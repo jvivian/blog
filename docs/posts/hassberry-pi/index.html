@@ -227,7 +227,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Praise the Omnissiah</p>
 </blockquote>
 <p>Every young transhumanist dreams of the day they merge with the great singularity… but until then, there’s home automation and intra-network device integration to get a whiff of extrasensory perception. <a href="https://www.home-assistant.io/">Home Assistant</a> (or <code>hass</code>) consolidates temperature sensors, motion detectors, cameras, computers, phones, and more into one extensible and configurable platform that can be run completely locked down on a local network <a href="https://www.eff.org/deeplinks/2022/07/ring-reveals-they-give-videos-police-without-user-consent-or-warrant">away from the prying eyes of Jeff Bezos</a>.</p>
-<p>I had a Windows Surface laying around that I wasn’t using and decided to turn it into a server after a good friend got me excited about <code>hass</code>. As a masochistic exercise I forewent reformatting with linux (in case Surface-specific issues arose) and did everything in <code>WSL2</code> – the Windows Subsystem for Linux.</p>
+<p>I had been wanting to check out <code>hass</code> for a while after a good friend got me excited about it, but hadn’t wanted to shell out the money for a <a href="https://www.intel.com/content/www/us/en/products/docs/boards-kits/nuc/what-is-nuc-article.html">NUC</a>. I realized I had a decent Windows Surface laying around from grad school that I wasn’t using and turned it into a server. As a masochistic exercise I forewent reformatting with linux (in case Surface-specific issues arose) and did everything in <code>WSL2</code> – the Windows Subsystem for Linux.</p>
 <p>Part 1 covers:</p>
 <ul>
 <li>Installing and running <code>hass</code> in <code>WSL2</code> on a Windows machine</li>
@@ -362,9 +362,7 @@ Warning
 <div class="{callout-warning}">
 <p>In PowerShell as Administrator</p>
 </div>
-<ul>
-<li>Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)</li>
-</ul>
+<p>Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Get<span class="op">-</span>NetIPAddress</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>IPAddress         <span class="op">:</span> <span class="op">**</span>192<span class="op">.</span><span class="fu">168</span><span class="op">.</span><span class="fu">1</span><span class="op">.</span><span class="fu">9</span><span class="op">**</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>InterfaceIndex    <span class="op">:</span> 5</span>
@@ -379,40 +377,33 @@ Warning
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>PreferredLifetime <span class="op">:</span> 18<span class="op">:</span>43<span class="op">:</span>44</span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>SkipAsSource      <span class="op">:</span> False</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>PolicyStore       <span class="op">:</span> ActiveStore</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Next, get the WSL2 IP (in WSL2 <em>not</em> PowerShell)</li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ifconf</span><span class="er">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">jvivian@DESKTOP-IM6KAKD:~$</span> ifconfig</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">eth0:</span> flags=4163<span class="op">&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="op">&gt;</span>  mtu 1500</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet</span> <span class="pp">**</span>192.168.42.81<span class="pp">**</span>  netmask 255.255.240.0  broadcast 192.168.17.255</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet6</span> fe82::211:5dwf:fec9:ce26  prefixlen 64  scopeid 0x20<span class="op">&lt;</span>link<span class="op">&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="ex">ether</span> 00:15:5d:e9:ce:56  txqueuelen 1000  <span class="er">(</span><span class="ex">Ethernet</span><span class="kw">)</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> packets 12089  bytes 1368012 <span class="er">(</span><span class="ex">1.3</span> MB<span class="kw">)</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> errors 0  dropped 0  overruns 0  frame 0</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> packets 10906  bytes 1009285 <span class="er">(</span><span class="ex">1.0</span> MB<span class="kw">)</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">lo:</span> flags=73<span class="op">&lt;</span>UP,LOOPBACK,RUNNING<span class="op">&gt;</span>  mtu 61536</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet</span> 127.0.0.1  netmask 255.0.0.0</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet6</span> ::2  prefixlen 128  scopeid 0x10<span class="op">&lt;</span>host<span class="op">&gt;</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">loop</span>  txqueuelen 1000  <span class="er">(</span><span class="ex">Local</span> Loopback<span class="kw">)</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> packets 26263  bytes 2461138 <span class="er">(</span><span class="ex">2.4</span> MB<span class="kw">)</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> errors 0  dropped 0  overruns 0  frame 0</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> packets 26263  bytes 2461138 <span class="er">(</span><span class="ex">2.4</span> MB<span class="kw">)</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Allow the port through the firewall</li>
-</ul>
+<p>Next, get the WSL2 IP (in WSL2 <em>not</em> PowerShell) via <code>ifconfig</code></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">eth0:</span> flags=4163<span class="op">&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="op">&gt;</span>  mtu 1500</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet</span> <span class="pp">**</span>192.168.42.81<span class="pp">**</span>  netmask 255.255.240.0  broadcast 192.168.17.255</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet6</span> fe82::211:5dwf:fec9:ce26  prefixlen 64  scopeid 0x20<span class="op">&lt;</span>link<span class="op">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">ether</span> 00:15:5d:e9:ce:56  txqueuelen 1000  <span class="er">(</span><span class="ex">Ethernet</span><span class="kw">)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> packets 12089  bytes 1368012 <span class="er">(</span><span class="ex">1.3</span> MB<span class="kw">)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> errors 0  dropped 0  overruns 0  frame 0</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> packets 10906  bytes 1009285 <span class="er">(</span><span class="ex">1.0</span> MB<span class="kw">)</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="ex">lo:</span> flags=73<span class="op">&lt;</span>UP,LOOPBACK,RUNNING<span class="op">&gt;</span>  mtu 61536</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet</span> 127.0.0.1  netmask 255.0.0.0</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">inet6</span> ::2  prefixlen 128  scopeid 0x10<span class="op">&lt;</span>host<span class="op">&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="ex">loop</span>  txqueuelen 1000  <span class="er">(</span><span class="ex">Local</span> Loopback<span class="kw">)</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> packets 26263  bytes 2461138 <span class="er">(</span><span class="ex">2.4</span> MB<span class="kw">)</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="ex">RX</span> errors 0  dropped 0  overruns 0  frame 0</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> packets 26263  bytes 2461138 <span class="er">(</span><span class="ex">2.4</span> MB<span class="kw">)</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="ex">TX</span> errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Allow the port through the firewall</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>netsh advfirewall firewall add rule name<span class="op">=</span><span class="st">"HASS Protocol"</span> <span class="fu">dir</span><span class="op">=</span><span class="kw">in</span> action<span class="op">=</span>allow protocol<span class="op">=</span>TCP localport<span class="op">=</span>8123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Set up the port-forwarding / portproxy using the address in <strong>inet</strong></li>
-</ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>netsh interface portproxy add v4tov4 listenaddress<span class="op">=</span>0<span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span> listenport<span class="op">=</span>8123 connectaddress<span class="op">=</span>192<span class="op">.</span><span class="fu">168</span><span class="op">.</span><span class="fu">43</span><span class="op">.</span><span class="fu">89</span> connectport<span class="op">=</span>8123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Set up the port-forwarding / portproxy using the address in <strong>inet</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>netsh interface portproxy add v4tov4 listenaddress<span class="op">=</span>0<span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span> listenport<span class="op">=</span>8123 connectaddress<span class="op">=</span>192<span class="op">.</span><span class="fu">168</span><span class="op">.</span><span class="fu">42</span><span class="op">.</span><span class="fu">81</span> connectport<span class="op">=</span>8123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Home Assistant should now be accessible on the internal network via the IP of the windows machine or the phone app.</p>
 </section>
 <section id="mqtt" class="level2">
 <h2 class="anchored" data-anchor-id="mqtt">MQTT</h2>
-<p>Running <code>MQTT</code> is a breeze after setting up the <code>Z-Wave</code> server and handling the port-proxying for <code>hass</code>. <a href="https://hometechhacker.com/mqtt-home-assistant-using-docker-eclipse-mosquitto/#What_is_MQTT_and_what_can_I_do_with_it">This guide</a> explains the set up in detail which I will list the core steps below:</p>
+<p>Running <code>MQTT</code> is a breeze after setting up the <code>Z-Wave</code> server and handling the port-proxying for <code>hass</code>. <a href="https://hometechhacker.com/mqtt-home-assistant-using-docker-eclipse-mosquitto/#What_is_MQTT_and_what_can_I_do_with_it">This guide</a> explains the set up in detail which I will list the core steps below. I set up <code>MQTT</code> to pass messages between my desktop computer and <code>hass</code> using <a href="https://github.com/LAB02-Research/HASS.Agent">hass.agent</a>.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /srv/mosquitto/config</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /srv/mosquitto/data</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /srv/mosquitto/log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -443,11 +434,24 @@ Warning
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>-v /srv/mosquitto/log:/mosquitto/log <span class="dt">\</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>-p 1883:1883 <span class="dt">\</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>eclipse-mosquitto</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will need to use the same <code>netsh</code> approach used to forward the <code>hass</code> 8123 port here to foward port <code>1883</code> and allow it through the firewall.</p>
+</div>
+</div>
 <p>To add credentials:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec <span class="at">-it</span> <span class="op">&lt;</span>containerID<span class="op">&gt;</span> sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(<code>mqtt</code> in our case due to <code>--name=mqtt</code>)</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mosquitto_passwd</span> <span class="at">-c</span> /mosquitto/config/credentials <span class="op">&lt;</span>username<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Update conf</p>
+<p>Update the conf file</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>mosquitto.conf</strong></pre>
@@ -468,7 +472,7 @@ Warning
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ex">password_file</span> /mosquitto/config/credentials</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To add to <code>hass</code>, just edit the configuration file</p>
+<p>Edit the configuration file to add to <code>hass</code></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>configuration.yaml</strong></pre>

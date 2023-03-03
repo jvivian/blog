@@ -14,9 +14,7 @@ format:
 
 Every young transhumanist dreams of the day they merge with the great singularity... but until then, there's home automation and intra-network device integration to get a whiff of extrasensory perception. [Home Assistant](https://www.home-assistant.io/) (or `hass`) consolidates temperature sensors, motion detectors, cameras, computers, phones, and more into one extensible and configurable platform that can be run completely locked down on a local network [away from the prying eyes of Jeff Bezos](https://www.eff.org/deeplinks/2022/07/ring-reveals-they-give-videos-police-without-user-consent-or-warrant).
 
-I had a Windows Surface laying around that I wasn't using and decided to turn it
-into a server after a good friend got me excited about `hass`. As a masochistic exercise
-I forewent reformatting with linux (in case Surface-specific issues arose)
+I had been wanting to check out `hass` for a while after a good friend got me excited about it, but hadn't wanted to shell out the money for a [NUC](https://www.intel.com/content/www/us/en/products/docs/boards-kits/nuc/what-is-nuc-article.html). I realized I had a decent Windows Surface laying around from grad school that I wasn't using and turned it into a server. As a masochistic exercise I forewent reformatting with linux (in case Surface-specific issues arose)
 and did everything in `WSL2` -- the Windows Subsystem for Linux.
 
 Part 1 covers:
@@ -125,7 +123,7 @@ Home assistant should now be able to integrate Z-Wave automatically.
 In PowerShell as Administrator
 :::
 
-- Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)
+Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)
 
 ```powershell
 Get-NetIPAddress
@@ -144,10 +142,9 @@ SkipAsSource      : False
 PolicyStore       : ActiveStore
 ```
 
-- Next, get the WSL2 IP (in WSL2 _not_ PowerShell)
+Next, get the WSL2 IP (in WSL2 _not_ PowerShell) via `ifconfig`
 
 ```bash
-ifconf(base) jvivian@DESKTOP-IM6KAKD:~$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet **192.168.42.81**  netmask 255.255.240.0  broadcast 192.168.17.255
         inet6 fe82::211:5dwf:fec9:ce26  prefixlen 64  scopeid 0x20<link>
@@ -167,16 +164,16 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 61536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-- Allow the port through the firewall
+Allow the port through the firewall
 
 ```powershell
 netsh advfirewall firewall add rule name="HASS Protocol" dir=in action=allow protocol=TCP localport=8123
 ```
 
--  Set up the port-forwarding / portproxy using the address in **inet**
+Set up the port-forwarding / portproxy using the address in **inet**
 
 ```powershell
-netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8123 connectaddress=192.168.43.89 connectport=8123
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8123 connectaddress=192.168.42.81 connectport=8123
 ```
 
 Home Assistant should now be accessible on the internal network via the IP of the windows machine or the phone app.
@@ -184,7 +181,7 @@ Home Assistant should now be accessible on the internal network via the IP of th
 
 ## MQTT
 
-Running `MQTT` is a breeze after setting up the `Z-Wave` server and handling the port-proxying for `hass`. [This guide](https://hometechhacker.com/mqtt-home-assistant-using-docker-eclipse-mosquitto/#What_is_MQTT_and_what_can_I_do_with_it) explains the set up in detail which I will list the core steps below:
+Running `MQTT` is a breeze after setting up the `Z-Wave` server and handling the port-proxying for `hass`. [This guide](https://hometechhacker.com/mqtt-home-assistant-using-docker-eclipse-mosquitto/#What_is_MQTT_and_what_can_I_do_with_it) explains the set up in detail which I will list the core steps below. I set up `MQTT` to pass messages between my desktop computer and `hass` using [hass.agent](https://github.com/LAB02-Research/HASS.Agent).
 
 ```bash
 mkdir -p /srv/mosquitto/config
@@ -222,6 +219,11 @@ docker run -it \
 eclipse-mosquitto
 ```
 
+::: {.callout-note}
+You will need to use the same `netsh` approach used to forward the `hass` 8123 port
+here to foward port `1883` and allow it through the firewall.
+:::
+
 To add credentials:
 
 ```bash
@@ -233,7 +235,7 @@ docker exec -it <containerID> sh
 mosquitto_passwd -c /mosquitto/config/credentials <username>
 ```
 
-Update conf
+Update the conf file
 
 ```{.bash filename="mosquitto.conf"}
 persistence true
@@ -253,7 +255,7 @@ log_dest stdout
 password_file /mosquitto/config/credentials
 ```
 
-To add to `hass`, just edit the configuration file
+Edit the configuration file to add to `hass`
 
 ```{.yaml filename="configuration.yaml"}
 mqtt:
