@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Everything from Bayesian stats to home automation guides to tech death drum covers"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blast Beats and Beep Boops",
+    "section": "",
+    "text": "Hassberry-Pi: Part 1\n\n\nSetting up Home Assistant for ZWave, MQTT, Discord, and Raspberry Pi integration\n\n\n\n\nAutomation\n\n\nDocumentation\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html",
+    "href": "posts/hassberry-pi/index.html",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "",
+    "text": "Praise the Omnissiah\nEvery young transhumanist dreams of the day they merge with the great singularity… but until then, there’s home automation and intra-network device integration to get a whiff of extrasensory perception. Home Assistant (or hass) consolidates temperature sensors, motion detectors, cameras, computers, phones, and more into one extensible and configurable platform that can be run completely locked down on a local network away from the prying eyes of Jeff Bezos.\nI had a Windows Surface laying around that I wasn’t using and decided to turn it into a server after a good friend got me excited about hass. As a masochistic exercise I forewent reformatting with linux (in case Surface-specific issues arose) and did everything in WSL2 – the Windows Subsystem for Linux.\nPart 1 covers:"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#dependencies",
+    "href": "posts/hassberry-pi/index.html#dependencies",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "Dependencies",
+    "text": "Dependencies\n\nWindows WSL2\nConda for hass environment\n\nNote: I have not had any issues using this approach, but there are apparently some Supervised features that are not available using the Python Core version of hass.\n\nDocker on Windows with WSL2 integration\n\nAll commands and activities takes place inside WSL2 except for a few sporadic uses of elevated PowerShell.\n\nCreate a project directory\n\nmkdir /srv/homeassistant && cd /srv/homeassistant\n\nSet up environment\n\nconda env update -f environment.yml\n\n\n\n\nenvironment.yml\n\nname: hass\nchannels:\n  - defaults\n  - conda-forge\ndependencies:\n  - python=3.9\n  - homeassistant\n  - pycountry\n  - aiohttp-cors"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#usb-tools",
+    "href": "posts/hassberry-pi/index.html#usb-tools",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "USB tools",
+    "text": "USB tools\nIn WSL2, install tools for USB\n\n\ninstall-usb-tools.sh\n\nsudo apt install linux-tools-5.4.0-77-generic hwdata\nsudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2\n\n\nAttach USB zwave stick to machine\n\nI bought a “no drivers needed” Zooz 700 Series Z-Wave Plus S2 USB Stick"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#usb-forwarding",
+    "href": "posts/hassberry-pi/index.html#usb-forwarding",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "USB forwarding",
+    "text": "USB forwarding\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\n\nList devices to ensure zwave stick is present.\n\nusbipd wsl list\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\nAtach the USB to the WSL2 instance\n\nusbipd wsl attach --busid 2-2"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#launch-home-assistant",
+    "href": "posts/hassberry-pi/index.html#launch-home-assistant",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "Launch home assistant",
+    "text": "Launch home assistant\nAfter installing the dependencies, launching hass should simple.\ncd /srv/homeassistant/\nconda run -n hass hass\nOpen a browser to https://localhost:8123 to see the hass Dashboard"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#launch-zwave-server",
+    "href": "posts/hassberry-pi/index.html#launch-zwave-server",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "Launch ZWave server",
+    "text": "Launch ZWave server\n\n\nlaunch-zwave-server.sh\n\n# Launch Zwave server\ndocker run --rm -p 8091:8091 -p 3000:3000 --device=/dev/ttyUSB0:/dev/zwave \\\n-v $(pwd)/store:/usr/src/app/store zwavejs/zwave-js-ui:latest\n\n\n\n\n\n\n\nWarning\n\n\n\nApparently using /dev/ttyUSB0 cause issues as the name can change, but I have not encountered any."
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#update-zwave-server-permissions",
+    "href": "posts/hassberry-pi/index.html#update-zwave-server-permissions",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "Update Zwave server permissions",
+    "text": "Update Zwave server permissions\nBy default, the zwave server running in the docker does not support home assistant\n\nGo to [localhost:8091](http://localhost:8091)\nSettings → Home Assistant → WS Server\n\nHome assistant should now be able to integrate ZWave automatically.\n\nSettings -> Devices and Services -> Integrations tab -> Add Integration -> Search Z-Wave JS and install"
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#port-forward-from-wsl2-to-machine",
+    "href": "posts/hassberry-pi/index.html#port-forward-from-wsl2-to-machine",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "Port Forward from WSL2 to machine",
+    "text": "Port Forward from WSL2 to machine\n\nIn PowerShell as Administrator\n\n\nGet local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)\n\nGet-NetIPAddress\nIPAddress         : **192.168.1.9**\nInterfaceIndex    : 5\nInterfaceAlias    : Wi-Fi\nAddressFamily     : IPv4\nType              : Unicast\nPrefixLength      : 24\nPrefixOrigin      : Dhcp\nSuffixOrigin      : Dhcp\nAddressState      : Preferred\nValidLifetime     : 18:43:44\nPreferredLifetime : 18:43:44\nSkipAsSource      : False\nPolicyStore       : ActiveStore\n\nNext, get the WSL2 IP (in WSL2 not PowerShell)\n\nifconf(base) jvivian@DESKTOP-IM6KAKD:~$ ifconfig\neth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500\n        inet **192.168.42.81**  netmask 255.255.240.0  broadcast 192.168.17.255\n        inet6 fe82::211:5dwf:fec9:ce26  prefixlen 64  scopeid 0x20<link>\n        ether 00:15:5d:e9:ce:56  txqueuelen 1000  (Ethernet)\n        RX packets 12089  bytes 1368012 (1.3 MB)\n        RX errors 0  dropped 0  overruns 0  frame 0\n        TX packets 10906  bytes 1009285 (1.0 MB)\n        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\n\nlo: flags=73<UP,LOOPBACK,RUNNING>  mtu 61536\n        inet 127.0.0.1  netmask 255.0.0.0\n        inet6 ::2  prefixlen 128  scopeid 0x10<host>\n        loop  txqueuelen 1000  (Local Loopback)\n        RX packets 26263  bytes 2461138 (2.4 MB)\n        RX errors 0  dropped 0  overruns 0  frame 0\n        TX packets 26263  bytes 2461138 (2.4 MB)\n        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\n\nAllow the port through the firewall\n\nnetsh advfirewall firewall add rule name=\"HASS Protocol\" dir=in action=allow protocol=TCP localport=8123\n\nSet up the port-forwarding / portproxy using the address in inet\n\nnetsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8123 connectaddress=192.168.43.89 connectport=8123\nHome Assistant should now be accessible on the internal network via the IP of the windows machine or the phone app."
+  },
+  {
+    "objectID": "posts/hassberry-pi/index.html#mqtt",
+    "href": "posts/hassberry-pi/index.html#mqtt",
+    "title": "Hassberry-Pi: Part 1",
+    "section": "MQTT",
+    "text": "MQTT\nRunning MQTT is a breeze after setting up the ZWave server and handling the port-proxying for hass. This guide explains the set up in detail which I will list the core steps below:\nmkdir -p /srv/mosquitto/config\nmkdir -p /srv/mosquitto/data\nmkdir -p /srv/mosquitto/log\nAdd the following file to the config dir\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\nRun the container\ndocker run -it \\\n--name=mqtt \\\n-v /srv/mosquitto/config:/mosquitto/config \\\n-v /srv/mosquitto/data:/mosquitto/data \\\n-v /srv/mosquitto/log:/mosquitto/log \\\n-p 1883:1883 \\\neclipse-mosquitto\nTo add credentials:\ndocker exec -it <containerID> sh\n(mqtt in our case due to --name=mqtt)\nmosquitto_passwd -c /mosquitto/config/credentials <username>\nUpdate conf\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\npassword_file /mosquitto/config/credentials\n\nTo add to hass, just edit the configuration file\n\n\nconfiguration.yaml\n\nmqtt:\n  broker: <brokerip>\n  username: <mqtt_username>\n  password: <mqtt_password>"
+  }
+]

@@ -1,0 +1,20 @@
+---
+title: "Blast Beats and Beep Boops"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+<!-- 
+**Topics to add**
+
+- Bayesian stats notes
+- Raspberry Pi Camera object detection classification with YOLO
+- `YAML` for minimalist-ui theme in `hass` 
+-->

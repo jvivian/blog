@@ -1,9 +1,0 @@
-project:
-  output-dir: _docs
-
-website:
-  title: "blog"
-  site-url: "https://jvivian.github.io/blog"
-  description: "Repository for posts / code that doesn't need its own library"
-  repo-branch: main
-  repo-url: "https://github.com/jvivian/blog"
