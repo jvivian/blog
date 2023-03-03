@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Blast Beats and Beep Boops",
     "section": "",
-    "text": "Hassberry-Pi: Part 1\n\n\nSetting up Home Assistant for ZWave, MQTT, Discord, and Raspberry Pi integration\n\n\n\n\nAutomation\n\n\nDocumentation\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\nNo matching items"
+    "text": "Hassberry-Pi: Part 1\n\n\nSetting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration\n\n\n\n\nAutomation\n\n\nDocumentation\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hassberry-pi/index.html",
@@ -32,14 +32,14 @@
     "href": "posts/hassberry-pi/index.html#usb-tools",
     "title": "Hassberry-Pi: Part 1",
     "section": "USB tools",
-    "text": "USB tools\nIn WSL2, install tools for USB\n\n\ninstall-usb-tools.sh\n\nsudo apt install linux-tools-5.4.0-77-generic hwdata\nsudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2\n\n\nAttach USB zwave stick to machine\n\nI bought a “no drivers needed” Zooz 700 Series Z-Wave Plus S2 USB Stick"
+    "text": "USB tools\nIn WSL2, install tools for USB\n\n\ninstall-usb-tools.sh\n\nsudo apt install linux-tools-5.4.0-77-generic hwdata\nsudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2\n\n\nAttach USB Z-Wave stick to machine\n\nI bought a “no drivers needed” Zooz 700 Series Z-Wave Plus S2 USB Stick"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#usb-forwarding",
     "href": "posts/hassberry-pi/index.html#usb-forwarding",
     "title": "Hassberry-Pi: Part 1",
     "section": "USB forwarding",
-    "text": "USB forwarding\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\n\nList devices to ensure zwave stick is present.\n\nusbipd wsl list\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\nAtach the USB to the WSL2 instance\n\nusbipd wsl attach --busid 2-2"
+    "text": "USB forwarding\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\n\nList devices to ensure Z-Wave stick is present.\n\nusbipd wsl list\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\nAtach the USB to the WSL2 instance\n\nusbipd wsl attach --busid 2-2"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#launch-home-assistant",
@@ -49,18 +49,18 @@
     "text": "Launch home assistant\nAfter installing the dependencies, launching hass should simple.\ncd /srv/homeassistant/\nconda run -n hass hass\nOpen a browser to https://localhost:8123 to see the hass Dashboard"
   },
   {
-    "objectID": "posts/hassberry-pi/index.html#launch-zwave-server",
-    "href": "posts/hassberry-pi/index.html#launch-zwave-server",
+    "objectID": "posts/hassberry-pi/index.html#launch-z-wave-server",
+    "href": "posts/hassberry-pi/index.html#launch-z-wave-server",
     "title": "Hassberry-Pi: Part 1",
-    "section": "Launch ZWave server",
-    "text": "Launch ZWave server\n\n\nlaunch-zwave-server.sh\n\n# Launch Zwave server\ndocker run --rm -p 8091:8091 -p 3000:3000 --device=/dev/ttyUSB0:/dev/zwave \\\n-v $(pwd)/store:/usr/src/app/store zwavejs/zwave-js-ui:latest\n\n\n\n\n\n\n\nWarning\n\n\n\nApparently using /dev/ttyUSB0 cause issues as the name can change, but I have not encountered any."
+    "section": "Launch Z-Wave server",
+    "text": "Launch Z-Wave server\n\n\nlaunch-zwave-server.sh\n\n# Launch Z-Wave server\ndocker run --rm -p 8091:8091 -p 3000:3000 --device=/dev/ttyUSB0:/dev/zwave \\\n-v $(pwd)/store:/usr/src/app/store zwavejs/zwave-js-ui:latest\n\n\n\n\n\n\n\nWarning\n\n\n\nApparently using /dev/ttyUSB0 cause issues as the name can change, but I have not encountered any."
   },
   {
-    "objectID": "posts/hassberry-pi/index.html#update-zwave-server-permissions",
-    "href": "posts/hassberry-pi/index.html#update-zwave-server-permissions",
+    "objectID": "posts/hassberry-pi/index.html#update-z-wave-server-permissions",
+    "href": "posts/hassberry-pi/index.html#update-z-wave-server-permissions",
     "title": "Hassberry-Pi: Part 1",
-    "section": "Update Zwave server permissions",
-    "text": "Update Zwave server permissions\nBy default, the zwave server running in the docker does not support home assistant\n\nGo to [localhost:8091](http://localhost:8091)\nSettings → Home Assistant → WS Server\n\nHome assistant should now be able to integrate ZWave automatically.\n\nSettings -> Devices and Services -> Integrations tab -> Add Integration -> Search Z-Wave JS and install"
+    "section": "Update Z-Wave server permissions",
+    "text": "Update Z-Wave server permissions\nBy default, the Z-Wave server running in the docker does not support home assistant\n\nGo to localhost:8091\nSettings → Home Assistant → WS Server\n\nHome assistant should now be able to integrate Z-Wave automatically.\n\nSettings -> Devices and Services -> Integrations tab -> Add Integration -> Search Z-Wave JS and install"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#port-forward-from-wsl2-to-machine",
@@ -74,6 +74,6 @@
     "href": "posts/hassberry-pi/index.html#mqtt",
     "title": "Hassberry-Pi: Part 1",
     "section": "MQTT",
-    "text": "MQTT\nRunning MQTT is a breeze after setting up the ZWave server and handling the port-proxying for hass. This guide explains the set up in detail which I will list the core steps below:\nmkdir -p /srv/mosquitto/config\nmkdir -p /srv/mosquitto/data\nmkdir -p /srv/mosquitto/log\nAdd the following file to the config dir\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\nRun the container\ndocker run -it \\\n--name=mqtt \\\n-v /srv/mosquitto/config:/mosquitto/config \\\n-v /srv/mosquitto/data:/mosquitto/data \\\n-v /srv/mosquitto/log:/mosquitto/log \\\n-p 1883:1883 \\\neclipse-mosquitto\nTo add credentials:\ndocker exec -it <containerID> sh\n(mqtt in our case due to --name=mqtt)\nmosquitto_passwd -c /mosquitto/config/credentials <username>\nUpdate conf\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\npassword_file /mosquitto/config/credentials\n\nTo add to hass, just edit the configuration file\n\n\nconfiguration.yaml\n\nmqtt:\n  broker: <brokerip>\n  username: <mqtt_username>\n  password: <mqtt_password>"
+    "text": "MQTT\nRunning MQTT is a breeze after setting up the Z-Wave server and handling the port-proxying for hass. This guide explains the set up in detail which I will list the core steps below:\nmkdir -p /srv/mosquitto/config\nmkdir -p /srv/mosquitto/data\nmkdir -p /srv/mosquitto/log\nAdd the following file to the config dir\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\nRun the container\ndocker run -it \\\n--name=mqtt \\\n-v /srv/mosquitto/config:/mosquitto/config \\\n-v /srv/mosquitto/data:/mosquitto/data \\\n-v /srv/mosquitto/log:/mosquitto/log \\\n-p 1883:1883 \\\neclipse-mosquitto\nTo add credentials:\ndocker exec -it <containerID> sh\n(mqtt in our case due to --name=mqtt)\nmosquitto_passwd -c /mosquitto/config/credentials <username>\nUpdate conf\n\n\nmosquitto.conf\n\npersistence true\npersistence_location /mosquitto/data/\n\nuser mosquitto\n\n# Listen on all interfaces \nlistener 1883\n\n#Allow connection without authentication\nallow_anonymous true\n\nlog_dest file /mosquitto/log/mosquitto.log\nlog_dest stdout\n\npassword_file /mosquitto/config/credentials\n\nTo add to hass, just edit the configuration file\n\n\nconfiguration.yaml\n\nmqtt:\n  broker: <brokerip>\n  username: <mqtt_username>\n  password: <mqtt_password>"
   }
 ]

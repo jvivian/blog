@@ -2,7 +2,7 @@
 title: "Hassberry-Pi: Part 1"
 subtitle: "Setting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration"
 author: "John Vivian"
-date: "2023-03-02"
+date: "2023-03-03"
 categories: [Automation, Documentation]
 image: "image.png"
 format:
