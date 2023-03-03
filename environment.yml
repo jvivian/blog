@@ -1,0 +1,10 @@
+name: blog
+channels:
+  - default
+  - fastai
+dependencies:
+  - python=3.10
+  - nbdev
+  - plotly
+  - jupyter
+
