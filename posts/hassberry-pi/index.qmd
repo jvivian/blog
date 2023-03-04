@@ -12,6 +12,10 @@ format:
 
 > Praise the Omnissiah
 
+::: {.column-margin}
+![My Custom Home Assistant UI. Details in Part 2](ui.png)
+:::
+
 Every young transhumanist dreams of the day they merge with the great singularity... but until then, there's home automation and intra-network device integration to get a whiff of extrasensory perception. [Home Assistant](https://www.home-assistant.io/) (or `hass`) consolidates temperature sensors, motion detectors, cameras, computers, phones, and more into one extensible and configurable platform that can be run completely locked down on a local network [away from the prying eyes of Jeff Bezos](https://www.eff.org/deeplinks/2022/07/ring-reveals-they-give-videos-police-without-user-consent-or-warrant).
 
 I had been wanting to check out `hass` for a while after a good friend got me excited about it, but hadn't wanted to shell out the money for a [NUC](https://www.intel.com/content/www/us/en/products/docs/boards-kits/nuc/what-is-nuc-article.html). I realized I had a decent Windows Surface laying around from grad school that I wasn't using and turned it into a server. As a masochistic exercise I forewent reformatting with linux (in case Surface-specific issues arose)
