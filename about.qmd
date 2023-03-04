@@ -10,12 +10,12 @@ about:
     - icon: github
       text: Github
       href: https://github.com/jvivian
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/john-vivian-913b41a6/
     - icon: book
       text: Google Scholar
       href: https://scholar.google.com/citations?user=CXQJI-AAAAAJ&hl=en&authuser=1
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/john-vivian-913b41a6/
 ---
 
 Everything from home automation guides to tech death drum covers and Bayesian stats to kitty cats

@@ -7,10 +7,18 @@ website:
   navbar:
     right:
       - about.qmd
+      - icon: bookmarks
+        text: Website
+        href: https://jvivian.github.io
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        text: Github
+        href: https://github.com/jvivian
+      - icon: book
+        text: Google Scholar
+        href: https://scholar.google.com/citations?user=CXQJI-AAAAAJ&hl=en&authuser=1
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/john-vivian-913b41a6/
 format:
   html:
     theme: spacelab
