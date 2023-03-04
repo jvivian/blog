@@ -32,14 +32,14 @@
     "href": "posts/hassberry-pi/index.html#usb-tools-for-wsl2",
     "title": "Hassberry-Pi: Part 1",
     "section": "USB tools for WSL2",
-    "text": "USB tools for WSL2\nIn WSL2, install tools for USB\n\n\ninstall-usb-tools.sh\n\nsudo apt install linux-tools-5.4.0-77-generic hwdata\nsudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2\n\nAttach USB Z-Wave stick to machine\n\n\n\n\n\n\nInfo\n\n\n\nI bought a “no drivers needed” Zooz 700 Series Z-Wave Plus S2 USB Stick"
+    "text": "USB tools for WSL2\nIn WSL2, install tools for USB\n\n\ninstall-usb-tools.sh\n\nsudo apt install linux-tools-5.4.0-77-generic hwdata\nsudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2\n\nAttach USB Z-Wave stick to machine\n\n\n\n\n\n\nNote\n\n\n\nI bought a “no drivers needed” Zooz 700 Series Z-Wave Plus S2 USB Stick"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#usb-forwarding-to-wsl2",
     "href": "posts/hassberry-pi/index.html#usb-forwarding-to-wsl2",
     "title": "Hassberry-Pi: Part 1",
     "section": "USB forwarding to WSL2",
-    "text": "USB forwarding to WSL2\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\nList devices to ensure Z-Wave stick is present.\nusbipd wsl list\n\n\n\n\n\n\nInfo\n\n\n\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\n\nAtach the USB to the WSL2 instance\nusbipd wsl attach --busid 2-2"
+    "text": "USB forwarding to WSL2\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\nList devices to ensure Z-Wave stick is present.\nusbipd wsl list\n\n\n\n\n\n\nNote\n\n\n\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\n\nAtach the USB to the WSL2 instance\nusbipd wsl attach --busid 2-2"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#launch-home-assistant",

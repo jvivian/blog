@@ -66,7 +66,7 @@ sudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-too
 
 Attach USB Z-Wave stick to machine
 
-::: {.callout-info}
+::: {.callout-note}
 I bought a "no drivers needed" **Zooz 700 Series Z-Wave Plus S2 USB Stick**
 :::
 
@@ -82,7 +82,7 @@ List devices to ensure Z-Wave stick is present.
 usbipd wsl list
 ```
 
-::: {.callout-info}
+::: {.callout-note}
 Mine came up under `BUSID` **2-2** called `Zooz_ZST10_700_Z-Wave_Stick`
 :::
 
