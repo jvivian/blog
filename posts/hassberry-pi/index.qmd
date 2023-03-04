@@ -76,15 +76,17 @@ I bought a "no drivers needed" **Zooz 700 Series Z-Wave Plus S2 USB Stick**
 The below commands happen in Windows PowerShell `Run as Administrator`
 :::
 
-- List devices to ensure Z-Wave stick is present.
+List devices to ensure Z-Wave stick is present.
 
 ```powershell
 usbipd wsl list
 ```
 
+::: {.callout-info}
 Mine came up under `BUSID` **2-2** called `Zooz_ZST10_700_Z-Wave_Stick`
+:::
 
-- Atach the USB to the WSL2 instance
+Atach the USB to the WSL2 instance
 
 ```powershell
 usbipd wsl attach --busid 2-2
@@ -99,7 +101,7 @@ cd /srv/homeassistant/
 conda run -n hass hass
 ```
 
-Open a browser to https://localhost:8123 to see the `hass` Dashboard
+Open a browser to [localhost:8123](https://localhost:8123) to see the `hass` Dashboard
 
 ## Launch Z-Wave server
 

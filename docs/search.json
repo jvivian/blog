@@ -46,7 +46,7 @@
     "href": "posts/hassberry-pi/index.html#launch-home-assistant",
     "title": "Hassberry-Pi: Part 1",
     "section": "Launch home assistant",
-    "text": "Launch home assistant\nAfter installing the dependencies, launching hass should simple.\ncd /srv/homeassistant/\nconda run -n hass hass\nOpen a browser to https://localhost:8123 to see the hass Dashboard"
+    "text": "Launch home assistant\nAfter installing the dependencies, launching hass should simple.\ncd /srv/homeassistant/\nconda run -n hass hass\nOpen a browser to localhost:8123 to see the hass Dashboard"
   },
   {
     "objectID": "posts/hassberry-pi/index.html#launch-z-wave-server",
@@ -88,6 +88,6 @@
     "href": "posts/hassberry-pi/index.html#usb-forwarding-to-wsl2",
     "title": "Hassberry-Pi: Part 1",
     "section": "USB forwarding to WSL2",
-    "text": "USB forwarding to WSL2\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\n\nList devices to ensure Z-Wave stick is present.\n\nusbipd wsl list\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\nAtach the USB to the WSL2 instance\n\nusbipd wsl attach --busid 2-2"
+    "text": "USB forwarding to WSL2\n\n\n\n\n\n\nWarning\n\n\n\nThe below commands happen in Windows PowerShell Run as Administrator\n\n\nList devices to ensure Z-Wave stick is present.\nusbipd wsl list\n\n\n\n\n\n\nInfo\n\n\n\nMine came up under BUSID 2-2 called Zooz_ZST10_700_Z-Wave_Stick\n\n\nAtach the USB to the WSL2 instance\nusbipd wsl attach --busid 2-2"
   }
 ]

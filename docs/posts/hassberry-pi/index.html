@@ -320,14 +320,22 @@ Warning
 <p>The below commands happen in Windows PowerShell <code>Run as Administrator</code></p>
 </div>
 </div>
-<ul>
-<li>List devices to ensure Z-Wave stick is present.</li>
-</ul>
+<p>List devices to ensure Z-Wave stick is present.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usbipd wsl list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-info callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Info
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mine came up under <code>BUSID</code> <strong>2-2</strong> called <code>Zooz_ZST10_700_Z-Wave_Stick</code></p>
-<ul>
-<li>Atach the USB to the WSL2 instance</li>
-</ul>
+</div>
+</div>
+<p>Atach the USB to the WSL2 instance</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>usbipd wsl attach <span class="op">--</span>busid 2<span class="op">-</span>2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="launch-home-assistant" class="level2">
@@ -335,7 +343,7 @@ Warning
 <p>After installing the dependencies, launching <code>hass</code> should simple.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /srv/homeassistant/</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> run <span class="at">-n</span> hass hass</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Open a browser to https://localhost:8123 to see the <code>hass</code> Dashboard</p>
+<p>Open a browser to <a href="https://localhost:8123">localhost:8123</a> to see the <code>hass</code> Dashboard</p>
 </section>
 <section id="launch-z-wave-server" class="level2">
 <h2 class="anchored" data-anchor-id="launch-z-wave-server">Launch Z-Wave server</h2>
