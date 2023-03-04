@@ -207,8 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#dependencies" id="toc-dependencies" class="nav-link active" data-scroll-target="#dependencies">Dependencies</a></li>
-  <li><a href="#usb-tools" id="toc-usb-tools" class="nav-link" data-scroll-target="#usb-tools">USB tools</a></li>
-  <li><a href="#usb-forwarding" id="toc-usb-forwarding" class="nav-link" data-scroll-target="#usb-forwarding">USB forwarding</a></li>
+  <li><a href="#usb-tools-for-wsl2" id="toc-usb-tools-for-wsl2" class="nav-link" data-scroll-target="#usb-tools-for-wsl2">USB tools for WSL2</a></li>
+  <li><a href="#usb-forwarding-to-wsl2" id="toc-usb-forwarding-to-wsl2" class="nav-link" data-scroll-target="#usb-forwarding-to-wsl2">USB forwarding to WSL2</a></li>
   <li><a href="#launch-home-assistant" id="toc-launch-home-assistant" class="nav-link" data-scroll-target="#launch-home-assistant">Launch home assistant</a></li>
   <li><a href="#launch-z-wave-server" id="toc-launch-z-wave-server" class="nav-link" data-scroll-target="#launch-z-wave-server">Launch Z-Wave server</a></li>
   <li><a href="#update-z-wave-server-permissions" id="toc-update-z-wave-server-permissions" class="nav-link" data-scroll-target="#update-z-wave-server-permissions">Update Z-Wave server permissions</a></li>
@@ -280,8 +280,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> aiohttp-cors</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="usb-tools" class="level2">
-<h2 class="anchored" data-anchor-id="usb-tools">USB tools</h2>
+<section id="usb-tools-for-wsl2" class="level2">
+<h2 class="anchored" data-anchor-id="usb-tools-for-wsl2">USB tools for WSL2</h2>
 <p>In WSL2, install tools for USB</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -290,15 +290,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install linux-tools-5.4.0-77-generic hwdata</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> update-alternatives <span class="at">--install</span> /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li>Attach USB Z-Wave stick to machine
-<ul>
-<li>I bought a “no drivers needed” <strong>Zooz 700 Series Z-Wave Plus S2 USB Stick</strong></li>
-</ul></li>
-</ul>
+<p>Attach USB Z-Wave stick to machine</p>
+<div class="callout-info callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Info
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I bought a “no drivers needed” <strong>Zooz 700 Series Z-Wave Plus S2 USB Stick</strong></p>
+</div>
+</div>
 </section>
-<section id="usb-forwarding" class="level2">
-<h2 class="anchored" data-anchor-id="usb-forwarding">USB forwarding</h2>
+<section id="usb-forwarding-to-wsl2" class="level2">
+<h2 class="anchored" data-anchor-id="usb-forwarding-to-wsl2">USB forwarding to WSL2</h2>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -370,7 +378,7 @@ Warning
 <div class="{callout-warning}">
 <p>In PowerShell as Administrator</p>
 </div>
-<p>Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)</p>
+<p>Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs).</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Get<span class="op">-</span>NetIPAddress</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>IPAddress         <span class="op">:</span> <span class="op">**</span>192<span class="op">.</span><span class="fu">168</span><span class="op">.</span><span class="fu">1</span><span class="op">.</span><span class="fu">9</span><span class="op">**</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>InterfaceIndex    <span class="op">:</span> 5</span>
@@ -408,6 +416,19 @@ Warning
 <p>Set up the port-forwarding / portproxy using the address in <strong>inet</strong></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>netsh interface portproxy add v4tov4 listenaddress<span class="op">=</span>0<span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span><span class="op">.</span><span class="fu">0</span> listenport<span class="op">=</span>8123 connectaddress<span class="op">=</span>192<span class="op">.</span><span class="fu">168</span><span class="op">.</span><span class="fu">42</span><span class="op">.</span><span class="fu">81</span> connectport<span class="op">=</span>8123</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Home Assistant should now be accessible on the internal network via the IP of the windows machine or the phone app.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Use a static IP!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Any local server should have a static IP set or have a registered IP through DHCP. Google “Windows static IP” and you should be good to go.</p>
+</div>
+</div>
 </section>
 <section id="mqtt" class="level2">
 <h2 class="anchored" data-anchor-id="mqtt">MQTT</h2>

@@ -55,7 +55,7 @@ dependencies:
   - aiohttp-cors
 ```
 
-## USB tools
+## USB tools for WSL2
 
 In WSL2, install tools for USB
 
@@ -64,10 +64,13 @@ sudo apt install linux-tools-5.4.0-77-generic hwdata
 sudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/5.4.0-77-generic/usbip 2
 ```
 
-- Attach USB Z-Wave stick to machine
-    - I bought a "no drivers needed" **Zooz 700 Series Z-Wave Plus S2 USB Stick**
+Attach USB Z-Wave stick to machine
 
-## USB forwarding
+::: {.callout-info}
+I bought a "no drivers needed" **Zooz 700 Series Z-Wave Plus S2 USB Stick**
+:::
+
+## USB forwarding to WSL2
 
 ::: {.callout-warning}
 The below commands happen in Windows PowerShell `Run as Administrator`
@@ -127,7 +130,7 @@ Home assistant should now be able to integrate Z-Wave automatically.
 In PowerShell as Administrator
 :::
 
-Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs)
+Get local IP address of windows host running wsl2/hass. IP address to connect to is bolded (look for IPv4 in the list of IPs).
 
 ```powershell
 Get-NetIPAddress
@@ -181,6 +184,11 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8123 conne
 ```
 
 Home Assistant should now be accessible on the internal network via the IP of the windows machine or the phone app.
+
+::: {.callout-tip}
+## Use a static IP!
+Any local server should have a static IP set or have a registered IP through DHCP. Google "Windows static IP" and you should be good to go.
+:::
 
 
 ## MQTT
