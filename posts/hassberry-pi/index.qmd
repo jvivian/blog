@@ -277,3 +277,13 @@ mqtt:
   username: <mqtt_username>
   password: <mqtt_password>
 ```
+
+## Touch Panel Dashboard
+
+::: {#fig-dashboard layout-ncol=2}
+![Accessible from desk](touch-panel-wide.jpg){#fig-wide}
+
+![Close-up of UI](touch-panel-close.jpg){#fig-close}
+
+Using a tablet for the server means it can double as a touch panel!
+:::
