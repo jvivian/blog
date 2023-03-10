@@ -281,7 +281,7 @@ mqtt:
 ## Touch Panel Dashboard
 
 ::: {#fig-dashboard layout-ncol=2}
-![Close-up of UI](touch-panel-close.png){#fig-close}
+![Close-up of UI](touch-panel-close.jpg){#fig-close}
 
 ![Accessible from desk](touch-panel-wide.jpg){#fig-wide}
 
