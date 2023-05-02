@@ -43,6 +43,9 @@ While there are quotes/art for every chapter the writing is incomplete
     - Skip to Chapter 1: @sec-y1
 - Chapters 15-30 contain only my notes from the session
     - Skip to Addendum: @sec-add
+
+<br>
+<center><b>Best viewed on a large screen</b></center>
 :::
 
 ## Foreword
