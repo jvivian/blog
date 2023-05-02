@@ -43,7 +43,7 @@ While there are quotes/art for every chapter the writing is incomplete
     - Skip to Chapter 1: @sec-y1
 - Chapters 15-30 contain only my notes from the session
     - Skip to Addendum: @sec-add
-- `Dark Mode` available in the top-right
+- `Dark Mode` toggle in the top-right
 :::
 
 ## Foreword
@@ -440,7 +440,7 @@ A piece of falling ash left a grey tear-like streak along its cheek as it danced
 He stood there for what felt like a silent eternity then tilted his head very slightly back and forth to one side in a sort of random walk -- as if attuning himself to a frequency only he could hear. 
 
 :::{.column-screen-inset-shaded}
-![](imgs/THE-HAND.jpg){group="gallery"}
+![](imgs/the_hand.jpg){group="gallery"}
 :::
 
 His head froze for a moment then slowly straightened -- almost visibly locking into a perfectly upright position and a smirking grin split his face. 
@@ -1008,7 +1008,7 @@ Below are all examples where the actual miniature from Kingdom Death itself was 
 ![The Hand model](imgs/models/The-Hand.JPG){#fig-mini group='mini'}
 :::
 ::: {.g-col-6}
-![The Hand](imgs/The-hand.jpg){#fig-hanno group='mini'}
+![The Hand](imgs/the_hand.jpg){#fig-hanno group='mini'}
 :::
 :::
 
@@ -1035,7 +1035,7 @@ Below are all examples where the actual miniature from Kingdom Death itself was 
 ![Lion God model](imgs/models/lion-god.png){#fig-mini group='mini'}
 :::
 ::: {.g-col-6}
-![Lion God - Absolutely disgusting, one of my favorites](imgs/Lion-God.jpg){#fig-hanno group='mini'}
+![Lion God - ew](imgs/Lion-God.jpg){#fig-hanno group='mini'}
 :::
 :::
 
