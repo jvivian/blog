@@ -501,7 +501,6 @@ As is usually the case, things could have been much worse. All four ~~blood ba~~
 
 Before the shallow graves could be dug, the `Lion Knight` awoke to continue the revelry. **Sir David Attenborough** filled the role of Cupid and shot a Clawhead arrow straight into his heart knocking him to the stone ground. **Margaret Howe** and **Amelia Earhart** then proceeded to beat the absolute shit out of this wannabe theatre kid furry. Using some `Gloom-coated Arrow` trickery, a special `death blow` was delivered by **Sir David Attenborough** who, by wearing the `Hideous Disguise`, became an `Ageless Apprentice`. 
 
-
 The settlement proceeded to mourn the loss of their two new friends with a rowdy celebration that left the settlement with four glorious new spartan children to take up the mantle.
 
 ## Year 14: $10^9$ Lion
@@ -834,88 +833,94 @@ Undecided on epilogue atm
 It always takes longer than you expect,<br>
 even when you take into account Hofstadter's Law.
 
-References for quotes found at the start of each chapter
+References (mostly) for quotes found at the start of each chapter
 
 - Foreword
     - Paraphrased quote by Henry Van Dyke
 - Chapter 0 
-    -  _Discourse on the Method_ - Rene Descartes
+    -  _Discourse on the Method_ -- Rene Descartes
 - Chapter 1
-    - _Left to Die_ - Death
+    - _Left to Die_ -- Death
+    - _Mathesar_ -- Galaxy Quest
 - Chapter 2
-    -  _Harm_ - Humanity's Last Breath
+    -  _Harm_ -- Humanity's Last Breath
 - Chapter 3
-    -  _We've Been Here Before_ - Warforged
+    -  _We've Been Here Before_ -- Warforged
     - [How the world discovered X-rays](https://www.pbs.org/newshour/health/i-have-seen-my-death-how-the-world-discovered-the-x-ray)
+    - _The Making of the Atomic Bomb_ -- Richard Rhodes
+    - _Mac_ -- It's Always Sunny in Philadelphia
 - Chapter 4
-    - _Earthless_ - Humanity's Last Breath
+    - _Earthless_ -- Humanity's Last Breath
 - Chapter 5
-    - _Regurgitate_ - Warforged
+    - _Regurgitate_ -- Warforged
 - Chapter 6
-    - _Beneath the Forest Floor_ - Warforged
+    - _Beneath the Forest Floor_ -- Warforged
 - Chapter 7
     - _Settlement Intelligencia_
 - Chapter 8
-    - _The Mountain Top_ - Black Crown Initiate
+    - _The Mountain Top_ -- Black Crown Initiate
+    - [99942 Apophis](https://en.wikipedia.org/wiki/99942_Apophis)
 - Chapter 9
-    -  _Old Friend_ - Warforged
+    -  _Old Friend_ -- Warforged
+    - [Argyle showed up in multiple campaigns for no real reason](https://strangerthings.fandom.com/wiki/Argyle)
 - Chapter 10
-    - _Left to Die_ - Death
+    - _Left to Die_ -- Death
 - Chapter 11
-    - _The Court of the Crimson King_ - King Crimson
+    - _The Court of the Crimson King_ -- King Crimson
 - Chapter 12
-    - _Turn! Turn! Turn!_ - The Byrds
+    - _Turn! Turn! Turn!_ -- The Byrds
+    - [The Golem of Prague](https://en.wikipedia.org/wiki/Golem)
 - Chapter 13
-    - _The Lion, the Witch, and the Wardrobe_ - C.S. Lewis
+    - _The Lion, the Witch, and the Wardrobe_ -- C.S. Lewis
 - Chapter 14
-    - _Cygnus....Vismund Cygnus_ - The Mars Volta
+    - _Cygnus....Vismund Cygnus_ -- The Mars Volta
 - Chapter 15
-    - _Crop Killer_ - Slugdge
+    - _Crop Killer_ -- Slugdge
 - Chapter 16
-    - _Lord of the Rings_ - J.R.R. Tolkien
+    - _Lord of the Rings_ -- J.R.R. Tolkien
 - Chapter 17
     - Paraphrased quote by Epicurus
 - Chapter 18
-    - _The Carbon Stampede_ - Cattle Decapitation
+    - _The Carbon Stampede_ -- Cattle Decapitation
 - Chapter 19
-    - _Charlie and the Chocolate Factory_ - Roald Dahl
+    - _Charlie and the Chocolate Factory_ -- Roald Dahl
 - Chapter 20
     - Paraphrased quote by Hippocrates
 - Chapter 21
-    - _Swim to the Moon_ - Between the Buried and Me
+    - _Swim to the Moon_ -- Between the Buried and Me
 - Chapter 22
     - Man moments before being stabbed 
 - Chapter 23
-    - _The Second Coming_ – William Butler Yeats
+    - _The Second Coming_ -– William Butler Yeats
 - Chapter 24
-    - _Graal_ - Ne Obliviscarsis
+    - _Graal_ -- Ne Obliviscarsis
 - Chapter 25
-    - _Alpha Centurai_ - Commissioner Pravin Lal
+    - _Alpha Centurai_ -- Commissioner Pravin Lal
 - Chapter 26
-    - _From Exile to Exhaltation_ - Inferi
+    - _From Exile to Exhaltation_ -- Inferi
 - Chapter 27
-    - _Usurpation_ - Hath
+    - _Usurpation_ -- Hath
 - Chapter 28
-    - _Nightfall Came_ - Warforged
+    - _Nightfall Came_ -- Warforged
 - Chapter 29
-    - _Capricorn/Agoratopia_ - Rivers of Nihil
+    - _Capricorn/Agoratopia_ -- Rivers of Nihil
 - Chapter 30
-    - _Credo Omnissiah_ - Adeptus Mechanicus
+    - _Credo Omnissiah_ -- Adeptus Mechanicus
 - Addendum 
     - References
-        - _Gödel, Escher, Bach: An Eternal Golden Braid_ - Douglas Hofstadter
+        - _Gödel, Escher, Bach: An Eternal Golden Braid_ -- Douglas Hofstadter
     - Artwork
-        - _Autotheism Movement III: Deconsecrate_ - The Faceless
+        - _Autotheism Movement III: Deconsecrate_ -- The Faceless
     - Tools and Versioning
-        - _Right in Two_ - Tool 
+        - _Right in Two_ -- Tool 
     - Mini-based Gallery
-        - _Gallery of Thrills_ - The Number Twelve Looks Like You
+        - _Gallery of Thrills_ -- The Number Twelve Looks Like You
     - B-sides and Rarities
-        - _Change (In the House of Flies)_ - Deftones
+        - _Change (In the House of Flies)_ -- Deftones
     - 40k Chaos Nurgle Kitbash
-        - _No Gods but Our Flesh_ - Inferi
+        - _No Gods but Our Flesh_ -- Inferi
     - Summary Statistics
-        - _Fundamentals of MaxEnt in data analysis_ - Skilling, J. (1991). 
+        - _Fundamentals of MaxEnt in data analysis_ -- Skilling, J. (1991). 
     - Acknowledgements
         - Quote by Carl Sagan
 
@@ -1184,6 +1189,7 @@ to look death in the eye and to be grateful every day<br>
 for the brief but magnificent opportunity that life provides
 
 - **David Vivian** -- For always being down to edit my denisovan writing and being a bro I can jam with
+- **Poots and Co.** -- There is no Kingdom without the Creator. Thanks for existing in the spacetime as me
 - **FISTOs** -- Couldn't do it without the boys
 - **Tyler Reed, Preston Frasier** -- Music is one of the most important things in my life and I'm grateful for those I can connect with about music that makes most people feel physically ill. Thanks for giving me the opportunity to bang the drum loud.
     - Reed's project: [Deiphage](https://deiphage-war.bandcamp.com/album/nuclear-cavalry)
