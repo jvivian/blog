@@ -839,6 +839,8 @@ References (mostly) for quotes found at the start of each chapter
     - Paraphrased quote by Henry Van Dyke
 - Chapter 0 
     -  _Discourse on the Method_ -- Rene Descartes
+    - [_The Ghost in The Machine_](https://youtu.be/e3K5UxWRRuY) -- Joscha Bach
+    - _The Wheel of Time_ -- Robert Jordan
 - Chapter 1
     - _Left to Die_ -- Death
     - _Mathesar_ -- Galaxy Quest
