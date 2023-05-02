@@ -1,0 +1,39 @@
+Year,Monster,Level,SpecialShowdown,Deaths
+0,White Lion,0,False,1
+1,White Lion,1,False,0
+2,White Lion,1,False,0
+3,White Lion,1,False,0
+4,The Butcher,1,False,0
+5,White Lion,1,False,0
+6,White Lion,2,False,0
+7,White Lion,2,False,0
+8,White Lion,2,False,0
+8,Lion Knight,1,True,0
+9,Antelope,2,False,0
+9,Slenderman,1,True,2
+10,Antelope,2,False,4
+11,Antelope,1,False,0
+11,The Hand,1,True,4
+12,White Lion,2,False,0
+13,The Hand,1,False,0
+13,Lion Knight,2,True,0
+14,Gigalion,1,False,0
+15,The Phoneix,1,False,0
+16,White Lion,1,False,0
+16,The Butcher,2,True,0
+17,The Phoenix,1,False,0
+17,Lion Knight,3,True,1
+18,Gigalion,2,False,0
+19,Slenderman,2,False,0
+20,Gigalion,2,False,0
+21,Gigalion,2,False,0
+22,Dung Beetle Knight,1,False,0
+23,The Butcher,3,False,4
+24,The Watcher,1,False,1
+25,Antelope,3,False,0
+26,Dung Beetle Knight,3,False,2
+27,Gigalion,3,False,0
+27,Lion Knight,3,True,0
+28,Slenderman,3,False,0
+29,Lion God,3,False,3
+30,Gold Smoke Knight,666,True,16

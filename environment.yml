@@ -1,10 +1,16 @@
 name: blog
 channels:
-  - default
-  - fastai
+  - defaults
+  - conda-forge
 dependencies:
   - python=3.10
-  - nbdev
   - plotly
   - jupyter
+  - black
+  - polars
+  - statsmodels
+  - pyarrow
+  - pandas
+  - scipy
+  - numpy
 
