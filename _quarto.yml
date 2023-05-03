@@ -17,8 +17,7 @@ website:
         href: https://www.linkedin.com/in/john-vivian-913b41a6/
 format:
   html:
-    theme: cyborg
+    theme: 
+      light: simplex
+      dark: cyborg
     css: styles.css
-
-
-

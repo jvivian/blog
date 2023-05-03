@@ -46,6 +46,7 @@ While there are quotes/art for every chapter the writing is incomplete
 
 <br>
 <center><b>Best viewed on a large screen</b></center>
+<center><b>Dark Mode toggle available in navbar</b></center>
 :::
 
 ## Foreword
