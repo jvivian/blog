@@ -211,7 +211,7 @@ After many hours of introspection and discussion the settlement comes to a conse
 > All at once, the Lights! <br>
 Carried from a distance, Shot to me, <br>
 Flowing through me, Flashing before me, <br>
-Violent, Convulsing, Bright <br>
+Violent, Convulsing, Bright <br><br>
 I was haggard but unworn, <br>
 I was youthful but bitter, <br>
 I was ignorant, I was worldly, <br>
@@ -328,7 +328,7 @@ The hunt was a breeze thanks to **Emily Dickinson**, who showed the settlement w
 > There's a place within the mind<br>
 colored splendor there, you'll remember where<br>
 A scene where beauty used to shine<br>
-never yours or mine, faded, broken lines<br>
+never yours or mine, faded, broken lines<br><br>
 Only traces are left behind<br>
 Sorry, silent stares, breathing poisoned air<br>
 Children shrieking towards the sky<br>
@@ -419,7 +419,7 @@ Until only sweet sweet **Argyle** -- He Who Transcends -- remained. The repeated
 > The rusted chains of prison moons <br>
 Are shattered by the sun<br>
 I walk a road, horizons change<br>
-The tournament's begun<br>
+The tournament's begun<br><br>
 The purple piper plays his tune <br>
 The choir softly sing<br>
 Three lullabies in an ancient tongue<br>
@@ -591,9 +591,9 @@ Decided to work on the Warlord gear set, crafting the phoenix chest and antelope
 > There's no earthly way of knowing<br>
 Which direction we are going<br>
 There's no knowing where we're rowing<br>
-Or which way the river's flowing<br>
+Or which way the river's flowing<br><br>
 Is it raining? is it snowing?<br>
-Is a hurricane a-blowing?<br>
+Is a hurricane a-blowing?<br><br>
 Not a speck of light is showing<br>
 So the danger must be growing<br>
 Are the fires of Hell a-glowing?<br>
@@ -676,7 +676,7 @@ Built the lantern glaive and panic-built as much shit as possible in preparation
 > Sorrow, the path to the end<br>
 Faceless horizon<br>
 Where silence listens to silence<br>
-Rippling call, of the holy grail<br>
+Rippling call, of the holy grail<br><br>
 Gorge the blood of God<br>
 Blood of God of Self<br>
 Purge all poison<br>
@@ -727,9 +727,8 @@ With limited options, the sruvivors go after a dung bettle knight... not an easy
 > In the pantheon of old<br>
 I'll find my place<br>
 I'll ascend to snuff the light<br>
-Usurping the fire<br>
-
-> What rises may fade<br>
+Usurping the fire<br><br>
+What rises may fade<br>
 The spread of the dark begins<br>
 Seeking its vessels<br>
 The flame would be its bane<br>
@@ -785,10 +784,10 @@ Secret meeting part 2! Natalie portman got a bunch of shimmering poo shoved down
 :::
 
 ## Year 30: Gold Smoke Knight
-> There is no truth in flesh, only betrayal. <br>
-There is no strength in flesh, only weakness. <br>
-There is no constancy in flesh, only decay. <br>
-There is no certainty in flesh but death. 
+> There is no truth in flesh, only betrayal<br>
+There is no strength in flesh, only weakness<br>
+There is no constancy in flesh, only decay<br>
+There is no certainty in flesh but death
 
 
 ::: {.callout-warning}
@@ -896,7 +895,7 @@ References (mostly) for quotes found at the start of each chapter
 - Chapter 22
     - Man moments before being stabbed 
 - Chapter 23
-    - _The Second Coming_ -– William Butler Yeats
+    - _The Second Coming_ -- William Butler Yeats
 - Chapter 24
     - _Graal_ -- Ne Obliviscarsis
 - Chapter 25
@@ -1194,7 +1193,7 @@ to look death in the eye and to be grateful every day<br>
 for the brief but magnificent opportunity that life provides
 
 - **David Vivian** -- For always being down to edit my denisovan writing and being a bro I can jam with
-- **Poots and Co.** -- There is no Kingdom without the Creator. Thanks for existing in the spacetime as me
+- **Poots and Co.** -- There is no Kingdom without the Creator. Thanks for existing in the same spacetime as me
 - **FISTOs** -- Couldn't do it without the boys
 - **Tyler Reed, Preston Frasier** -- Music is one of the most important things in my life and I'm grateful for those I can connect with about music that makes most people feel physically ill. Thanks for giving me the opportunity to bang the drum loud.
     - Reed's project: [Deiphage](https://deiphage-war.bandcamp.com/album/nuclear-cavalry)
@@ -1211,7 +1210,7 @@ for the brief but magnificent opportunity that life provides
 ![Hey stop so lookin so cute in my kitchen](imgs/misc/warforged-2.JPG){#fig-war-2 group='war'}
 :::
 ::: {.g-col-4}
-![A mediocre drummer and Spencer Moore, drum legend](imgs/misc/bad_drummer_good_drummer.jpg){#fig-war-2 group='war'}
+![Some guy and Spencer Moore from Inferi](imgs/misc/bad_drummer_good_drummer.jpg){#fig-war-2 group='war'}
 :::
 :::
 
