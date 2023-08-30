@@ -18,6 +18,6 @@ website:
 format:
   html:
     theme: 
-      light: simplex
+      light: spacelab
       dark: cyborg
     css: styles.css
