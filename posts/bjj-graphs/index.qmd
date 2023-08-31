@@ -4,13 +4,13 @@ subtitle: ""
 author: "John Vivian"
 date: "2023-08-30"
 categories: [BJJ, Graphs]
-image: "pawdna.png"
+image: "cover-jv.jpg"
 format:
     html:
         toc: true
 ---
 
-> Depth-first ~~Search~~ (Butt) Scooch 
+> Depth-first S~~earch~~cooch
 
 ---
 
