@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Vivian">
+<meta name="dcterms.date" content="2023-08-31">
+
+<title>blog - Brazilian Jiu Jitsu concepts as graphs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jvivian.github.io" rel="" target=""><i class="bi bi-bookmarks" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jvivian" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&amp;hl=en&amp;authuser=1" rel="" target=""><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/john-vivian-913b41a6/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#concepts-as-graphs" id="toc-concepts-as-graphs" class="nav-link active" data-scroll-target="#concepts-as-graphs">Concepts as Graphs</a></li>
+  <li><a href="#graph-definitions-the-spaghetti-monster-cometh" id="toc-graph-definitions-the-spaghetti-monster-cometh" class="nav-link" data-scroll-target="#graph-definitions-the-spaghetti-monster-cometh">Graph Definitions: The Spaghetti Monster Cometh</a></li>
+  <li><a href="#subgraphs-and-the-library-of-babelerimbolos" id="toc-subgraphs-and-the-library-of-babelerimbolos" class="nav-link" data-scroll-target="#subgraphs-and-the-library-of-babelerimbolos">Subgraphs and The Library of B<del>abel</del>erimbolos</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#afterward" id="toc-afterward" class="nav-link" data-scroll-target="#afterward">Afterward</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#subgraph-code" id="toc-subgraph-code" class="nav-link" data-scroll-target="#subgraph-code">Subgraph code</a></li>
+  <li><a href="#cover-photo" id="toc-cover-photo" class="nav-link" data-scroll-target="#cover-photo">Cover Photo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Brazilian Jiu Jitsu concepts as graphs</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">BJJ</div>
+    <div class="quarto-category">Graphs</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Vivian </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 31, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<blockquote class="blockquote">
+<p>Depth-first <del>Search</del> Scooch</p>
+</blockquote>
+<div id="fig-video" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0geE0E0muKE?si=TO2fYaQdTt70l445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<figcaption class="figure-caption">Figure&nbsp;1: Demo - Defining a BJJ concept as a graph then combining it with other concepts/graphs</figcaption>
+</figure>
+</div>
+<hr>
+<p>Everybody loves <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)">graphs</a> – if you are not “everybody”, see sidebar ➡️ – and they seem an ideal data structure for representing concepts in Brazilian Jiu Jitsu (BJJ). I think of BJJ as a loose physical analogue to chess which has several <a href="https://www.chessroots.com/">graph-based explorers</a>. While chess explorers use directed acyclic graphs, BJJ is more intuitively modeled as a cyclic graph due to state repetition. For example, one representation defines <em>nodes</em> as positions and <em>edges</em> as transitions/moves.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pawdna.png" class="img-fluid figure-img" alt="Don't like graphs? Keep walkin..."></p>
+<figcaption class="figure-caption">Node two ways about it</figcaption>
+</figure>
+</div>
+</div></div><p>Can this representation aid our study of BJJ?</p>
+<p>I explored a few approaches: Drawing them on a tablet, <code>Draw.io</code> flowcharts, using <a href="https://obsidian.md/">Obsidian</a> notes with links as directed edges, <code>Excalidraw</code>, and others…, but failed to meet some desired criteria:</p>
+<ul>
+<li>Graphs have a portable definition - e.g.&nbsp;plaintext, not hand-drawn or proprietary format</li>
+<li>Easy to generate larger graphs from existing graphs</li>
+<li>Integrates into existing note-taking tool of choice (Obsidian)</li>
+</ul>
+<section id="concepts-as-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-as-graphs">Concepts as Graphs</h2>
+<blockquote class="blockquote">
+<p>It’s All… Connected<br> &nbsp;&nbsp;&nbsp;&nbsp;<em>Humanity’s Last Breath - Passage</em></p>
+</blockquote>
+<p>We can represent an arbitrary concept – such as <em>Maintaining Full Mount</em> or <em>Triangle from De La Riva</em> – as a <a href="https://mermaid.js.org/">Mermaid</a> diagram inside of <a href="https://obsidian.md/">Obsidian</a>. These discrete concepts can then act as new nodes within Obsidian’s built-in <code>Canvas</code> note to produce larger meta-graphs representing game plans, focus areas, etc…</p>
+<div id="fig-armbar" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+SMount((S-Mount)) --&gt;|grab arm| ArmBar[Arm Bar]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;2: A basic example with two node types, position (circle) and attack (square) connected by a movement (edge)</figcaption>
+</figure>
+</div>
+<p>In plaintext, this is written as</p>
+<div id="fig-armbar-graph" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<pre><code>flowchart LR
+
+SMount((S-Mount)) --&gt;|grab arm| ArmBar[Arm Bar]</code></pre>
+<figcaption class="figure-caption">Figure&nbsp;3: Mermaid DSL definition of the armbar diagram</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Trouble seeing figures?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try “Dark Mode”: Toggle in the top right of the navbar</p>
+</div>
+</div>
+</section>
+<section id="graph-definitions-the-spaghetti-monster-cometh" class="level2">
+<h2 class="anchored" data-anchor-id="graph-definitions-the-spaghetti-monster-cometh">Graph Definitions: The Spaghetti Monster Cometh</h2>
+<blockquote class="blockquote">
+<p>I have found the truth and it is made of Pasta<br> &nbsp;&nbsp;&nbsp;&nbsp;<em>COTFSM</em></p>
+</blockquote>
+<p>As mentioned, an intuitive representation is a cyclic graph with <em>nodes</em> as positions and <em>edges</em> as moves/submissions/sweeps. Unfortunately, this more formal definition tends to produce an obfuscated graph. Below is an example of <em>Maintaining Full Mount</em> with two edge types: dotted edges represent opponent movements and solid edges represent responses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="formal.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Formal definition with <em>nodes</em> as static positions and <em>edges</em> as movements.</figcaption>
+</figure>
+</div>
+<p>This definition is somewhat tedious to generate given the myriad of side-variations that stem from a given canonical position. Collapsing variations results in information loss but requiring each node define a specific position tends to produce an unaesthetic mess.</p>
+</section>
+<section id="subgraphs-and-the-library-of-babelerimbolos" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="subgraphs-and-the-library-of-babelerimbolos">Subgraphs and The Library of B<del>abel</del>erimbolos</h2>
+<blockquote class="blockquote">
+<p>The library will endure; it is the universe<br> &nbsp;&nbsp;&nbsp;&nbsp;<em>The Library of Babel</em></p>
+</blockquote>
+<p>Mermaid provides several dfferent node/edge/arrow types which can be used along with an alternative definiton to make the graph more concise. One approach is to use <em>subgraphs</em>, which allow us to nest subsections of the graph, resulting in a denser output with fewer edges.</p>
+<p>In this example, opponent moves are now represented as edges and our reaction are denoted by a separate node shape (rounded square). These reactions are nested within a respective subgraph that denotes the terminal position of the sequence.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="subgraph.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Use subgraphs for a denser representation</figcaption>
+</figure>
+</div>
+<p>The other benefit of this approach is this graph now represents a potential modular component! A typical graph will likely have a left-most starting position and one or more possible terminal positions, such as our previous example with <em>High Mount</em> and <em>Maintain Mount</em>. But how are these separate graphs combined across Obsidian notes?</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="yo-dawg.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Rather considerate, thank you Xzibit</figcaption>
+</figure>
+</div>
+</div></div><p>Obsidian’s <code>Canvas</code> allows any note to be inserted into a larger space which can then connect to other concepts into larger meta-graphs: representing anything from game plans to study areas. As more concepts are defined a “library” of ideas is built – each cleanly contained in their own note note, which when edited is conveniently propogated to any canvas referencing that note.</p>
+<p>Below is a toy example where the previously defined subgraph previously defined is connected to some other possible concepts (which the author has lazily left undefined).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="canvas.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Building a meta-graph in Obsidian’s Canvas</figcaption>
+</figure>
+</div>
+<p>In addition to information retention – the goal of most note-taking – this approach should improve relating concepts learned at noncontiguous periods and assist in assembling systems that capitialize on curated experience.</p>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<blockquote class="blockquote">
+<p>For now, what is important is not finding the answer, but looking for it <br> &nbsp;&nbsp;&nbsp;&nbsp;<em>Gödel, Escher, Bach: An Eternal Golden Braid</em></p>
+</blockquote>
+<section id="afterward" class="level2">
+<h2 class="anchored" data-anchor-id="afterward">Afterward</h2>
+<p>I had been interested in Jiu Jitsu since grad school when a guy on the UCSC Genome Browser team invited me to a trial class, but I was <em>waaay</em> too broke at the time to even consider it. Serendipitiously, I moved last summer and on one of my runs I saw a BJJ gym was close by and convinced my wife to take a trial class. I was humbled by how difficult it was – and it hadn’t looked easy to begin with.</p>
+<p>BJJ is difficult for me: I’m stubborn and hold bad grips, I have poor breath control, my lower ribs enjoy dislocating, and I’m over 30 which is borderline ancient for a combat sport.</p>
+<p>And yet… I really enjoy it. Aside from the challenge it also forces me to prioritize my health and diet in order to train effectively. But most of my enjoyment stems from the generosity and kindness of the people I am fortunate enough to train with. I am grateful to them as this experience is a source of happiness in my life.</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li>Special thanks to Head Instructor Professor Jeremy Espiritu</li>
+<li>Thank you to Coach Carlos Contreras and the Noon Goons</li>
+<li>Thank you to my wonderful wife who puts up with my pained groans and dubious choice of hobbies. She’s amazing and not just because she’s a doctor who is also patient and understanding and so won’t be upset that I might need my ear drained later today… (wish me luck)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="goons.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The author with some fellow Noon Goons</figcaption>
+</figure>
+</div>
+</section>
+<section id="subgraph-code" class="level2">
+<h2 class="anchored" data-anchor-id="subgraph-code">Subgraph code</h2>
+<pre><code>flowchart LR
+
+subgraph M[Maintain Mount]
+    direction LR
+    Underhook(Wet noodle slurp)
+    Waist(Grab the Plum and hip down hard) 
+    WidePush(Swim like Phelps)
+    ClosePush(Derisive arm shove)
+end
+
+subgraph HM[High Mount]
+    direction LR
+    Overhook[Head opposite side &amp; spiderwalk] 
+    SBBL[Shmoov on up, hand-edge in throat, halloween cat] 
+    Knees[Yank arm &amp; slide knee up 1-by-1]
+end
+
+FM((Full Mount)) ==&gt; |Overhook| Overhook
+FM --&gt; |Underhook| Underhook
+FM ==&gt; |Seat Belt / Body Lock| SBBL
+FM ==&gt; |Knees| Knees
+FM --&gt; |Waist| Waist
+FM --&gt; |Wide Pushup| WidePush
+FM --&gt; |Close Pushup| ClosePush</code></pre>
+</section>
+<section id="cover-photo" class="level2">
+<h2 class="anchored" data-anchor-id="cover-photo">Cover Photo</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover-jv.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption"><em>Contemplation</em> - John Vivian</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div id="quarto-copyright" class="quarto-appendix-contents"><div>John Vivian - 2023 - All Rights Reserved</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
