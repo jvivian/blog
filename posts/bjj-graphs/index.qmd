@@ -2,7 +2,7 @@
 title: "Brazilian Jiu Jitsu concepts as graphs"
 subtitle: ""
 author: "John Vivian"
-date: "2023-08-30"
+date: "2023-08-31"
 categories: [BJJ, Graphs]
 image: "cover-jv.jpg"
 format:
@@ -10,17 +10,17 @@ format:
         toc: true
 ---
 
-> Depth-first S~~earch~~cooch
-
----
+> Depth-first ~~Search~~ Scooch
 
 ::: {#fig-video}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0geE0E0muKE?si=TO2fYaQdTt70l445" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Video Demo - Defining a BJJ concept as a graph and then combining it with other concepts
+Demo - Defining a BJJ concept as a graph then combining it with other concepts/graphs
 :::
 
-Everybody loves [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) -- if you are not "everybody", see sidebar ➡️ -- and they seem an ideal data structure for representing concepts in Brazilian Jiu Jitsu (BJJ). I think of BJJ as a loose physical analogue to chess which has several [graph-based explorers](https://www.chessroots.com/). While Chess explorers use directed acyclic graphs, BJJ is more intuitively modeled as a cyclic graph due to state repetition. For example, one could represent _nodes_ and _edges_ as positions and transitions/moves respectively.
+---
+
+Everybody loves [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) -- if you are not "everybody", see sidebar ➡️ -- and they seem an ideal data structure for representing concepts in Brazilian Jiu Jitsu (BJJ). I think of BJJ as a loose physical analogue to chess which has several [graph-based explorers](https://www.chessroots.com/). While chess explorers use directed acyclic graphs, BJJ is more intuitively modeled as a cyclic graph due to state repetition. For example, one representation defines _nodes_ as positions and _edges_ as transitions/moves.
 
 ::: {.column-margin}
 ![Node two ways about it](pawdna.png){fig-alt="Don't like graphs? Keep walkin..."}
@@ -35,7 +35,7 @@ I explored a few approaches: Drawing them on a tablet, `Draw.io` flowcharts, usi
 - Integrates into existing note-taking tool of choice (Obsidian)
 
 ## Concepts as Graphs
-> It's All<br>Connected<br>
+> It's All... Connected<br>
 &nbsp;&nbsp;&nbsp;&nbsp;_Humanity's Last Breath - Passage_
 
 We can represent an arbitrary concept -- such as _Maintaining Full Mount_ or _Triangle from De La Riva_ -- as a [Mermaid](https://mermaid.js.org/) diagram inside of [Obsidian](https://obsidian.md/). These discrete concepts can then act as new nodes within Obsidian's built-in `Canvas` note to produce larger meta-graphs representing game plans, focus areas, etc... 
@@ -86,7 +86,12 @@ In this example, opponent moves are now represented as edges and our reaction ar
 
 ![Use subgraphs for a denser representation](subgraph.png)
 
+
 The other benefit of this approach is this graph now represents a potential modular component! A typical graph will likely have a left-most starting position and one or more possible terminal positions, such as our previous example with _High Mount_ and _Maintain Mount_. But how are these separate graphs combined across Obsidian notes?
+
+::: {.column-margin}
+![Rather considerate, thank you Xzibit](yo-dawg.png)
+:::
 
 Obsidian's `Canvas` allows any note to be inserted into a larger space which can then connect to other concepts into larger meta-graphs: representing anything from game plans to study areas. As more concepts are defined a "library" of ideas is built -- each cleanly contained in their own note note, which when edited is conveniently propogated to any canvas referencing that note. 
 
@@ -101,16 +106,17 @@ In addition to information retention -- the goal of most note-taking -- this app
 &nbsp;&nbsp;&nbsp;&nbsp;_Gödel, Escher, Bach: An Eternal Golden Braid_
 
 ## Afterward
-I didn't plan on starting Jiu Jitsu when I moved last year in 2022. I had been interested since grad school when a guy on the UCSC Genome Browser team invited me to a trial class, but I was _waaay_ too broke at the time to even consider it. Serendipitiously, I saw a gym on a run exploring the area one day and decided to take a trial class with my wife. I was humbled by how much more difficult it was than it looked (and it didn't look easy to begin with).
+I had been interested in Jiu Jitsu since grad school when a guy on the UCSC Genome Browser team invited me to a trial class, but I was _waaay_ too broke at the time to even consider it. Serendipitiously, I moved last summer and on one of my runs I saw a BJJ gym was close by and convinced my wife to take a trial class. I was humbled by how difficult it was -- and it hadn't looked easy to begin with.
 
-I struggle with a lot in BJJ: I'm stubborn and hold bad grips, I have poor breath control, my ribs tend to pop out of place, and I'm over 30 which is borderline ancient for a combat sport.
+BJJ is difficult for me: I'm stubborn and hold bad grips, I have poor breath control, my lower ribs enjoy dislocating, and I'm over 30 which is borderline ancient for a combat sport.
 
-And yet... I really enjoy it. It is challenging and forces me to prioritize my health and diet in order to even be able to train effectively. But most of my enjoyment stems from the generosity and kindness of the people who I'm fortunate enough to train with. Thanks to them this experience is a source of happiness in my life, and for that I am grateful.
+And yet... I really enjoy it. Aside from the challenge it also forces me to prioritize my health and diet in order to train effectively. But most of my enjoyment stems from the generosity and kindness of the people I am fortunate enough to train with. I am grateful to them as this experience is a source of happiness in my life.
+
 
 ## Acknowledgments
 - Special thanks to Head Instructor Professor Jeremy Espiritu 
 - Thank you to Coach Carlos Contreras and the Noon Goons
-- Thank you to my wonderful wife who puts up with my pained groans and dubious choice of hobbies. She's amazing and not just because she's a doctor who is also very patient and understanding and so won't be upset that I might need my ear drained when she comes home later... (wish me luck)
+- Thank you to my wonderful wife who puts up with my pained groans and dubious choice of hobbies. She's amazing and not just because she's a doctor who is also patient and understanding and so won't be upset that I might need my ear drained later today... (wish me luck)
 
 ![The author with some fellow Noon Goons](goons.jpg)
 
@@ -142,3 +148,7 @@ FM --> |Waist| Waist
 FM --> |Wide Pushup| WidePush
 FM --> |Close Pushup| ClosePush
 ```
+
+## Cover Photo
+
+![_Contemplation_ - John Vivian](cover-jv.jpg)
