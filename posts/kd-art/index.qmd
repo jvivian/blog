@@ -1,0 +1,290 @@
+---
+title: "Kingdom Death Artwork"
+subtitle: "Physical Models as the Basis of Digital Art"
+author: "John Vivian"
+date: "2023-11-11"
+categories: [Digital Art]
+image: "the_hand.jpg"
+format: 
+    html:
+        toc: true
+filters:
+    - lightbox
+lightbox: auto
+title-block-banner: false
+---
+
+> The Ghost in the Machine
+
+::: {.callout-note}
+> Click images to full-screen images and arrow keys to cycle
+:::
+
+
+I made most of this artwork about ~8-9 months ago as part of an amateur writing series which I've written ~20 chapters of (out of 30) but only released the [prologue](https://github.com/jvivian/blog/tree/main/posts/kd-awake).
+
+Many illustrations are derived *directly* from the [Kingdom Death](https://build.kingdomdeath.com/) miniatures themselves (see @sec-mini) using `ControlNet` within Stable Diffusion. I most often used the `depth`, `lineart`, and `softedge` models within ControlNet as my starting point.
+
+::: grid
+::: g-col-6
+![Lion Knight Miniature](imgs/models/Lion-Knight.JPG){#fig-mini group="mini"}
+:::
+
+::: g-col-6
+![Several hours later](imgs/Lion-Knight-4k.jpg){#fig-hanno group="mini"}
+:::
+:::
+
+## Chapter Artwork
+> Ladies and gentlemen<br> Creatures of the night<br> Terrestrials that are extra, lend me your ears!<br> Would you like to be shocked and amazed?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_The Number Twelve Looks Like You - Gallery of Thrills_
+
+Artwork I created for each chapter. One per "year" in our Kingdom Death campaign. Each piece is titled after its respective chapter. Year 7 is missing because that is when the White Speaker arrived (if you've played you understand).
+
+::: grid
+::: g-col-6
+![0: Awake](imgs/ch00a-wide.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![1: Returning Survivors](imgs/ch01.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![2: Endless Screams](imgs/ch02-endless-screams-4k.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![3: Lights in the Sky](imgs/lights-in-the-sky.jpg){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![4: The Butcher](imgs/The-Butcher-4k.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![5: Hands of Head & Murder](imgs/ch05-b.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![6: Uninvited Guest](imgs/ch06.png){group="gallery"}
+:::
+
+::: g-col-6
+![8: Glowing Crater & Rumbling in the Dark](imgs/ch08.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![9: Forgotten Fear](imgs/ch09.png){group="gallery"}
+:::
+
+::: g-col-6
+![10: Antelo(o)p~~e~~s](imgs/ch10.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![11: Regal Visit](imgs/the_hand.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![12: Hooded Knight & Lanterns in the Sky](imgs/ch12.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![13: The Lion, The Hand, and the Silver City](imgs/ch13-b.png){group="gallery"}
+:::
+
+::: g-col-6
+![14: 10^9 Lion](imgs/ch14.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![15: (B) The Decade of Statues](imgs/Time-Phoenix-4k.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![16: The Butcher & The Hooded Knight Return](imgs/ch16.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![17: Places, Everyone](imgs/Lion-Knight-4k.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![18: An Ocular Assessment, A Clearing of Passage](imgs/warlord-armor.jpg){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![19: Slenderman II: Electric Boogaloo & The Triatholon of Death](imgs/triathalon-redone.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![20: Watched](imgs/ch20.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![21: Foul Play](imgs/ch21.png){group="gallery"}
+:::
+
+::: g-col-6
+![22: Cat Scratch Fever](imgs/ch22.png){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![23: The Butcher III: Hack City](imgs/Butcher-HackCityh.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![24: Hottest Hands & Darkest Nights](imgs/Watcher-redo.jpg){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![25: The Secret Meeting](imgs/00005.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![26: Acid Rain](imgs/DBK.jpg){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![27: Murder She Wrote](imgs/horripilation.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![28: Slenderman III: Catching the Boogeyman](imgs/slendyboi.jpg){group="gallery"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![29: Secret Meeting II: Not-So-Secret](imgs/Lion-God.jpg){group="gallery"}
+:::
+
+::: g-col-6
+![30: Gold Smoke Knight](imgs/GSK-4k-upscaled.jpg){group="gallery"}
+:::
+:::
+
+## Miniature-based Gallery {#sec-mini}
+> Bow your head in awe of our creation<br> Bring closer his withered throne to earth<br> Lowering paradise within reach<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_The Faceless - Autotheism Movement III: Deconsecrate_
+
+
+
+Below are all examples where the actual miniature from Kingdom Death itself was used as the basis for building the artwork, typically via `ControlNet`.
+
+
+::: grid
+::: g-col-6
+![The Butcher model](imgs/models/The_Butcher.JPG){group="mini"}
+:::
+
+::: g-col-6
+![The Butcher](imgs/The-Butcher-4k.jpg){group="mini"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![The Hand model](imgs/models/The-Hand.JPG){group="mini"}
+:::
+
+::: g-col-6
+![The Hand](imgs/the_hand.jpg){group="mini"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![Slenderman model](imgs/models/slenderman.png){group="mini"}
+:::
+
+::: g-col-6
+![Slenderman](imgs/slendyboi.jpg){group="mini"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![The Watcher model](imgs/models/watcher-uncropped.JPG){group="mini"}
+:::
+
+::: g-col-6
+![The Watcher](imgs/Watcher-redo.jpg){group="mini"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![Lion God model](imgs/models/lion-god.png){group="mini"}
+:::
+
+::: g-col-6
+![Lion God - ew](imgs/Lion-God.jpg){group="mini"}
+:::
+:::
+
+::: grid
+::: g-col-6
+![Gold Smoke Knight model](imgs/models/gsk.JPG){group="mini"}
+:::
+
+::: g-col-6
+![Gold Smoke Knight](imgs/GSK-4k-upscaled.jpg){group="mini"}
+:::
+:::
+
+
+## Tools & Versioning
+> Silly monkeys<br> Give them thumbs, they make a club<br> To beat their brother down<br> How they've survived so misguided is a mystery
+
+::: {.callout-note collapse="true"}
+## An editorial the author wrote to make himself feel better
+All art was created using a computer, several dozen pieces of software, and several hundred more hours than expected.
+
+While I understand the deeply unsettling nature of AI, automation, and vast potential for artist abuse, these tools provided me an opportunity to explore visual media in a way I would not be able to otherwise given my technical limitations within the area. I have spent thousands of hours practicing to be a mediocre tech death drummer and several thousand other hours wasted in grad school, not learning to draw. Tools like stable diffusion allow me to combine visual art with the other thing in life I truly enjoy: swearing at the computer and package dependency hell.
+
+I think of an interview many years ago with Hans Zimmer that surprised me. He said he wasn't really "fluent" in any particular instrument and that he is appreciative music made its way onto computers or he would never have had the opportunity to explore a passion that brings him and many others so much joy.
+:::
+
+-   Stable Diffusion 1.5
+-   Photoshop / Photopea
+-   A1111 WebUI
+    - ControlNet
+    - Ultimate SD Upscale
+    - Segment Anything
+    - Checkpoint Merger
+    - Extras (for background removal)
+    - Infinite Image Browser
+    - Infinite Grid Generator
+    - canvas-zoom
+-   `xformers` - 0.0.18 (monkey-patched version to work with `PyTorch` 2.0)
+-   `torch` - 2.0.0+cu118 (not default for A1111, look up how to do this)
+-   `cuDNN 8.7` (you will have to do this manually)
+-   Switched from `--xformers` to `--opt-sdp-attention --opt-channelslast`
