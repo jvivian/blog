@@ -27,11 +27,11 @@ Many illustrations are derived *directly* from the [Kingdom Death](https://build
 
 ::: grid
 ::: g-col-6
-![Lion Knight Miniature](imgs/models/Lion-Knight.JPG){#fig-mini group="mini"}
+![Lion Knight Miniature](imgs/models/Lion-Knight.JPG){#fig-mini group="demo"}
 :::
 
 ::: g-col-6
-![Several hours later](imgs/Lion-Knight-4k.jpg){#fig-hanno group="mini"}
+![Several hours later](imgs/Lion-Knight-4k.jpg){#fig-hanno group="demo"}
 :::
 :::
 
