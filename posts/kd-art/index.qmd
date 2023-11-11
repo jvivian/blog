@@ -262,7 +262,7 @@ Below are all examples where the actual miniature from Kingdom Death itself was 
 
 
 ## Tools & Versioning
-> Silly monkeys<br> Give them thumbs, they make a club<br> To beat their brother down<br> How they've survived so misguided is a mystery
+> Silly monkeys<br> Give them thumbs, they make a club<br> To beat their brother down<br> How they've survived so misguided is a mystery<br>&nbsp;&nbsp;&nbsp;&nbsp;_Tool - Right in Two_
 
 ::: {.callout-note collapse="true"}
 ## An editorial the author wrote to make himself feel better
