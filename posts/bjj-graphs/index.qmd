@@ -1,5 +1,5 @@
 ---
-title: "Brazilian Jiu Jitsu concepts as graphs"
+title: "Brazilian Jiu Jitsu Concepts as Graphs"
 subtitle: ""
 author: "John Vivian"
 date: "2023-08-31"
