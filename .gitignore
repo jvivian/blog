@@ -1,4 +1,4 @@
-docs/
+_docs/
 _proc/
 
 *.bak
@@ -153,3 +153,4 @@ checklink/cookies.txt
 /.quarto/
 
 /.luarc.json
+docs/index.html
