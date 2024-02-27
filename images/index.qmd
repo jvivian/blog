@@ -1,0 +1,286 @@
+---
+title: "Kingdom Death"
+subtitle: "_Settlement Intelligencia_: Chapters I - X"
+author: "John Vivian"
+date: "2023-05-02"
+categories: [Writing, Digital Art]
+# image: "ch00a-wide.jpg"
+format: 
+    html:
+        toc: true
+filters:
+    - lightbox
+lightbox: auto
+title-block-banner: false
+---
+
+::: {.callout-warning collapse="true"}
+## This is a work in progress
+
+While there are quotes/art for every chapter the writing is incomplete
+
+-  Prologue: [Kingdom Death: Awake](https://jvivian.github.io/blog/posts/kd-awake/)
+    - The prologue is written in a drastically different style from the rest of the work -- which is still gruesome but humorous. By contrast, the prologue is inspired by one of my favorite hard sci-fi books *Blindsight* by Peter Watts, whose narrative style is... admittedly confusing and makes use of abstract imagery.
+-   Chapters 11-15 are written but need editing
+-   Chapters 16-30 are still a collection of notes
+
+:::
+
+::: {.callout}
+
+<center><b>Best viewed on a large screen</b></center>
+
+<center><b>Dark Mode toggle available in navbar</b></center>
+:::
+
+::: {.callout-note collapse="true"}
+## Foreward 
+
+> How quiet the forest would be<br> if only the most beautiful bird sang
+
+One day as a young lad sailing the high seas of the early internet, I came across a comic that depicted a zany, bizarre, and humorous story about some dwarves who lived under the ground and suffered a series of misfortunes before all dying in some horrible way. I was immediately entranced and stunned to find out this story was based on video game, one with *emergent gameplay* which meant the incredible tale had not been explicitly hard-coded. It was from a game I was surprised I had never heard about called `Dwarf Fortress`
+
+"Surely this must be the greatest game ever made! I must immediately find and play it!"
+
+![13 year old me: "What the fuck is this?"](imgs/dorfs.png)
+
+My tiny child mind was too stupid to handle ASCII graphics so I never even attempted to play the game, but I never forgot how incredible it was to read about such a ludicrous adventure that somehow made me care about these dwarves being hurt or dying while doing whatever it is dwarves do. Mining and drinking mostly.
+
+20 years later, after a [Kingdom Death](https://kingdomdeath.com/) campaign where I doodled some random pictures and notes from the campaign, I had the idea to take a set of more detailed notes for the next campaign and compile it into a short little summary to share with the others as a going away gift when they moved later this year. 2-3 pages tops.
+
+Then, in the middle of the campaign, I had the idea to use Midjourney, a text-to-image generation tool my wife had shown me, to make maybe 2-3 cool pictures I could include with the summary of the campaign. That would really step it up a notch. AI ended up working on this, in some capacity, every day for almost three months (and am still working on it...). I got obsessed with new features in tools like Stable Diffusion, which offer much more control than commercial tools like Midjourney.
+
+![And now for something, completely different](imgs/mpythong.jpg)
+
+:::
+
+------------------------------------------------------------------------
+
+## Year 1: Returning Survivors {#sec-y1}
+
+> Legs blown off, all hope is lost<br> A human life is what it cost<br> Others follow close behind<br> A real adventure they will find
+
+<br><br> *scritch*, *scratch* <br>
+
+Well, it's not the *worst* job in the settlement. And I can write about pretty much anything and it looks like I'm diligently working.
+
+Heh, ok -- maybe not so bad. *Curator of the Historical Documents* has a nice ring to it. Too bad that's not my title and nobody will call me that, but hey -- something to work towards. Goals! People are supposed to have those -- right?
+
+With so many ~~weirdos~~ brilliant minds about it's not too surprising to see an exponential uptick in technological innovations. A `Symposium` to display new inventions and discuss outlandish ideas was built in the square beneath the looming `Lantern Hoard`, sparking much joy. As we set out on the year's hunt to gather necessary resources, the ground erupted beneath us and we plunged into the sky on the back of an impossibly large stone beast -- as if riding atop the very land itself. Scuttling along its lengthy back struggling to gain purchase and somewhere closer to the titan's head we were struck by the sight of a ghastly pale miniscule creature with an inverted stone face -- with what appeared to be carving tools in hand. Upon cresting the spine the creature was nowhere to be seen, but we did find 4 additional founding stones to add to our persons. Looking about we saw perfectly carves faces adjacent to a set cracked and weathered by the volatile weather and... well.. big moving mountains apparently.
+
+We were confident from our first victory, but this `White Lion` did not go down without leaving his mark. Our dear **Ptolemy** -- whose ink stills stains your thumb from the moment you rubbed it from his eye and beheld another human's gaze for the first time -- had his legs forcibly and -- rather unpleasantly -- separated from his torso. It is obvious even if he lived we would have struggled to bring him home, but this confirms what we had universally suspected -- if enough of the red liquid inside someone becomes no-longer-inside-them, they take to a sleep they do not awaken from. What wonders await these eternal dreamers? You kneel and hold his hand one last time then turn and begin the journey home. Rest in peace brother -- we will remember your flame when the darkness closes in.
+
+☠️ **Ptolemy**
+
+![](imgs/ch01.png){group="gallery"}
+
+## Year 2: Endless Screams
+
+> I didn't choose to be of this Earth <br> I didn't choose this Human Burden
+
+Fucking. *Seemed* like fun, but wow. That did *not* go well. Two denizens of the **Settlement Intelligencia** fucked so poorly they somehow died. Maybe all that damn screaming had something to do with it. It's been difficult to get a good night's sleep in weeks -- the screaming was difficult to ignore as sometimes it went on for what seemed like hours.
+
+From ~~playing with~~ investigating the bodies, we discovered `Ammonia` and used our resources to build `The Leatherworker`. After an intense discussion about what exactly went wrong with the first fucking, a second fucking commenced which was incredibly successful: yielding a pair of healthy twins.
+
+<!-- ![](imgs/ch02.png) -->
+
+![](imgs/ch02-endless-screams-4k.jpg){group="gallery"}
+
+After many hours of introspection and discussion the settlement comes to a consensus. We have decided that we are not about weak-ass wimpy bitch-babies and chose the hard-knock path of `Survival of the Fittest` -- offspring are much less likely to make it through rearing within the settlement, but those that survive to adulthood are better prepared to endure the harshness of the waste. Armed with the confidence only foreknowledge of *superior buff babies* can bring, our heros set out and slew a `White Lion` while barely breaking a sweat.
+
+## Year 3: Lights in The Sky
+
+> All at once, the Lights! <br> Carried from a distance, Shot to me, <br> Flowing through me, Flashing before me, <br> Violent, Convulsing, Bright <br><br> I was haggard but unworn, <br> I was youthful but bitter, <br> I was ignorant, I was worldly, <br> I was shown into a lifetime's experiences
+
+Night became day. A blinding flash turned the world to white. Permanently, for one unlucky scout who had been looking in the eldritch ordinance's direction. A couple more had been awake: the first had insomnia and was grinding away the hours making meal from various vermin gathered and preserved over the years and he said everywhere became so bright so quickly that he didn't have time to shield his eyes and had spots in his vision for weeks after. The second, the town's eccentric chemist, ran outside carrying a hammered piece of metal that had been laying near his desk, which moments earlier had had a bottle of volatile cyanoplatinate analogues (unbeknownst of course to our town's *shaman*, but he's doing his best, can't be too hard him). The plate held a ghostly yet distinguishable imprint of the chemist's own hand. Without the skin. Mostly the outline of the bones to be precise.
+
+"I have seen my own death!" he shrieked melodramatically.
+
+This world was obviously no stranger to deranged black swan events showing up willy-nilly and causing god knows what mayhem. The light had initially dimmed away, almost impossible to see, before slowly building in intensity until unknown leagues away a vertical shaft of chaotic energy split the sky in two. At whatever could be considered the "peak" of the line of light -- it was hard to crane one's neck far back enough to make out too much detail -- one could see the light open up into a contained spherical shape, which would periodically writhe and pulse, leaving fading slashes of darkness against the glowing exterior. We prepared for the worst.
+
+Hot damn! We are blessed! Blessed by holy lights in the sky! sacred `lifetime rerolls` were exchanged for a bounty of 3 beautiful buff babies!
+
+![](imgs/lights-in-the-sky.jpg){group="gallery"}
+
+"Holy light homiieessss. Let's roll baby!" yelled the overeager leader of the hunting party, who to be fair, *was* impressively pulling off a series of phantom karate moves against an invisible foe -- complete with accompanied sound effects -- all while maintaining a steady jog ahead of the other three. They didn't mind. Why? Have... have you been reading? Buff Babies! Get your shit together.
+
+Anyway, back to the lion. Long story short: he should have been scared of *us*.
+
+## Year 4: The Butcher
+
+> A voiceless choir weeping<br> Contorted bodies stacking<br> The dull hum of death<br> Deafening
+
+Confidence begets the fall.
+
+In our case -- narrowly-begets-the-fall.
+
+As we prepared for what we thought would be another lion hunt, someone noticed a light began pulsing in the distance. A faint metallic sound begin to build as the settlers felt resonance vibrations begin to rhythmically form in their chest. In concert with this beast's footsteps no doubt. The pulse of the light was a dim lantern that periodically swung behind the bulk of the shape forming through the mist. We could only watch in horror as an enormous armored hulk sauntered towards their home. We could smell him before we could fully see his visage in the flickering light he held. Why was the light so dim? A question many wished had never been answered.
+
+`The Butcher` had arrived.
+
+::: column-screen-inset-shaded
+![](imgs/The-Butcher-4k.jpg){group="gallery"}
+:::
+
+Evident from the stretched caricature of human faces adorning the monster's lantern, he was not here to parlay. Ordinary survivors may have wet their filthy rags -- we on the other hand, hatched a devious plan. Starting in the corner of the open battlefield we sprang into action! -- Swiftly dealing three wounds with our freshly carved founding stones. Baited into a blind fury, `The Butcher` ran towards us but his devastating movements only made contact a single time before he lay still upon the barren stone.
+
+Incredibly, the blow that fell him separated `The Butcher's Cleaver` -- usually welded in place -- from his armored gauntlet and the settlement gained a powerful talisman to use against the coming darkness.
+
+## Year 5: Hands of Heat & Murder
+
+> Brother are you here, hiding<br> In the mist<br> Hiding in fear<br> Regurgitate<br> Release
+
+**Galileo**, overwrought with jealousy, murdered the legendary **Jane Austen** in cold blood. As if that were not heinous enough, he then proceeded to painstakingly *devour* her skull. Smashing it against the stone faces to form pieces small enough to hungrily push down his gullet.
+
+![](imgs/ch05-b.png){group="gallery"}
+
+One enterprising villager -- a missed opportunity as an inevitable arsonist if there *were* much to burn around here -- had noticed how the heat and glow of the fire pulsed in concert with the eerie wind that would sometimes ebb and flow through the settlement. Using some tattered strips of hide and bone scraps he formed an air proof sack he could run holding above his head and swing down to trap the air. By squeezing the top of the bag in his fist and holding the bag beneath his arm, he could simultaneously squeeze and relax his grip to spew a concentrated column of air into the fire.
+
+The forge was born.
+
+Another became so entranced by the dancing flame before them that they plunged their hands deep into the scalding embers as others could only watch and gasp. Incredulously they watched as the madman removed their hands, not unscathed, but not mangled and charred. Burnt, but glowing with a dangerous power -- the rapturous `Hands of Heat`. The survivors had forged minds of steel and swiftly dealt with a Lion despite the depravity they had witnessed earlier.
+
+*ever forwards...*
+
+☠️ **Jane Austen**
+
+## Year 6: Uninvited Guest
+
+> I blinked and saw nothing <br> I blinked and saw a struggle between embers <br> I blinked and saw a face <br> I blinked and saw a face <br>                     in the Dark
+
+Horror, these settlers of The Mind had become inured to. But... Absurdity? Insanity? These were novel frontiers to conquer. First, reports of a prancing band of weirdos on the outskirts of town are heard before one morning an enormous statue of a -- one might say oddly handsome `Lion Knight` with beautiful hair -- except for the fact that from each finger extended a 12" razor sharp blade. Something about the statue was so unnerving that despite the theoretic ability to use the blades attached to the statue in some manner, it was topic that never made its way from thought to discourse.
+
+Concurrent with the other reports were utterances far more unsettling. People reported seeing an inhumanly tall, gangly, and stark pale figure standing partially behind a tree, bush, or corner of a building. Upon doing a double-take this apparition would vanish -- a mere trick of the light? If the reports had not been collected independently, it would be nothing to worry about... Whispers of the `Slenderman` were heard, but never in polite company.
+
+![](imgs/ch06.png){group="gallery"}
+
+He... he's so familiar. Everyone agrees they know who he is -- and he acknowledges that he has known them for some time -- but the man formerly known as **Galileo Figaro** -- ceased to possess name known by any member of the collective. Unsettling indeed...
+
+The charming **David Attenborough** journeyed out for the first time. In what was later agreed by all to be a rather fair exchange as far as these things go, David Attenborough had his leg cut off by the lion, and in return cut the lion's hand off and grew stronger from the experience.
+
+🦵 **David Attenborough**
+
+## Year 7: Phoenix Feather & Plague
+
+> Them Thangs be Thangin'
+
+A mysterious and scantily clad blind woman strolled into the settlement. I uh... I don't really remember what she wanted or asked about.
+
+What? Stop looking at me like that.
+
+::: {.callout-note collapse="true"}
+## An impeccable rendition confiscated from a youth. Best kept from prying eyes...
+
+Couldn't help yourself could ya?
+
+![](imgs/White-Speaker.jpg){fig-align="center"}
+
+::: {.callout-important collapse="true"}
+## A somehow *even more* lascivious rendition!?
+
+![BONK! Gotcha 😏](imgs/bonk.jpg)
+:::
+:::
+
+As the villagers began the arduous task of collectively picking up their jaws, a vibrant rainbow shuddered over the settlement. Several retched during the nauseating distortions that rippled as the silhouette of an enormous distorted bird appeared dimly in the sky above. The granularity of the effects were not noticed immediately, but the spacetime scars that had appeared briefly in the settlement had the incredibly unfortunate effect of transposing a highly effective growth gene into a benign bacterial colony in the left lower lung of one villager. Coughs turned to wheezes turned to water out the ass as the settlers quickly donned makeshift masks and hunkered in their respective enclaves to wait out the infection.
+
+The hunt was a breeze thanks to **Emily Dickinson**, who showed the settlement was more than capable of taking on the more dangerous species of `White Lion` they had found existed a few years back. The lion was no match for the hunters' ferocity and **Emily** cleaved the lion's jaw from his face as she slay him.
+
+## Year 8: Glowing Crater & Rumbling in the Dark
+
+> There's a place within the mind<br> colored splendor there, you'll remember where<br> A scene where beauty used to shine<br> never yours or mine, faded, broken lines<br><br> Only traces are left behind<br> Sorry, silent stares, breathing poisoned air<br> Children shrieking towards the sky<br> Hatred they declare, and they care not where
+
+The woman awoke exasperated. How her husband's stomach be growling *so loud* to wake her in the middle of the night! Yes, it wasn't always easy having filling meals on the table but she knew he had eaten enough. As the bed started to shake and the rumbling grew louder she began to suspect the source of the noise was different than she had presumed. The husband woke as the shaking intensified, knocking items off and with a jolt the woman toppled backwards and the man was thrown into the side of the wall. As the woman sat up she saw her husband's head silhouetted against an ominous and somehow *thick* green glow from somewhere distant outside. Was this an omen from the gods? They would have to be careful if they chose to seek the origin of the glow. Hm, maybe there are some "volunteers" around here we could encourage...
+
+![](imgs/ch08.png){group="gallery"}
+
+The ferocity of the glowing crater smashing mercilessly into the ground was indeed an omen -- and a metaphor -- for the hale, handsome, and oh-so-virile **Adam Smith**. It turns out one person was taking *very* careful notes during that first eventful fucking and the settlement welcomed three hearty and insane babies into this dark dark world, one without even a semblance of nations, let alone ones possessing any wealth. These cold truths aside, a celebration was in order!
+
+...And you wouldn't be so rude as to fail to deliver an invitation to your settlement's own patient guest of honor, would you?
+
+Possibly besmirched by this lack of invitation, who's to say, the previously immobile statue of the `Lion Knight` roared to life and joined in on the festivities...ferociously!
+
+**Euler's** back was destroyed in the ensuing chaos and moments before the rest of him could join the obliteration, **Sir David Attenborough** (sorry -- been a busy year, but he's a knight now, don't worry it'll be in the Christmas card) dealt the killing blow and was awarded with the perfect way to obscure his grotesqueries -- `The Hideous Disguise`.
+
+## Year 9: Forgotten Fear
+
+> This is but one woven world<br> within a medley of revulsion<br> A scope unfathomable to the conscious mind<br> Eaten, Willow...<br> Vines tore me off my feet<br> and under the water again
+
+**Emily Dickinson** was always a bit of an odd bird that one, so I guess it makes sense that she would become `The Gloom Woman` carrying the `Husk of Destiny`. A terrifying combination and one the `Slenderman` was not prepared for in the slightest. **Emily Dickinson** popped `Slenderman's` head like a fermented pomegranate then promptly forgot her name.
+
+![](imgs/ch09.png){group="gallery"}
+
+Our good friend uh...whatever his name used to be was visited by a hooded stranger who placed `The Twilight Sword` into his hands and left without uttering a single word. Befitting his settlement's name, he chose to bravely wield it in battle against the very next `Antelope` they saw and promptly had his head trampled in. Oops.
+
+**Milton Friedman** decapitated the `Antelope` with a critical hit in revenge. After the fight the others went over to the trampled remains to look for `The Twilight Sword` but when pulled the fabric covering his body away they were struck by a bizarre sight. The fabled **Argyle** -- He Who Transcends -- lay before us covered head-to-toe in translucent moths. The moths formed a murmuration and swelled and shrank chaotically as they flew away.
+
+Oh right and then on the walk home **Argyle** got possessed during a haunting. It was a busy year, what can I say.
+
+☠️ **???**
+
+## Year 10: Antelo(o)p~~e~~s
+
+> The first blood shed does not seem real <br> Reality is what you feel <br> Dropping to your knees you pray <br> God won't make this go away
+
+Despite a wealth of resources no hide meant little armor to don and so another standard `Antelope` was chosen once again as the target for the year's hunt. The settlement even crafted a set of potent `Gloom-coated Arrows` to make this venture even more pedestrian.
+
+You know what else is pedestrian?
+
+...
+
+Walking into traffic.
+
+![](imgs/ch10.png){group="gallery"}
+
+**Vera Rubin** had her head repeatedly trampled until it would be difficult to say that what remained was even capable of being trampled further.
+
+**Janet Yellen-Smith** was bitten to death.
+
+**Rebecca Smith** had her chest caved in.
+
+Until only sweet sweet **Argyle** -- He Who Transcends -- remained. The repeated nicks and cuts the `Antelope` delivered as it shot back and forth across the chipped and mangled field of stone faces was finally too much for our hero to bear. His breathing labored and his movements slowed. He quietly lay down his tenacious dough-kneading arms and sighed in exsanguination.
+
+☠️ **Vera Rubin** <br> ☠️ **Janet Yellen-Smith** <br> ☠️ **Rebecca Smith** <br> ☠️ **Argyle** <br>
+
+## 10 Years: A Summary
+
+| Year | Monster     | Level | Special Showdown | Level | Deaths |
+|------|-------------|-------|------------------|-------|--------|
+| 0    | White Lion  | 0     | \-               | \-    | 1      |
+| 1    | White Lion  | 1     | \-               | \-    | 0      |
+| 2    | White Lion  | 1     | \-               | \-    | 0      |
+| 3    | White Lion  | 1     | \-               | \-    | 0      |
+| 4    | The Butcher | 1     | \-               | \-    | 0      |
+| 5    | White Lion  | 1     | \-               | \-    | 0      |
+| 6    | White Lion  | 2     | \-               | \-    | 0      |
+| 7    | White Lion  | 2     | \-               | \-    | 0      |
+| 8    | White Lion  | 2     | Lion Knight      | 1     | 0      |
+| 9    | Antelope    | 2     | Slenderman       | 1     | 2      |
+| 10   | Antelope    | 2     | \-               | \-    | 4      |
+
+
+## Acknowledgements
+
+> Far better it seems to me, in our vulnerability<br> to look death in the eye and to be grateful every day<br> for the brief but magnificent opportunity that life provides
+
+
+-   **You!** -- Thank you for reading! I sincerely hope it provided you some moments of joy
+-   **David Vivian** -- For always being down to edit my denisovan writing and being a bro I can jam with
+-   **Poots and Co.** -- There is no Kingdom without the Creator. Thank you for putting your heart into your work.
+-   **FISTOs** -- Couldn't do it without the lads
+-   **Tyler Reed, Preston Fraser** -- Music is one of the most important things in my life and I'm grateful for those I can connect with about music that makes most people feel physically ill. Thanks for giving me the opportunity to bang the drum loud.
+    -   Reed's project: [Deiphage](https://deiphage-war.bandcamp.com/album/nuclear-cavalry)
+    -   Preston's project: [Overneath](https://overneath.bandcamp.com/album/a-tribute-to-a-tribute-to-overneath)
+-   **Ian, Arjun, Nathan, Ed** -- Thanks for not letting me die in grad school.
+-   **Adrian Perez and Warforged** -- *I: Voice* is one of my favorite albums and the visual imagery in their songs inspired several parts of the story. Also they are cool dudes and crashed at my house when I lived in San Diego 🤘
+
+::: grid
+::: g-col-6
+![Dudes from Warforged and Alluvial](imgs/misc/warforged.JPG){#fig-war-1 group="war"}
+:::
+
+::: g-col-6
+![Hey stop so lookin so cute in my kitchen](imgs/misc/warforged-2.JPG){#fig-war-2 group="war"}
+:::
+:::
+

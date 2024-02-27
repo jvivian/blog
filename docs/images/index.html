@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Vivian">
+<meta name="dcterms.date" content="2023-05-02">
+
+<title>blog - Kingdom Death</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jvivian.github.io" rel="" target=""><i class="bi bi-bookmarks" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jvivian" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&amp;hl=en&amp;authuser=1" rel="" target=""><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/john-vivian-913b41a6/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-y1" id="toc-sec-y1" class="nav-link active" data-scroll-target="#sec-y1">Year 1: Returning Survivors</a></li>
+  <li><a href="#year-2-endless-screams" id="toc-year-2-endless-screams" class="nav-link" data-scroll-target="#year-2-endless-screams">Year 2: Endless Screams</a></li>
+  <li><a href="#year-3-lights-in-the-sky" id="toc-year-3-lights-in-the-sky" class="nav-link" data-scroll-target="#year-3-lights-in-the-sky">Year 3: Lights in The Sky</a></li>
+  <li><a href="#year-4-the-butcher" id="toc-year-4-the-butcher" class="nav-link" data-scroll-target="#year-4-the-butcher">Year 4: The Butcher</a></li>
+  <li><a href="#year-5-hands-of-heat-murder" id="toc-year-5-hands-of-heat-murder" class="nav-link" data-scroll-target="#year-5-hands-of-heat-murder">Year 5: Hands of Heat &amp; Murder</a></li>
+  <li><a href="#year-6-uninvited-guest" id="toc-year-6-uninvited-guest" class="nav-link" data-scroll-target="#year-6-uninvited-guest">Year 6: Uninvited Guest</a></li>
+  <li><a href="#year-7-phoenix-feather-plague" id="toc-year-7-phoenix-feather-plague" class="nav-link" data-scroll-target="#year-7-phoenix-feather-plague">Year 7: Phoenix Feather &amp; Plague</a></li>
+  <li><a href="#year-8-glowing-crater-rumbling-in-the-dark" id="toc-year-8-glowing-crater-rumbling-in-the-dark" class="nav-link" data-scroll-target="#year-8-glowing-crater-rumbling-in-the-dark">Year 8: Glowing Crater &amp; Rumbling in the Dark</a></li>
+  <li><a href="#year-9-forgotten-fear" id="toc-year-9-forgotten-fear" class="nav-link" data-scroll-target="#year-9-forgotten-fear">Year 9: Forgotten Fear</a></li>
+  <li><a href="#year-10-anteloopes" id="toc-year-10-anteloopes" class="nav-link" data-scroll-target="#year-10-anteloopes">Year 10: Antelo(o)p<del>e</del>s</a></li>
+  <li><a href="#years-a-summary" id="toc-years-a-summary" class="nav-link" data-scroll-target="#years-a-summary">10 Years: A Summary</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Kingdom Death</h1>
+<p class="subtitle lead"><em>Settlement Intelligencia</em>: Chapters I - X</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Writing</div>
+    <div class="quarto-category">Digital Art</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Vivian </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is a work in progress
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>While there are quotes/art for every chapter the writing is incomplete</p>
+<ul>
+<li>Prologue: <a href="https://jvivian.github.io/blog/posts/kd-awake/">Kingdom Death: Awake</a>
+<ul>
+<li>The prologue is written in a drastically different style from the rest of the work – which is still gruesome but humorous. By contrast, the prologue is inspired by one of my favorite hard sci-fi books <em>Blindsight</em> by Peter Watts, whose narrative style is… admittedly confusing and makes use of abstract imagery.</li>
+</ul></li>
+<li>Chapters 11-15 are written but need editing</li>
+<li>Chapters 16-30 are still a collection of notes</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<center>
+<b>Best viewed on a large screen</b>
+</center>
+<center>
+<b>Dark Mode toggle available in navbar</b>
+</center>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Foreward
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>How quiet the forest would be<br> if only the most beautiful bird sang</p>
+</blockquote>
+<p>One day as a young lad sailing the high seas of the early internet, I came across a comic that depicted a zany, bizarre, and humorous story about some dwarves who lived under the ground and suffered a series of misfortunes before all dying in some horrible way. I was immediately entranced and stunned to find out this story was based on video game, one with <em>emergent gameplay</em> which meant the incredible tale had not been explicitly hard-coded. It was from a game I was surprised I had never heard about called <code>Dwarf Fortress</code></p>
+<p>“Surely this must be the greatest game ever made! I must immediately find and play it!”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/dorfs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="13 year old me: “What the fuck is this?”"><img src="imgs/dorfs.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">13 year old me: “What the fuck is this?”</figcaption>
+</figure>
+</div>
+<p>My tiny child mind was too stupid to handle ASCII graphics so I never even attempted to play the game, but I never forgot how incredible it was to read about such a ludicrous adventure that somehow made me care about these dwarves being hurt or dying while doing whatever it is dwarves do. Mining and drinking mostly.</p>
+<p>20 years later, after a <a href="https://kingdomdeath.com/">Kingdom Death</a> campaign where I doodled some random pictures and notes from the campaign, I had the idea to take a set of more detailed notes for the next campaign and compile it into a short little summary to share with the others as a going away gift when they moved later this year. 2-3 pages tops.</p>
+<p>Then, in the middle of the campaign, I had the idea to use Midjourney, a text-to-image generation tool my wife had shown me, to make maybe 2-3 cool pictures I could include with the summary of the campaign. That would really step it up a notch. AI ended up working on this, in some capacity, every day for almost three months (and am still working on it…). I got obsessed with new features in tools like Stable Diffusion, which offer much more control than commercial tools like Midjourney.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/mpythong.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="And now for something, completely different"><img src="imgs/mpythong.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">And now for something, completely different</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<section id="sec-y1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-y1">Year 1: Returning Survivors</h2>
+<blockquote class="blockquote">
+<p>Legs blown off, all hope is lost<br> A human life is what it cost<br> Others follow close behind<br> A real adventure they will find</p>
+</blockquote>
+<p><br><br> <em>scritch</em>, <em>scratch</em> <br></p>
+<p>Well, it’s not the <em>worst</em> job in the settlement. And I can write about pretty much anything and it looks like I’m diligently working.</p>
+<p>Heh, ok – maybe not so bad. <em>Curator of the Historical Documents</em> has a nice ring to it. Too bad that’s not my title and nobody will call me that, but hey – something to work towards. Goals! People are supposed to have those – right?</p>
+<p>With so many <del>weirdos</del> brilliant minds about it’s not too surprising to see an exponential uptick in technological innovations. A <code>Symposium</code> to display new inventions and discuss outlandish ideas was built in the square beneath the looming <code>Lantern Hoard</code>, sparking much joy. As we set out on the year’s hunt to gather necessary resources, the ground erupted beneath us and we plunged into the sky on the back of an impossibly large stone beast – as if riding atop the very land itself. Scuttling along its lengthy back struggling to gain purchase and somewhere closer to the titan’s head we were struck by the sight of a ghastly pale miniscule creature with an inverted stone face – with what appeared to be carving tools in hand. Upon cresting the spine the creature was nowhere to be seen, but we did find 4 additional founding stones to add to our persons. Looking about we saw perfectly carves faces adjacent to a set cracked and weathered by the volatile weather and… well.. big moving mountains apparently.</p>
+<p>We were confident from our first victory, but this <code>White Lion</code> did not go down without leaving his mark. Our dear <strong>Ptolemy</strong> – whose ink stills stains your thumb from the moment you rubbed it from his eye and beheld another human’s gaze for the first time – had his legs forcibly and – rather unpleasantly – separated from his torso. It is obvious even if he lived we would have struggled to bring him home, but this confirms what we had universally suspected – if enough of the red liquid inside someone becomes no-longer-inside-them, they take to a sleep they do not awaken from. What wonders await these eternal dreamers? You kneel and hold his hand one last time then turn and begin the journey home. Rest in peace brother – we will remember your flame when the darkness closes in.</p>
+<p>☠️ <strong>Ptolemy</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch01.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch01.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="year-2-endless-screams" class="level2">
+<h2 class="anchored" data-anchor-id="year-2-endless-screams">Year 2: Endless Screams</h2>
+<blockquote class="blockquote">
+<p>I didn’t choose to be of this Earth <br> I didn’t choose this Human Burden</p>
+</blockquote>
+<p>Fucking. <em>Seemed</em> like fun, but wow. That did <em>not</em> go well. Two denizens of the <strong>Settlement Intelligencia</strong> fucked so poorly they somehow died. Maybe all that damn screaming had something to do with it. It’s been difficult to get a good night’s sleep in weeks – the screaming was difficult to ignore as sometimes it went on for what seemed like hours.</p>
+<p>From <del>playing with</del> investigating the bodies, we discovered <code>Ammonia</code> and used our resources to build <code>The Leatherworker</code>. After an intense discussion about what exactly went wrong with the first fucking, a second fucking commenced which was incredibly successful: yielding a pair of healthy twins.</p>
+<!-- ![](imgs/ch02.png) -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch02-endless-screams-4k.jpg" class="lightbox" data-gallery="gallery"><img src="imgs/ch02-endless-screams-4k.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>After many hours of introspection and discussion the settlement comes to a consensus. We have decided that we are not about weak-ass wimpy bitch-babies and chose the hard-knock path of <code>Survival of the Fittest</code> – offspring are much less likely to make it through rearing within the settlement, but those that survive to adulthood are better prepared to endure the harshness of the waste. Armed with the confidence only foreknowledge of <em>superior buff babies</em> can bring, our heros set out and slew a <code>White Lion</code> while barely breaking a sweat.</p>
+</section>
+<section id="year-3-lights-in-the-sky" class="level2">
+<h2 class="anchored" data-anchor-id="year-3-lights-in-the-sky">Year 3: Lights in The Sky</h2>
+<blockquote class="blockquote">
+<p>All at once, the Lights! <br> Carried from a distance, Shot to me, <br> Flowing through me, Flashing before me, <br> Violent, Convulsing, Bright <br><br> I was haggard but unworn, <br> I was youthful but bitter, <br> I was ignorant, I was worldly, <br> I was shown into a lifetime’s experiences</p>
+</blockquote>
+<p>Night became day. A blinding flash turned the world to white. Permanently, for one unlucky scout who had been looking in the eldritch ordinance’s direction. A couple more had been awake: the first had insomnia and was grinding away the hours making meal from various vermin gathered and preserved over the years and he said everywhere became so bright so quickly that he didn’t have time to shield his eyes and had spots in his vision for weeks after. The second, the town’s eccentric chemist, ran outside carrying a hammered piece of metal that had been laying near his desk, which moments earlier had had a bottle of volatile cyanoplatinate analogues (unbeknownst of course to our town’s <em>shaman</em>, but he’s doing his best, can’t be too hard him). The plate held a ghostly yet distinguishable imprint of the chemist’s own hand. Without the skin. Mostly the outline of the bones to be precise.</p>
+<p>“I have seen my own death!” he shrieked melodramatically.</p>
+<p>This world was obviously no stranger to deranged black swan events showing up willy-nilly and causing god knows what mayhem. The light had initially dimmed away, almost impossible to see, before slowly building in intensity until unknown leagues away a vertical shaft of chaotic energy split the sky in two. At whatever could be considered the “peak” of the line of light – it was hard to crane one’s neck far back enough to make out too much detail – one could see the light open up into a contained spherical shape, which would periodically writhe and pulse, leaving fading slashes of darkness against the glowing exterior. We prepared for the worst.</p>
+<p>Hot damn! We are blessed! Blessed by holy lights in the sky! sacred <code>lifetime rerolls</code> were exchanged for a bounty of 3 beautiful buff babies!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/lights-in-the-sky.jpg" class="lightbox" data-gallery="gallery"><img src="imgs/lights-in-the-sky.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>“Holy light homiieessss. Let’s roll baby!” yelled the overeager leader of the hunting party, who to be fair, <em>was</em> impressively pulling off a series of phantom karate moves against an invisible foe – complete with accompanied sound effects – all while maintaining a steady jog ahead of the other three. They didn’t mind. Why? Have… have you been reading? Buff Babies! Get your shit together.</p>
+<p>Anyway, back to the lion. Long story short: he should have been scared of <em>us</em>.</p>
+</section>
+<section id="year-4-the-butcher" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="year-4-the-butcher">Year 4: The Butcher</h2>
+<blockquote class="blockquote">
+<p>A voiceless choir weeping<br> Contorted bodies stacking<br> The dull hum of death<br> Deafening</p>
+</blockquote>
+<p>Confidence begets the fall.</p>
+<p>In our case – narrowly-begets-the-fall.</p>
+<p>As we prepared for what we thought would be another lion hunt, someone noticed a light began pulsing in the distance. A faint metallic sound begin to build as the settlers felt resonance vibrations begin to rhythmically form in their chest. In concert with this beast’s footsteps no doubt. The pulse of the light was a dim lantern that periodically swung behind the bulk of the shape forming through the mist. We could only watch in horror as an enormous armored hulk sauntered towards their home. We could smell him before we could fully see his visage in the flickering light he held. Why was the light so dim? A question many wished had never been answered.</p>
+<p><code>The Butcher</code> had arrived.</p>
+<div class="column-screen-inset-shaded">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/The-Butcher-4k.jpg" class="lightbox" data-gallery="gallery"><img src="imgs/The-Butcher-4k.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<p>Evident from the stretched caricature of human faces adorning the monster’s lantern, he was not here to parlay. Ordinary survivors may have wet their filthy rags – we on the other hand, hatched a devious plan. Starting in the corner of the open battlefield we sprang into action! – Swiftly dealing three wounds with our freshly carved founding stones. Baited into a blind fury, <code>The Butcher</code> ran towards us but his devastating movements only made contact a single time before he lay still upon the barren stone.</p>
+<p>Incredibly, the blow that fell him separated <code>The Butcher's Cleaver</code> – usually welded in place – from his armored gauntlet and the settlement gained a powerful talisman to use against the coming darkness.</p>
+</section>
+<section id="year-5-hands-of-heat-murder" class="level2">
+<h2 class="anchored" data-anchor-id="year-5-hands-of-heat-murder">Year 5: Hands of Heat &amp; Murder</h2>
+<blockquote class="blockquote">
+<p>Brother are you here, hiding<br> In the mist<br> Hiding in fear<br> Regurgitate<br> Release</p>
+</blockquote>
+<p><strong>Galileo</strong>, overwrought with jealousy, murdered the legendary <strong>Jane Austen</strong> in cold blood. As if that were not heinous enough, he then proceeded to painstakingly <em>devour</em> her skull. Smashing it against the stone faces to form pieces small enough to hungrily push down his gullet.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch05-b.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch05-b.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>One enterprising villager – a missed opportunity as an inevitable arsonist if there <em>were</em> much to burn around here – had noticed how the heat and glow of the fire pulsed in concert with the eerie wind that would sometimes ebb and flow through the settlement. Using some tattered strips of hide and bone scraps he formed an air proof sack he could run holding above his head and swing down to trap the air. By squeezing the top of the bag in his fist and holding the bag beneath his arm, he could simultaneously squeeze and relax his grip to spew a concentrated column of air into the fire.</p>
+<p>The forge was born.</p>
+<p>Another became so entranced by the dancing flame before them that they plunged their hands deep into the scalding embers as others could only watch and gasp. Incredulously they watched as the madman removed their hands, not unscathed, but not mangled and charred. Burnt, but glowing with a dangerous power – the rapturous <code>Hands of Heat</code>. The survivors had forged minds of steel and swiftly dealt with a Lion despite the depravity they had witnessed earlier.</p>
+<p><em>ever forwards…</em></p>
+<p>☠️ <strong>Jane Austen</strong></p>
+</section>
+<section id="year-6-uninvited-guest" class="level2">
+<h2 class="anchored" data-anchor-id="year-6-uninvited-guest">Year 6: Uninvited Guest</h2>
+<blockquote class="blockquote">
+<p>I blinked and saw nothing <br> I blinked and saw a struggle between embers <br> I blinked and saw a face <br> I blinked and saw a face <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; in the Dark</p>
+</blockquote>
+<p>Horror, these settlers of The Mind had become inured to. But… Absurdity? Insanity? These were novel frontiers to conquer. First, reports of a prancing band of weirdos on the outskirts of town are heard before one morning an enormous statue of a – one might say oddly handsome <code>Lion Knight</code> with beautiful hair – except for the fact that from each finger extended a 12” razor sharp blade. Something about the statue was so unnerving that despite the theoretic ability to use the blades attached to the statue in some manner, it was topic that never made its way from thought to discourse.</p>
+<p>Concurrent with the other reports were utterances far more unsettling. People reported seeing an inhumanly tall, gangly, and stark pale figure standing partially behind a tree, bush, or corner of a building. Upon doing a double-take this apparition would vanish – a mere trick of the light? If the reports had not been collected independently, it would be nothing to worry about… Whispers of the <code>Slenderman</code> were heard, but never in polite company.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch06.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch06.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>He… he’s so familiar. Everyone agrees they know who he is – and he acknowledges that he has known them for some time – but the man formerly known as <strong>Galileo Figaro</strong> – ceased to possess name known by any member of the collective. Unsettling indeed…</p>
+<p>The charming <strong>David Attenborough</strong> journeyed out for the first time. In what was later agreed by all to be a rather fair exchange as far as these things go, David Attenborough had his leg cut off by the lion, and in return cut the lion’s hand off and grew stronger from the experience.</p>
+<p>🦵 <strong>David Attenborough</strong></p>
+</section>
+<section id="year-7-phoenix-feather-plague" class="level2">
+<h2 class="anchored" data-anchor-id="year-7-phoenix-feather-plague">Year 7: Phoenix Feather &amp; Plague</h2>
+<blockquote class="blockquote">
+<p>Them Thangs be Thangin’</p>
+</blockquote>
+<p>A mysterious and scantily clad blind woman strolled into the settlement. I uh… I don’t really remember what she wanted or asked about.</p>
+<p>What? Stop looking at me like that.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+An impeccable rendition confiscated from a youth. Best kept from prying eyes…
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Couldn’t help yourself could ya?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/White-Speaker.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="imgs/White-Speaker.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A somehow <em>even more</em> lascivious rendition!?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/bonk.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="BONK! Gotcha 😏"><img src="imgs/bonk.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">BONK! Gotcha 😏</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>As the villagers began the arduous task of collectively picking up their jaws, a vibrant rainbow shuddered over the settlement. Several retched during the nauseating distortions that rippled as the silhouette of an enormous distorted bird appeared dimly in the sky above. The granularity of the effects were not noticed immediately, but the spacetime scars that had appeared briefly in the settlement had the incredibly unfortunate effect of transposing a highly effective growth gene into a benign bacterial colony in the left lower lung of one villager. Coughs turned to wheezes turned to water out the ass as the settlers quickly donned makeshift masks and hunkered in their respective enclaves to wait out the infection.</p>
+<p>The hunt was a breeze thanks to <strong>Emily Dickinson</strong>, who showed the settlement was more than capable of taking on the more dangerous species of <code>White Lion</code> they had found existed a few years back. The lion was no match for the hunters’ ferocity and <strong>Emily</strong> cleaved the lion’s jaw from his face as she slay him.</p>
+</section>
+<section id="year-8-glowing-crater-rumbling-in-the-dark" class="level2">
+<h2 class="anchored" data-anchor-id="year-8-glowing-crater-rumbling-in-the-dark">Year 8: Glowing Crater &amp; Rumbling in the Dark</h2>
+<blockquote class="blockquote">
+<p>There’s a place within the mind<br> colored splendor there, you’ll remember where<br> A scene where beauty used to shine<br> never yours or mine, faded, broken lines<br><br> Only traces are left behind<br> Sorry, silent stares, breathing poisoned air<br> Children shrieking towards the sky<br> Hatred they declare, and they care not where</p>
+</blockquote>
+<p>The woman awoke exasperated. How her husband’s stomach be growling <em>so loud</em> to wake her in the middle of the night! Yes, it wasn’t always easy having filling meals on the table but she knew he had eaten enough. As the bed started to shake and the rumbling grew louder she began to suspect the source of the noise was different than she had presumed. The husband woke as the shaking intensified, knocking items off and with a jolt the woman toppled backwards and the man was thrown into the side of the wall. As the woman sat up she saw her husband’s head silhouetted against an ominous and somehow <em>thick</em> green glow from somewhere distant outside. Was this an omen from the gods? They would have to be careful if they chose to seek the origin of the glow. Hm, maybe there are some “volunteers” around here we could encourage…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch08.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch08.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The ferocity of the glowing crater smashing mercilessly into the ground was indeed an omen – and a metaphor – for the hale, handsome, and oh-so-virile <strong>Adam Smith</strong>. It turns out one person was taking <em>very</em> careful notes during that first eventful fucking and the settlement welcomed three hearty and insane babies into this dark dark world, one without even a semblance of nations, let alone ones possessing any wealth. These cold truths aside, a celebration was in order!</p>
+<p>…And you wouldn’t be so rude as to fail to deliver an invitation to your settlement’s own patient guest of honor, would you?</p>
+<p>Possibly besmirched by this lack of invitation, who’s to say, the previously immobile statue of the <code>Lion Knight</code> roared to life and joined in on the festivities…ferociously!</p>
+<p><strong>Euler’s</strong> back was destroyed in the ensuing chaos and moments before the rest of him could join the obliteration, <strong>Sir David Attenborough</strong> (sorry – been a busy year, but he’s a knight now, don’t worry it’ll be in the Christmas card) dealt the killing blow and was awarded with the perfect way to obscure his grotesqueries – <code>The Hideous Disguise</code>.</p>
+</section>
+<section id="year-9-forgotten-fear" class="level2">
+<h2 class="anchored" data-anchor-id="year-9-forgotten-fear">Year 9: Forgotten Fear</h2>
+<blockquote class="blockquote">
+<p>This is but one woven world<br> within a medley of revulsion<br> A scope unfathomable to the conscious mind<br> Eaten, Willow…<br> Vines tore me off my feet<br> and under the water again</p>
+</blockquote>
+<p><strong>Emily Dickinson</strong> was always a bit of an odd bird that one, so I guess it makes sense that she would become <code>The Gloom Woman</code> carrying the <code>Husk of Destiny</code>. A terrifying combination and one the <code>Slenderman</code> was not prepared for in the slightest. <strong>Emily Dickinson</strong> popped <code>Slenderman's</code> head like a fermented pomegranate then promptly forgot her name.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch09.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch09.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Our good friend uh…whatever his name used to be was visited by a hooded stranger who placed <code>The Twilight Sword</code> into his hands and left without uttering a single word. Befitting his settlement’s name, he chose to bravely wield it in battle against the very next <code>Antelope</code> they saw and promptly had his head trampled in. Oops.</p>
+<p><strong>Milton Friedman</strong> decapitated the <code>Antelope</code> with a critical hit in revenge. After the fight the others went over to the trampled remains to look for <code>The Twilight Sword</code> but when pulled the fabric covering his body away they were struck by a bizarre sight. The fabled <strong>Argyle</strong> – He Who Transcends – lay before us covered head-to-toe in translucent moths. The moths formed a murmuration and swelled and shrank chaotically as they flew away.</p>
+<p>Oh right and then on the walk home <strong>Argyle</strong> got possessed during a haunting. It was a busy year, what can I say.</p>
+<p>☠️ <strong>???</strong></p>
+</section>
+<section id="year-10-anteloopes" class="level2">
+<h2 class="anchored" data-anchor-id="year-10-anteloopes">Year 10: Antelo(o)p<del>e</del>s</h2>
+<blockquote class="blockquote">
+<p>The first blood shed does not seem real <br> Reality is what you feel <br> Dropping to your knees you pray <br> God won’t make this go away</p>
+</blockquote>
+<p>Despite a wealth of resources no hide meant little armor to don and so another standard <code>Antelope</code> was chosen once again as the target for the year’s hunt. The settlement even crafted a set of potent <code>Gloom-coated Arrows</code> to make this venture even more pedestrian.</p>
+<p>You know what else is pedestrian?</p>
+<p>…</p>
+<p>Walking into traffic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="imgs/ch10.png" class="lightbox" data-gallery="gallery"><img src="imgs/ch10.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><strong>Vera Rubin</strong> had her head repeatedly trampled until it would be difficult to say that what remained was even capable of being trampled further.</p>
+<p><strong>Janet Yellen-Smith</strong> was bitten to death.</p>
+<p><strong>Rebecca Smith</strong> had her chest caved in.</p>
+<p>Until only sweet sweet <strong>Argyle</strong> – He Who Transcends – remained. The repeated nicks and cuts the <code>Antelope</code> delivered as it shot back and forth across the chipped and mangled field of stone faces was finally too much for our hero to bear. His breathing labored and his movements slowed. He quietly lay down his tenacious dough-kneading arms and sighed in exsanguination.</p>
+<p>☠️ <strong>Vera Rubin</strong> <br> ☠️ <strong>Janet Yellen-Smith</strong> <br> ☠️ <strong>Rebecca Smith</strong> <br> ☠️ <strong>Argyle</strong> <br></p>
+</section>
+<section id="years-a-summary" class="level2">
+<h2 class="anchored" data-anchor-id="years-a-summary">10 Years: A Summary</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Monster</th>
+<th>Level</th>
+<th>Special Showdown</th>
+<th>Level</th>
+<th>Deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>White Lion</td>
+<td>0</td>
+<td>-</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>White Lion</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>White Lion</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>White Lion</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>The Butcher</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>White Lion</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>White Lion</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>White Lion</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>White Lion</td>
+<td>2</td>
+<td>Lion Knight</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Antelope</td>
+<td>2</td>
+<td>Slenderman</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Antelope</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<blockquote class="blockquote">
+<p>Far better it seems to me, in our vulnerability<br> to look death in the eye and to be grateful every day<br> for the brief but magnificent opportunity that life provides</p>
+</blockquote>
+<ul>
+<li><strong>You!</strong> – Thank you for reading! I sincerely hope it provided you some moments of joy</li>
+<li><strong>David Vivian</strong> – For always being down to edit my denisovan writing and being a bro I can jam with</li>
+<li><strong>Poots and Co.</strong> – There is no Kingdom without the Creator. Thank you for putting your heart into your work.</li>
+<li><strong>FISTOs</strong> – Couldn’t do it without the lads</li>
+<li><strong>Tyler Reed, Preston Fraser</strong> – Music is one of the most important things in my life and I’m grateful for those I can connect with about music that makes most people feel physically ill.&nbsp;Thanks for giving me the opportunity to bang the drum loud.
+<ul>
+<li>Reed’s project: <a href="https://deiphage-war.bandcamp.com/album/nuclear-cavalry">Deiphage</a></li>
+<li>Preston’s project: <a href="https://overneath.bandcamp.com/album/a-tribute-to-a-tribute-to-overneath">Overneath</a></li>
+</ul></li>
+<li><strong>Ian, Arjun, Nathan, Ed</strong> – Thanks for not letting me die in grad school.</li>
+<li><strong>Adrian Perez and Warforged</strong> – <em>I: Voice</em> is one of my favorite albums and the visual imagery in their songs inspired several parts of the story. Also they are cool dudes and crashed at my house when I lived in San Diego 🤘</li>
+</ul>
+<div class="grid">
+<div class="g-col-6">
+<div id="fig-war-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="imgs/misc/warforged.JPG" class="lightbox" data-gallery="war" title="Dudes from Warforged and Alluvial"><img src="imgs/misc/warforged.JPG" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Dudes from Warforged and Alluvial</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-6">
+<div id="fig-war-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="imgs/misc/warforged-2.JPG" class="lightbox" data-gallery="war" title="Hey stop so lookin so cute in my kitchen"><img src="imgs/misc/warforged-2.JPG" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Hey stop so lookin so cute in my kitchen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div id="quarto-copyright" class="quarto-appendix-contents"><div>John Vivian - 2024 - All Rights Reserved</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
+
+
+
+</body></html>
