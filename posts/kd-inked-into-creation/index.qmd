@@ -104,7 +104,7 @@ After an intense discussion about what exactly went wrong with the first fucking
 
 ![](imgs/ch02-endless-screams-4k.jpg){group="gallery"}
 
-After hours of contemplation and vigorous debate, the settlement reached a unanimous decision. In no uncertain terms, we declared our disdain for mediocrity and fragility, embracing instead the ruthless doctrine of Survival of the Fittest. This path we chose is unforgiving; the young ones face a grueling trial by fire, with only the strongest emerging from the crucible of our community's upbringing. Yet, it's this very crucible that tempers them into beings capable of withstanding the desolate cruelty of the wasteland.
+After hours of contemplation and vigorous debate, the settlement reached a unanimous decision. In no uncertain terms, we declared our disdain for mediocrity and fragility, embracing instead the ruthless doctrine of `Survival of the Fittest`. This path we chose is unforgiving; the young ones face a grueling trial by fire, with only the strongest emerging from the crucible of our community's upbringing. Yet, it's this very crucible that tempers them into beings capable of withstanding the desolate cruelty of the wasteland.
 
 Bolstered by the promise of nurturing not just survivors, but warriors of unparalleled resilience—our very own cadre of *elite, buff babies*—our heroes ventured forth. Their target: a `White Lion`, a formidable beast that, under normal circumstances, would require a herculean effort to subdue. However, with their newfound confidence and strategic prowess, they dispatched the creature with such ease, it was as if they were merely swatting a fly, not battling a predator at the apex of its ferocity.
 
@@ -210,7 +210,7 @@ As if summoned by some arcane force, a vibrant rainbow tore across the sky, its 
 
 The settlement was plunged into a state of emergency as the infection spread, transforming mild coughs into severe respiratory distress. In an act of communal solidarity, the settlers donned makeshift masks, retreating into isolation in hopes of curbing the contagion.
 
-Amidst this turmoil, the settlement's resilience was once again put to the test during a hunt that proved to be a pivotal moment for their survival. **Emily Dickinson**, a name synonymous with quiet introspection, emerged as an unlikely champion of the hunt. Her encounter with a particularly formidable White Lion—a beast that had long evaded capture—ended in a display of unparalleled ferocity. With a decisive strike, Emily severed the lion's jaw, a symbolic act that resonated deeply within the hearts of the settlers.
+Amidst this turmoil, the settlement's resilience was once again put to the test during a hunt that proved to be a pivotal moment for their survival. **Emily Dickinson**, a name synonymous with quiet introspection, emerged as an unlikely champion of the hunt. Her encounter with a particularly formidable `White Lion`—a beast that had long evaded capture—ended in a display of unparalleled ferocity. With a decisive strike, Emily severed the lion's jaw, a symbolic act that resonated deeply within the hearts of the settlers.
 
 ## Year 8: Glowing Crater & Rumbling in the Dark
 
@@ -222,11 +222,11 @@ Compelled by a mixture of fear, curiosity, and an unspoken duty to their communi
 
 ![](imgs/ch08.png){group="gallery"}
 
-As fate would have it, the impact of the glowing crater heralded a period of unexpected abundance and vitality within the settlement. The charismatic Adam Smith, embodying both the vigor of youth and the wisdom of an elder, became the focal point of a remarkable event that saw the birth of three robust infants. These new lives, born into a world devoid of the constructs of nationhood or economic prosperity, represented a beacon of hope amidst the enveloping darkness. A celebration was inevitable, a moment of joyous reprieve in an existence marked by perpetual struggle.
+As fate would have it, the impact of the glowing crater heralded a period of unexpected abundance and vitality within the settlement. The charismatic **Adam Smith**, embodying both the vigor of youth and the wisdom of an elder, became the focal point of a remarkable event that saw the birth of three robust infants. These new lives, born into a world devoid of the constructs of nationhood or economic prosperity, represented a beacon of hope amidst the enveloping darkness. A celebration was inevitable, a moment of joyous reprieve in an existence marked by perpetual struggle.
 
 ...And you wouldn't be so rude as to fail to deliver an invitation to your settlement's own patient guest of honor, would you?
 
-However, joy turned to terror as the once inanimate statue of the `Lion Knight` sprung to life, its previous stillness giving way to a ferocious and unanticipated hostility. Amidst the chaos, **Euler** suffered grievous injuries, a testament to the unpredictability of their reality. Yet, in the face of overwhelming odds, **Sir David Attenborough**—recently knighted in recognition of his unparalleled contributions to the settlement—struck a decisive blow. Donning `The Hideous Disguise` bestowed upon him, he emerged not only as a savior but as a symbol of the indomitable spirit of their community.
+Joy turned to terror as the once inanimate statue of the `Lion Knight` sprung to life, its previous stillness giving way to a ferocious and unanticipated hostility. Amidst the chaos, **Euler** suffered grievous injuries, a testament to the unpredictability of their reality. Yet, in the face of overwhelming odds, **Sir David Attenborough**—recently knighted in recognition of his unparalleled contributions to the settlement—struck a decisive blow. Donning `The Hideous Disguise` bestowed upon him, he emerged not only as a savior but as a symbol of the indomitable spirit of their community.
 
 ## Year 9: Forgotten Fear
 
@@ -238,9 +238,9 @@ However, joy turned to terror as the once inanimate statue of the `Lion Knight` 
 
 Meanwhile, the man formerly known by a name now lost to all, including himself, was approached by a mysterious figure. This hooded stranger bestowed upon him `The Twilight Sword`, a weapon shrouded in enigma and imbued with the potential to alter destinies. Yet, fate, as ever, proved both cruel and capricious. In his inaugural combat, wielding the sword against an unsuspecting Antelope, he met a tragic and ignominious end, his aspirations crushed beneath the weight of his adversary's hooves.
 
-In the aftermath, **Milton Friedman**, spurred by a blend of vengeance and the cold calculus of survival, delivered a swift retribution upon the Antelope, decapitating the beast with a precision that spoke of both skill and underlying rage. Yet, it was the discovery of **Argyle** @StrangerThings —He Who Transcends—amidst the carnage that truly bewildered the survivors. Shrouded in a cloak of translucent moths, he presented a sight both beautiful and unsettling, a living embodiment of transformation and transience. As the moths dispersed, they left behind more questions than answers, a murmuration of mysteries taking flight into the unknown.
+In the aftermath, **Milton Friedman**, spurred by a blend of vengeance and the cold calculus of survival, delivered a swift retribution upon the `Antelope`, decapitating the beast with a precision that spoke of both skill and underlying rage. Yet, it was the discovery of **Argyle** @StrangerThings —He Who Transcends—amidst the carnage that truly bewildered the survivors. Shrouded in a cloak of translucent moths, he presented a sight both beautiful and unsettling, a living embodiment of transformation and transience. As the moths dispersed, they left behind more questions than answers, a murmuration of mysteries taking flight into the unknown.
 
-Oh right and then on the walk home Argyle got possessed during a haunting. It was a busy year, what can I say.
+Oh right, and then on the walk home **Argyle** got possessed during a haunting. It was a busy year, what can I say.
 
 ☠️ **???**
 
