@@ -7,25 +7,26 @@ categories: ['Math', 'Modeling', 'Python']
 image: "jv_dfm.jpg"
 format:
     html:
-        output-file: "presentation-post.html"
-    revealjs:
-        include-in-header:
-            text: |
-                <style>
-                .center-xy {
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -ms-transform: translateY(-50%), translateX(-50%);
-                transform: translateY(-50%), translateX(-50%);
-                }
-                </style>
+        toc: true
+#         output-file: "presentation-post.html"
+    # revealjs:
+    #     include-in-header:
+    #         text: |
+    #             <style>
+    #             .center-xy {
+    #             margin: 0;
+    #             position: absolute;
+    #             top: 50%;
+    #             left: 50%;
+    #             -ms-transform: translateY(-50%), translateX(-50%);
+    #             transform: translateY(-50%), translateX(-50%);
+    #             }
+    #             </style>
 editor:
     render-on-save: true
 code:
     echo: false
-format-links: [revealjs]
+# format-links: [revealjs]
 ---
 
 ## Understanding the Economic Impact of COVID-19 Through Data
