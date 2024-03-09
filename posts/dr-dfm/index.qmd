@@ -19,6 +19,10 @@ format:
                 transform: translateY(-50%), translateX(-50%);
                 }
                 </style>
+editor:
+    render-on-save: true
+code:
+    echo: false
 ---
 
 ## Understanding the Economic Impact of COVID-19 Through Data
@@ -74,6 +78,7 @@ The loading matrix is a bridge that connects the latent factors, which are unobs
 > Relationship between latent factors and observed variables via loading matrix
 
 ```{python}
+# echo: false
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -167,6 +172,7 @@ $\eta_t$: Innovation term
 Examining the first transition matrix
 
 ```{python}
+# echo: false
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -206,6 +212,7 @@ plt.show()
 Examining the second transition matrix
 
 ```{python}
+# echo: false
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
