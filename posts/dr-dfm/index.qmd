@@ -6,8 +6,8 @@ date: "2024-03-09"
 categories: ['Math', 'Modeling', 'Python']
 image: "jv_dfm.jpg"
 format:
-    html: 
-        output-file: "test.html"
+    html:
+        output-file: "presentation-post.html"
     revealjs:
         include-in-header:
             text: |
