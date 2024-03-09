@@ -23,6 +23,7 @@ editor:
     render-on-save: true
 code:
     echo: false
+format-links: [revealjs]
 ---
 
 ## Understanding the Economic Impact of COVID-19 Through Data
