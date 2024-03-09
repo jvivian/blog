@@ -68,7 +68,7 @@ The loading matrix is a bridge that connects the latent factors, which are unobs
 > Relationship between latent factors and observed variables via loading matrix
 
 ```{python}
-# echo: false
+#| echo: false
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -162,7 +162,7 @@ $\eta_t$: Innovation term
 Examining the first transition matrix
 
 ```{python}
-# echo: false
+#| echo: false
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -202,7 +202,7 @@ plt.show()
 Examining the second transition matrix
 
 ```{python}
-# echo: false
+#| echo: false
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -247,7 +247,7 @@ By applying constraints to the model parameters, we can improve interpretability
 For example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors.
 
 ## Factor Constraints {.smaller}
-> Factor loading constraint example
+Factor constraint loadings example
 
 | Dep. variable  | Global.1 | Pandemic | Employment | Consumption | Inflation |
 |-----------------|----------|----------|------------|-------------|-----------|
