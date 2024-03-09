@@ -8,20 +8,6 @@ image: "jv_dfm.jpg"
 format:
     html:
         toc: true
-#         output-file: "presentation-post.html"
-    # revealjs:
-    #     include-in-header:
-    #         text: |
-    #             <style>
-    #             .center-xy {
-    #             margin: 0;
-    #             position: absolute;
-    #             top: 50%;
-    #             left: 50%;
-    #             -ms-transform: translateY(-50%), translateX(-50%);
-    #             transform: translateY(-50%), translateX(-50%);
-    #             }
-    #             </style>
 editor:
     render-on-save: true
 code:
