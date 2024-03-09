@@ -424,7 +424,7 @@
     "href": "temp/kingdom-death/index.html#summary-statistics",
     "title": "Kingdom Death",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_1201/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_1201/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_1201/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_1201/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_1201/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
+    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_2271/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_2271/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_2271/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_2271/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_2271/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
   },
   {
     "objectID": "temp/kingdom-death/index.html#acknowledgements",
@@ -448,127 +448,127 @@
     "text": "Parse Medical Data\n\nmed = pl.read_csv(\"./data/body_measurements.csv\", skip_rows_after_header=1)\nprint(med)\n\nshape: (715, 13)\n┌────────┬─────┬─────────────┬─────────────┬───┬─────────────┬────────────┬───────────┬────────────┐\n│ Gender ┆ Age ┆ HeadCircumf ┆ ShoulderWid ┆ … ┆ ShoulderToW ┆ WaistToKne ┆ LegLength ┆ TotalHeigh │\n│ ---    ┆ --- ┆ erence      ┆ th          ┆   ┆ aist        ┆ e          ┆ ---       ┆ t          │\n│ i64    ┆ i64 ┆ ---         ┆ ---         ┆   ┆ ---         ┆ ---        ┆ i64       ┆ ---        │\n│        ┆     ┆ i64         ┆ i64         ┆   ┆ i64         ┆ i64        ┆           ┆ i64        │\n╞════════╪═════╪═════════════╪═════════════╪═══╪═════════════╪════════════╪═══════════╪════════════╡\n│ 1      ┆ 28  ┆ 19          ┆ 22          ┆ … ┆ 23          ┆ 25         ┆ 20        ┆ 56         │\n│ 2      ┆ 27  ┆ 21          ┆ 18          ┆ … ┆ 18          ┆ 14         ┆ 18        ┆ 53         │\n│ 1      ┆ 29  ┆ 20          ┆ 20          ┆ … ┆ 21          ┆ 20         ┆ 21        ┆ 45         │\n│ 2      ┆ 28  ┆ 16          ┆ 14          ┆ … ┆ 22          ┆ 32         ┆ 13        ┆ 47         │\n│ 2      ┆ 22  ┆ 17          ┆ 19          ┆ … ┆ 24          ┆ 21         ┆ 19        ┆ 60         │\n│ …      ┆ …   ┆ …           ┆ …           ┆ … ┆ …           ┆ …          ┆ …         ┆ …          │\n│ 2      ┆ 13  ┆ 22          ┆ 6           ┆ … ┆ 20          ┆ 16         ┆ 33        ┆ 59         │\n│ 1      ┆ 10  ┆ 21          ┆ 11          ┆ … ┆ 15          ┆ 14         ┆ 25        ┆ 45         │\n│ 1      ┆ 4   ┆ 20          ┆ 17          ┆ … ┆ 12          ┆ 12         ┆ 22        ┆ 40         │\n│ 1      ┆ 13  ┆ 20          ┆ 15          ┆ … ┆ 20          ┆ 16         ┆ 33        ┆ 59         │\n│ 2      ┆ 4   ┆ 20          ┆ 15          ┆ … ┆ 10          ┆ 12         ┆ 19        ┆ 37         │\n└────────┴─────┴─────────────┴─────────────┴───┴─────────────┴────────────┴───────────┴────────────┘\n\n\n\n\nmed.columns = [x.strip() for x in med.columns]\n\n\n# med.select(pl.col('^Chest.*$'))\nmed.with_columns((pl.col('ChestWidth') + pl.col('ArmLength') * 2).alias('ArmSpan'))\n\n\nshape: (715, 14)\n\n\n\nGender\nAge\nHeadCircumference\nShoulderWidth\nChestWidth\nBelly\nWaist\nHips\nArmLength\nShoulderToWaist\nWaistToKnee\nLegLength\nTotalHeight\nArmSpan\n\n\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\n\n\n\n\n1\n28\n19\n22\n17\n18\n21\n25\n28\n23\n25\n20\n56\n73\n\n\n2\n27\n21\n18\n16\n14\n10\n15\n21\n18\n14\n18\n53\n58\n\n\n1\n29\n20\n20\n18\n11\n19\n14\n24\n21\n20\n21\n45\n66\n\n\n2\n28\n16\n14\n18\n13\n11\n30\n25\n22\n32\n13\n47\n68\n\n\n2\n22\n17\n19\n18\n14\n16\n18\n20\n24\n21\n19\n60\n58\n\n\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n\n\n2\n13\n22\n6\n14\n25\n18\n30\n21\n20\n16\n33\n59\n56\n\n\n1\n10\n21\n11\n12\n22\n2\n26\n21\n15\n14\n25\n45\n54\n\n\n1\n4\n20\n17\n11\n22\n22\n22\n17\n12\n12\n22\n40\n45\n\n\n1\n13\n20\n15\n14\n25\n18\n30\n21\n20\n16\n33\n59\n56\n\n\n2\n4\n20\n15\n10\n20\n20\n21\n18\n10\n12\n19\n37\n46\n\n\n\n\n\n\n\ncols = [\"arm_len_spine_wrist\", \"hand_len\", \"gender\", \"reported_height\", \"height\"]\nmed.select(pl.col(\"^*hand.*$\"))\n# med = med.select(cols).with_columns(\n#     (pl.col(\"arm_len_spine_wrist\") * 2 + pl.col(\"hand_len\") * 2).alias(\"armspan\")\n# ).with_columns((pl.col(\"armspan\") / pl.col(\"height\")).alias(\"ApeIndex\"))\n# print(med)\n\n\nshape: (4_464, 1)\n\n\n\nhand_len\n\n\nf64\n\n\n\n\n8.62\n\n\n8.82\n\n\n8.27\n\n\n8.03\n\n\n8.58\n\n\n…\n\n\n6.89\n\n\n7.24\n\n\n7.48\n\n\n7.48\n\n\n7.05\n\n\n\n\n\n\n\nmed.select(pl.col('^arm.*$'))\n\n\nshape: (4_464, 3)\n\n\n\narm_len_spine_wrist\narm_len_shoulder_wrist\narm_len_shoulder_elbow\n\n\nf64\nf64\nf64\n\n\n\n\n35.71\n27.44\n14.84\n\n\n34.61\n25.55\n13.5\n\n\n34.25\n25.75\n13.74\n\n\n34.53\n26.02\n13.31\n\n\n36.18\n27.32\n14.29\n\n\n…\n…\n…\n\n\n27.64\n20.39\n10.63\n\n\n30.83\n22.87\n11.57\n\n\n32.87\n25.31\n13.39\n\n\n30.39\n22.72\n11.61\n\n\n29.8\n22.24\n11.54"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html",
-    "href": "posts/dr-dfm-covid/index.html",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html",
+    "href": "posts/dr-dfm-covid/presentation-post.html",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "",
     "text": "As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#understanding-the-economic-impact-of-covid-19-through-data",
-    "href": "posts/dr-dfm-covid/index.html#understanding-the-economic-impact-of-covid-19-through-data",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#understanding-the-economic-impact-of-covid-19-through-data",
+    "href": "posts/dr-dfm-covid/presentation-post.html#understanding-the-economic-impact-of-covid-19-through-data",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "",
     "text": "As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#dynamic-factor-models-a-primer",
-    "href": "posts/dr-dfm-covid/index.html#dynamic-factor-models-a-primer",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#dynamic-factor-models-a-primer",
+    "href": "posts/dr-dfm-covid/presentation-post.html#dynamic-factor-models-a-primer",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dynamic Factor Models: A Primer",
     "text": "Dynamic Factor Models: A Primer\n\nDynamic Factor Models are powerful statistical tools that help us make sense of complex, interconnected data. By identifying latent factors that influence observed variables over time, DFMs can reveal the underlying trends and dynamics of economic systems. This approach is particularly valuable in the context of COVID-19, where traditional models may struggle to account for rapidly changing conditions."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#the-model-at-a-glance",
-    "href": "posts/dr-dfm-covid/index.html#the-model-at-a-glance",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#the-model-at-a-glance",
+    "href": "posts/dr-dfm-covid/presentation-post.html#the-model-at-a-glance",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "The Model at a Glance",
     "text": "The Model at a Glance\nConsider the basic Dynamic Factor Model equation:\n\\[y_t = \\Lambda f_t + \\epsilon_t\\]\n\nHere’s what each symbol represents:\n\n\\(y_t\\): The observed variables at time \\(t\\).\n\\(\\Lambda\\): The loading matrix, showing how each latent factor influences observed variables.\n\\(f_t\\): The latent factors, representing underlying trends.\n\\(\\epsilon_t\\): The error term, accounting for discrepancies between model predictions and observed data."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#visualizing-the-model",
-    "href": "posts/dr-dfm-covid/index.html#visualizing-the-model",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#visualizing-the-model",
+    "href": "posts/dr-dfm-covid/presentation-post.html#visualizing-the-model",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Visualizing the Model",
     "text": "Visualizing the Model\n\n\n\nThe latent factors (\\(f_t\\)) influence the observed variables (\\(y_t\\)) through the loading matrix (\\(\\Lambda\\)), and the error term (\\(\\epsilon_t\\)) is associated with the observed variables.\n\nThe loading matrix is a bridge that connects the latent factors, which are unobservable, to the observed variables, providing a mathematical representation of how the latent factors influence the observed data"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#latent-factors-and-observed-variables",
-    "href": "posts/dr-dfm-covid/index.html#latent-factors-and-observed-variables",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#latent-factors-and-observed-variables",
+    "href": "posts/dr-dfm-covid/presentation-post.html#latent-factors-and-observed-variables",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Latent Factors and Observed Variables",
     "text": "Latent Factors and Observed Variables\n\nRelationship between latent factors and observed variables via loading matrix\n\n\n# echo: false\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Set seed for reproducibility\nnp.random.seed(42)\n\n# Generate dummy data\nnum_observed_variables = 4\nnum_time_points = 100\nloading_matrix = np.array([[0.5, 0.3, 0.8, 0.2],\n                           [0.7, 0.2, 0.5, 0.1]])\n\nlatent_factors = np.random.randn(num_time_points, 2)\nobserved_variables = np.dot(latent_factors, loading_matrix) + np.random.randn(num_time_points, num_observed_variables)\n\n# Plotting\nplt.figure(figsize=(10, 6))\n\n# Plot latent factors\nplt.subplot(2, 1, 1)\nplt.plot(latent_factors[:, 0], label='Latent Factor 1', linestyle='--')\nplt.plot(latent_factors[:, 1], label='Latent Factor 2', linestyle='--')\nplt.title('Latent Factors Over Time')\nplt.legend()\n\n# Plot observed variables\nplt.subplot(2, 1, 2)\nfor i in range(num_observed_variables):\n    plt.plot(observed_variables[:, i], label=f'Observed Variable {i+1}')\nplt.title('Observed Variables Over Time')\nplt.legend()\n\nplt.tight_layout()\nplt.show()"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics",
-    "href": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics",
+    "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Extending the Model with Time Dynamics",
     "text": "Extending the Model with Time Dynamics\nBy incorporating autoregressive components, we can capture the evolving nature of economic relationships during the pandemic. This advanced model formulation allows for a more accurate representation of the data, enabling better forecasts and insights.\n\n\\[\n\\begin{split}\\begin{align}\ny_t & = \\Lambda f_t + B x_t + u_t \\\\\nf_t & = A_1 f_{t-1} + \\dots + A_p f_{t-p} + \\eta_t \\qquad \\eta_t \\sim N(0, I)\\\\\nu_t & = C_1 u_{t-1} + \\dots + C_q u_{t-q} + \\varepsilon_t \\qquad \\varepsilon_t \\sim N(0, \\Sigma)\n\\end{align}\\end{split}\n\\]"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics-1",
-    "href": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics-1",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-1",
+    "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-1",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Extending the Model with Time Dynamics",
     "text": "Extending the Model with Time Dynamics\n\\[\n\\begin{split}\\begin{align}\ny_t & = \\Lambda f_t + B x_t + u_t \\\\\nf_t & = A_1 f_{t-1} + \\dots + A_p f_{t-p} + \\eta_t \\qquad \\eta_t \\sim N(0, I)\\\\\nu_t & = C_1 u_{t-1} + \\dots + C_q u_{t-q} + \\varepsilon_t \\qquad \\varepsilon_t \\sim N(0, \\Sigma)\n\\end{align}\\end{split}\n\\]\n\nWhere \\(y_t\\) is observed, \\(f_t\\) are unobserved latent factors, \\(x_t\\) are optional (unused for our case) exogenous variables, and the dynamic evolution of latent factors is expressed using the transition matrix \\(A\\) with \\(\\eta_t\\) representing new information or random shocks. \\(u_t\\) is the error or “idiosyncratic” process\n. . .\n\nThis model is then cast into state space form and the unobserved factors estimated via the Kalman filter. The likelihood can be evaluated as a byproduct of the filtering recursions with maximum likelihood estimation used to estimate the parameters."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics-2",
-    "href": "posts/dr-dfm-covid/index.html#extending-the-model-with-time-dynamics-2",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-2",
+    "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-2",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Extending the Model with Time Dynamics",
     "text": "Extending the Model with Time Dynamics\n\\[f_t = A f_{t-1} + \\eta_t\\]\n\\(A\\): Transition matrix \\(\\eta_t\\): Innovation term\n\n\n\nThe transition matrix, often denoted as \\(A\\), is a square matrix that governs the temporal evolution of the latent factors\nEach element of the matrix represents the influence of one latent factor at the current time on the corresponding latent factor at the next time point\nThe elements of the transition matrix \\(A\\) determine how each latent factor at the previous time point contributes to the latent factors at the current time point\nValues in the diagonal of \\(A\\) represent the persistence of each latent factor over time\nOff-diagonal elements indicate the influence of one latent factor on another"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#interpreting-transition-matrices",
-    "href": "posts/dr-dfm-covid/index.html#interpreting-transition-matrices",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices",
+    "href": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Interpreting Transition Matrices",
     "text": "Interpreting Transition Matrices\nExamining the first transition matrix\n\n# echo: false\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Set seed for reproducibility\nnp.random.seed(42)\n\n# Generate two different transition matrices\ntransition_matrix_1 = np.array([[0.8, 0.2],\n                                [0.3, 0.7]])\n\ntransition_matrix_2 = np.array([[0.5, 0.5],\n                                [0.6, 0.4]])\n\n# Create a figure with subplots\nfig, axs = plt.subplots(1, 2, figsize=(10, 4))\n\n# Plot heatmap for Transition Matrix 1\nsns.heatmap(transition_matrix_1, annot=True, cmap=\"Reds\", linewidths=.5, ax=axs[0])\naxs[0].set_title('Transition Matrix 1')\n\n# Plot heatmap for Transition Matrix 2\nsns.heatmap(transition_matrix_2, annot=True, cmap=\"Reds\", linewidths=.5, ax=axs[1])\naxs[1].set_title('Transition Matrix 2')\n\n# Adjust layout\nplt.tight_layout()\nplt.show()\n\n\n\n\n\nThe diagonal elements (0.8 and 0.7) are relatively high, indicating a strong persistence of each latent factor over time.\nThe off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.\nSummary: latent factors have a tendency to persist, with some interdependence."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#interpreting-transition-matrices-1",
-    "href": "posts/dr-dfm-covid/index.html#interpreting-transition-matrices-1",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices-1",
+    "href": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices-1",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Interpreting Transition Matrices",
     "text": "Interpreting Transition Matrices\nExamining the second transition matrix\n\n# echo: false\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Set seed for reproducibility\nnp.random.seed(42)\n\n# Generate two different transition matrices\ntransition_matrix_1 = np.array([[0.8, 0.2],\n                                [0.3, 0.7]])\n\ntransition_matrix_2 = np.array([[0.5, 0.5],\n                                [0.6, 0.4]])\n\n# Create a figure with subplots\nfig, axs = plt.subplots(1, 2, figsize=(10, 4))\n\n# Plot heatmap for Transition Matrix 1\nsns.heatmap(transition_matrix_1, annot=True, cmap=\"Reds\", linewidths=.5, ax=axs[0])\naxs[0].set_title('Transition Matrix 1')\n\n# Plot heatmap for Transition Matrix 2\nsns.heatmap(transition_matrix_2, annot=True, cmap=\"Reds\", linewidths=.5, ax=axs[1])\naxs[1].set_title('Transition Matrix 2')\n\n# Adjust layout\nplt.tight_layout()\nplt.show()\n\n\n\n\n\nThe diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.\nThe off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.\nSummary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#factor-constraints-enhancing-model-interpretability",
-    "href": "posts/dr-dfm-covid/index.html#factor-constraints-enhancing-model-interpretability",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#factor-constraints-enhancing-model-interpretability",
+    "href": "posts/dr-dfm-covid/presentation-post.html#factor-constraints-enhancing-model-interpretability",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Factor Constraints: Enhancing Model Interpretability",
     "text": "Factor Constraints: Enhancing Model Interpretability\n\nBy applying constraints to the model parameters, we can improve interpretability and reduce complexity while incorporating prior domain knowledge about variable relationships.\n\nFor example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#factor-constraints",
-    "href": "posts/dr-dfm-covid/index.html#factor-constraints",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#factor-constraints",
+    "href": "posts/dr-dfm-covid/presentation-post.html#factor-constraints",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Factor Constraints",
     "text": "Factor Constraints\n\nFactor loading constraint example\n\n\n\n\n\n\n\n\n\n\n\n\nDep. variable\nGlobal.1\nPandemic\nEmployment\nConsumption\nInflation\n\n\n\n\nSupply_1\nX\n\n\n\n\n\n\nSupply_7\nX\n\n\n\n\n\n\nMonetary_5\nX\n\n\n\n\n\n\nMonetary_9\nX\n\n\n\n\n\n\nSupply_2\nX\n\nX\n\n\n\n\nSupply_3\nX\n\nX\n\n\n\n\nDemand_7\nX\n\nX\n\n\n\n\nDemand_3\nX\n\n\nX\n\n\n\nDemand_5\nX\n\n\nX\n\n\n\nMonetary_2\nX\n\n\n\nX\n\n\nMonetary_1\nX\n\n\n\nX\n\n\nPandemic_2\nX\nX\n\n\n\n\n\nPandemic_9\nX\nX"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#implementation",
-    "href": "posts/dr-dfm-covid/index.html#implementation",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#implementation",
+    "href": "posts/dr-dfm-covid/presentation-post.html#implementation",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Implementation",
     "text": "Implementation\n\nWe are developing a Python package that simplifies the process of applying DFMs to COVID-19 economic data. The package includes features such as:\n\n\nPoetry for dependency management\nCI with GitHub Actions\nPre-commit hooks with pre-commit\nCode quality with black & ruff\nTesting and coverage with pytest and codecov\nDocumentation with MkDocs\nCompatibility testing for multiple versions of Python with Tox\nContainerization with Docker"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#dashboard",
-    "href": "posts/dr-dfm-covid/index.html#dashboard",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard",
+    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard",
     "text": "Dashboard\n Our package contains a simplified interface for running parameterized DFM models"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#dashboard---data-explorer",
-    "href": "posts/dr-dfm-covid/index.html#dashboard---data-explorer",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---data-explorer",
+    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---data-explorer",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard - Data Explorer",
     "text": "Dashboard - Data Explorer\n Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here’s a sneak peek at what you can do:"
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#dashboard---factor-analysis",
-    "href": "posts/dr-dfm-covid/index.html#dashboard---factor-analysis",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---factor-analysis",
+    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---factor-analysis",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard - Factor Analysis",
     "text": "Dashboard - Factor Analysis\n Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time."
   },
   {
-    "objectID": "posts/dr-dfm-covid/index.html#dashboard---comparative-analysis",
-    "href": "posts/dr-dfm-covid/index.html#dashboard---comparative-analysis",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---comparative-analysis",
+    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---comparative-analysis",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard - Comparative Analysis",
     "text": "Dashboard - Comparative Analysis\nTest and compare different model configurations to identify the most accurate representations of the data."

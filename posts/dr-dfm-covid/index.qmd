@@ -8,6 +8,7 @@ image: "jv_dfm.jpg"
 format:
     html:
         toc: true
+        output-file: presentation-post.html
 editor:
     render-on-save: true
 code:
