@@ -10,7 +10,10 @@ dependencies:
   - polars
   - statsmodels
   - pyarrow
+  - seaborn
+  - matplotlib
   - pandas
   - scipy
   - numpy
+  - rich
 
