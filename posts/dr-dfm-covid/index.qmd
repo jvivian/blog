@@ -136,8 +136,6 @@ $\eta_t$: Innovation term
 
 ## Interpreting Transition Matrices 
 
-Examining the first transition matrix
-
 ```{python}
 #| echo: false
 import numpy as np
@@ -170,12 +168,15 @@ plt.tight_layout()
 plt.show()
 ```
 
+**First Transition Matrix**
+
 - The diagonal elements (0.8 and 0.7) are relatively high, indicating a strong persistence of each latent factor over time.
 - The off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.
 - Summary: latent factors have a tendency to persist, with some interdependence.
 
 
-### Examining the second transition matrix
+**Second Transition Matrix**
+
 - The diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.
 - The off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.
 - Summary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior.

@@ -136,10 +136,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#visualizing-the-model" id="toc-visualizing-the-model" class="nav-link" data-scroll-target="#visualizing-the-model">Visualizing the Model</a></li>
   <li><a href="#latent-factors-and-observed-variables" id="toc-latent-factors-and-observed-variables" class="nav-link" data-scroll-target="#latent-factors-and-observed-variables">Latent Factors and Observed Variables</a></li>
   <li><a href="#extending-the-model-with-time-dynamics" id="toc-extending-the-model-with-time-dynamics" class="nav-link" data-scroll-target="#extending-the-model-with-time-dynamics">Extending the Model with Time Dynamics</a></li>
-  <li><a href="#interpreting-transition-matrices" id="toc-interpreting-transition-matrices" class="nav-link" data-scroll-target="#interpreting-transition-matrices">Interpreting Transition Matrices</a>
-  <ul class="collapse">
-  <li><a href="#examining-the-second-transition-matrix" id="toc-examining-the-second-transition-matrix" class="nav-link" data-scroll-target="#examining-the-second-transition-matrix">Examining the second transition matrix</a></li>
-  </ul></li>
+  <li><a href="#interpreting-transition-matrices" id="toc-interpreting-transition-matrices" class="nav-link" data-scroll-target="#interpreting-transition-matrices">Interpreting Transition Matrices</a></li>
   <li><a href="#factor-constraints-enhancing-model-interpretability" id="toc-factor-constraints-enhancing-model-interpretability" class="nav-link" data-scroll-target="#factor-constraints-enhancing-model-interpretability">Factor Constraints: Enhancing Model Interpretability</a></li>
   </ul></li>
   <li><a href="#our-python-package-modeling-and-analysis" id="toc-our-python-package-modeling-and-analysis" class="nav-link" data-scroll-target="#our-python-package-modeling-and-analysis">Our Python Package: Modeling and Analysis</a>
@@ -267,25 +264,23 @@ u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon
 </section>
 <section id="interpreting-transition-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="interpreting-transition-matrices">Interpreting Transition Matrices</h2>
-<p>Examining the first transition matrix</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-3-output-1.png" width="750" height="373"></p>
 </div>
 </div>
+<p><strong>First Transition Matrix</strong></p>
 <ul>
 <li>The diagonal elements (0.8 and 0.7) are relatively high, indicating a strong persistence of each latent factor over time.</li>
 <li>The off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.</li>
 <li>Summary: latent factors have a tendency to persist, with some interdependence.</li>
 </ul>
-<section id="examining-the-second-transition-matrix" class="level3">
-<h3 class="anchored" data-anchor-id="examining-the-second-transition-matrix">Examining the second transition matrix</h3>
+<p><strong>Second Transition Matrix</strong></p>
 <ul>
 <li>The diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.</li>
 <li>The off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.</li>
 <li>Summary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior.</li>
 </ul>
-</section>
 </section>
 <section id="factor-constraints-enhancing-model-interpretability" class="level2">
 <h2 class="anchored" data-anchor-id="factor-constraints-enhancing-model-interpretability">Factor Constraints: Enhancing Model Interpretability</h2>
