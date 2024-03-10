@@ -424,7 +424,7 @@
     "href": "temp/kingdom-death/index.html#summary-statistics",
     "title": "Kingdom Death",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_28356/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_28356/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_28356/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_28356/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_28356/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
+    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_31367/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_31367/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_31367/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_31367/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_31367/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
   },
   {
     "objectID": "temp/kingdom-death/index.html#acknowledgements",
@@ -522,28 +522,14 @@
     "href": "posts/dr-dfm-covid/presentation-post.html#dashboard",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard",
-    "text": "Dashboard\n Our package contains a simplified interface for running parameterized DFM models"
+    "text": "Dashboard\n Our package contains a simplified interface for running parameterized DFM models\n\n\n\n\nData Explorer\n Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here’s a sneak peek at what you can do:\n\n\n\n\n\nFactor Analysis\n Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time.\n\n\n\n\n\nComparative Analysis\nTest and compare different model configurations to identify the most accurate representations of the data."
   },
   {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---data-explorer",
-    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---data-explorer",
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#future-work",
+    "href": "posts/dr-dfm-covid/presentation-post.html#future-work",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Dashboard - Data Explorer",
-    "text": "Dashboard - Data Explorer\n Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here’s a sneak peek at what you can do:"
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---factor-analysis",
-    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---factor-analysis",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Dashboard - Factor Analysis",
-    "text": "Dashboard - Factor Analysis\n Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time."
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard---comparative-analysis",
-    "href": "posts/dr-dfm-covid/presentation-post.html#dashboard---comparative-analysis",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Dashboard - Comparative Analysis",
-    "text": "Dashboard - Comparative Analysis\nTest and compare different model configurations to identify the most accurate representations of the data."
+    "section": "Future Work",
+    "text": "Future Work\n\nOur next steps involve incorporating the insights gained from DFMs into a Synthetic Control Model to further refine our understanding of COVID-19’s economic impact by exploring counter-factual statements. We are garnering feedback on our work and are hoping to submit for publication within the year!\nThank you for reading."
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#footnotes",

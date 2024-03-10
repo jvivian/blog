@@ -228,7 +228,7 @@ Our package contains a simplified interface for running parameterized DFM models
 ![](runner.png)
 :::
 
-## Dashboard - Data Explorer 
+### Data Explorer 
 <br>
 Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here's a sneak peek at what you can do:
 
@@ -237,7 +237,7 @@ Our package includes a comprehensive dashboard with features for data exploratio
 ![](data_explorer.png)
 :::
 
-## Dashboard - Factor Analysis
+### Factor Analysis
 <br>
 Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time.
 
@@ -245,7 +245,7 @@ Dive deep into the relationships between latent factors and observed variables. 
 ![](factor_analysis.png)
 :::
 
-## Dashboard - Comparative Analysis 
+### Comparative Analysis 
 Test and compare different model configurations to identify the most accurate representations of the data.
 
 :::{.column-page}
@@ -253,7 +253,7 @@ Test and compare different model configurations to identify the most accurate re
 :::
 
 
-# Future Work
+## Future Work
 
 <br>
 
