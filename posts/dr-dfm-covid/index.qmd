@@ -16,17 +16,12 @@ code:
 ---
 
 ## Understanding the Economic Impact of COVID-19 Through Data
-
-<br>
-
 As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges.
 
 
 # Dynamic Factor Models
 
 ## Dynamic Factor Models: A Primer
-
-<br>
 
 Dynamic Factor Models are powerful statistical tools that help us make sense of complex, interconnected data. By identifying latent factors that influence observed variables over time, DFMs can reveal the underlying trends and dynamics of economic systems. This approach is particularly valuable in the context of COVID-19, where traditional models may struggle to account for rapidly changing conditions.
 
@@ -47,11 +42,9 @@ Here's what each symbol represents:
 
 
 ## Visualizing the Model
-
-
 :::{.columns}
-::::{.column width="70%"}
-<br>
+::::{.column width="60%"}
+<br><br><br>
 
 The latent factors ($f_t$) influence the observed variables ($y_t$) through the loading matrix ($\Lambda$), and the error term ($\epsilon_t$) is associated with the observed variables.
 
@@ -64,7 +57,7 @@ The loading matrix is a bridge that connects the latent factors, which are unobs
 ::::
 :::
 
-## Latent Factors and Observed Variables {.smaller}
+## Latent Factors and Observed Variables
 An example of how the observed variables are mapped to latent factors through the loading matrix
 
 ```{python}
@@ -85,7 +78,7 @@ latent_factors = np.random.randn(num_time_points, 2)
 observed_variables = np.dot(latent_factors, loading_matrix) + np.random.randn(num_time_points, num_observed_variables)
 
 # Plotting
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(8, 4))
 
 # Plot latent factors
 plt.subplot(2, 1, 1)
@@ -107,11 +100,8 @@ plt.show()
 
 
 ## Extending the Model with Time Dynamics
-
 By incorporating autoregressive components, we can capture the evolving nature of economic relationships during the pandemic. This advanced model formulation allows for a more accurate representation of the data, enabling better forecasts and insights.
 
-<br>
-
 $$
 \begin{split}\begin{align}
 y_t & = \Lambda f_t + B x_t + u_t \\
@@ -120,28 +110,13 @@ u_t & = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon_t \
 \end{align}\end{split}
 $$
 
-## Extending the Model with Time Dynamics {.smaller}
-
-$$
-\begin{split}\begin{align}
-y_t & = \Lambda f_t + B x_t + u_t \\
-f_t & = A_1 f_{t-1} + \dots + A_p f_{t-p} + \eta_t \qquad \eta_t \sim N(0, I)\\
-u_t & = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon_t \sim N(0, \Sigma)
-\end{align}\end{split}
-$$
-
-<br>
 
 Where $y_t$ is observed, $f_t$ are unobserved latent factors, $x_t$ are optional (unused for our case) exogenous variables, and the dynamic evolution of latent factors is expressed using the transition matrix $A$ with $\eta_t$ representing new information or random shocks. $u_t$ is the error or "idiosyncratic" process
 
-. . .
-
-<br>
 
 This model is then cast into state space form and the unobserved factors estimated via the Kalman filter. The likelihood can be evaluated as a byproduct of the filtering recursions with maximum likelihood estimation used to estimate the parameters.
 
-
-## Extending the Model with Time Dynamics {.smaller}
+<br>
 $$f_t = A f_{t-1} + \eta_t$$
 
 $A$: Transition matrix<br>
@@ -149,15 +124,13 @@ $\eta_t$: Innovation term
 
 <br>
 
-:::{.incremental}
 - The transition matrix, often denoted as $A$, is a square matrix that governs the temporal evolution of the latent factors
 - Each element of the matrix represents the influence of one latent factor at the current time on the corresponding latent factor at the next time point
 - The elements of the transition matrix $A$ determine how each latent factor at the previous time point contributes to the latent factors at the current time point
 - Values in the diagonal of $A$ represent the persistence of each latent factor over time
 - Off-diagonal elements indicate the influence of one latent factor on another
-:::
 
-## Interpreting Transition Matrices {.smaller}
+## Interpreting Transition Matrices 
 
 Examining the first transition matrix
 
@@ -178,7 +151,7 @@ transition_matrix_2 = np.array([[0.5, 0.5],
                                 [0.6, 0.4]])
 
 # Create a figure with subplots
-fig, axs = plt.subplots(1, 2, figsize=(10, 4))
+fig, axs = plt.subplots(1, 2, figsize=(8, 4))
 
 # Plot heatmap for Transition Matrix 1
 sns.heatmap(transition_matrix_1, annot=True, cmap="Reds", linewidths=.5, ax=axs[0])
@@ -197,57 +170,18 @@ plt.show()
 - The off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.
 - Summary: latent factors have a tendency to persist, with some interdependence.
 
-## Interpreting Transition Matrices {.smaller}
 
-Examining the second transition matrix
-
-```{python}
-#| echo: false
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Set seed for reproducibility
-np.random.seed(42)
-
-# Generate two different transition matrices
-transition_matrix_1 = np.array([[0.8, 0.2],
-                                [0.3, 0.7]])
-
-transition_matrix_2 = np.array([[0.5, 0.5],
-                                [0.6, 0.4]])
-
-# Create a figure with subplots
-fig, axs = plt.subplots(1, 2, figsize=(10, 4))
-
-# Plot heatmap for Transition Matrix 1
-sns.heatmap(transition_matrix_1, annot=True, cmap="Reds", linewidths=.5, ax=axs[0])
-axs[0].set_title('Transition Matrix 1')
-
-# Plot heatmap for Transition Matrix 2
-sns.heatmap(transition_matrix_2, annot=True, cmap="Reds", linewidths=.5, ax=axs[1])
-axs[1].set_title('Transition Matrix 2')
-
-# Adjust layout
-plt.tight_layout()
-plt.show()
-```
-
+### Examining the second transition matrix
 - The diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.
 - The off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.
 - Summary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior.
 
 ## Factor Constraints: Enhancing Model Interpretability
-<br>
-
 By applying constraints to the model parameters, we can improve interpretability and reduce complexity while incorporating prior domain knowledge about variable relationships.
-
-<br><br>
 
 For example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors.
 
-## Factor Constraints {.smaller}
-Factor constraint loadings example
+Below is an example of a boolean loading matrix with constraints
 
 | Dep. variable  | Global.1 | Pandemic | Employment | Consumption | Inflation |
 |-----------------|----------|----------|------------|-------------|-----------|
@@ -268,9 +202,7 @@ Factor constraint loadings example
 
 # Our Python Package: Modeling and Analysis
 
-## Implementation {.smaller}
-<br>
-
+## Implementation
 We are developing a Python package that simplifies the process of applying DFMs to COVID-19 economic data. The package includes features such as:
 
 <br>
@@ -284,7 +216,7 @@ We are developing a Python package that simplifies the process of applying DFMs 
 - Compatibility testing for multiple versions of Python with Tox
 - Containerization with Docker
 
-## Dashboard {.smaller}
+## Dashboard 
 <br>
 Our package contains a simplified interface for running parameterized DFM models
 
@@ -292,7 +224,7 @@ Our package contains a simplified interface for running parameterized DFM models
 ![](runner.png)
 :::
 
-## Dashboard - Data Explorer {.smaller .scrollable}
+## Dashboard - Data Explorer 
 <br>
 Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here's a sneak peek at what you can do:
 
@@ -301,7 +233,7 @@ Our package includes a comprehensive dashboard with features for data exploratio
 ![](data_explorer.png)
 :::
 
-## Dashboard - Factor Analysis {.smaller}
+## Dashboard - Factor Analysis
 <br>
 Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time.
 
@@ -309,7 +241,7 @@ Dive deep into the relationships between latent factors and observed variables. 
 ![](factor_analysis.png)
 :::
 
-## Dashboard - Comparative Analysis {.smaller .scrollable}
+## Dashboard - Comparative Analysis 
 Test and compare different model configurations to identify the most accurate representations of the data.
 
 :::{.column-page}

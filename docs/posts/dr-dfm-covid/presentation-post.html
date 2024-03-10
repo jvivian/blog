@@ -136,12 +136,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#visualizing-the-model" id="toc-visualizing-the-model" class="nav-link" data-scroll-target="#visualizing-the-model">Visualizing the Model</a></li>
   <li><a href="#latent-factors-and-observed-variables" id="toc-latent-factors-and-observed-variables" class="nav-link" data-scroll-target="#latent-factors-and-observed-variables">Latent Factors and Observed Variables</a></li>
   <li><a href="#extending-the-model-with-time-dynamics" id="toc-extending-the-model-with-time-dynamics" class="nav-link" data-scroll-target="#extending-the-model-with-time-dynamics">Extending the Model with Time Dynamics</a></li>
-  <li><a href="#extending-the-model-with-time-dynamics-1" id="toc-extending-the-model-with-time-dynamics-1" class="nav-link" data-scroll-target="#extending-the-model-with-time-dynamics-1">Extending the Model with Time Dynamics</a></li>
-  <li><a href="#extending-the-model-with-time-dynamics-2" id="toc-extending-the-model-with-time-dynamics-2" class="nav-link" data-scroll-target="#extending-the-model-with-time-dynamics-2">Extending the Model with Time Dynamics</a></li>
-  <li><a href="#interpreting-transition-matrices" id="toc-interpreting-transition-matrices" class="nav-link" data-scroll-target="#interpreting-transition-matrices">Interpreting Transition Matrices</a></li>
-  <li><a href="#interpreting-transition-matrices-1" id="toc-interpreting-transition-matrices-1" class="nav-link" data-scroll-target="#interpreting-transition-matrices-1">Interpreting Transition Matrices</a></li>
+  <li><a href="#interpreting-transition-matrices" id="toc-interpreting-transition-matrices" class="nav-link" data-scroll-target="#interpreting-transition-matrices">Interpreting Transition Matrices</a>
+  <ul class="collapse">
+  <li><a href="#examining-the-second-transition-matrix" id="toc-examining-the-second-transition-matrix" class="nav-link" data-scroll-target="#examining-the-second-transition-matrix">Examining the second transition matrix</a></li>
+  </ul></li>
   <li><a href="#factor-constraints-enhancing-model-interpretability" id="toc-factor-constraints-enhancing-model-interpretability" class="nav-link" data-scroll-target="#factor-constraints-enhancing-model-interpretability">Factor Constraints: Enhancing Model Interpretability</a></li>
-  <li><a href="#factor-constraints" id="toc-factor-constraints" class="nav-link" data-scroll-target="#factor-constraints">Factor Constraints</a></li>
   </ul></li>
   <li><a href="#our-python-package-modeling-and-analysis" id="toc-our-python-package-modeling-and-analysis" class="nav-link" data-scroll-target="#our-python-package-modeling-and-analysis">Our Python Package: Modeling and Analysis</a>
   <ul class="collapse">
@@ -195,14 +194,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="understanding-the-economic-impact-of-covid-19-through-data" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-economic-impact-of-covid-19-through-data">Understanding the Economic Impact of COVID-19 Through Data</h2>
-<p><br></p>
 <p>As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges.</p>
 </section>
 <section id="dynamic-factor-models" class="level1">
 <h1>Dynamic Factor Models</h1>
 <section id="dynamic-factor-models-a-primer" class="level2">
 <h2 class="anchored" data-anchor-id="dynamic-factor-models-a-primer">Dynamic Factor Models: A Primer</h2>
-<p><br></p>
 <p>Dynamic Factor Models are powerful statistical tools that help us make sense of complex, interconnected data. By identifying latent factors that influence observed variables over time, DFMs can reveal the underlying trends and dynamics of economic systems. This approach is particularly valuable in the context of COVID-19, where traditional models may struggle to account for rapidly changing conditions.</p>
 </section>
 <section id="the-model-at-a-glance" class="level2">
@@ -221,8 +218,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="visualizing-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="visualizing-the-model">Visualizing the Model</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
-<p><br></p>
+<div class="column" style="width:60%;">
+<p><br><br><br></p>
 <p>The latent factors (<span class="math inline">\(f_t\)</span>) influence the observed variables (<span class="math inline">\(y_t\)</span>) through the loading matrix (<span class="math inline">\(\Lambda\)</span>), and the error term (<span class="math inline">\(\epsilon_t\)</span>) is associated with the observed variables.</p>
 <p><br></p>
 <p>The loading matrix is a bridge that connects the latent factors, which are unobservable, to the observed variables, providing a mathematical representation of how the latent factors influence the observed data</p>
@@ -231,21 +228,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="latent-factors-and-observed-variables" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="latent-factors-and-observed-variables">Latent Factors and Observed Variables</h2>
-<blockquote class="blockquote">
-<p>Relationship between latent factors and observed variables via loading matrix</p>
-</blockquote>
+<section id="latent-factors-and-observed-variables" class="level2">
+<h2 class="anchored" data-anchor-id="latent-factors-and-observed-variables">Latent Factors and Observed Variables</h2>
+<p>An example of how the observed variables are mapped to latent factors through the loading matrix</p>
 <div class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="950" height="565"></p>
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="758" height="373"></p>
 </div>
 </div>
 </section>
 <section id="extending-the-model-with-time-dynamics" class="level2">
 <h2 class="anchored" data-anchor-id="extending-the-model-with-time-dynamics">Extending the Model with Time Dynamics</h2>
 <p>By incorporating autoregressive components, we can capture the evolving nature of economic relationships during the pandemic. This advanced model formulation allows for a more accurate representation of the data, enabling better forecasts and insights.</p>
-<p><br></p>
 <p><span class="math display">\[
 \begin{split}\begin{align}
 y_t &amp; = \Lambda f_t + B x_t + u_t \\
@@ -253,43 +247,25 @@ f_t &amp; = A_1 f_{t-1} + \dots + A_p f_{t-p} + \eta_t \qquad \eta_t \sim N(0, I
 u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon_t \sim N(0, \Sigma)
 \end{align}\end{split}
 \]</span></p>
-</section>
-<section id="extending-the-model-with-time-dynamics-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="extending-the-model-with-time-dynamics-1">Extending the Model with Time Dynamics</h2>
-<p><span class="math display">\[
-\begin{split}\begin{align}
-y_t &amp; = \Lambda f_t + B x_t + u_t \\
-f_t &amp; = A_1 f_{t-1} + \dots + A_p f_{t-p} + \eta_t \qquad \eta_t \sim N(0, I)\\
-u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon_t \sim N(0, \Sigma)
-\end{align}\end{split}
-\]</span></p>
-<p><br></p>
 <p>Where <span class="math inline">\(y_t\)</span> is observed, <span class="math inline">\(f_t\)</span> are unobserved latent factors, <span class="math inline">\(x_t\)</span> are optional (unused for our case) exogenous variables, and the dynamic evolution of latent factors is expressed using the transition matrix <span class="math inline">\(A\)</span> with <span class="math inline">\(\eta_t\)</span> representing new information or random shocks. <span class="math inline">\(u_t\)</span> is the error or “idiosyncratic” process</p>
-<p>. . .</p>
-<p><br></p>
 <p>This model is then cast into state space form and the unobserved factors estimated via the Kalman filter. The likelihood can be evaluated as a byproduct of the filtering recursions with maximum likelihood estimation used to estimate the parameters.</p>
-</section>
-<section id="extending-the-model-with-time-dynamics-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="extending-the-model-with-time-dynamics-2">Extending the Model with Time Dynamics</h2>
-<p><span class="math display">\[f_t = A f_{t-1} + \eta_t\]</span></p>
+<p><br> <span class="math display">\[f_t = A f_{t-1} + \eta_t\]</span></p>
 <p><span class="math inline">\(A\)</span>: Transition matrix<br> <span class="math inline">\(\eta_t\)</span>: Innovation term</p>
 <p><br></p>
-<div class="incremental">
-<ul class="incremental">
+<ul>
 <li>The transition matrix, often denoted as <span class="math inline">\(A\)</span>, is a square matrix that governs the temporal evolution of the latent factors</li>
 <li>Each element of the matrix represents the influence of one latent factor at the current time on the corresponding latent factor at the next time point</li>
 <li>The elements of the transition matrix <span class="math inline">\(A\)</span> determine how each latent factor at the previous time point contributes to the latent factors at the current time point</li>
 <li>Values in the diagonal of <span class="math inline">\(A\)</span> represent the persistence of each latent factor over time</li>
 <li>Off-diagonal elements indicate the influence of one latent factor on another</li>
 </ul>
-</div>
 </section>
-<section id="interpreting-transition-matrices" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="interpreting-transition-matrices">Interpreting Transition Matrices</h2>
+<section id="interpreting-transition-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-transition-matrices">Interpreting Transition Matrices</h2>
 <p>Examining the first transition matrix</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="936" height="373"></p>
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="750" height="373"></p>
 </div>
 </div>
 <ul>
@@ -297,31 +273,20 @@ u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon
 <li>The off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.</li>
 <li>Summary: latent factors have a tendency to persist, with some interdependence.</li>
 </ul>
-</section>
-<section id="interpreting-transition-matrices-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="interpreting-transition-matrices-1">Interpreting Transition Matrices</h2>
-<p>Examining the second transition matrix</p>
-<div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-4-output-1.png" width="936" height="373"></p>
-</div>
-</div>
+<section id="examining-the-second-transition-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="examining-the-second-transition-matrix">Examining the second transition matrix</h3>
 <ul>
 <li>The diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.</li>
 <li>The off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.</li>
 <li>Summary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior.</li>
 </ul>
 </section>
+</section>
 <section id="factor-constraints-enhancing-model-interpretability" class="level2">
 <h2 class="anchored" data-anchor-id="factor-constraints-enhancing-model-interpretability">Factor Constraints: Enhancing Model Interpretability</h2>
-<p><br></p>
 <p>By applying constraints to the model parameters, we can improve interpretability and reduce complexity while incorporating prior domain knowledge about variable relationships.</p>
-<p><br><br></p>
 <p>For example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors.</p>
-</section>
-<section id="factor-constraints" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="factor-constraints">Factor Constraints</h2>
-<p>Factor constraint loadings example</p>
+<p>Below is an example of a boolean loading matrix with constraints</p>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -452,9 +417,8 @@ u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon
 </section>
 <section id="our-python-package-modeling-and-analysis" class="level1 page-columns page-full">
 <h1>Our Python Package: Modeling and Analysis</h1>
-<section id="implementation" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="implementation">Implementation</h2>
-<p><br></p>
+<section id="implementation" class="level2">
+<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
 <p>We are developing a Python package that simplifies the process of applying DFMs to COVID-19 economic data. The package includes features such as:</p>
 <p><br></p>
 <ul>
@@ -468,29 +432,29 @@ u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon
 <li>Containerization with Docker</li>
 </ul>
 </section>
-<section id="dashboard" class="level2 smaller page-columns page-full">
-<h2 class="smaller anchored" data-anchor-id="dashboard">Dashboard</h2>
+<section id="dashboard" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>
 <p><br> Our package contains a simplified interface for running parameterized DFM models</p>
 <div class="column-page">
 <p><img src="runner.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="dashboard---data-explorer" class="level2 smaller scrollable page-columns page-full">
-<h2 class="smaller scrollable anchored" data-anchor-id="dashboard---data-explorer">Dashboard - Data Explorer</h2>
+<section id="dashboard---data-explorer" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="dashboard---data-explorer">Dashboard - Data Explorer</h2>
 <p><br> Our package includes a comprehensive dashboard with features for data exploration, factor analysis, and comparative model testing. Here’s a sneak peek at what you can do:</p>
 <div class="column-page">
 <p><img src="data_explorer.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="dashboard---factor-analysis" class="level2 smaller page-columns page-full">
-<h2 class="smaller anchored" data-anchor-id="dashboard---factor-analysis">Dashboard - Factor Analysis</h2>
+<section id="dashboard---factor-analysis" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="dashboard---factor-analysis">Dashboard - Factor Analysis</h2>
 <p><br> Dive deep into the relationships between latent factors and observed variables. Understand how economic trends evolve over time.</p>
 <div class="column-page">
 <p><img src="factor_analysis.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="dashboard---comparative-analysis" class="level2 smaller scrollable page-columns page-full">
-<h2 class="smaller scrollable anchored" data-anchor-id="dashboard---comparative-analysis">Dashboard - Comparative Analysis</h2>
+<section id="dashboard---comparative-analysis" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="dashboard---comparative-analysis">Dashboard - Comparative Analysis</h2>
 <p>Test and compare different model configurations to identify the most accurate representations of the data.</p>
 <div class="column-page">
 <p><img src="comparative_analysis.png" class="img-fluid"></p>
@@ -500,7 +464,8 @@ u_t &amp; = C_1 u_{t-1} + \dots + C_q u_{t-q} + \varepsilon_t \qquad \varepsilon
 <section id="future-work" class="level1">
 <h1>Future Work</h1>
 <p><br></p>
-<p>Our next steps involve incorporating the insights gained from DFMs into <a href="https://github.com/OscarEngelbrektson/SyntheticControlMethods">Synthetic Control Model</a> to further refine our understanding of COVID-19’s economic impact by exploring counter-factual statements. We are garnering feedback on our work and are hoping to submit for publication within the year!</p>
+<p>Our next steps involve incorporating the insights gained from DFMs into a <a href="https://github.com/OscarEngelbrektson/SyntheticControlMethods">Synthetic Control Model</a> to further refine our understanding of COVID-19’s economic impact by exploring counter-factual statements. We are garnering feedback on our work and are hoping to submit for publication within the year!</p>
+<p>Thank you for reading.</p>
 
 
 </section>

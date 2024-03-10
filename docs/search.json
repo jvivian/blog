@@ -424,7 +424,7 @@
     "href": "temp/kingdom-death/index.html#summary-statistics",
     "title": "Kingdom Death",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_12344/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_12344/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_12344/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_12344/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_12344/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
+    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_26774/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_26774/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_26774/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_26774/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_26774/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
   },
   {
     "objectID": "temp/kingdom-death/index.html#acknowledgements",
@@ -466,7 +466,7 @@
     "href": "posts/dr-dfm-covid/presentation-post.html#dynamic-factor-models-a-primer",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dynamic Factor Models: A Primer",
-    "text": "Dynamic Factor Models: A Primer\n\nDynamic Factor Models are powerful statistical tools that help us make sense of complex, interconnected data. By identifying latent factors that influence observed variables over time, DFMs can reveal the underlying trends and dynamics of economic systems. This approach is particularly valuable in the context of COVID-19, where traditional models may struggle to account for rapidly changing conditions."
+    "text": "Dynamic Factor Models: A Primer\nDynamic Factor Models are powerful statistical tools that help us make sense of complex, interconnected data. By identifying latent factors that influence observed variables over time, DFMs can reveal the underlying trends and dynamics of economic systems. This approach is particularly valuable in the context of COVID-19, where traditional models may struggle to account for rapidly changing conditions."
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#the-model-at-a-glance",
@@ -487,63 +487,35 @@
     "href": "posts/dr-dfm-covid/presentation-post.html#latent-factors-and-observed-variables",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Latent Factors and Observed Variables",
-    "text": "Latent Factors and Observed Variables\n\nRelationship between latent factors and observed variables via loading matrix"
+    "text": "Latent Factors and Observed Variables\nAn example of how the observed variables are mapped to latent factors through the loading matrix"
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics",
     "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Extending the Model with Time Dynamics",
-    "text": "Extending the Model with Time Dynamics\nBy incorporating autoregressive components, we can capture the evolving nature of economic relationships during the pandemic. This advanced model formulation allows for a more accurate representation of the data, enabling better forecasts and insights.\n\n\\[\n\\begin{split}\\begin{align}\ny_t & = \\Lambda f_t + B x_t + u_t \\\\\nf_t & = A_1 f_{t-1} + \\dots + A_p f_{t-p} + \\eta_t \\qquad \\eta_t \\sim N(0, I)\\\\\nu_t & = C_1 u_{t-1} + \\dots + C_q u_{t-q} + \\varepsilon_t \\qquad \\varepsilon_t \\sim N(0, \\Sigma)\n\\end{align}\\end{split}\n\\]"
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-1",
-    "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-1",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Extending the Model with Time Dynamics",
-    "text": "Extending the Model with Time Dynamics\n\\[\n\\begin{split}\\begin{align}\ny_t & = \\Lambda f_t + B x_t + u_t \\\\\nf_t & = A_1 f_{t-1} + \\dots + A_p f_{t-p} + \\eta_t \\qquad \\eta_t \\sim N(0, I)\\\\\nu_t & = C_1 u_{t-1} + \\dots + C_q u_{t-q} + \\varepsilon_t \\qquad \\varepsilon_t \\sim N(0, \\Sigma)\n\\end{align}\\end{split}\n\\]\n\nWhere \\(y_t\\) is observed, \\(f_t\\) are unobserved latent factors, \\(x_t\\) are optional (unused for our case) exogenous variables, and the dynamic evolution of latent factors is expressed using the transition matrix \\(A\\) with \\(\\eta_t\\) representing new information or random shocks. \\(u_t\\) is the error or “idiosyncratic” process\n. . .\n\nThis model is then cast into state space form and the unobserved factors estimated via the Kalman filter. The likelihood can be evaluated as a byproduct of the filtering recursions with maximum likelihood estimation used to estimate the parameters."
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-2",
-    "href": "posts/dr-dfm-covid/presentation-post.html#extending-the-model-with-time-dynamics-2",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Extending the Model with Time Dynamics",
-    "text": "Extending the Model with Time Dynamics\n\\[f_t = A f_{t-1} + \\eta_t\\]\n\\(A\\): Transition matrix \\(\\eta_t\\): Innovation term\n\n\n\nThe transition matrix, often denoted as \\(A\\), is a square matrix that governs the temporal evolution of the latent factors\nEach element of the matrix represents the influence of one latent factor at the current time on the corresponding latent factor at the next time point\nThe elements of the transition matrix \\(A\\) determine how each latent factor at the previous time point contributes to the latent factors at the current time point\nValues in the diagonal of \\(A\\) represent the persistence of each latent factor over time\nOff-diagonal elements indicate the influence of one latent factor on another"
+    "text": "Extending the Model with Time Dynamics\nBy incorporating autoregressive components, we can capture the evolving nature of economic relationships during the pandemic. This advanced model formulation allows for a more accurate representation of the data, enabling better forecasts and insights.\n\\[\n\\begin{split}\\begin{align}\ny_t & = \\Lambda f_t + B x_t + u_t \\\\\nf_t & = A_1 f_{t-1} + \\dots + A_p f_{t-p} + \\eta_t \\qquad \\eta_t \\sim N(0, I)\\\\\nu_t & = C_1 u_{t-1} + \\dots + C_q u_{t-q} + \\varepsilon_t \\qquad \\varepsilon_t \\sim N(0, \\Sigma)\n\\end{align}\\end{split}\n\\]\nWhere \\(y_t\\) is observed, \\(f_t\\) are unobserved latent factors, \\(x_t\\) are optional (unused for our case) exogenous variables, and the dynamic evolution of latent factors is expressed using the transition matrix \\(A\\) with \\(\\eta_t\\) representing new information or random shocks. \\(u_t\\) is the error or “idiosyncratic” process\nThis model is then cast into state space form and the unobserved factors estimated via the Kalman filter. The likelihood can be evaluated as a byproduct of the filtering recursions with maximum likelihood estimation used to estimate the parameters.\n \\[f_t = A f_{t-1} + \\eta_t\\]\n\\(A\\): Transition matrix \\(\\eta_t\\): Innovation term\n\n\nThe transition matrix, often denoted as \\(A\\), is a square matrix that governs the temporal evolution of the latent factors\nEach element of the matrix represents the influence of one latent factor at the current time on the corresponding latent factor at the next time point\nThe elements of the transition matrix \\(A\\) determine how each latent factor at the previous time point contributes to the latent factors at the current time point\nValues in the diagonal of \\(A\\) represent the persistence of each latent factor over time\nOff-diagonal elements indicate the influence of one latent factor on another"
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices",
     "href": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Interpreting Transition Matrices",
-    "text": "Interpreting Transition Matrices\nExamining the first transition matrix\n\n\n\n\n\n\nThe diagonal elements (0.8 and 0.7) are relatively high, indicating a strong persistence of each latent factor over time.\nThe off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.\nSummary: latent factors have a tendency to persist, with some interdependence."
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices-1",
-    "href": "posts/dr-dfm-covid/presentation-post.html#interpreting-transition-matrices-1",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Interpreting Transition Matrices",
-    "text": "Interpreting Transition Matrices\nExamining the second transition matrix\n\n\n\n\n\n\nThe diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.\nThe off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.\nSummary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior."
+    "text": "Interpreting Transition Matrices\nExamining the first transition matrix\n\n\n\n\n\n\nThe diagonal elements (0.8 and 0.7) are relatively high, indicating a strong persistence of each latent factor over time.\nThe off-diagonal elements (0.2 and 0.3) suggest moderate influence of one latent factor on the other, allowing for some interaction between the two factors.\nSummary: latent factors have a tendency to persist, with some interdependence.\n\n\nExamining the second transition matrix\n\nThe diagonal elements (0.5 and 0.4) are lower compared to Transition Matrix 1, suggesting less persistence of each latent factor over time.\nThe off-diagonal elements (0.5 and 0.6) indicate a relatively stronger influence of one latent factor on the other compared to Transition Matrix 1.\nSummary: latent factors are less likely to persist and may be influenced more by each other, allowing for a more dynamic and responsive behavior."
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#factor-constraints-enhancing-model-interpretability",
     "href": "posts/dr-dfm-covid/presentation-post.html#factor-constraints-enhancing-model-interpretability",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Factor Constraints: Enhancing Model Interpretability",
-    "text": "Factor Constraints: Enhancing Model Interpretability\n\nBy applying constraints to the model parameters, we can improve interpretability and reduce complexity while incorporating prior domain knowledge about variable relationships.\n\nFor example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors."
-  },
-  {
-    "objectID": "posts/dr-dfm-covid/presentation-post.html#factor-constraints",
-    "href": "posts/dr-dfm-covid/presentation-post.html#factor-constraints",
-    "title": "Covid-19 Data-Rich Dynamic Factor Model",
-    "section": "Factor Constraints",
-    "text": "Factor Constraints\nFactor constraint loadings example\n\n\n\n\n\n\n\n\n\n\n\nDep. variable\nGlobal.1\nPandemic\nEmployment\nConsumption\nInflation\n\n\n\n\nSupply_1\nX\n\n\n\n\n\n\nSupply_7\nX\n\n\n\n\n\n\nMonetary_5\nX\n\n\n\n\n\n\nMonetary_9\nX\n\n\n\n\n\n\nSupply_2\nX\n\nX\n\n\n\n\nSupply_3\nX\n\nX\n\n\n\n\nDemand_7\nX\n\nX\n\n\n\n\nDemand_3\nX\n\n\nX\n\n\n\nDemand_5\nX\n\n\nX\n\n\n\nMonetary_2\nX\n\n\n\nX\n\n\nMonetary_1\nX\n\n\n\nX\n\n\nPandemic_2\nX\nX\n\n\n\n\n\nPandemic_9\nX\nX"
+    "text": "Factor Constraints: Enhancing Model Interpretability\nBy applying constraints to the model parameters, we can improve interpretability and reduce complexity while incorporating prior domain knowledge about variable relationships.\nFor example, setting certain elements of the loading matrix to zero might suggest that specific observed variables are not influenced by particular latent factors.\nBelow is an example of a boolean loading matrix with constraints\n\n\n\n\n\n\n\n\n\n\n\nDep. variable\nGlobal.1\nPandemic\nEmployment\nConsumption\nInflation\n\n\n\n\nSupply_1\nX\n\n\n\n\n\n\nSupply_7\nX\n\n\n\n\n\n\nMonetary_5\nX\n\n\n\n\n\n\nMonetary_9\nX\n\n\n\n\n\n\nSupply_2\nX\n\nX\n\n\n\n\nSupply_3\nX\n\nX\n\n\n\n\nDemand_7\nX\n\nX\n\n\n\n\nDemand_3\nX\n\n\nX\n\n\n\nDemand_5\nX\n\n\nX\n\n\n\nMonetary_2\nX\n\n\n\nX\n\n\nMonetary_1\nX\n\n\n\nX\n\n\nPandemic_2\nX\nX\n\n\n\n\n\nPandemic_9\nX\nX"
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#implementation",
     "href": "posts/dr-dfm-covid/presentation-post.html#implementation",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Implementation",
-    "text": "Implementation\n\nWe are developing a Python package that simplifies the process of applying DFMs to COVID-19 economic data. The package includes features such as:\n\n\nPoetry for dependency management\nCI with GitHub Actions\nPre-commit hooks with pre-commit\nCode quality with black & ruff\nTesting and coverage with pytest and codecov\nDocumentation with MkDocs\nCompatibility testing for multiple versions of Python with Tox\nContainerization with Docker"
+    "text": "Implementation\nWe are developing a Python package that simplifies the process of applying DFMs to COVID-19 economic data. The package includes features such as:\n\n\nPoetry for dependency management\nCI with GitHub Actions\nPre-commit hooks with pre-commit\nCode quality with black & ruff\nTesting and coverage with pytest and codecov\nDocumentation with MkDocs\nCompatibility testing for multiple versions of Python with Tox\nContainerization with Docker"
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#dashboard",
