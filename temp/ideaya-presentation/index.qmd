@@ -3,9 +3,10 @@ title: "Single-cell sequencing of the blood T cell repertoire"
 title-slide-attributes:
     data-background-image: imgs/ideaya-cover.png
     data-background-size: contain
-    data-background-opacity: "0.5"
+    data-background-opacity: "0.10"
 subtitle: "before and after trastuzumab treatment in early-stage HER2+ breast cancer"
-author: "John Vivian, et al."
+date: 2024-03-14
+author: "John Vivian"
 format: 
   revealjs:
     transition: 'slide'
