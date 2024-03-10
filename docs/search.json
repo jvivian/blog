@@ -684,5 +684,166 @@
     "title": "Kingdom Death Artwork",
     "section": "Tools & Versioning",
     "text": "Tools & Versioning\n\nSilly monkeys Give them thumbs, they make a club To beat their brother down    Tool - Right in Two\n\n\n\n\n\n\n\nAn editorial the author wrote to make himself feel better\n\n\n\n\n\nAll art was created using a computer, several dozen pieces of software, and several hundred more hours than expected.\nWhile I understand the deeply unsettling nature of AI, automation, and vast potential for artist abuse, these tools provided me an opportunity to explore visual media in a way I would not be able to otherwise given my technical limitations within the area. I have spent thousands of hours practicing to be a mediocre tech death drummer and several thousand other hours wasted in grad school, not learning to draw. Tools like stable diffusion allow me to combine visual art with the other thing in life I truly enjoy: swearing at the computer and package dependency hell.\nI think of an interview many years ago with Hans Zimmer that surprised me. He said he wasn’t really “fluent” in any particular instrument and that he is appreciative music made its way onto computers or he would never have had the opportunity to explore a passion that brings him and many others so much joy.\n\n\n\n\nStable Diffusion 1.5\nPhotoshop / Photopea\nA1111 WebUI\n\nControlNet\nUltimate SD Upscale\nSegment Anything\nCheckpoint Merger\nExtras (for background removal)\nInfinite Image Browser\nInfinite Grid Generator\ncanvas-zoom\n\nxformers - 0.0.18 (monkey-patched version to work with PyTorch 2.0)\ntorch - 2.0.0+cu118 (not default for A1111, look up how to do this)\ncuDNN 8.7 (you will have to do this manually)\nSwitched from --xformers to --opt-sdp-attention --opt-channelslast"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#personal-introduction",
+    "href": "temp/ideaya-presentation/index.html#personal-introduction",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Personal Introduction",
+    "text": "Personal Introduction\n\nYour name and current role\nBrief academic background\nPassion for bioinformatics"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#career-timeline---nanopore-research",
+    "href": "temp/ideaya-presentation/index.html#career-timeline---nanopore-research",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Career Timeline - Nanopore Research",
+    "text": "Career Timeline - Nanopore Research"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#career-timeline---computational-genomics-lab",
+    "href": "temp/ideaya-presentation/index.html#career-timeline---computational-genomics-lab",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Career Timeline - Computational Genomics Lab",
+    "text": "Career Timeline - Computational Genomics Lab\n\nGraduate research at UC Santa Cruz\n\nDistributed computing for genomics\nNanopore experiments and data analysis"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#career-timeline---treehouse-childhood-cancer-initiative",
+    "href": "temp/ideaya-presentation/index.html#career-timeline---treehouse-childhood-cancer-initiative",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Career Timeline - Treehouse Childhood Cancer Initiative",
+    "text": "Career Timeline - Treehouse Childhood Cancer Initiative"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#career-timeline---atreca-inc.",
+    "href": "temp/ideaya-presentation/index.html#career-timeline---atreca-inc.",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Career Timeline - Atreca Inc.",
+    "text": "Career Timeline - Atreca Inc."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#career-timeline---teiko-bio",
+    "href": "temp/ideaya-presentation/index.html#career-timeline---teiko-bio",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Career Timeline - Teiko Bio",
+    "text": "Career Timeline - Teiko Bio"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#study-background",
+    "href": "temp/ideaya-presentation/index.html#study-background",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Study Background",
+    "text": "Study Background\n\nImportance of HER2+ breast cancer research\nRole of anti-HER2 treatment"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#methods-and-findings",
+    "href": "temp/ideaya-presentation/index.html#methods-and-findings",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Methods and Findings",
+    "text": "Methods and Findings\n\nSingle-cell sequencing approach\nAnalyzing T cell profiles before and after treatment\nKey findings and their significance"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#implications-and-future-directions",
+    "href": "temp/ideaya-presentation/index.html#implications-and-future-directions",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Implications and Future Directions",
+    "text": "Implications and Future Directions\n\nImpact on understanding immune responses\nPotential influence on treatment strategies\nFuture research directions"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#summary-1",
+    "href": "temp/ideaya-presentation/index.html#summary-1",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Summary",
+    "text": "Summary\n\nRecap of your background and research\nHow it aligns with the position"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#multiple-avenues-for-contribution",
+    "href": "temp/ideaya-presentation/index.html#multiple-avenues-for-contribution",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Multiple Avenues for Contribution",
+    "text": "Multiple Avenues for Contribution"
+  },
+  {
+    "objectID": "temp/ape-index/scratch.html",
+    "href": "temp/ape-index/scratch.html",
+    "title": "Ape Index",
+    "section": "",
+    "text": "import polars as pl\nimport pandas as pd\n\nimport plotly.express as px\nimport plotly.io as pio\nfrom pathlib import Path\n\n# pl.Config(set_fmt_float='full')\n\nfrom rich import print"
+  },
+  {
+    "objectID": "temp/ape-index/scratch.html#parse-medical-data",
+    "href": "temp/ape-index/scratch.html#parse-medical-data",
+    "title": "Ape Index",
+    "section": "Parse Medical Data",
+    "text": "Parse Medical Data\n\nmed = pl.read_csv(\"./data/body_measurements.csv\", skip_rows_after_header=1)\nprint(med)\n\nshape: (715, 13)\n┌────────┬─────┬─────────────┬─────────────┬───┬─────────────┬────────────┬───────────┬────────────┐\n│ Gender ┆ Age ┆ HeadCircumf ┆ ShoulderWid ┆ … ┆ ShoulderToW ┆ WaistToKne ┆ LegLength ┆ TotalHeigh │\n│ ---    ┆ --- ┆ erence      ┆ th          ┆   ┆ aist        ┆ e          ┆ ---       ┆ t          │\n│ i64    ┆ i64 ┆ ---         ┆ ---         ┆   ┆ ---         ┆ ---        ┆ i64       ┆ ---        │\n│        ┆     ┆ i64         ┆ i64         ┆   ┆ i64         ┆ i64        ┆           ┆ i64        │\n╞════════╪═════╪═════════════╪═════════════╪═══╪═════════════╪════════════╪═══════════╪════════════╡\n│ 1      ┆ 28  ┆ 19          ┆ 22          ┆ … ┆ 23          ┆ 25         ┆ 20        ┆ 56         │\n│ 2      ┆ 27  ┆ 21          ┆ 18          ┆ … ┆ 18          ┆ 14         ┆ 18        ┆ 53         │\n│ 1      ┆ 29  ┆ 20          ┆ 20          ┆ … ┆ 21          ┆ 20         ┆ 21        ┆ 45         │\n│ 2      ┆ 28  ┆ 16          ┆ 14          ┆ … ┆ 22          ┆ 32         ┆ 13        ┆ 47         │\n│ 2      ┆ 22  ┆ 17          ┆ 19          ┆ … ┆ 24          ┆ 21         ┆ 19        ┆ 60         │\n│ …      ┆ …   ┆ …           ┆ …           ┆ … ┆ …           ┆ …          ┆ …         ┆ …          │\n│ 2      ┆ 13  ┆ 22          ┆ 6           ┆ … ┆ 20          ┆ 16         ┆ 33        ┆ 59         │\n│ 1      ┆ 10  ┆ 21          ┆ 11          ┆ … ┆ 15          ┆ 14         ┆ 25        ┆ 45         │\n│ 1      ┆ 4   ┆ 20          ┆ 17          ┆ … ┆ 12          ┆ 12         ┆ 22        ┆ 40         │\n│ 1      ┆ 13  ┆ 20          ┆ 15          ┆ … ┆ 20          ┆ 16         ┆ 33        ┆ 59         │\n│ 2      ┆ 4   ┆ 20          ┆ 15          ┆ … ┆ 10          ┆ 12         ┆ 19        ┆ 37         │\n└────────┴─────┴─────────────┴─────────────┴───┴─────────────┴────────────┴───────────┴────────────┘\n\n\n\n\nmed.columns = [x.strip() for x in med.columns]\n\n\n# med.select(pl.col('^Chest.*$'))\nmed.with_columns((pl.col('ChestWidth') + pl.col('ArmLength') * 2).alias('ArmSpan'))\n\n\nshape: (715, 14)\n\n\n\nGender\nAge\nHeadCircumference\nShoulderWidth\nChestWidth\nBelly\nWaist\nHips\nArmLength\nShoulderToWaist\nWaistToKnee\nLegLength\nTotalHeight\nArmSpan\n\n\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\ni64\n\n\n\n\n1\n28\n19\n22\n17\n18\n21\n25\n28\n23\n25\n20\n56\n73\n\n\n2\n27\n21\n18\n16\n14\n10\n15\n21\n18\n14\n18\n53\n58\n\n\n1\n29\n20\n20\n18\n11\n19\n14\n24\n21\n20\n21\n45\n66\n\n\n2\n28\n16\n14\n18\n13\n11\n30\n25\n22\n32\n13\n47\n68\n\n\n2\n22\n17\n19\n18\n14\n16\n18\n20\n24\n21\n19\n60\n58\n\n\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n…\n\n\n2\n13\n22\n6\n14\n25\n18\n30\n21\n20\n16\n33\n59\n56\n\n\n1\n10\n21\n11\n12\n22\n2\n26\n21\n15\n14\n25\n45\n54\n\n\n1\n4\n20\n17\n11\n22\n22\n22\n17\n12\n12\n22\n40\n45\n\n\n1\n13\n20\n15\n14\n25\n18\n30\n21\n20\n16\n33\n59\n56\n\n\n2\n4\n20\n15\n10\n20\n20\n21\n18\n10\n12\n19\n37\n46\n\n\n\n\n\n\n\ncols = [\"arm_len_spine_wrist\", \"hand_len\", \"gender\", \"reported_height\", \"height\"]\nmed.select(pl.col(\"^*hand.*$\"))\n# med = med.select(cols).with_columns(\n#     (pl.col(\"arm_len_spine_wrist\") * 2 + pl.col(\"hand_len\") * 2).alias(\"armspan\")\n# ).with_columns((pl.col(\"armspan\") / pl.col(\"height\")).alias(\"ApeIndex\"))\n# print(med)\n\n\nshape: (4_464, 1)\n\n\n\nhand_len\n\n\nf64\n\n\n\n\n8.62\n\n\n8.82\n\n\n8.27\n\n\n8.03\n\n\n8.58\n\n\n…\n\n\n6.89\n\n\n7.24\n\n\n7.48\n\n\n7.48\n\n\n7.05\n\n\n\n\n\n\n\nmed.select(pl.col('^arm.*$'))\n\n\nshape: (4_464, 3)\n\n\n\narm_len_spine_wrist\narm_len_shoulder_wrist\narm_len_shoulder_elbow\n\n\nf64\nf64\nf64\n\n\n\n\n35.71\n27.44\n14.84\n\n\n34.61\n25.55\n13.5\n\n\n34.25\n25.75\n13.74\n\n\n34.53\n26.02\n13.31\n\n\n36.18\n27.32\n14.29\n\n\n…\n…\n…\n\n\n27.64\n20.39\n10.63\n\n\n30.83\n22.87\n11.57\n\n\n32.87\n25.31\n13.39\n\n\n30.39\n22.72\n11.61\n\n\n29.8\n22.24\n11.54"
+  },
+  {
+    "objectID": "temp/ape-index/index.html",
+    "href": "temp/ape-index/index.html",
+    "title": "blog",
+    "section": "",
+    "text": "CopyrightJohn Vivian - 2024 - All Rights Reserved"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#nanopore-research",
+    "href": "temp/ideaya-presentation/index.html#nanopore-research",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Nanopore Research",
+    "text": "Nanopore Research"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#computational-genomics-lab",
+    "href": "temp/ideaya-presentation/index.html#computational-genomics-lab",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Computational Genomics Lab",
+    "text": "Computational Genomics Lab"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#treehouse-childhood-cancer-initiative",
+    "href": "temp/ideaya-presentation/index.html#treehouse-childhood-cancer-initiative",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Treehouse Childhood Cancer Initiative",
+    "text": "Treehouse Childhood Cancer Initiative"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#atreca-inc.",
+    "href": "temp/ideaya-presentation/index.html#atreca-inc.",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Atreca Inc. ",
+    "text": "Atreca Inc."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#teiko-bio",
+    "href": "temp/ideaya-presentation/index.html#teiko-bio",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Teiko Bio",
+    "text": "Teiko Bio"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#scalable-cloud-distributed-pipeline-management",
+    "href": "temp/ideaya-presentation/index.html#scalable-cloud-distributed-pipeline-management",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Scalable Cloud-distributed Pipeline Management",
+    "text": "Scalable Cloud-distributed Pipeline Management"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#scalable-cloud-distributed-pipeline-managemen",
+    "href": "temp/ideaya-presentation/index.html#scalable-cloud-distributed-pipeline-managemen",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Scalable Cloud-distributed Pipeline Managemen",
+    "text": "Scalable Cloud-distributed Pipeline Managemen"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#next",
+    "href": "temp/ideaya-presentation/index.html#next",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Next?",
+    "text": "Next?"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#next-steps",
+    "href": "temp/ideaya-presentation/index.html#next-steps",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Next Steps?",
+    "text": "Next Steps?"
   }
 ]

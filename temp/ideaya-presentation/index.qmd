@@ -1,0 +1,76 @@
+---
+title: "Single-cell sequencing of the blood T cell repertoire"
+title-slide-attributes:
+    data-background-image: imgs/ideaya-cover.png
+    data-background-size: contain
+    data-background-opacity: "0.5"
+subtitle: "before and after trastuzumab treatment in early-stage HER2+ breast cancer"
+author: "John Vivian, et al."
+format: 
+  revealjs:
+    transition: 'slide'
+    center: true
+    height: 1000
+    width: 1600
+editor: 
+    renderOnSave: true
+---
+
+# Introduction  {background-color=#f0f4f7}
+
+## Personal Introduction  {background-color=#f0f4f7}
+- Your name and current role
+- Brief academic background
+- Passion for bioinformatics
+
+# Career Timeline {background-color=#f0f4f7}
+![](imgs/timeline.png)
+
+## Nanopore Research {background-color=#f0f4f7}
+![](imgs/timeline_nanopore.png)
+
+## Computational Genomics Lab {background-color=#f0f4f7}
+![](imgs/timeline_grad.png)
+
+## Scalable Cloud-distributed Pipeline Management {background-color=#f0f4f7}
+
+## Treehouse Childhood Cancer Initiative {background-color=#f0f4f7}
+
+## Atreca Inc. {background-color=#f0f4f7}
+![](imgs/timeline_atreca.png)
+
+## Teiko Bio {background-color=#f0f4f7}
+![](imgs/timeline_teiko.png)
+
+## Next Steps? {background-color=#f0f4f7}
+![](imgs/timeline_ideaya.png)
+
+# Analysis of T-cell sub-populations {background-color=#f0f4f7}
+
+## Study Background {background-color=#f0f4f7}
+- Importance of HER2+ breast cancer research
+- Role of anti-HER2 treatment
+
+## Methods and Findings {background-color=#f0f4f7}
+- Single-cell sequencing approach
+- Analyzing T cell profiles before and after treatment
+- Key findings and their significance
+
+## Implications and Future Directions {background-color=#f0f4f7}
+- Impact on understanding immune responses
+- Potential influence on treatment strategies
+- Future research directions
+
+# Summary {background-color=#f0f4f7}
+
+## Summary {background-color=#f0f4f7}
+- Recap of your background and research
+- How it aligns with the position
+
+## Multiple Avenues for Contribution {background-color=#f0f4f7}
+
+![](imgs/skills.png)
+
+# Open for Questions {background-color=#f0f4f7}
+
+Thank you for your time and consideration
