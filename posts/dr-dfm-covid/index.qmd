@@ -16,6 +16,10 @@ code:
 ---
 
 ## Understanding the Economic Impact of COVID-19 Through Data
+> The only function of economic forecasting is to make astrology look respectable [^1]
+
+[^1]: John Kenneth Galbraith
+
 As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges.
 
 

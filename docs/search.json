@@ -424,7 +424,7 @@
     "href": "temp/kingdom-death/index.html#summary-statistics",
     "title": "Kingdom Death",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_26774/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_26774/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_26774/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_26774/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_26774/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
+    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_28356/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_28356/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_28356/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_28356/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_28356/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
   },
   {
     "objectID": "temp/kingdom-death/index.html#acknowledgements",
@@ -452,14 +452,14 @@
     "href": "posts/dr-dfm-covid/presentation-post.html",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "",
-    "text": "As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
+    "text": "The only function of economic forecasting is to make astrology look respectable 1\n\nAs the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#understanding-the-economic-impact-of-covid-19-through-data",
     "href": "posts/dr-dfm-covid/presentation-post.html#understanding-the-economic-impact-of-covid-19-through-data",
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "",
-    "text": "As the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
+    "text": "The only function of economic forecasting is to make astrology look respectable 1\n\nAs the world grapples with the ongoing effects of the COVID-19 pandemic, it is necessary to leverage advanced analytical tools to understand its economic impacts. Our project leverages Dynamic Factor Models (DFMs) to uncover hidden patterns and relationships in large amounts of economic data generated during this period. This presentation will introduce you to the core concepts of DFMs, the specific challenges posed by COVID-19 data, and the Python package we designed to address these challenges."
   },
   {
     "objectID": "posts/dr-dfm-covid/presentation-post.html#dynamic-factor-models-a-primer",
@@ -544,6 +544,13 @@
     "title": "Covid-19 Data-Rich Dynamic Factor Model",
     "section": "Dashboard - Comparative Analysis",
     "text": "Dashboard - Comparative Analysis\nTest and compare different model configurations to identify the most accurate representations of the data."
+  },
+  {
+    "objectID": "posts/dr-dfm-covid/presentation-post.html#footnotes",
+    "href": "posts/dr-dfm-covid/presentation-post.html#footnotes",
+    "title": "Covid-19 Data-Rich Dynamic Factor Model",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nJohn Kenneth Galbraith↩︎"
   },
   {
     "objectID": "posts/kd-inked-into-creation/index.html",
