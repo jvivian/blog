@@ -65,7 +65,7 @@ The loading matrix is a bridge that connects the latent factors, which are unobs
 :::
 
 ## Latent Factors and Observed Variables {.smaller}
-> Relationship between latent factors and observed variables via loading matrix
+An example of how the observed variables are mapped to latent factors through the loading matrix
 
 ```{python}
 #| echo: false
@@ -321,4 +321,6 @@ Test and compare different model configurations to identify the most accurate re
 
 <br>
 
-Our next steps involve incorporating the insights gained from DFMs into [Synthetic Control Model](https://github.com/OscarEngelbrektson/SyntheticControlMethods) to further refine our understanding of COVID-19's economic impact by exploring counter-factual statements. We are garnering feedback on our work and are hoping to submit for publication within the year!
+Our next steps involve incorporating the insights gained from DFMs into a [Synthetic Control Model](https://github.com/OscarEngelbrektson/SyntheticControlMethods) to further refine our understanding of COVID-19's economic impact by exploring counter-factual statements. We are garnering feedback on our work and are hoping to submit for publication within the year!
+
+Thank you for reading.
