@@ -18,8 +18,9 @@ about:
       href: https://www.linkedin.com/in/john-vivian-913b41a6/
 ---
 
-An eclectic menagerie ranging from home automation guides to tech death drum covers and Bayesian stats to stable-diffused kitty cats
+A repository spanning an eclectic range of projects I cared enough about to document
 
 ## Me
 The author was born, became self-aware, and has been somewhat confused ever since
 
+He lives in California with his beautiful wife Kaia, his 11-year old son Beejus (pictured), his two kittens, and his drumset

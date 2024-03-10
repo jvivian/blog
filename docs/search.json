@@ -151,14 +151,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "An eclectic menagerie ranging from home automation guides to tech death drum covers and Bayesian stats to stable-diffused kitty cats"
+    "text": "A repository spanning an eclectic range of projects I cared enough about to document"
   },
   {
     "objectID": "about.html#me",
     "href": "about.html#me",
     "title": "About",
     "section": "Me",
-    "text": "Me\nThe author was born, became self-aware, and has been somewhat confused ever since"
+    "text": "Me\nThe author was born, became self-aware, and has been somewhat confused ever since\nHe lives in California with his beautiful wife Kaia, his 11-year old son Beejus (pictured), his two kittens, and his drumset"
   },
   {
     "objectID": "temp/kingdom-death/index.html#foreword",
@@ -424,7 +424,7 @@
     "href": "temp/kingdom-death/index.html#summary-statistics",
     "title": "Kingdom Death",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_31367/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_31367/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_31367/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_31367/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_31367/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
+    "text": "Summary Statistics\n\nThere is a valid defence [sic] of using non-Bayesian methods, namely incompetence\n\n\n\n/tmp/ipykernel_32625/1245481724.py:9: DeprecationWarning:\n\n`apply` is deprecated. It has been renamed to `map_elements`.\n\n/tmp/ipykernel_32625/1245481724.py:10: DeprecationWarning:\n\n`cumsum` is deprecated. It has been renamed to `cum_sum`.\n\n\n\n\nCumulative Deaths Over Time\n\n\n\n                                                \n\n\n\n\nMost Dangerous Foes\n\n\n/tmp/ipykernel_32625/510724665.py:2: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n\n\n\n                                                \n\n\n\n\nMost Hunted Quarries\n\n\n/tmp/ipykernel_32625/250231344.py:3: DeprecationWarning:\n\n`groupby` is deprecated. It has been renamed to `group_by`.\n\n/tmp/ipykernel_32625/250231344.py:4: DeprecationWarning:\n\n`count` is deprecated. It has been renamed to `len`.\n\n\n\n\n\n\n\n\n\n\ncount\n\n\nMonster\n\n\n\n\n\nWhite Lion\n10\n\n\nGigalion\n5\n\n\nAntelope\n4"
   },
   {
     "objectID": "temp/kingdom-death/index.html#acknowledgements",
