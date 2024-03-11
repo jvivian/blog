@@ -1,47 +1,118 @@
 ---
 title: "Single-cell sequencing of the blood T cell repertoire"
 title-slide-attributes:
-    data-background-image: imgs/ideaya-cover.png
+    data-background-image: imgs/cover.png
     data-background-size: contain
-    data-background-opacity: "0.10"
+    data-background-opacity: "0.25"
 subtitle: "before and after trastuzumab treatment in early-stage HER2+ breast cancer"
-date: 2024-03-14
+date: March 14 2024
+date-format: long
 author: "John Vivian"
 format: 
   revealjs:
     transition: 'slide'
     center: true
-    height: 1000
-    width: 1600
+    height: 1117
+    width: 1728
 editor: 
     renderOnSave: true
 ---
 
 # Introduction  {background-color=#f0f4f7}
 
-## Personal Introduction  {background-color=#f0f4f7}
-- Your name and current role
-- Brief academic background
-- Passion for bioinformatics
+## {background-iframe="https://jvivian.github.io/"}
 
 # Career Timeline {background-color=#f0f4f7}
-![](imgs/timeline.png)
+![](imgs/timeline.png){width=80%}
 
 ## Nanopore Research {background-color=#f0f4f7}
 ![](imgs/timeline_nanopore.png)
 
+## Nanopore reread project
+
+![**A**: Substrate bound to the lipid bilayer via a cholesterol tag with a helicase (Hel308) bound and inactive at the other end. **B**: Electric potential causes the DNA duplex to unwind, leaving behind the cholesterol tether bound to the complement strand. **C**: Electric potential and the steady-state nature of the G-Quadruplex (GQ) causes it to unfold allowing the helicase to become enzymatically active in the 3’ -> 5’ direction. **D**: As Hel308 translocates the DNA back up through the pore, the GQ will refold allowing an additional enzyme to become bound. **E**: Continued translocation. **F**: More than 3-4 abasic residues causes Hel308 to dissociate from the substrate (9 are used in the substrate). The DNA strand is then pulled back down and the cycle is able to repeat itself once more.](imgs/nanopore_figure.png){width=100%}
+
 ## Computational Genomics Lab {background-color=#f0f4f7}
 ![](imgs/timeline_grad.png)
 
-## Scalable Cloud-distributed Pipeline Management {background-color=#f0f4f7}
+<!-- ## {background-image=imgs/toil_splash.png} -->
+## {background-iframe="https://toil.ucsc-cgl.org/"}
 
-## Treehouse Childhood Cancer Initiative {background-color=#f0f4f7}
+## Scalable Pipeline Management System 
+:::{.columns}
+::::{.column width="5%"}
+::::
+::::{.column width="50%"}
+![](imgs/toil.png)
+::::
+::::{.column width="40%"}
+![Metrics 20,000 sample RNA-seq compute, averaged over 5-minute intervals across all instances. Pipeline framework was intentionally terminated at hours 10 and 20 to showcase ability to resume from failure.](imgs/toil_metrics.png)
+::::
+:::
+
+## Data Accessibility Collaborations
+:::{.columns}
+::::{.column width="10%"}
+::::
+::::{.column width="40%"}
+![FOXM1 and its isoforms across 19,948 **TCGA, TARGET, GTEx** samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser](imgs/xena.png)
+::::
+::::{.column width="40%"}
+![A dependency graph of the RNA-seq pipeline. `CutAdapt` was used to remove extraneous adapters, `STAR` was used for alignmentand read coverage, and `RSEM` and `Kallisto` were used to produce quantification data](imgs/toil_pipeline.png)
+::::
+:::
+
+
+## UCSC Genome Browser {.smaller }
+
+:::{.columns}
+::::{.column width="55%"}
+![A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.](imgs/gtex.png)
+::::
+::::{.column width="45%"}
+<br>
+Tracks show tissue-specific expression of two genes from the GTEx dataset<br>
+
+:::{.callout-note}
+TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain's basal ganglia but not in muscle or brain cortex
+:::
+
+33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues<br>
+
+The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline
+::::
+:::
+
+
+::: {.notes}
+- Mention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser
+:::
+
+## Treehouse Childhood Cancer Initiative 
+![](imgs/UCSC-treehouse-splash.png)
 
 ## Atreca Inc. {background-color=#f0f4f7}
 ![](imgs/timeline_atreca.png)
 
+::: {.notes}
+- Mention collaborating closely with protein engineering to design, maintain, improve tools they used every day
+- Ab-CRUNCH
+    - Annotated reports of antibody sequences, metadata, chain sequences, multiple alignments, and more
+    - 200 antibodies took 45 - 60 minutes to process, after I rewrote it from scratch I reduced the codebase by 66% and 200 antibodies could be processed and returned in about a minute.
+:::
+
+## Novel Antibody Target Discovery Platform
+:::{.columns}
+::::{.column width="10%"}
+::::
+::::{.column width="90%"}
+![](imgs/atreca_paper.png)
+::::
+:::
+
 ## Teiko Bio {background-color=#f0f4f7}
 ![](imgs/timeline_teiko.png)
+
 
 ## Next Steps? {background-color=#f0f4f7}
 ![](imgs/timeline_ideaya.png)
@@ -73,5 +144,7 @@ editor:
 ![](imgs/skills.png)
 
 # Open for Questions {background-color=#f0f4f7}
+
+## {background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html"}
 
 Thank you for your time and consideration

@@ -325,7 +325,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="imgs/ideaya-cover.png" data-background-opacity="0.10" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="imgs/cover.png" data-background-opacity="0.25" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Single-cell sequencing of the blood T cell repertoire</h1>
   <p class="subtitle">before and after trastuzumab treatment in early-stage HER2+ breast cancer</p>
 
@@ -337,44 +337,159 @@ John Vivian
 </div>
 </div>
 
-  <p class="date">2024-03-14</p>
+  <p class="date">March 14, 2024</p>
 </section>
 <section>
 <section id="introduction" class="title-slide slide level1 center" data-background-color="#f0f4f7">
 <h1>Introduction</h1>
 
 </section>
-<section id="personal-introduction" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Personal Introduction</h2>
-<ul>
-<li>Your name and current role</li>
-<li>Brief academic background</li>
-<li>Passion for bioinformatics</li>
-</ul>
+<section id="section" class="slide level2 center" data-background-iframe="https://jvivian.github.io/">
+<h2></h2>
 </section></section>
 <section>
 <section id="career-timeline" class="title-slide slide level1 center" data-background-color="#f0f4f7">
 <h1>Career Timeline</h1>
 
-<img data-src="imgs/timeline.png" class="r-stretch"></section>
+<img data-src="imgs/timeline.png" style="width:80.0%" class="r-stretch"></section>
 <section id="nanopore-research" class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Nanopore Research</h2>
 
 <img data-src="imgs/timeline_nanopore.png" class="r-stretch"></section>
+<section id="nanopore-reread-project" class="slide level2 center">
+<h2>Nanopore reread project</h2>
+
+<img data-src="imgs/nanopore_figure.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption"><strong>A</strong>: Substrate bound to the lipid bilayer via a cholesterol tag with a helicase (Hel308) bound and inactive at the other end. <strong>B</strong>: Electric potential causes the DNA duplex to unwind, leaving behind the cholesterol tether bound to the complement strand. <strong>C</strong>: Electric potential and the steady-state nature of the G-Quadruplex (GQ) causes it to unfold allowing the helicase to become enzymatically active in the 3’ -&gt; 5’ direction. <strong>D</strong>: As Hel308 translocates the DNA back up through the pore, the GQ will refold allowing an additional enzyme to become bound. <strong>E</strong>: Continued translocation. <strong>F</strong>: More than 3-4 abasic residues causes Hel308 to dissociate from the substrate (9 are used in the substrate). The DNA strand is then pulled back down and the cycle is able to repeat itself once more.</p></section>
 <section id="computational-genomics-lab" class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Computational Genomics Lab</h2>
 
+<!-- ## {background-image=imgs/toil_splash.png} -->
 <img data-src="imgs/timeline_grad.png" class="r-stretch"></section>
-<section id="scalable-cloud-distributed-pipeline-management" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Scalable Cloud-distributed Pipeline Management</h2>
+<section id="section-1" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/">
+<h2></h2>
 </section>
-<section id="treehouse-childhood-cancer-initiative" class="slide level2 center" data-background-color="#f0f4f7">
+<section id="scalable-pipeline-management-system" class="slide level2 center">
+<h2>Scalable Pipeline Management System</h2>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p><img data-src="imgs/toil.png"></p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/toil_metrics.png"></p>
+<figcaption>Metrics 20,000 sample RNA-seq compute, averaged over 5-minute intervals across all instances. Pipeline framework was intentionally terminated at hours 10 and 20 to showcase ability to resume from failure.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-accessibility-collaborations" class="slide level2 center">
+<h2>Data Accessibility Collaborations</h2>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/xena.png"></p>
+<figcaption>FOXM1 and its isoforms across 19,948 <strong>TCGA, TARGET, GTEx</strong> samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/toil_pipeline.png"></p>
+<figcaption>A dependency graph of the RNA-seq pipeline. <code>CutAdapt</code> was used to remove extraneous adapters, <code>STAR</code> was used for alignmentand read coverage, and <code>RSEM</code> and <code>Kallisto</code> were used to produce quantification data</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ucsc-genome-browser" class="slide level2 smaller center">
+<h2>UCSC Genome Browser</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/gtex.png"></p>
+<figcaption>A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<p><br> Tracks show tissue-specific expression of two genes from the GTEx dataset<br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex</p>
+</div>
+</div>
+</div>
+<p>33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues<br></p>
+<p>The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline</p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Mention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="treehouse-childhood-cancer-initiative" class="slide level2 center">
 <h2>Treehouse Childhood Cancer Initiative</h2>
-</section>
+
+<img data-src="imgs/UCSC-treehouse-splash.png" class="r-stretch"></section>
 <section id="atreca-inc." class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Atreca Inc.&nbsp;</h2>
 
-<img data-src="imgs/timeline_atreca.png" class="r-stretch"></section>
+<img data-src="imgs/timeline_atreca.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Mention collaborating closely with protein engineering to design, maintain, improve tools they used every day</li>
+<li>Ab-CRUNCH
+<ul>
+<li>Annotated reports of antibody sequences, metadata, chain sequences, multiple alignments, and more</li>
+<li>200 antibodies took 45 - 60 minutes to process, after I rewrote it from scratch I reduced the codebase by 66% and 200 antibodies could be processed and returned in about a minute.</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="novel-antibody-target-discovery-platform" class="slide level2 center">
+<h2>Novel Antibody Target Discovery Platform</h2>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:90%;">
+<p><img data-src="imgs/atreca_paper.png"></p>
+</div>
+</div>
+</section>
 <section id="teiko-bio" class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Teiko Bio</h2>
 
@@ -427,14 +542,19 @@ John Vivian
 <h2>Multiple Avenues for Contribution</h2>
 
 <img data-src="imgs/skills.png" class="r-stretch"></section></section>
+<section>
 <section id="open-for-questions" class="title-slide slide level1 center" data-background-color="#f0f4f7">
 <h1>Open for Questions</h1>
+
+</section>
+<section id="section-2" class="slide level2 center" data-background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html">
+<h2></h2>
 <p>Thank you for your time and consideration</p>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -612,9 +732,9 @@ John Vivian
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1728,
 
-        height: 1000,
+        height: 1117,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
