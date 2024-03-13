@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="John Vivian">
+  <meta name="author" content="John Vivian, Ph.D">
   <meta name="dcterms.date" content="2024-03-14">
   <title>blog - Single-cell sequencing of the blood T cell repertoire</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -332,7 +332,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-John Vivian 
+John Vivian, Ph.D 
 </div>
 </div>
 </div>
@@ -356,7 +356,7 @@ John Vivian
 <h2>Nanopore Research</h2>
 
 <img data-src="imgs/timeline_nanopore.png" class="r-stretch"></section>
-<section id="nanopore-reread-project" class="slide level2 center">
+<section id="nanopore-reread-project" class="slide level2 center" data-transition="zoom">
 <h2>Nanopore reread project</h2>
 
 <img data-src="imgs/nanopore_figure.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption"><strong>A</strong>: Substrate bound to the lipid bilayer via a cholesterol tag with a helicase (Hel308) bound and inactive at the other end. <strong>B</strong>: Electric potential causes the DNA duplex to unwind, leaving behind the cholesterol tether bound to the complement strand. <strong>C</strong>: Electric potential and the steady-state nature of the G-Quadruplex (GQ) causes it to unfold allowing the helicase to become enzymatically active in the 3’ -&gt; 5’ direction. <strong>D</strong>: As Hel308 translocates the DNA back up through the pore, the GQ will refold allowing an additional enzyme to become bound. <strong>E</strong>: Continued translocation. <strong>F</strong>: More than 3-4 abasic residues causes Hel308 to dissociate from the substrate (9 are used in the substrate). The DNA strand is then pulled back down and the cycle is able to repeat itself once more.</p></section>
@@ -368,77 +368,51 @@ John Vivian
 <section id="section-1" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/">
 <h2></h2>
 </section>
-<section id="scalable-pipeline-management-system" class="slide level2 center">
-<h2>Scalable Pipeline Management System</h2>
+<section id="section-2" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/" data-background-opacity="0.25" data-transition="convex">
+<h2></h2>
 <div class="columns">
-<div class="column" style="width:5%;">
+<div class="column" style="width:25%;">
 
 </div><div class="column" style="width:50%;">
 <p><img data-src="imgs/toil.png"></p>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/toil_metrics.png"></p>
-<figcaption>Metrics 20,000 sample RNA-seq compute, averaged over 5-minute intervals across all instances. Pipeline framework was intentionally terminated at hours 10 and 20 to showcase ability to resume from failure.</figcaption>
-</figure>
 </div>
 </div>
-</div>
+<!-- ## Scalable Pipeline Management System 
+:::{.columns}
+::::{.column width="5%"}
+::::
+::::{.column width="50%"}
+![](imgs/toil.png)
+::::
+::::{.column width="40%"}
+![Metrics 20,000 sample RNA-seq compute, averaged over 5-minute intervals across all instances. Pipeline framework was intentionally terminated at hours 10 and 20 to showcase ability to resume from failure.](imgs/toil_metrics.png)
+::::
+::: -->
 </section>
-<section id="data-accessibility-collaborations" class="slide level2 center">
-<h2>Data Accessibility Collaborations</h2>
+<section id="data-access-collaborations" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/" data-background-opacity="0.25" data-transition="zoom">
+<h2>Data Access Collaborations</h2>
 <div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/xena.png"></p>
-<figcaption>FOXM1 and its isoforms across 19,948 <strong>TCGA, TARGET, GTEx</strong> samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/toil_pipeline.png"></p>
-<figcaption>A dependency graph of the RNA-seq pipeline. <code>CutAdapt</code> was used to remove extraneous adapters, <code>STAR</code> was used for alignmentand read coverage, and <code>RSEM</code> and <code>Kallisto</code> were used to produce quantification data</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="ucsc-genome-browser" class="slide level2 smaller center">
-<h2>UCSC Genome Browser</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:65%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/gtex.png"></p>
-<figcaption>A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.</figcaption>
+<figcaption><strong>UCSC Genome Browser</strong>: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:45%;">
-<p><br> Tracks show tissue-specific expression of two genes from the GTEx dataset<br></p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</div><div class="column" style="width:35%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/xena.png"></p>
+<figcaption><strong>UCSC Xena Browser</strong>: FOXM1 and its isoforms across 19,948 <strong>TCGA, TARGET, GTEx</strong> samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser</figcaption>
+</figure>
 </div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex</p>
-</div>
-</div>
-</div>
-<p>33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues<br></p>
-<p>The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline</p>
 </div>
 </div>
 <aside class="notes">
 <ul>
-<li>Mention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser</li>
+<li>Collaborated with researchers in the ucsc genome browser team to create RNA-seq expression browser tracks</li>
+<li>TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex</li>
+<li>Collaborated with the UCSC Xena team to provide an open-source data exploration platform of all ~20,000 samples</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -451,11 +425,50 @@ John Vivian
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<!-- ## UCSC Genome Browser {.smaller }
+
+:::{.columns}
+::::{.column width="55%"}
+![A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.](imgs/gtex.png)
+::::
+::::{.column width="45%"}
+<br>
+Tracks show tissue-specific expression of two genes from the GTEx dataset<br>
+
+
+33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues<br>
+
+The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline
+::::
+::: -->
+<ul>
+<li>Mention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser ::: –&gt;</li>
+</ul>
 </section>
 <section id="treehouse-childhood-cancer-initiative" class="slide level2 center">
 <h2>Treehouse Childhood Cancer Initiative</h2>
 
 <img data-src="imgs/UCSC-treehouse-splash.png" class="r-stretch"></section>
+<section id="section-3" class="slide level2 center" data-transition="zoom" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:80%;">
+<p><img data-src="imgs/jco_paper_title.png"></p>
+</div>
+</div>
+</section>
+<section id="section-4" class="slide level2 center" data-transition="convex" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="imgs/jco_paper_title.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="imgs/jco_plate_notation.jpeg"></p>
+</div>
+</div>
+</section>
 <section id="atreca-inc." class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Atreca Inc.&nbsp;</h2>
 
@@ -547,7 +560,7 @@ John Vivian
 <h1>Open for Questions</h1>
 
 </section>
-<section id="section-2" class="slide level2 center" data-background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html">
+<section id="section-5" class="slide level2 center" data-background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html">
 <h2></h2>
 <p>Thank you for your time and consideration</p>
 
@@ -579,7 +592,7 @@ John Vivian
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -590,7 +603,7 @@ John Vivian
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide

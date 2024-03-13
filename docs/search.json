@@ -858,7 +858,7 @@
     "href": "temp/ideaya-presentation/index.html#ucsc-genome-browser",
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "UCSC Genome Browser",
-    "text": "UCSC Genome Browser\n\n\n\n\n\nA detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.\n\n\n\n Tracks show tissue-specific expression of two genes from the GTEx dataset\n\n\n\n\n\n\nNote\n\n\nTCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex\n\n\n\n33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues\nThe tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline\n\n\n\n\nMention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser"
+    "text": "UCSC Genome Browser\n\n\n\n\n\nA detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.\n\n\n\n Tracks show tissue-specific expression of two genes from the GTEx dataset\n33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues\nThe tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline\n\n\n\n\nMention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser"
   },
   {
     "objectID": "temp/ideaya-presentation/index.html#scalable-pipeline-management-system-1",
@@ -879,14 +879,14 @@
     "href": "temp/ideaya-presentation/index.html#data-accessibility-collaborations",
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "Data Accessibility Collaborations",
-    "text": "Data Accessibility Collaborations\n\n\n\n\n\n\n\nFOXM1 and its isoforms across 19,948 TCGA, TARGET, GTEx samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser\n\n\n\n\n\n\nA dependency graph of the RNA-seq pipeline. CutAdapt was used to remove extraneous adapters, STAR was used for alignmentand read coverage, and RSEM and Kallisto were used to produce quantification data"
+    "text": "Data Accessibility Collaborations\n\n\n\n\n\nUCSC Genome Browser: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.\n\n\n\n\n\n\nUCSC Xena Browser: FOXM1 and its isoforms across 19,948 TCGA, TARGET, GTEx samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser\n\n\n\n\n\n\nCollaborated with researchers in the ucsc genome browser team to create RNA-seq expression browser tracks\nTCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex\nCollaborated with the UCSC Xena team to provide an open-source data exploration platform of all ~20,000 samples"
   },
   {
     "objectID": "temp/ideaya-presentation/index.html#section-2",
     "href": "temp/ideaya-presentation/index.html#section-2",
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "",
-    "text": "Thank you for your time and consideration"
+    "text": ":::{.columns} ::::{.column width=“10%”} :::: ::::{.column width=“90%”}  :::"
   },
   {
     "objectID": "temp/ideaya-presentation/index.html#novel-antibody-target-discovery-platform",
@@ -894,5 +894,40 @@
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "Novel Antibody Target Discovery Platform",
     "text": "Novel Antibody Target Discovery Platform"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#section-3",
+    "href": "temp/ideaya-presentation/index.html#section-3",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "",
+    "text": "Thank you for your time and consideration"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#section-4",
+    "href": "temp/ideaya-presentation/index.html#section-4",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "",
+    "text": "Thank you for your time and consideration"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#treehouse-childhood-cancer-initiative-1",
+    "href": "temp/ideaya-presentation/index.html#treehouse-childhood-cancer-initiative-1",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Treehouse Childhood Cancer Initiative",
+    "text": "Treehouse Childhood Cancer Initiative"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#section-5",
+    "href": "temp/ideaya-presentation/index.html#section-5",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "",
+    "text": "Thank you for your time and consideration"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#data-access-collaborations",
+    "href": "temp/ideaya-presentation/index.html#data-access-collaborations",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Data Access Collaborations",
+    "text": "Data Access Collaborations\n\n\n\n\n\nUCSC Genome Browser: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.\n\n\n\n\n\n\nUCSC Xena Browser: FOXM1 and its isoforms across 19,948 TCGA, TARGET, GTEx samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser\n\n\n\n\n\n\nCollaborated with researchers in the ucsc genome browser team to create RNA-seq expression browser tracks\nTCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex\nCollaborated with the UCSC Xena team to provide an open-source data exploration platform of all ~20,000 samples\n\n\n\n\nMention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser ::: –&gt;"
   }
 ]
