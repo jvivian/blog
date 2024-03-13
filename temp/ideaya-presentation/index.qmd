@@ -39,6 +39,7 @@ editor:
 <!-- ## {background-image=imgs/toil_splash.png} -->
 ## {background-iframe="https://toil.ucsc-cgl.org/"} 
 
+<!-- TODO: Change to image of UCSC page -->
 ## {background-iframe="https://toil.ucsc-cgl.org/" background-opacity=0.25 transition="convex"}
 
 :::{.columns}
@@ -61,6 +62,7 @@ editor:
 ::::
 ::: -->
 
+<!-- TODO: Change to image of UCSC page -->
 ## Data Access Collaborations {background-iframe="https://toil.ucsc-cgl.org/" background-opacity=0.25 transition="zoom"}
 :::{.columns}
 ::::{.column width="65%"}
@@ -92,11 +94,6 @@ Tracks show tissue-specific expression of two genes from the GTEx dataset<br>
 
 The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline
 ::::
-::: -->
-
-
-
-- Mention also collaborating with a researcher on the UCSC genome browser team and contributing all GTEx RNA-seq tracks to the genome browser
 ::: -->
 
 ## Treehouse Childhood Cancer Initiative 
