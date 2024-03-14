@@ -766,19 +766,45 @@ John Vivian, Ph.D
 </div>
 <div class="fragment">
 <ul>
-<li>Due to the limited sample size (<span class="math inline">\(n=5\)</span>), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations.</li>
+<li>Due to the limited sample size (<span class="math inline">\(n=5\)</span>), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations. Bayesian power analysis can be used to estimate the number of samples we <em>would</em> need to reliably quantify a given effect size.</li>
 </ul>
 </div>
 </section></section>
+<section>
 <section id="open-for-questions" class="title-slide slide level1 center" data-background-color="#f0f4f7">
 <h1>Open for Questions</h1>
 <p>Thank you for your time and consideration</p>
+</section>
+<section id="addendum-bayesian-power-analysis" class="slide level2 smaller center">
+<h2>Addendum: Bayesian Power Analysis</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/power_analysis.svg"></p>
+<figcaption>This heatmap shows Bayesian power analysis outcomes, where the x-axis corresponds to <strong>sample size</strong> and the y-axis to <strong>effect size</strong>. Each cell shows the <strong>power</strong> (<span class="math inline">\(p \in [0, 1]\)</span>), which corresponds to the proportion of simulations detecting a significant difference. Color intensity denotes power levels, with darker colors signifying higher statistical power. Power analysis can help discern study feasibility as well as provide a sense of what effect size is detectable given sample size limitations.</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="center">
+<p><strong>General Steps</strong></p>
+</div>
+<ul>
+<li>Define your prior beliefs about the parameters of interest</li>
+<li>Specify the data generating process model. This model should represent the belief of how data arises within an experimental context</li>
+<li>Determine the decision rule defining “significant” or “practically relevant.” A Bayesian approach is to specify a region of practical equivalence (ROPE) around a null value where effects are considered too small to be of interest</li>
+<li>Simulate data of varying sample sizes at differing effect sizes</li>
+<li>Run inference (e.g.&nbsp;MCMC) on each simulated dataset to estimate the posterior distributions</li>
+<li>Calculate power by determining how often the decision rule leads to a conclusion of practical significance by calculating the proportion of simulations where the posterior distribution of the effect size meets your criteria for significance (e.g., falls outside the ROPE).</li>
+</ul>
+</div>
+</div>
 
 <div class="footer footer-default">
 
 </div>
-</section>
-
+</section></section>
 
     </div>
   </div>

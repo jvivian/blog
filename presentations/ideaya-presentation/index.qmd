@@ -368,8 +368,32 @@ TCR Analysis: Achieved ~100,000 Unique Molecular Identifiers (UMIs) per sample f
 
 . . . 
 
-- Due to the limited sample size ($n=5$), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations.
+- Due to the limited sample size ($n=5$), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations. Bayesian power analysis can be used to estimate the number of samples we _would_ need to reliably quantify a given effect size.
 
 # Open for Questions {background-color=#f0f4f7}
 
 Thank you for your time and consideration
+
+## Addendum: Bayesian Power Analysis {.smaller}
+::: {.columns}
+::::{.column width="50%"}
+<br>
+
+![This heatmap shows Bayesian power analysis outcomes, where the x-axis corresponds to **sample size** and the y-axis to **effect size**. Each cell shows the **power** ($p \in [0, 1]$), which corresponds to the proportion of simulations detecting a significant difference. Color intensity denotes power levels, with darker colors signifying higher statistical power. Power analysis can help discern study feasibility as well as provide a sense of what effect size is detectable given sample size limitations.](imgs/power_analysis.svg)
+::::
+::::{.column width="40%"}
+
+::: {.center}
+**General Steps**
+:::
+
+
+- Define your prior beliefs about the parameters of interest
+- Specify the data generating process model. This model should represent the belief of how data arises within an experimental context
+- Determine the decision rule defining "significant" or "practically relevant." A Bayesian approach is to specify a region of practical equivalence (ROPE) around a null value where effects are considered too small to be of interest
+- Simulate data of varying sample sizes at differing effect sizes
+- Run inference (e.g. MCMC) on each simulated dataset to estimate the posterior distributions
+- Calculate power by determining how often the decision rule leads to a conclusion of practical significance by calculating the proportion of simulations where the posterior distribution of the effect size meets your criteria for significance (e.g., falls outside the ROPE).
+::::
+:::
+

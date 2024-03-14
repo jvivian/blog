@@ -179,7 +179,7 @@
     "href": "presentations/ideaya-presentation/index.html#summary",
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "Summary",
-    "text": "Summary\n\nSingle-cell mRNA sequencing enables high-resolution characterization of immune cell subsets and represents a promising approach to assess the immune response to anti-HER2 treatment and other cancer therapeutics\n\n\n\nIn this study, single-cell mRNA sequencing of peripheral CD3+ T-cells identified clonal expansions in activated CD8+ and CD4+ T cells in HER2+ breast cancer patients who had a pathological complete response with preoperative docetaxel, carboplatin, trastuzumab, and pertuzumab treatment\nThese data are consistent with the model that T-cells play a key role in anti-HER2-mediated tumor control and warrant further investigation in a larger sample population\n\n\n\n\nDue to the limited sample size (\\(n=5\\)), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations."
+    "text": "Summary\n\nSingle-cell mRNA sequencing enables high-resolution characterization of immune cell subsets and represents a promising approach to assess the immune response to anti-HER2 treatment and other cancer therapeutics\n\n\n\nIn this study, single-cell mRNA sequencing of peripheral CD3+ T-cells identified clonal expansions in activated CD8+ and CD4+ T cells in HER2+ breast cancer patients who had a pathological complete response with preoperative docetaxel, carboplatin, trastuzumab, and pertuzumab treatment\nThese data are consistent with the model that T-cells play a key role in anti-HER2-mediated tumor control and warrant further investigation in a larger sample population\n\n\n\n\nDue to the limited sample size (\\(n=5\\)), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations. Bayesian power analysis can be used to estimate the number of samples we would need to reliably quantify a given effect size."
   },
   {
     "objectID": "posts/kd-art/index.html",
@@ -831,5 +831,12 @@
     "title": "Hassberry-Pi: Part 1",
     "section": "Touch Panel Dashboard",
     "text": "Touch Panel Dashboard\n\n\n\n\n\n\n\n(a) Close-up of UI\n\n\n\n\n\n\n\n(b) Accessible from desk\n\n\n\n\nFigure 1: Using a tablet for the server means it can double as a touch panel!"
+  },
+  {
+    "objectID": "presentations/ideaya-presentation/index.html#addendum-bayesian-power-analysis",
+    "href": "presentations/ideaya-presentation/index.html#addendum-bayesian-power-analysis",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Addendum: Bayesian Power Analysis",
+    "text": "Addendum: Bayesian Power Analysis\n\n\n\n\n\n\nThis heatmap shows Bayesian power analysis outcomes, where the x-axis corresponds to sample size and the y-axis to effect size. Each cell shows the power (\\(p \\in [0, 1]\\)), which corresponds to the proportion of simulations detecting a significant difference. Color intensity denotes power levels, with darker colors signifying higher statistical power. Power analysis can help discern study feasibility as well as provide a sense of what effect size is detectable given sample size limitations.\n\n\n\n\nGeneral Steps\n\n\nDefine your prior beliefs about the parameters of interest\nSpecify the data generating process model. This model should represent the belief of how data arises within an experimental context\nDetermine the decision rule defining “significant” or “practically relevant.” A Bayesian approach is to specify a region of practical equivalence (ROPE) around a null value where effects are considered too small to be of interest\nSimulate data of varying sample sizes at differing effect sizes\nRun inference (e.g. MCMC) on each simulated dataset to estimate the posterior distributions\nCalculate power by determining how often the decision rule leads to a conclusion of practical significance by calculating the proportion of simulations where the posterior distribution of the effect size meets your criteria for significance (e.g., falls outside the ROPE)."
   }
 ]
