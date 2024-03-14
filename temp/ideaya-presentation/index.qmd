@@ -72,10 +72,10 @@ editor:
 <!-- ## {background-image=imgs/toil_splash.png} -->
 ## {background-iframe="https://toil.ucsc-cgl.org/"} 
 
-## {background-image="imgs/toil-splash-page.png" background-opacity=0.25 transition="convex"auto-animate=true}
+## {background-image="imgs/toil-splash-page.png" background-opacity=0.25 transition="zoom"}
 
 :::{.columns}
-::::{.column width="25%"}
+::::{.column width="5%"}
 ::::
 ::::{.column width="50%"}
 ![](imgs/toil.png)
@@ -126,7 +126,7 @@ editor:
 ## Research Data Collaborations {transition='concave'}
 ![](imgs/UCSC-treehouse-splash.png)
 
-## {transition="convex" background-image="imgs/UCSC-treehouse-splash.png" background-opacity=0.3 auto-animate="true"}
+## {transition="zoom" background-image="imgs/UCSC-treehouse-splash.png" background-opacity=0.3 auto-animate="true"}
 :::{.columns}
 ::::{.column width="20%"}
 ::::
@@ -192,7 +192,7 @@ editor:
 ::::
 :::
 
-# Analysis of T-cell sub-populations {background-color=#f0f4f7}
+# Analysis of T-cell sub-populations in HER2+ breast cancer {background-color=#f0f4f7}
 
 ## Study Background {background-color=#f0f4f7}
 :::{.columns}
@@ -200,20 +200,19 @@ editor:
 :::{.center}
 **HER2+ Breast Cancer**
 ::: 
-::: {.incremental}
 - HER2-positive breast cancer accounts for approximately 20% of breast cancer cases and is characterized by the overexpression of the human epidermal growth factor receptor 2 (HER2) gene [^1]
-- HER2+ breast cancer is aggressive and accompanies poorer prognosis compared to HER2-negative breast cancers
-- Better understanding of the biomolecular underpinnings of HER2+ breast cancer have paved the way for targeted therapies, significantly improving patient outcomes
+
+::: {.incremental}
+- Anti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes [^2]
 ::: 
 ::::
 ::::{.column width="50%"}
 :::{.incremental}
 :::{.center}
-**Anti-HER2 Treatment**
+**Tumor-Infiltrating Lymphocytes**
 ::: 
-- Anti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes [^2]
-- These treatments specifically target the HER2 protein, inhibiting cancer cell growth and survival
-- Ongoing research is focused on overcoming resistance to anti-HER2 therapies and enhancing treatment efficacy through combination therapies and novel agents
+- Anti-tumor immunity plays a role in the efficacy of anti-HER2 treatment, as demonstrated by the association of TILs with prognosis and increased efficacy from treatment with trastuzumab and chemotherapy in HER2+ breast cancer [^3]
+-  Immunohistochemistry and RNA sequencing of breast tumor tissues has suggested that trastuzumab may recruit and activate anti-tumor T cells [^4]
 :::
 ::::
 :::
@@ -223,7 +222,14 @@ editor:
 
 [^2]: Piccart-Gebhart, M. J., et al. (2005). "Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer." New England Journal of Medicine, 353(16), 1659-1672.
 
-## Study Design 
+[^3]: Loi, S., et al. (2014). "Tumor infiltrating lymphocytes are prognostic in triple negative breast cancer and predictive for trastuzumab benefit in early breast cancer." Ann Oncol, 25(8), 1544–1550.
+
+[^4]: Hendricks, WPD., et al. (2019). "PD-1-Associated Gene Expression Signature of Neoadjuvant Trastuzumab-Treated Tumors Correlates with Patient Survival in HER2-Positive Breast Cancer." Cancers, 11(10), 156.
+
+
+
+
+## Study Design {auto-animate="true"}
 :::{.columns}
 ::::{.column width="15%"}
 ::::
@@ -232,29 +238,140 @@ editor:
 ::::
 :::
 
+## Study Design {auto-animate="true"}
+:::{.columns}
+::::{.column width="35%"}
+::: {.center}
+**Patient Cohort and Treatment Regimen**
+:::
 
-## Methods and Findings {background-color=#f0f4f7}
-- Single-cell sequencing approach
-- Analyzing T cell profiles before and after treatment
-- Key findings and their significance
+- **Study Group**: Analysis involved paired pre-treatment and on-treatment PBMC samples from five patients with HER2+ breast cancer, staged IIA–IV (IIA [n=2], IIIC [n=2], IV [n=1])
+- **Treatment Protocol**: Patients received preoperative therapy comprising docetaxel, carboplatin, trastuzumab, and pertuzumab
+::::
+::::{.column width="65%"}
 
-## Implications and Future Directions {background-color=#f0f4f7}
-- Impact on understanding immune responses
-- Potential influence on treatment strategies
-- Future research directions
+![](imgs/sc_fig1.png)
+::::
+:::
 
-# Summary {background-color=#f0f4f7}
+## Study Design {auto-animate="true"}
+:::{.columns}
+::::{.column width="40%"}
+::: {.center}
+**Sampling and Analytical Methods**
+:::
+- **Sample Collection**: Blood samples were collected at the start of Cycle 1, Day 1 (C1D1) for pre-treatment baseline and on Day 1 of Cycle 3, 4, or 5 (C3, C4, C5) to monitor treatment response
+- **Cellular Profiling**: Peripheral CD3+ T cells from these samples were subjected to detailed profiling, utilizing 10x Genomics VDJ alongside gene expression single-cell sequencing to elucidate the immune landscape and gene expression alterations induced by the treatment
+
+::::
+::::{.column width="60%"}
+![](imgs/sc_fig1.png)
+::::
+:::
+
+## VDJ Pipeline {auto-animate="true"}
+![The cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5' V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell. ](imgs/sc_vdj.png)
+
+
+## Cite-Seq {auto-animate="true" transition="convex"}
+::: {.columns}
+::::{.column width="45%"}
+![The cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5' V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell. ](imgs/sc_vdj.png)
+::::
+::::{.column width="55%"}
+![CITE-seq uses DNA-barcoded antibodies to convert detection of proteins into a quantitative, sequenceable readout.  Antibody-bound oligos act as synthetic transcripts that are captured during most large-scale oligodT-based scRNA-seq library preparation protocols (e.g. 10x Genomics, Drop-seq, ddSeq).](imgs/cite-seq.png)
+::::
+:::
+
+
+## Single-Cell Data
+::: {.columns}
+::::{.column width="50%"}
+- **Cellular Data Depth**: High-quality data with over 6,500 cells profiled per sample
+
+::: {.incremental}
+- **Gene Expression**: Approximately 41 million reads per sample, ensuring robust gene expression profiling.
+TCR Analysis: Achieved ~100,000 Unique Molecular Identifiers (UMIs) per sample for precise T-cell receptor (TCR) sequencing
+- **CITE-Seq**: CITE-seq marker panel was included and used in conjunction with gene expression QC to filter the dataset and improve downstream analysis
+:::
+::::
+::::{.column width="50%"}
+![](imgs/sc_cell_counts.png)
+::::
+:::
+
+## Computational Methods
+::: {.columns}
+::::{.column width="50%"}
+![`AnnData` schema for storing annotated data. The core data structure used by `scanpy` which was used for this analysis.](imgs/anndata_schema.svg)
+::::
+::::{.column width="50%"}
+<br><br>
+
+::: {.center}
+**Data Processing**
+:::
+- **Filter Cells** - Remove cells with high mitochondrial content and too few genes detected
+- **Filter Genes** - Remove genes below minimum cell and variance threshold
+- **Normalization** - Regress out effects by total count and scale each gene to unit variance
+::::
+:::
+
+## Batch Correction and Dimensionality Reduction
+![`Harmony` operates in embedding space and produces a corrected `PCA` embedding which is used downstream to calculate the neighborhood graph which in turn is used by `UMAP` for further dimnsionality reduction.](imgs/Harmony.jpeg)
+
+##  Clustering and Annotation
+::: {.columns}
+::::{.column width="40%"}
+<br><br>
+
+::: {.center}
+**CD8+ and CD4+ T-cell subsets**
+:::
+- Eleven T cell subsets were characterized based on transcriptional profiles from the peripheral blood of donors
+- Undefined (grey) represents a collection of cells that did not confidently correspond to signatures of collected T cell subsets
+::::
+::::{.column width="60%"}
+![](imgs/sc_umap.png)
+::::
+:::
+
+<!-- ## Clonal expansions in patients with pathological complete response -->
+## Patient-level Analysis
+![Large T cell clonal expansions were observed in pre- and on-treatment peripheral blood samples from two patients who exhibited a pathological complete response. A high abundance of activated CD8+ TEM/EM cells was seen in patients 1 and 5 (red arrows). The other three patients had partial clinical responses with residual disease at surgery. Patient 4 had an increase in activated CD4+ Tregs on-treatment (red circle)](imgs/sc_umap_by_patient.png)
+
+## Variation in T-Cell Populations Across Treatment Stages {auto-animate="true"}
+::: {.columns}
+::::{.column width="35%"}
+<br><br>
+
+- Clonal expansions were observed in activated CD8+ TEM/EM cells in patients 1 and 5
+
+::: {.incremental}
+- Clonal expansion of activated CD4+ TEM/EM cells was observed in patient 5
+- No significant expansions were observed in the other subsets
+:::
+::::
+::::{.column width="65%"}
+![All five samples had similar pre- and on-treatment subset distributions and clonal expansion profiles](imgs/sc_tcell_subsets.png)
+::::
+:::
+
+## Variation in T-Cell Populations Across Treatment Stages {auto-animate="true"}
+![A possible trend toward on-treatment increase in activated CD4+ Tregs was observed. Activated CD4+ Treg subset sizes are small and therefore estimation of abundance has high error bars.](imgs/sc_population_over_time.png)
 
 ## Summary {background-color=#f0f4f7}
-- Recap of your background and research
-- How it aligns with the position
+- Single-cell mRNA sequencing enables high-resolution characterization of immune cell subsets and represents a promising approach to assess the immune response to anti-HER2 treatment and other cancer therapeutics
 
-## Multiple Avenues for Contribution {background-color=#f0f4f7}
+::: {.incremental}
+- In this study, single-cell mRNA sequencing of peripheral CD3+ T-cells identified clonal expansions in activated CD8+ and CD4+ T cells in HER2+ breast cancer patients who had a pathological complete response with preoperative docetaxel, carboplatin, trastuzumab, and pertuzumab treatment
+- These data are consistent with the model that T-cells play a key role in anti-HER2-mediated tumor control and warrant further investigation in a larger sample population
+:::
 
-![](imgs/skills.png)
+. . . 
+
+- Due to the limited sample size ($n=5$), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations.
 
 # Open for Questions {background-color=#f0f4f7}
-
-## {background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html"}
 
 Thank you for your time and consideration
