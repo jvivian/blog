@@ -32,6 +32,7 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -325,7 +326,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="imgs/cover.png" data-background-opacity="0.25" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-color="black" data-background-image="imgs/cover.png" data-background-opacity="0.2" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Single-cell sequencing of the blood T cell repertoire</h1>
   <p class="subtitle">before and after trastuzumab treatment in early-stage HER2+ breast cancer</p>
 
@@ -348,29 +349,55 @@ John Vivian, Ph.D
 <h2></h2>
 </section></section>
 <section>
-<section id="career-timeline" class="title-slide slide level1 center" data-background-color="#f0f4f7">
-<h1>Career Timeline</h1>
+<section id="career-timeline" class="title-slide slide level1 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Career Timeline</h1>
+<div class="columns">
+<div class="column" style="width:20%;">
 
-<img data-src="imgs/timeline.png" style="width:80.0%" class="r-stretch"></section>
-<section id="nanopore-research" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Nanopore Research</h2>
+</div><div class="column" style="width:60%;">
+<p><img data-src="imgs/timeline.png"></p>
+</div>
+</div>
+</section>
+<section id="nanopore-research" class="slide level2 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Nanopore Research</h2>
+<div class="columns">
+<div class="column" style="width:15%;">
 
-<img data-src="imgs/timeline_nanopore.png" class="r-stretch"></section>
+</div><div class="column" style="width:85%;">
+<p><img data-src="imgs/timeline_nanopore.png"></p>
+</div>
+</div>
+</section>
 <section id="nanopore-reread-project" class="slide level2 center" data-transition="zoom">
 <h2>Nanopore reread project</h2>
 
 <img data-src="imgs/nanopore_figure.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption"><strong>A</strong>: Substrate bound to the lipid bilayer via a cholesterol tag with a helicase (Hel308) bound and inactive at the other end. <strong>B</strong>: Electric potential causes the DNA duplex to unwind, leaving behind the cholesterol tether bound to the complement strand. <strong>C</strong>: Electric potential and the steady-state nature of the G-Quadruplex (GQ) causes it to unfold allowing the helicase to become enzymatically active in the 3’ -&gt; 5’ direction. <strong>D</strong>: As Hel308 translocates the DNA back up through the pore, the GQ will refold allowing an additional enzyme to become bound. <strong>E</strong>: Continued translocation. <strong>F</strong>: More than 3-4 abasic residues causes Hel308 to dissociate from the substrate (9 are used in the substrate). The DNA strand is then pulled back down and the cycle is able to repeat itself once more.</p></section>
-<section id="computational-genomics-lab" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Computational Genomics Lab</h2>
+<section id="computational-genomics-lab" class="slide level2 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Computational Genomics Lab</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
 
+</div><div class="column" style="width:80%;">
+<p><img data-src="imgs/timeline_grad.png"></p>
+</div>
+</div>
+<!-- ## Computational Genomics Lab {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="50%"}
+![](imgs/timeline_grad.png)
+::::
+::::{.column width="50%"}
+![](imgs/papers.png)
+::::
+::: -->
 <!-- ## {background-image=imgs/toil_splash.png} -->
-<img data-src="imgs/timeline_grad.png" class="r-stretch"></section>
+</section>
 <section id="section-1" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/">
 <h2></h2>
-<!-- TODO: Change to image of UCSC page -->
 </section>
-<section id="section-2" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/" data-background-opacity="0.25" data-transition="convex">
-<h2></h2>
+<section id="section-2" class="slide level2 center" data-background-image="imgs/toil-splash-page.png" data-background-opacity="0.25" data-transition="convex" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:25%;">
 
@@ -378,30 +405,46 @@ John Vivian, Ph.D
 <p><img data-src="imgs/toil.png"></p>
 </div>
 </div>
-<!-- ## Scalable Pipeline Management System 
-:::{.columns}
-::::{.column width="5%"}
-::::
-::::{.column width="50%"}
-![](imgs/toil.png)
-::::
-::::{.column width="40%"}
-![Metrics 20,000 sample RNA-seq compute, averaged over 5-minute intervals across all instances. Pipeline framework was intentionally terminated at hours 10 and 20 to showcase ability to resume from failure.](imgs/toil_metrics.png)
-::::
-::: -->
-<!-- TODO: Change to image of UCSC page -->
 </section>
-<section id="data-access-collaborations" class="slide level2 center" data-background-iframe="https://toil.ucsc-cgl.org/" data-background-opacity="0.25" data-transition="zoom">
-<h2>Data Access Collaborations</h2>
+<section id="data-access-gtex-and-ucsc-genome-browser" class="slide level2 center" data-background-image="imgs/toil-splash-page.png" data-background-opacity="0.1" data-transition="convex" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Data Access: GTEx and UCSC Genome Browser</h2>
 <div class="columns">
-<div class="column" style="width:65%;">
+<div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/gtex.png"></p>
 <figcaption><strong>UCSC Genome Browser</strong>: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:35%;">
+</div><div class="column" style="width:45%;">
+<p><img data-src="imgs/UCSC-Genome-browser-paper.png"><br></p>
+</div>
+</div>
+</section>
+<section id="data-access-gtex-and-ucsc-genome-browser-1" class="slide level2 center" data-background-image="imgs/toil-splash-page.png" data-background-opacity="0.1" data-transition="convex" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Data Access: GTEx and UCSC Genome Browser</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/gtex.png"></p>
+<figcaption><strong>UCSC Genome Browser</strong>: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="imgs/sc_gtex_paper.png"><br></p>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2 center" data-background-iframe="https://xena.ucsc.edu">
+<h2></h2>
+</section>
+<section id="section-4" class="slide level2 center" data-background-image="imgs/ucsc-xena-splash.png" data-background-opacity="0.2" data-transition="zoom">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/xena.png"></p>
@@ -413,6 +456,7 @@ John Vivian, Ph.D
 <aside class="notes">
 <ul>
 <li>Collaborated with researchers in the ucsc genome browser team to create RNA-seq expression browser tracks</li>
+<li>Developed the toil-RNAseq pipeline</li>
 <li>TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain’s basal ganglia but not in muscle or brain cortex</li>
 <li>Collaborated with the UCSC Xena team to provide an open-source data exploration platform of all ~20,000 samples</li>
 </ul>
@@ -427,29 +471,13 @@ John Vivian, Ph.D
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- ## UCSC Genome Browser {.smaller }
-
-:::{.columns}
-::::{.column width="55%"}
-![A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq.](imgs/gtex.png)
-::::
-::::{.column width="45%"}
-<br>
-Tracks show tissue-specific expression of two genes from the GTEx dataset<br>
-
-
-33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues<br>
-
-The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline
-::::
-::: -->
 </section>
-<section id="treehouse-childhood-cancer-initiative" class="slide level2 center">
-<h2>Treehouse Childhood Cancer Initiative</h2>
+<section id="research-data-collaborations" class="slide level2 center" data-transition="concave">
+<h2>Research Data Collaborations</h2>
 
 <img data-src="imgs/UCSC-treehouse-splash.png" class="r-stretch"></section>
-<section id="section-3" class="slide level2 center" data-transition="zoom" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3">
-<h2></h2>
+<section id="section-5" class="slide level2 center" data-transition="convex" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
 
@@ -458,20 +486,33 @@ The tracks for hg19 were produced using the UCSC liftOver tool, which converts c
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 center" data-transition="convex" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3" data-auto-animate="true">
+<section id="section-6" class="slide level2 center" data-transition="convex" data-background-image="imgs/UCSC-treehouse-splash.png" data-background-opacity="0.3" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="imgs/jco_paper_title.png"></p>
+<div class="column" style="width:10%;">
+
 </div><div class="column" style="width:50%;">
+<p><img data-src="imgs/jco_paper_title.png"></p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="imgs/jco_plate_notation.jpeg"></p>
+<figcaption>The model represented in Bayesian plate notation. <strong>G</strong> and <strong>D</strong> stand for Gene and Dataset respectively. <span class="math inline">\(x\)</span> denotes the gene expression from a background dataset, forming a convex combination <span class="math inline">\(\hat{y}\)</span> when multiplied by the dot product of <span class="math inline">\(\beta^T\)</span>. The model incorporates a ‘jointly Dirichlet’ distribution for <span class="math inline">\(\beta\)</span>, as each dataset contributes to the overall distribution. We add a Laplacian error term <span class="math inline">\(\epsilon\)</span> to the expected expression <span class="math inline">\(\hat{y}\)</span> when modeling the observed expression of a new sample <span class="math inline">\(y\)</span>.</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="atreca-inc." class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Atreca Inc.&nbsp;</h2>
+<section id="atreca-inc." class="slide level2 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Atreca Inc.&nbsp;</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
 
-<img data-src="imgs/timeline_atreca.png" class="r-stretch"><aside class="notes">
+</div><div class="column" style="width:75%;">
+<p><img data-src="imgs/timeline_atreca.png"></p>
+</div>
+</div>
+<aside class="notes">
 <ul>
 <li>Mention collaborating closely with protein engineering to design, maintain, improve tools they used every day</li>
 <li>Ab-CRUNCH
@@ -492,24 +533,36 @@ The tracks for hg19 were produced using the UCSC liftOver tool, which converts c
           display:block!important;
       }</style></aside>
 </section>
-<section id="novel-antibody-target-discovery-platform" class="slide level2 center">
-<h2>Novel Antibody Target Discovery Platform</h2>
+<section id="novel-antibody-target-discovery-platform" class="slide level2 center" data-auto-animate="true" data-background-color="#f0f4f7">
+<h2 data-id="quarto-animate-title">Novel Antibody Target Discovery Platform</h2>
 <div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:90%;">
+<div class="column" style="width:60%;">
 <p><img data-src="imgs/atreca_paper.png"></p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="imgs/timeline_atreca.png"></p>
 </div>
 </div>
 </section>
-<section id="teiko-bio" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Teiko Bio</h2>
+<section id="teiko-bio" class="slide level2 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Teiko Bio</h2>
+<div class="columns">
+<div class="column" style="width:15%;">
 
-<img data-src="imgs/timeline_teiko.png" class="r-stretch"></section>
-<section id="next-steps" class="slide level2 center" data-background-color="#f0f4f7">
-<h2>Next Steps?</h2>
+</div><div class="column" style="width:85%;">
+<p><img data-src="imgs/timeline_teiko.png"></p>
+</div>
+</div>
+</section>
+<section id="next-steps" class="slide level2 center" data-background-color="#f0f4f7" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Next Steps?</h2>
+<div class="columns">
+<div class="column" style="width:5%;">
 
-<img data-src="imgs/timeline_ideaya.png" class="r-stretch"></section></section>
+</div><div class="column" style="width:75%;">
+<p><img data-src="imgs/timeline_ideaya.png"></p>
+</div>
+</div>
+</section></section>
 <section>
 <section id="analysis-of-t-cell-sub-populations" class="title-slide slide level1 center" data-background-color="#f0f4f7">
 <h1>Analysis of T-cell sub-populations</h1>
@@ -517,10 +570,41 @@ The tracks for hg19 were produced using the UCSC liftOver tool, which converts c
 </section>
 <section id="study-background" class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Study Background</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="center">
+<p><strong>HER2+ Breast Cancer</strong></p>
+</div>
+<div>
 <ul>
-<li>Importance of HER2+ breast cancer research</li>
-<li>Role of anti-HER2 treatment</li>
+<li class="fragment">HER2-positive breast cancer accounts for approximately 20% of breast cancer cases and is characterized by the overexpression of the human epidermal growth factor receptor 2 (HER2) gene <sup>1</sup></li>
+<li class="fragment">HER2+ breast cancer is aggressive and accompanies poorer prognosis compared to HER2-negative breast cancers</li>
+<li class="fragment">Better understanding of the biomolecular underpinnings of HER2+ breast cancer have paved the way for targeted therapies, significantly improving patient outcomes</li>
 </ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<div class="center">
+<p><strong>Anti-HER2 Treatment</strong></p>
+</div>
+<ul>
+<li class="fragment">Anti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes <sup>2</sup></li>
+<li class="fragment">These treatments specifically target the HER2 protein, inhibiting cancer cell growth and survival</li>
+<li class="fragment">Ongoing research is focused on overcoming resistance to anti-HER2 therapies and enhancing treatment efficacy through combination therapies and novel agents</li>
+</ul>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Slamon, D. J., et al.&nbsp;(2001). “Use of chemotherapy plus a monoclonal antibody against HER2 for metastatic breast cancer that overexpresses HER2.” New England Journal of Medicine, 344(11), 783-792.</p></li><li id="fn2"><p>Piccart-Gebhart, M. J., et al.&nbsp;(2005). “Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer.” New England Journal of Medicine, 353(16), 1659-1672.</p></li></ol></aside></section>
+<section id="study-design" class="slide level2 center">
+<h2>Study Design</h2>
+<div class="columns">
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:85%;">
+<p><img data-src="imgs/sc_fig1.png"></p>
+</div>
+</div>
 </section>
 <section id="methods-and-findings" class="slide level2 center" data-background-color="#f0f4f7">
 <h2>Methods and Findings</h2>
@@ -559,7 +643,7 @@ The tracks for hg19 were produced using the UCSC liftOver tool, which converts c
 <h1>Open for Questions</h1>
 
 </section>
-<section id="section-5" class="slide level2 center" data-background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html">
+<section id="section-7" class="slide level2 center" data-background-iframe="https://jvivian.github.io/blog/posts/dr-dfm-covid/presentation-post.html">
 <h2></h2>
 <p>Thank you for your time and consideration</p>
 
@@ -567,6 +651,7 @@ The tracks for hg19 were produced using the UCSC liftOver tool, which converts c
 
 </div>
 </section></section>
+
     </div>
   </div>
 
