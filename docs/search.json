@@ -697,7 +697,7 @@
     "href": "temp/ideaya-presentation/index.html#study-background",
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "Study Background",
-    "text": "Study Background\n\n\n\nHER2+ Breast Cancer\n\n\n\nHER2-positive breast cancer accounts for approximately 20% of breast cancer cases and is characterized by the overexpression of the human epidermal growth factor receptor 2 (HER2) gene 1\nHER2+ breast cancer is aggressive and accompanies poorer prognosis compared to HER2-negative breast cancers\nBetter understanding of the biomolecular underpinnings of HER2+ breast cancer have paved the way for targeted therapies, significantly improving patient outcomes\n\n\n\n\n\nAnti-HER2 Treatment\n\n\nAnti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes 2\nThese treatments specifically target the HER2 protein, inhibiting cancer cell growth and survival\nOngoing research is focused on overcoming resistance to anti-HER2 therapies and enhancing treatment efficacy through combination therapies and novel agents\n\n\n\n\nSlamon, D. J., et al. (2001). “Use of chemotherapy plus a monoclonal antibody against HER2 for metastatic breast cancer that overexpresses HER2.” New England Journal of Medicine, 344(11), 783-792.Piccart-Gebhart, M. J., et al. (2005). “Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer.” New England Journal of Medicine, 353(16), 1659-1672."
+    "text": "Study Background\n\n\n\nHER2+ Breast Cancer\n\n\nHER2-positive breast cancer accounts for approximately 20% of breast cancer cases and is characterized by the overexpression of the human epidermal growth factor receptor 2 (HER2) gene 1\n\n\n\nAnti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes 2\n\n\n\n\n\nTumor-Infiltrating Lymphocytes\n\n\nAnti-tumor immunity plays a role in the efficacy of anti-HER2 treatment, as demonstrated by the association of TILs with prognosis and increased efficacy from treatment with trastuzumab and chemotherapy in HER2+ breast cancer 3\nImmunohistochemistry and RNA sequencing of breast tumor tissues has suggested that trastuzumab may recruit and activate anti-tumor T cells 4\n\n\n\n\nSlamon, D. J., et al. (2001). “Use of chemotherapy plus a monoclonal antibody against HER2 for metastatic breast cancer that overexpresses HER2.” New England Journal of Medicine, 344(11), 783-792.Piccart-Gebhart, M. J., et al. (2005). “Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer.” New England Journal of Medicine, 353(16), 1659-1672.Loi, S., et al. (2014). “Tumor infiltrating lymphocytes are prognostic in triple negative breast cancer and predictive for trastuzumab benefit in early breast cancer.” Ann Oncol, 25(8), 1544–1550.Hendricks, WPD., et al. (2019). “PD-1-Associated Gene Expression Signature of Neoadjuvant Trastuzumab-Treated Tumors Correlates with Patient Survival in HER2-Positive Breast Cancer.” Cancers, 11(10), 156."
   },
   {
     "objectID": "temp/ideaya-presentation/index.html#methods-and-findings",
@@ -1020,5 +1020,89 @@
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "",
     "text": "Thank you for your time and consideration"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#study-design-1",
+    "href": "temp/ideaya-presentation/index.html#study-design-1",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Study Design",
+    "text": "Study Design\n\n\n\nPatient Cohort and Treatment Regimen\n\n\nStudy Group: Analysis involved paired pre-treatment and on-treatment PBMC samples from five patients with HER2+ breast cancer, staged IIA–IV (IIA [n=2], IIIC [n=2], IV [n=1])\nTreatment Protocol: Patients received preoperative therapy comprising docetaxel, carboplatin, trastuzumab, and pertuzumab"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#study-design-2",
+    "href": "temp/ideaya-presentation/index.html#study-design-2",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Study Design",
+    "text": "Study Design\n\n\n\nSampling and Analytical Methods\n\n\nSample Collection: Blood samples were collected at the start of Cycle 1, Day 1 (C1D1) for pre-treatment baseline and on Day 1 of Cycle 3, 4, or 5 (C3, C4, C5) to monitor treatment response\nCellular Profiling: Peripheral CD3+ T cells from these samples were subjected to detailed profiling, utilizing 10x Genomics VDJ alongside gene expression single-cell sequencing to elucidate the immune landscape and gene expression alterations induced by the treatment"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#vdj-pipeline",
+    "href": "temp/ideaya-presentation/index.html#vdj-pipeline",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "VDJ Pipeline",
+    "text": "VDJ Pipeline\n\nThe cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5’ V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#cite-seq",
+    "href": "temp/ideaya-presentation/index.html#cite-seq",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Cite-Seq",
+    "text": "Cite-Seq\n\n\n\n\n\nThe cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5’ V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell.\n\n\n\n\n\n\nCITE-seq uses DNA-barcoded antibodies to convert detection of proteins into a quantitative, sequenceable readout. Antibody-bound oligos act as synthetic transcripts that are captured during most large-scale oligodT-based scRNA-seq library preparation protocols (e.g. 10x Genomics, Drop-seq, ddSeq)."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#single-cell-data",
+    "href": "temp/ideaya-presentation/index.html#single-cell-data",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Single-Cell Data",
+    "text": "Single-Cell Data\n\n\n\nCellular Data Depth: High-quality data with over 6,500 cells profiled per sample\n\n\n\nGene Expression: Approximately 41 million reads per sample, ensuring robust gene expression profiling. TCR Analysis: Achieved ~100,000 Unique Molecular Identifiers (UMIs) per sample for precise T-cell receptor (TCR) sequencing\nCITE-Seq: CITE-seq marker panel was included and used in conjunction with gene expression QC to filter the dataset and improve downstream analysis"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#computational-methods",
+    "href": "temp/ideaya-presentation/index.html#computational-methods",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Computational Methods",
+    "text": "Computational Methods\n\n\n\n\n\nAnnData schema for storing annotated data. The core data structure used by scanpy which was used for this analysis.\n\n\n\n\n\nData Processing\n\n\nFilter Cells - Remove cells with high mitochondrial content and too few genes detected\nFilter Genes - Remove genes below minimum cell and variance threshold\nNormalization - Regress out effects by total count and scale each gene to unit variance"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#batch-correction-and-dimensionality-reduction",
+    "href": "temp/ideaya-presentation/index.html#batch-correction-and-dimensionality-reduction",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Batch Correction and Dimensionality Reduction",
+    "text": "Batch Correction and Dimensionality Reduction\n\nHarmony operates in embedding space and produces a corrected PCA embedding which is used downstream to calculate the neighborhood graph which in turn is used by UMAP for further dimnsionality reduction."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#clustering-and-annotation",
+    "href": "temp/ideaya-presentation/index.html#clustering-and-annotation",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Clustering and Annotation",
+    "text": "Clustering and Annotation\n\n\n\n\nCD8+ and CD4+ T-cell subsets\n\n\nEleven T cell subsets were characterized based on transcriptional profiles from the peripheral blood of donors\nUndefined (grey) represents a collection of cells that did not confidently correspond to signatures of collected T cell subsets"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#patient-level-analysis",
+    "href": "temp/ideaya-presentation/index.html#patient-level-analysis",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Patient-level Analysis",
+    "text": "Patient-level Analysis\n\nLarge T cell clonal expansions were observed in pre- and on-treatment peripheral blood samples from two patients who exhibited a pathological complete response. A high abundance of activated CD8+ TEM/EM cells was seen in patients 1 and 5 (red arrows). The other three patients had partial clinical responses with residual disease at surgery. Patient 4 had an increase in activated CD4+ Tregs on-treatment (red circle)"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#variation-in-t-cell-populations-across-treatment-stages",
+    "href": "temp/ideaya-presentation/index.html#variation-in-t-cell-populations-across-treatment-stages",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Variation in T-Cell Populations Across Treatment Stages",
+    "text": "Variation in T-Cell Populations Across Treatment Stages\n\n\n\n\nClonal expansions were observed in activated CD8+ TEM/EM cells in patients 1 and 5\n\n\n\nClonal expansion of activated CD4+ TEM/EM cells was observed in patient 5\nNo significant expansions were observed in the other subsets\n\n\n\n\n\n\nAll five samples had similar pre- and on-treatment subset distributions and clonal expansion profiles"
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#variation-in-t-cell-populations-across-treatment-stages-1",
+    "href": "temp/ideaya-presentation/index.html#variation-in-t-cell-populations-across-treatment-stages-1",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Variation in T-Cell Populations Across Treatment Stages",
+    "text": "Variation in T-Cell Populations Across Treatment Stages\n\nA possible trend toward on-treatment increase in activated CD4+ Tregs was observed. Activated CD4+ Treg subset sizes are small and therefore estimation of abundance has high error bars."
+  },
+  {
+    "objectID": "temp/ideaya-presentation/index.html#summary",
+    "href": "temp/ideaya-presentation/index.html#summary",
+    "title": "Single-cell sequencing of the blood T cell repertoire",
+    "section": "Summary",
+    "text": "Summary\n\nSingle-cell mRNA sequencing enables high-resolution characterization of immune cell subsets and represents a promising approach to assess the immune response to anti-HER2 treatment and other cancer therapeutics\n\n\n\nIn this study, single-cell mRNA sequencing of peripheral CD3+ T-cells identified clonal expansions in activated CD8+ and CD4+ T cells in HER2+ breast cancer patients who had a pathological complete response with preoperative docetaxel, carboplatin, trastuzumab, and pertuzumab treatment\nThese data are consistent with the model that T-cells play a key role in anti-HER2-mediated tumor control and warrant further investigation in a larger sample population\n\n\n\n\nDue to the limited sample size (\\(n=5\\)), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations."
   }
 ]
