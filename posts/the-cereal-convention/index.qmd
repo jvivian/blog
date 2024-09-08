@@ -1,0 +1,168 @@
+---
+title: "The Cereal Convention"
+subtitle: "A Kingdom Death Campaign Log"
+format: 
+  html:
+    # css: styles.css
+    toc: true
+    toc-depth: 2
+    # code-fold: true
+    echo: false
+editor: visual
+execute: 
+    render-on-save: true
+# image: "imgs/cereal-cover.png"
+tools:
+  - mermaid
+---
+
+# Settlement Overview
+
+::: {.column-page}
+::: {.column width="40%"}
+### Campaign Information
+- **Settlement Name**: The Cereal Convention  
+- **Campaign**: People of the Lantern  
+- **Boss**: Watcher  
+- **Finale**: Gold Smoke Knight  
+:::
+
+::: {.column width="50%"}
+![The Cereal Convention](imgs/cereal-cover.png)
+:::
+:::
+
+# Campaign Nodes
+
+:::: {.columns}
+::: {.column width="30%"}
+### Quarry
+
+```{mermaid}
+graph TB
+    A(Crimson Crocodile)
+    B(Smog Singers)
+    C(Sunstalker)
+    D(King)
+
+    A --> B
+    B --> C
+    C --> D
+```
+:::
+
+::: {.column width="30%"}
+### Nemesis
+```{mermaid}
+graph TB
+    A(Manhunter)
+    B(Atnas)
+    C(Black Knight)
+
+    A --> B
+    B --> C
+```
+:::
+::: {.column width="30%"}
+### Boss & Finale
+```{mermaid}
+graph TB
+    A(Watcher)
+    B(Gold Smoke Knight)
+
+    A --> B
+```
+:::
+:::: 
+
+# Test
+::: {.column-page}
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data
+years = np.arange(1, 6)
+quarry_names = ['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Crimson Crocodile']
+quarry_levels = [1, 1, 2, 3, 2]
+nemesis_names = ['Manhunter', None, 'Atnas', None, 'Black Knight']
+nemesis_levels = [1, None, 1, None, 2]
+
+# Set up figure
+fig, ax = plt.subplots(figsize=(10, 4))
+
+# Plot quarries
+for i, (name, level) in enumerate(zip(quarry_names, quarry_levels)):
+    ax.scatter(years[i], name, s=level*100, color='skyblue', label='Quarry' if i == 0 else "")
+
+# Plot nemeses
+for i, (name, level) in enumerate(zip(nemesis_names, nemesis_levels)):
+    if name is not None:
+        ax.scatter(years[i], name, s=level*100, color='salmon', label='Nemesis' if i == 0 else "")
+
+# Add labels and title
+ax.set_xlabel('Years')
+ax.set_ylabel('Monster Fought')
+ax.set_title('Kingdom Death Campaign: Quarry and Nemesis Progression')
+
+# Legend and layout
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+```
+:::
+
+
+# Campaign Timeline
+
+## Prologue: Devour the White Lion
+::: {#prologue .callout-note collapse="true"}
+- **Characters**: Charlie, Carrie, Patrick Bateman, Freddie
+- **Outcome**: Patrick Bateman dies (chest severe injury)
+- **Principle**: Protect the Young (New Life)
+:::
+
+## Year 1: First Crimson Day
+::: {#year1 .callout-tip collapse="true"}
+- **Event**: First Crimson Day  
+- **Quarry**: Crimson Crocodile  
+- **Deaths**: None
+:::
+
+## Year 2: Smog Song
+::: {#year2 .callout-tip collapse="true"}
+- **Event**: Smog Song  
+- **Quarry**: Smog Singers  
+- **Innovation**: None  
+- **Nemesis**: None
+:::
+
+## Year 3: Velvet Fog
+::: {#year3 .callout-tip collapse="true"}
+- **Event**: Velvet Fog  
+- **Quarry**: None  
+- **Innovation**: None  
+- **Nemesis**: None
+:::
+
+## Year 4: The Hooded Knight
+::: {#year4 .callout-warning collapse="true"}
+- **Event**: The Hooded Knight (killed 2 people)  
+- **Quarry**: None  
+- **Deaths**: Carrie (Smog Song), 2 unnamed  
+:::
+
+## Year 5: Plague / The Hanged Man
+::: {#year5 .callout-warning collapse="true"}
+- **Event**: Plague / The Hanged Man  
+- **Quarry**: None  
+- **Deaths**: Charlie  
+- **Principles**: Cannibalize (Death), Accept the Darkness (Society)
+:::
+
+# Campaign Principles
+| New Life       | Death         | Society         |
+|----------------|---------------|-----------------|
+| Protect the Young | Cannibalize  | Accept the Darkness |
+
