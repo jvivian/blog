@@ -1,9 +1,12 @@
-Year,Quarry,Quarry_Level,Nemesis,Nemesis_Level,Innovation,Story Event,Settlement Events,Deaths,Population
+Year,Quarry,Quarry_Level,Nemesis,Nemesis_Level,Innovation,Story Event,Main Settlement Event,Deaths,Population
 0,Crimson Crocodile,0,,,,Devour The White Lion,,1,3
-1,Crimson Crocodile,1,,,,,,,
-2,Crimson Crocodile,1,,,,,,,
-3,Smog Singers,1,,,,,,,
-4,Smog Singers,1,,,,,,,
-5,Smog Singers,2,Manhunter,1,,,,,
-6,,,,,,,,,
-,,,,,,,,,
+1,Crimson Crocodile,1,,,,First Crimson Day,First Story,0,14
+2,Crimson Crocodile,1,,,,Jousting,Death of Song,0,16
+3,Smog Singers,1,,,,Velvet Fog,,1,19
+4,Smog Singers,1,,,,Haunted,The Hooded Knight,2,17
+5,Smog Singers,2,Manhunter,1,,Plague,The Hanged Man,1,16
+6,Crimson Crocodile,2,,,Settlement Watch,Knighting,Unwanted Gifts,,
+7,,,,,,,Self-Invited Guests,,
+8,,,,,,,Promise Under The Sun,,
+9,,,Atnas,1,,,,,
+10,,,Manhunter,2,,,,,

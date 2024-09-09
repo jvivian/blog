@@ -79,36 +79,34 @@ graph TB
 ::: {.column-page}
 ```{python}
 import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 
 # Data
-years = np.arange(1, 6)
-quarry_names = ['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Crimson Crocodile']
-quarry_levels = [1, 1, 2, 3, 2]
-nemesis_names = ['Manhunter', None, 'Atnas', None, 'Black Knight']
-nemesis_levels = [1, None, 1, None, 2]
+df = pd.read_csv('./data.csv')
+df
 
-# Set up figure
-fig, ax = plt.subplots(figsize=(10, 4))
+# # Set up figure
+# fig, ax = plt.subplots(figsize=(10, 4))
 
-# Plot quarries
-for i, (name, level) in enumerate(zip(quarry_names, quarry_levels)):
-    ax.scatter(years[i], name, s=level*100, color='skyblue', label='Quarry' if i == 0 else "")
+# # Plot quarries
+# for i, (name, level) in enumerate(zip(quarry_names, quarry_levels)):
+#     ax.scatter(years[i], name, s=level*100, color='skyblue', label='Quarry' if i == 0 else "")
 
-# Plot nemeses
-for i, (name, level) in enumerate(zip(nemesis_names, nemesis_levels)):
-    if name is not None:
-        ax.scatter(years[i], name, s=level*100, color='salmon', label='Nemesis' if i == 0 else "")
+# # Plot nemeses
+# for i, (name, level) in enumerate(zip(nemesis_names, nemesis_levels)):
+#     if name is not None:
+#         ax.scatter(years[i], name, s=level*100, color='salmon', label='Nemesis' if i == 0 else "")
 
-# Add labels and title
-ax.set_xlabel('Years')
-ax.set_ylabel('Monster Fought')
-ax.set_title('Kingdom Death Campaign: Quarry and Nemesis Progression')
+# # Add labels and title
+# ax.set_xlabel('Years')
+# ax.set_ylabel('Monster Fought')
+# ax.set_title('Kingdom Death Campaign: Quarry and Nemesis Progression')
 
-# Legend and layout
-plt.legend()
-plt.tight_layout()
-plt.show()
+# # Legend and layout
+# plt.legend()
+# plt.tight_layout()
+# plt.show()
 
 ```
 :::
@@ -117,6 +115,12 @@ plt.show()
 # Campaign Timeline
 
 ## Prologue: Devour the White Lion
+
+
+:::{.column-screen}
+![](imgs/CrimsonCroc.png)
+:::
+
 ::: {#prologue .callout-note collapse="true"}
 - **Characters**: Charlie, Carrie, Patrick Bateman, Freddie
 - **Outcome**: Patrick Bateman dies (chest severe injury)
@@ -139,6 +143,11 @@ plt.show()
 :::
 
 ## Year 3: Velvet Fog
+:::{.column-screen}
+![](imgs/SmogSingers.png)
+:::
+
+
 ::: {#year3 .callout-tip collapse="true"}
 - **Event**: Velvet Fog  
 - **Quarry**: None  
