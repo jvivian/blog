@@ -17,6 +17,9 @@ tools:
 ---
 
 # Settlement Overview
+> There is no sanity clause [^1]
+
+[^1]: Sandman Volume 3: The Doll's House
 
 ::: {.column-page}
 ::: {.column width="40%"}
@@ -32,7 +35,13 @@ tools:
 :::
 :::
 
-# Campaign Nodes
+### Principles
+| New Life       | Death         | Society         |
+|----------------|---------------|-----------------|
+| Protect the Young | Cannibalize  | Accept the Darkness |
+
+
+## Nodes
 
 :::: {.columns}
 ::: {.column width="30%"}
@@ -75,103 +84,113 @@ graph TB
 :::
 :::: 
 
-# Test
-::: {.column-page}
+::: {.column-screen-inset}
 ```{python}
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import plotly.express as px
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+
 
 # Data
 df = pd.read_csv('./data.csv')
-df
+df['Type'] = pd.Categorical(df['Type'], ['Quarry', 'Nemesis'])
+df['Deaths'] = df['Deaths'].astype(int)
+df['Level'] = df['Level'].astype(int)
 
-# # Set up figure
-# fig, ax = plt.subplots(figsize=(10, 4))
+# Style
+df.style.hide(axis='index')
+pd.set_option('display.max_colwidth', None)
 
-# # Plot quarries
-# for i, (name, level) in enumerate(zip(quarry_names, quarry_levels)):
-#     ax.scatter(years[i], name, s=level*100, color='skyblue', label='Quarry' if i == 0 else "")
-
-# # Plot nemeses
-# for i, (name, level) in enumerate(zip(nemesis_names, nemesis_levels)):
-#     if name is not None:
-#         ax.scatter(years[i], name, s=level*100, color='salmon', label='Nemesis' if i == 0 else "")
-
-# # Add labels and title
-# ax.set_xlabel('Years')
-# ax.set_ylabel('Monster Fought')
-# ax.set_title('Kingdom Death Campaign: Quarry and Nemesis Progression')
-
-# # Legend and layout
-# plt.legend()
-# plt.tight_layout()
-# plt.show()
-
+# Constants
+COLS = ['Monster', 'Level', 'Deaths', 'Story Event', 'Settlement Event', 'Notable Event']
+# df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Manhunter', 'Atnas', 'Black Knight', 'Watcher', 'Gold Smoke Knight'], ordered=True)
+# df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Manhunter', 'Atnas'], ordered=True)
+# df
 ```
+## Monster Timeline
+```{python}
+#| fig-align: center
+plt.figure(figsize=(16, 4))
+sns.scatterplot(df, x='Year', y='Monster', style='Type', size='Level', hue='Monster', palette='Set2', s=50)
+ax = sns.lineplot(df[df.Type == 'Quarry'], x='Year', y='Monster', c='k');
+ax.lines[0].set_linestyle('--');
+sns.lineplot(df[df.Type == 'Nemesis'], x='Year', y='Monster', c='cornflowerblue');
+```
+
+## Population Timeline
+
+```{python}
+#| fig-align: center
+plt.figure(figsize=(16, 4))
+sns.lineplot(df, x='Year', y='Population', c='red');
+```
+
 :::
 
-
-# Campaign Timeline
+# Campaign Log
 
 ## Prologue: Devour the White Lion
-
-
 :::{.column-screen}
 ![](imgs/CrimsonCroc.png)
 :::
 
-::: {#prologue .callout-note collapse="true"}
-- **Characters**: Charlie, Carrie, Patrick Bateman, Freddie
-- **Outcome**: Patrick Bateman dies (chest severe injury)
-- **Principle**: Protect the Young (New Life)
+:::{.column-page-inset}
+```{python}
+df[df.Year == 0][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
 
+**Starting Characters**: Charlie, Carrie, Patrick Bateman, Freddie
+
 ## Year 1: First Crimson Day
-::: {#year1 .callout-tip collapse="true"}
-- **Event**: First Crimson Day  
-- **Quarry**: Crimson Crocodile  
-- **Deaths**: None
+
+:::{.column-page-inset}
+```{python}
+df[df.Year == 1][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
 
 ## Year 2: Smog Song
-::: {#year2 .callout-tip collapse="true"}
-- **Event**: Smog Song  
-- **Quarry**: Smog Singers  
-- **Innovation**: None  
-- **Nemesis**: None
+:::{.column-page-inset}
+```{python}
+df[df.Year == 2][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
-
 ## Year 3: Velvet Fog
 :::{.column-screen}
 ![](imgs/SmogSingers.png)
 :::
-
-
-::: {#year3 .callout-tip collapse="true"}
-- **Event**: Velvet Fog  
-- **Quarry**: None  
-- **Innovation**: None  
-- **Nemesis**: None
+:::{.column-page-inset}
+```{python}
+df[df.Year == 3][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
 
 ## Year 4: The Hooded Knight
-::: {#year4 .callout-warning collapse="true"}
-- **Event**: The Hooded Knight (killed 2 people)  
-- **Quarry**: None  
-- **Deaths**: Carrie (Smog Song), 2 unnamed  
+:::{.column-page-inset}
+```{python}
+df[df.Year == 4][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
 
 ## Year 5: Plague / The Hanged Man
-::: {#year5 .callout-warning collapse="true"}
-- **Event**: Plague / The Hanged Man  
-- **Quarry**: None  
-- **Deaths**: Charlie  
-- **Principles**: Cannibalize (Death), Accept the Darkness (Society)
+:::{.column-page-inset}
+```{python}
+df[df.Year == 5][COLS].fillna(' ').style.hide(axis='index')
+```
 :::
 
-# Campaign Principles
-| New Life       | Death         | Society         |
-|----------------|---------------|-----------------|
-| Protect the Young | Cannibalize  | Accept the Darkness |
+## Year 6: Unwanted Gifts / Knighting
+:::{.column-page-inset}
+```{python}
+df[df.Year == 6][COLS].fillna(' ').style.hide(axis='index')
+```
+:::
+
+## Year 7: Self-invited Guests
+
 
