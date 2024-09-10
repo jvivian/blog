@@ -112,6 +112,9 @@ ND = [x for x in COLS if x != 'Deaths']
 # df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Manhunter', 'Atnas', 'Black Knight', 'Watcher', 'Gold Smoke Knight'], ordered=True)
 # df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Manhunter', 'Atnas'], ordered=True)
 # df
+
+def year(year, cols=COLS):
+    return df[df.Year == year][cols].fillna(' ').style.hide(axis='index')
 ```
 ## Monster Timeline
 ```{python}
@@ -144,7 +147,7 @@ sns.lineplot(df, x='Year', y='Population', c='red');
 
 :::{.column width=70%}
 ```{python}
-df[df.Year == 0][PROLOGUE].fillna(" ").style.hide(axis="index")
+year(0, PROLOGUE)
 ```
 :::
 
@@ -163,7 +166,7 @@ df[df.Year == 0][PROLOGUE].fillna(" ").style.hide(axis="index")
 ## Year 1: First Crimson Day
 ::: {.column-page-inset}
 ```{python}
-df[df.Year == 1][ND].fillna(' ').style.hide(axis='index')
+year(1, ND)
 ```
 :::
 ::: {.column-page}
@@ -173,7 +176,7 @@ df[df.Year == 1][ND].fillna(' ').style.hide(axis='index')
 ## Year 2: Death of Song
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 2][ND].fillna(' ').style.hide(axis='index')
+year(2, ND)
 ```
 :::{.column-screen}
 ![](imgs/SmogSingers.png)
@@ -183,7 +186,7 @@ df[df.Year == 2][ND].fillna(' ').style.hide(axis='index')
 ## Year 3: Velvet Fog
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 3][COLS].fillna(' ').style.hide(axis='index')
+year(3)
 ```
 :::
 :::{.column-body}
@@ -193,28 +196,28 @@ df[df.Year == 3][COLS].fillna(' ').style.hide(axis='index')
 ## Year 4: Hooded Knight
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 4][COLS].fillna(' ').style.hide(axis='index')
+year(4)
 ```
 :::
 
 ## Year 5: The Hanged Plaguebearer
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 5][COLS].fillna(' ').style.hide(axis='index')
+year(5)
 ```
 :::
 
 ## Year 6: Unwanted Gifts
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 6][ND].fillna(' ').style.hide(axis='index')
+year(6, ND)
 ```
 :::
 
 ## Year 7: Self-invited Guests
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 7][COLS].fillna(' ').style.hide(axis='index')
+year(7)
 ```
 :::
 
