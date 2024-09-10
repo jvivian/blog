@@ -31,7 +31,7 @@ tools:
 :::
 
 ::: {.column width="50%"}
-![The Cereal Convention](imgs/cereal-cover.png)
+![](imgs/cereal-cover.png)
 :::
 :::
 
@@ -106,7 +106,9 @@ df.style.hide(axis='index')
 pd.set_option('display.max_colwidth', None)
 
 # Constants
-COLS = ['Monster', 'Level', 'Deaths', 'Story Event', 'Settlement Event', 'Notable Event']
+COLS = ['Monster', 'Level', 'Deaths', 'Innovation', 'Story Event', 'Settlement Event', 'Notable Event']
+PROLOGUE = [x for x in COLS if x!= 'Story Event']
+ND = [x for x in COLS if x != 'Deaths']
 # df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Manhunter', 'Atnas', 'Black Knight', 'Watcher', 'Gold Smoke Knight'], ordered=True)
 # df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Manhunter', 'Atnas'], ordered=True)
 # df
@@ -134,63 +136,86 @@ sns.lineplot(df, x='Year', y='Population', c='red');
 # Campaign Log
 
 ## Prologue: Devour the White Lion
-:::{.column-screen}
+::::{.column-screen}
 ![](imgs/CrimsonCroc.png)
 :::
 
-:::{.column-page-inset}
+:::: {.column-page}
+
+:::{.column width=70%}
 ```{python}
-df[df.Year == 0][COLS].fillna(' ').style.hide(axis='index')
+df[df.Year == 0][PROLOGUE].fillna(" ").style.hide(axis="index")
 ```
 :::
 
-**Starting Characters**: Charlie, Carrie, Patrick Bateman, Freddie
+:::{.column width=20%}
+**Starting Characters** 
+
+- Carrie
+- Patrick Bateman
+- Freddie Krueger
+- Charlie (_Hereditary_) 
+:::
+::::
+
+
 
 ## Year 1: First Crimson Day
-
-:::{.column-page-inset}
+::: {.column-page-inset}
 ```{python}
-df[df.Year == 1][COLS].fillna(' ').style.hide(axis='index')
+df[df.Year == 1][ND].fillna(' ').style.hide(axis='index')
 ```
 :::
+::: {.column-page}
+![](imgs/year1.png)
+:::
 
-## Year 2: Smog Song
+## Year 2: Death of Song
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 2][COLS].fillna(' ').style.hide(axis='index')
+df[df.Year == 2][ND].fillna(' ').style.hide(axis='index')
 ```
-:::
-## Year 3: Velvet Fog
 :::{.column-screen}
 ![](imgs/SmogSingers.png)
 :::
+
+:::
+## Year 3: Velvet Fog
 :::{.column-page-inset}
 ```{python}
 df[df.Year == 3][COLS].fillna(' ').style.hide(axis='index')
 ```
 :::
+:::{.column-body}
+![](imgs/year3.png)
+:::
 
-## Year 4: The Hooded Knight
+## Year 4: Hooded Knight
 :::{.column-page-inset}
 ```{python}
 df[df.Year == 4][COLS].fillna(' ').style.hide(axis='index')
 ```
 :::
 
-## Year 5: Plague / The Hanged Man
+## Year 5: The Hanged Plaguebearer
 :::{.column-page-inset}
 ```{python}
 df[df.Year == 5][COLS].fillna(' ').style.hide(axis='index')
 ```
 :::
 
-## Year 6: Unwanted Gifts / Knighting
+## Year 6: Unwanted Gifts
 :::{.column-page-inset}
 ```{python}
-df[df.Year == 6][COLS].fillna(' ').style.hide(axis='index')
+df[df.Year == 6][ND].fillna(' ').style.hide(axis='index')
 ```
 :::
 
 ## Year 7: Self-invited Guests
+:::{.column-page-inset}
+```{python}
+df[df.Year == 7][COLS].fillna(' ').style.hide(axis='index')
+```
+:::
 
 
