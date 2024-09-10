@@ -1,11 +1,11 @@
 Year,Monster,Level,Type,Innovation,Settlement Event,Story Event,Deaths,Population,Notable Event
-0,Crimson Crocodile,0,Quarry,,Devour The White Lion,,1,3,The Crimson Crocodile caved in Patrick Bateman's chest with three repeated torso attacks
-1,Crimson Crocodile,1,Quarry,,First Crimson Day,First Story,0,14,"On the Hunt, three people rolled criticals in the Gambler's Game of Death and gained +1 permanent Luck"
-2,Crimson Crocodile,1,Quarry,,Jousting,Death of Song,0,16,Buffalo Bill narrowly defeated Freddie Kruger in a Jousting match
-3,Smog Singers,1,Quarry,,Velvet Fog,,1,19,Gave birth to five children in one year
-4,Smog Singers,1,Quarry,,Haunted,The Hooded Knight,2,17,"Hooded Knight showed up, smoked two people, and left"
-5,Smog Singers,2,Quarry,,Plague,The Hanged Man,1,16,"Still defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns"
-5,Manhunter,1,Nemesis,,,,0,16,Scored the Death Blow against the Manhunter
+0,Crimson Crocodile,0,Quarry,Language,Devour The White Lion,,1,3,The Crimson Crocodile caved in Patrick Bateman's chest with three repeated torso attacks
+1,Crimson Crocodile,1,Quarry,Ammonia,First Crimson Day,First Story,0,14,"On the Hunt, three people rolled criticals in the Gambler's Game of Death and gained +1 permanent Luck"
+2,Crimson Crocodile,1,Quarry,Paint,Jousting,Death of Song,0,16,Buffalo Bill narrowly defeated Freddie Kruger in a Jousting match
+3,Smog Singers,1,Quarry,Inner Lantern,Velvet Fog,,1,19,Gave birth to five children in one year
+4,Smog Singers,1,Quarry,Hovel,Haunted,The Hooded Knight,2,17,"Hooded Knight showed up, smoked two people, and left"
+5,Smog Singers,2,Quarry,Lantern Oven,Plague,The Hanged Man,1,16,"Still defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns"
+5,Manhunter,1,Nemesis,Scrap Smelting,,,0,16,Scored the Death Blow against the Manhunter
 6,Crimson Crocodile,2,Quarry,Settlement Watch,Knighting,Unwanted Gifts,0,16,Annabelle scored 5 wounds in one turn using the paired razor cymbal after we hit the trap turn 1
 7,Smog Singers,2,Quarry,,,Self-Invited Guests,0,,
 8,Smog Singers,2,Quarry,,,Promise Under The Sun,0,,
