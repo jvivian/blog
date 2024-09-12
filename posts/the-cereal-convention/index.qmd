@@ -3,15 +3,13 @@ title: "The Cereal Convention"
 subtitle: "A Kingdom Death Campaign Log"
 format: 
   html:
-    # css: styles.css
+    css: styles.css
     toc: true
     toc-depth: 2
-    # code-fold: true
     echo: false
 editor: visual
 execute: 
     render-on-save: true
-# image: "imgs/cereal-cover.png"
 tools:
   - mermaid
 ---
@@ -92,31 +90,45 @@ import numpy as np
 import plotly.express as px
 import seaborn as sns
 import warnings
-warnings.filterwarnings('ignore')
 
+warnings.filterwarnings("ignore")
 
-# Data
-df = pd.read_csv('./data.csv')
-df['Type'] = pd.Categorical(df['Type'], ['Quarry', 'Nemesis'])
-df['Deaths'] = df['Deaths'].astype(int)
-df['Level'] = df['Level'].astype(int)
-
-# Style
-df.style.hide(axis='index')
-pd.set_option('display.max_colwidth', None)
 
 # Constants
-COLS = ['Monster', 'Level', 'Deaths', 'Innovation', 'Story Event', 'Settlement Event', 'Notable Event']
-PROLOGUE = [x for x in COLS if x!= 'Story Event']
-ND = [x for x in COLS if x != 'Deaths']
-# df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Sunstalker', 'King', 'Manhunter', 'Atnas', 'Black Knight', 'Watcher', 'Gold Smoke Knight'], ordered=True)
-# df['Monster'] = pd.Categorical(df['Monster'], categories=['Crimson Crocodile', 'Smog Singers', 'Manhunter', 'Atnas'], ordered=True)
-# df
+COLS = [
+    "Monster",
+    "Level",
+    "Deaths",
+    "Innovation",
+    "Story Event",
+    "Settlement Event",
+    "Notable Event",
+]
+PROLOGUE = [x for x in COLS if x != "Story Event"]
+ND = [x for x in COLS if x != "Deaths"]
 
+
+# Fns
 def year(year, cols=COLS):
-    return df[df.Year == year][cols].fillna(' ').style.hide(axis='index')
-```
+    return df[df.Year == year][cols].fillna(" ").style.hide(axis="index")
+
+
+def process(df: pd.DataFrame) -> pd.DataFrame:
+    # Fix dtypes
+    df["Type"] = pd.Categorical(df["Type"], ["Quarry", "Nemesis"])
+    df["Deaths"] = df["Deaths"].astype(int)
+    df["Level"] = df["Level"].astype(int)
+    # Set Styles
+    df.style.hide(axis="index")
+    pd.set_option("display.max_colwidth", None)
+    return df
+
+# Data & Processing
+df = process(pd.read_csv("./data.csv"))
+df.head()
+
 ## Monster Timeline
+```
 ```{python}
 #| fig-align: center
 plt.figure(figsize=(16, 4))
@@ -184,27 +196,35 @@ year(2, ND)
 
 :::
 ## Year 3: Velvet Fog
-:::{.column-page-inset}
+:::{.column-margin}
+![](imgs/year3.png)
+:::
+:::{.column-body}
 ```{python}
 year(3)
 ```
 :::
-:::{.column-body}
-![](imgs/year3.png)
-:::
 
 ## Year 4: Hooded Knight
-:::{.column-page-inset}
+::: {.column-margin}
+![](imgs/year4.png)
+:::
+:::{.column-body}
 ```{python}
 year(4)
 ```
 :::
 
+
 ## Year 5: The Hanged Plaguebearer
-:::{.column-page-inset}
+:::{.column-body}
 ```{python}
 year(5)
 ```
+:::
+
+:::{.column-page}
+![](imgs/year5.png)
 :::
 
 ## Year 6: Unwanted Gifts
