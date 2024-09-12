@@ -222,7 +222,6 @@ year(4)
 year(5)
 ```
 :::
-
 :::{.column-page}
 ![](imgs/year5.png)
 :::
@@ -233,6 +232,8 @@ year(5)
 year(6, ND)
 ```
 :::
+![](imgs/year6.png)
+
 
 ## Year 7: Self-invited Guests
 :::{.column-page-inset}
