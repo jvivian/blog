@@ -243,3 +243,12 @@ year(7)
 :::
 
 
+## Year 8: Promise Under The Sun
+:::{.column-page-inset}
+```{python}
+year(8)
+```
+:::
+:::{.column-page}
+![](imgs/year8.png)
+:::
