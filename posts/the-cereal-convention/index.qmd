@@ -104,7 +104,7 @@ COLS = [
     "Settlement Event",
     "Notable Event",
 ]
-PROLOGUE = [x for x in COLS if x != "Story Event"]
+PROLOGUE = [x for x in COLS if x != "Settlement Event"]
 ND = [x for x in COLS if x != "Deaths"]
 
 
