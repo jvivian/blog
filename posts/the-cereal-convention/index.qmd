@@ -127,25 +127,7 @@ def process(df: pd.DataFrame) -> pd.DataFrame:
 df = process(pd.read_csv("./data.csv"))
 df.tail(10)
 
-## Monster Timeline
 ```
-```{python}
-#| fig-align: center
-plt.figure(figsize=(16, 4))
-sns.scatterplot(df, x='Year', y='Monster', style='Type', size='Level', hue='Monster', palette='Set2', s=50)
-ax = sns.lineplot(df[df.Type == 'Quarry'], x='Year', y='Monster', c='k');
-ax.lines[0].set_linestyle('--');
-sns.lineplot(df[df.Type == 'Nemesis'], x='Year', y='Monster', c='cornflowerblue');
-```
-
-## Population Timeline
-
-```{python}
-#| fig-align: center
-plt.figure(figsize=(16, 4))
-sns.lineplot(df, x='Year', y='Population', c='red');
-```
-
 :::
 
 # Campaign Log
@@ -246,8 +228,6 @@ year(7)
 :::
 
 
-
-
 ## Year 8: Under A Hooded Sun
 :::{.column-page-inset}
 ```{python}
@@ -266,8 +246,8 @@ year(9)
 :::
 
 
-
-# Test
+# Timelines
+## Campaign Timeline
 
 :::{.column-screen}
 ```{python}
@@ -376,3 +356,12 @@ plt.subplots_adjust(right=0.8)
 plt.show()
 ```
 :::
+
+## Population Timeline
+
+```{python}
+#| fig-align: center
+plt.figure(figsize=(16, 4))
+sns.lineplot(df, x='Year', y='Population', c='red');
+```
+
