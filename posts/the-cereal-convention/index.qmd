@@ -96,12 +96,12 @@ warnings.filterwarnings("ignore")
 
 # Constants
 COLS = [
+    "Settlement Event",
+    "Story Event",
+    "Innovation",
     "Monster",
     "Level",
     "Deaths",
-    "Innovation",
-    "Story Event",
-    "Settlement Event",
     "Notable Event",
 ]
 PROLOGUE = [x for x in COLS if x != "Settlement Event"]
@@ -125,7 +125,7 @@ def process(df: pd.DataFrame) -> pd.DataFrame:
 
 # Data & Processing
 df = process(pd.read_csv("./data.csv"))
-df.head()
+df.tail(10)
 
 ## Monster Timeline
 ```
@@ -235,15 +235,20 @@ year(6, ND)
 ![](imgs/year6.png)
 
 
-## Year 7: Self-invited Guests
+## Year 7: Self-invited Lights in the Sky
 :::{.column-page-inset}
 ```{python}
 year(7)
 ```
 :::
+:::{.column-screen}
+![](imgs/year7.png)
+:::
 
 
-## Year 8: Promise Under The Sun
+
+
+## Year 8: Under A Hooded Sun
 :::{.column-page-inset}
 ```{python}
 year(8)
@@ -251,4 +256,123 @@ year(8)
 :::
 :::{.column-page}
 ![](imgs/year8.png)
+:::
+
+## Year 9: Atnas's Dinner Bell
+:::{.column-page-inset}
+```{python}
+year(9)
+```
+:::
+
+
+
+# Test
+
+:::{.column-screen}
+```{python}
+# Assign a fight number to track the sequence of encounters
+df['FightNumber'] = range(1, len(df) + 1)
+
+# Map 'Type' to a categorical type with a specified order
+type_order = ['Quarry', 'Nemesis']
+df['Type'] = pd.Categorical(df['Type'], categories=type_order, ordered=True)
+
+# Create a 'NodeSort' column to sort Nodes differently for Quarries and Nemesis
+# For Quarries, sort Nodes descending (higher Nodes first)
+# For Nemesis, sort Nodes ascending (lower Nodes first)
+df['NodeSort'] = df.apply(lambda x: x['Node'] if x['Type'] == 'Quarry' else -x['Node'], axis=1)
+
+# Sort the DataFrame
+df = df.sort_values(['Type', 'NodeSort', 'Monster'], ascending=[True, False, True])
+
+# Create 'monster_order' based on the sorted DataFrame
+monster_order = df['Monster'].drop_duplicates().tolist()
+
+# Map monsters to numerical values for the y-axis
+monster_to_y = {monster: y for y, monster in enumerate(monster_order)}
+df['MonsterY'] = df['Monster'].map(monster_to_y)
+
+# Encode 'Node' as marker shapes
+node_values = sorted(df['Node'].unique())
+markers = ['o', 's', '^', 'D', 'v', 'P', '*', 'X', 'h', 'H', '+', 'x', 'd', '|', '_']
+node_to_marker = {node: markers[i % len(markers)] for i, node in enumerate(node_values)}
+df['Marker'] = df['Node'].map(node_to_marker)
+
+# Encode 'Level' as colors using ggplot-themed colors
+# Level colors: blue, green, purple, orange, red for levels 0-4
+level_colors = {
+    0: 'blue',
+    1: 'green',
+    2: 'purple',
+    3: 'orange',
+    4: 'red'
+}
+df['Color'] = df['Level'].map(level_colors)
+
+# Adjust x-values so all encounters line up on integer years
+df['YearAdjusted'] = df['Year']
+
+# Sort the DataFrame by FightNumber for plotting
+df_sorted = df.sort_values('FightNumber')
+
+# Plotting
+plt.figure(figsize=(16, 6))
+ax = plt.gca()
+
+# Plot the progression line
+ax.plot(df_sorted['YearAdjusted'], df_sorted['MonsterY'], color='grey', linestyle='-', marker='', zorder=1)
+
+# Scatter plot for each encounter
+for idx, row in df_sorted.iterrows():
+    ax.scatter(row['YearAdjusted'], row['MonsterY'],
+               marker=row['Marker'], s=200,
+               color=row['Color'], edgecolors='black', zorder=3)
+
+# Customize the y-axis to display monster names
+ax.set_yticks(range(len(monster_order)))
+ax.set_yticklabels(monster_order)
+
+# Label axes
+ax.set_xlabel('Year')
+ax.set_ylabel('Monster')
+
+# Draw a horizontal line to separate Quarries and Nemesis
+# Find the index where Nemesis monsters start
+nemesis_start_index = df[df['Type'] == 'Nemesis']['MonsterY'].min() - 0.5
+ax.axhline(y=nemesis_start_index, color='black', linestyle='--')
+
+# Adjust x-axis ticks to show integer years
+ax.set_xticks(sorted(df['Year'].unique()))
+ax.set_xticklabels(sorted(df['Year'].unique()))
+
+# Enhance plot aesthetics
+ax.set_title('Kingdom Death Campaign Progression')
+ax.grid(True, linestyle='--', alpha=0.5)
+
+# Move legends off the plot and stack them vertically
+import matplotlib.lines as mlines
+
+# Legend for 'Level' (Color)
+level_handles = [mlines.Line2D([], [], color=level_colors[level], marker='o', linestyle='None',
+                               markersize=10, label=f'Level {level}') for level in sorted(level_colors.keys())]
+
+# Legend for 'Node' (Marker Shape)
+node_handles = [mlines.Line2D([], [], color='grey', marker=node_to_marker[node], linestyle='None',
+                              markersize=10, label=f'Node {node}') for node in sorted(node_values)]
+
+# Combine legends
+from itertools import chain
+
+all_handles = list(chain(level_handles, node_handles))
+
+# Place the combined legend outside the plot
+ax.legend(handles=all_handles, title='Legend', loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Adjust layout to accommodate legends
+plt.tight_layout()
+plt.subplots_adjust(right=0.8)
+
+plt.show()
+```
 :::
