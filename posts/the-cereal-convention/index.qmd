@@ -28,7 +28,7 @@ tools:
 - **Finale**: Gold Smoke Knight  
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 ![](imgs/cereal-cover.png)
 :::
 :::
@@ -187,7 +187,7 @@ year(3)
 ```
 :::
 
-## Year 4: Hooded Knight
+## Year 4: Haunted Knight
 ::: {.column-margin}
 ![](imgs/year4.png)
 :::
@@ -254,6 +254,7 @@ year(9)
 
 :::{.column-screen}
 ```{python}
+plt.style.use('ggplot')
 # Assign a fight number to track the sequence of encounters
 df['FightNumber'] = range(1, len(df) + 1)
 
@@ -265,8 +266,6 @@ df['Type'] = pd.Categorical(df['Type'], categories=type_order, ordered=True)
 # For Quarries, sort Nodes descending (higher Nodes first)
 # For Nemesis, sort Nodes ascending (lower Nodes first)
 df['NodeSort'] = df.apply(lambda x: x['Node'] if x['Type'] == 'Quarry' else -x['Node'], axis=1)
-
-# Sort the DataFrame
 df = df.sort_values(['Type', 'NodeSort', 'Monster'], ascending=[True, False, True])
 
 # Create 'monster_order' based on the sorted DataFrame
@@ -300,7 +299,7 @@ df['YearAdjusted'] = df['Year']
 df_sorted = df.sort_values('FightNumber')
 
 # Plotting
-plt.figure(figsize=(16, 6))
+plt.figure(figsize=(20, 6))
 ax = plt.gca()
 
 # Plot the progression line
@@ -358,7 +357,6 @@ plt.subplots_adjust(right=0.8)
 
 plt.show()
 ```
-
 :::
 ## Population Timeline
 
