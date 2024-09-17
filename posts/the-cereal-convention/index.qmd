@@ -358,13 +358,14 @@ plt.subplots_adjust(right=0.8)
 
 plt.show()
 ```
-:::
 
+:::
 ## Population Timeline
 
+::: {.column-screen}
 ```{python}
 #| fig-align: center
 plt.figure(figsize=(16, 4))
 sns.lineplot(df, x='Year', y='Population', c='red');
 ```
-
+:::
