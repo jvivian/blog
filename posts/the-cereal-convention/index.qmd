@@ -244,6 +244,9 @@ year(8)
 year(9)
 ```
 :::
+:::{.column-screen}
+![](imgs/year9.png)
+:::
 
 
 # Timelines
