@@ -15,7 +15,7 @@ tools:
 ---
 
 # Settlement Overview
-> There is no sanity clause [^11]
+> _There is no sanity clause_ [^11]
 
 [^11]: Sandman Volume 3: The Doll's House
 
@@ -133,7 +133,7 @@ df.tail(10)
 # Campaign Log
 
 ## Prologue: Devour the White Lion
-> A purging of ashes down her hourglass figure<br>Inscribed on my heart; "Devour me, Colossus" [^0]
+> _A purging of ashes down her hourglass figure<br>Inscribed on my heart; "Devour me, Colossus"_ [^0]
 
 [^0]: Ne Obliviscaris - Devour Me, Colossus (Part I​)​: Blackholes
 
@@ -162,7 +162,7 @@ year(0, PROLOGUE)
 
 
 ## Year 1: First Crimson Day
-> I walk a road, horizons change<br>The tournament's begun [^1]
+> _I walk a road, horizons change<br>The tournament's begun_ [^1]
 
 [^1]: King Crimson - The Court of the Crimson King
 
@@ -176,7 +176,7 @@ year(1, ND)
 :::
 
 ## Year 2: Death of Song
-> And we sang dirges in the dark<br>The day the music died [^2]
+> _And we sang dirges in the dark<br>The day the music died_ [^2]
 
 [^2]: Don McLean - American Pie
 
@@ -190,7 +190,7 @@ year(2, ND)
 
 :::
 ## Year 3: Velvet Fog
-> A choice of gold or velvet<br>Do I go on, or follow the crown in the smoke? [^3]
+> _A choice of gold or velvet<br>Do I go on, or follow the crown in the smoke?_ [^3]
 
 [^3]: Between the Buried and Me - Option Oblivion
 
@@ -204,7 +204,7 @@ year(3)
 :::
 
 ## Year 4: Haunted Knight
-> And how can we win<br>When fools can be kings? [^4]
+> _And how can we win<br>When fools can be kings?_ [^4]
 
 [^4]: Muse - Knights of Cydonia
 
@@ -219,6 +219,10 @@ year(4)
 
 
 ## Year 5: The Hanged Plaguebearer
+> _A flourishing plague consumes the masses<br>Emaciated figures dying in the streets_ [^5]
+
+[^5]: The Faceless - Pestilence
+
 :::{.column-body}
 ```{python}
 year(5)
@@ -229,6 +233,10 @@ year(5)
 :::
 
 ## Year 6: Unwanted Gifts
+> _I was ignorant, I was worldly<br>I was shown into a lifetime's experiences_ [^6]
+
+[^6]: Warforged - We've Been Here Before
+
 :::{.column-page-inset}
 ```{python}
 year(6, ND)
@@ -263,6 +271,10 @@ year(8)
 :::
 
 ## Year 9: Atnas's Dinner Bell
+> _His sword was withdrawn; witness the falcon<br>Blood covers your face_ [^9]
+
+[^9]: Brand of Sacrifice - Casca
+
 :::{.column-page-inset}
 ```{python}
 year(9)
