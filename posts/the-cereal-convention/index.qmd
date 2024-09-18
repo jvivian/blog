@@ -15,9 +15,9 @@ tools:
 ---
 
 # Settlement Overview
-> There is no sanity clause [^1]
+> There is no sanity clause [^11]
 
-[^1]: Sandman Volume 3: The Doll's House
+[^11]: Sandman Volume 3: The Doll's House
 
 ::: {.column-page}
 ::: {.column width="40%"}
@@ -133,6 +133,10 @@ df.tail(10)
 # Campaign Log
 
 ## Prologue: Devour the White Lion
+> A purging of ashes down her hourglass figure<br>Inscribed on my heart; "Devour me, Colossus" [^0]
+
+[^0]: Ne Obliviscaris - Devour Me, Colossus (Part I​)​: Blackholes
+
 ::::{.column-screen}
 ![](imgs/CrimsonCroc.png)
 :::
@@ -158,6 +162,10 @@ year(0, PROLOGUE)
 
 
 ## Year 1: First Crimson Day
+> I walk a road, horizons change<br>The tournament's begun [^1]
+
+[^1]: King Crimson - The Court of the Crimson King
+
 ::: {.column-page-inset}
 ```{python}
 year(1, ND)
@@ -168,6 +176,10 @@ year(1, ND)
 :::
 
 ## Year 2: Death of Song
+> And we sang dirges in the dark<br>The day the music died [^2]
+
+[^2]: Don McLean - American Pie
+
 :::{.column-page-inset}
 ```{python}
 year(2, ND)
@@ -178,6 +190,10 @@ year(2, ND)
 
 :::
 ## Year 3: Velvet Fog
+> A choice of gold or velvet<br>Do I go on, or follow the crown in the smoke? [^3]
+
+[^3]: Between the Buried and Me - Option Oblivion
+
 :::{.column-margin}
 ![](imgs/year3.png)
 :::
@@ -188,6 +204,10 @@ year(3)
 :::
 
 ## Year 4: Haunted Knight
+> And how can we win<br>When fools can be kings? [^4]
+
+[^4]: Muse - Knights of Cydonia
+
 ::: {.column-margin}
 ![](imgs/year4.png)
 :::
@@ -229,6 +249,10 @@ year(7)
 
 
 ## Year 8: Under A Hooded Sun
+> _A vile adversary approaches with haste<br>The immense conqueror hides the sun_ [^8]
+
+[^8]: The Faceless - Planetary Duality II: A Prophecies Fruition
+
 :::{.column-page-inset}
 ```{python}
 year(8)
@@ -248,6 +272,10 @@ year(9)
 ![](imgs/year9.png)
 :::
 
+## Year 10: A Decade of Statues
+> _The waves have pushed me to where I need to be_ [^10]
+
+[^10]: Between the Buried and Me - Foam Born: (B) The Decade of Statues
 
 # Timelines
 ## Campaign Timeline
@@ -299,7 +327,7 @@ df['YearAdjusted'] = df['Year']
 df_sorted = df.sort_values('FightNumber')
 
 # Plotting
-plt.figure(figsize=(20, 6))
+plt.figure(figsize=(20, 4))
 ax = plt.gca()
 
 # Plot the progression line
@@ -329,7 +357,7 @@ ax.set_xticks(sorted(df['Year'].unique()))
 ax.set_xticklabels(sorted(df['Year'].unique()))
 
 # Enhance plot aesthetics
-ax.set_title('Kingdom Death Campaign Progression')
+# ax.set_title('Kingdom Death Campaign Progression')
 ax.grid(True, linestyle='--', alpha=0.5)
 
 # Move legends off the plot and stack them vertically
@@ -363,7 +391,7 @@ plt.show()
 ::: {.column-screen}
 ```{python}
 #| fig-align: center
-plt.figure(figsize=(16, 4))
+plt.figure(figsize=(16, 3))
 sns.lineplot(df, x='Year', y='Population', c='red');
 ```
 :::
