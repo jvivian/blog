@@ -246,6 +246,10 @@ year(6, ND)
 
 
 ## Year 7: Self-invited Lights in the Sky
+> _This organic antenna mounts<br>As the esoteric crown of my vertebrae_ [^7]
+
+[^7]: Job For a Cowboy - Beyond the Chemical Doorway
+
 :::{.column-page-inset}
 ```{python}
 year(7)
