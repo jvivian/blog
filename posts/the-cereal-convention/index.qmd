@@ -125,7 +125,7 @@ def process(df: pd.DataFrame) -> pd.DataFrame:
 
 # Data & Processing
 df = process(pd.read_csv("./data.csv"))
-df.tail(10)
+# df.tail(10)
 
 ```
 :::
