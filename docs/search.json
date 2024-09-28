@@ -697,7 +697,7 @@
     "href": "index.html",
     "title": "Blast Beats and Beep Boops",
     "section": "",
-    "text": "Covid-19 Data-Rich Dynamic Factor Model\n\n\nOverview, Python Package, and Interactive Analysis\n\n\n\n\nMath\n\n\nModeling\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2024\n\n\nJohn Vivian, Aaron Cooke, Josh Fitzgerald\n\n\n\n\n\n\n  \n\n\n\n\nInked Into Creation\n\n\nSettlement Intelligencia: Chapters I - XA Kingdom Death Tale\n\n\n\n\nWriting\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nKingdom Death Artwork\n\n\nPhysical Models as the Basis of Digital Art\n\n\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nBrazilian Jiu Jitsu Concepts as Graphs\n\n\n\n\n\n\n\nBJJ\n\n\nGraphs\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nAwake\n\n\nA Kingdom Death Tale\n\n\n\n\nWriting\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nHassberry-Pi: Part 1\n\n\nSetting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration\n\n\n\n\nAutomation\n\n\nDocumentation\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\nNo matching items\n\nCopyrightJohn Vivian - 2024 - All Rights Reserved"
+    "text": "The Cereal Convention\n\n\nA Kingdom Death Campaign Log\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCovid-19 Data-Rich Dynamic Factor Model\n\n\nOverview, Python Package, and Interactive Analysis\n\n\n\n\nMath\n\n\nModeling\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2024\n\n\nJohn Vivian, Aaron Cooke, Josh Fitzgerald\n\n\n\n\n\n\n  \n\n\n\n\nInked Into Creation\n\n\nSettlement Intelligencia: Chapters I - XA Kingdom Death Tale\n\n\n\n\nWriting\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nKingdom Death Artwork\n\n\nPhysical Models as the Basis of Digital Art\n\n\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nBrazilian Jiu Jitsu Concepts as Graphs\n\n\n\n\n\n\n\nBJJ\n\n\nGraphs\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nAwake\n\n\nA Kingdom Death Tale\n\n\n\n\nWriting\n\n\nDigital Art\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\n  \n\n\n\n\nHassberry-Pi: Part 1\n\n\nSetting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration\n\n\n\n\nAutomation\n\n\nDocumentation\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nJohn Vivian\n\n\n\n\n\n\nNo matching items\n\nCopyrightJohn Vivian - 2024 - All Rights Reserved"
   },
   {
     "objectID": "posts/bjj-graphs/index.html",
@@ -838,5 +838,222 @@
     "title": "Single-cell sequencing of the blood T cell repertoire",
     "section": "Addendum: Bayesian Power Analysis",
     "text": "Addendum: Bayesian Power Analysis\n\n\n\n\n\n\nThis heatmap shows Bayesian power analysis outcomes, where the x-axis corresponds to sample size and the y-axis to effect size. Each cell shows the power (\\(p \\in [0, 1]\\)), which corresponds to the proportion of simulations detecting a significant difference. Color intensity denotes power levels, with darker colors signifying higher statistical power. Power analysis can help discern study feasibility as well as provide a sense of what effect size is detectable given sample size limitations.\n\n\n\n\nGeneral Steps\n\n\nDefine your prior beliefs about the parameters of interest\nSpecify the data generating process model. This model should represent the belief of how data arises within an experimental context\nDetermine the decision rule defining “significant” or “practically relevant.” A Bayesian approach is to specify a region of practical equivalence (ROPE) around a null value where effects are considered too small to be of interest\nSimulate data of varying sample sizes at differing effect sizes\nRun inference (e.g. MCMC) on each simulated dataset to estimate the posterior distributions\nCalculate power by determining how often the decision rule leads to a conclusion of practical significance by calculating the proportion of simulations where the posterior distribution of the effect size meets your criteria for significance (e.g., falls outside the ROPE)."
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html",
+    "href": "posts/the-cereal-convention/index.html",
+    "title": "The Cereal Convention",
+    "section": "",
+    "text": "There is no sanity clause 1\n\n\n\n\n\n\nSettlement Name: The Cereal Convention\n\nCampaign: People of the Lantern\n\nBoss: Watcher\n\nFinale: Gold Smoke Knight\n\n\n\n\n\n\n\n\n\n\n\n\n\nNew Life\nDeath\nSociety\n\n\n\n\nProtect the Young\nCannibalize\nAccept the Darkness\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TB\n    A(Crimson Crocodile)\n    B(Smog Singers)\n    C(Sunstalker)\n    D(King)\n\n    A --&gt; B\n    B --&gt; C\n    C --&gt; D\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TB\n    A(Manhunter)\n    B(Atnas)\n    C(Black Knight)\n\n    A --&gt; B\n    B --&gt; C\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TB\n    A(Watcher)\n    B(Gold Smoke Knight)\n\n    A --&gt; B"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#prologue-devour-the-white-lion",
+    "href": "posts/the-cereal-convention/index.html#prologue-devour-the-white-lion",
+    "title": "The Cereal Convention",
+    "section": "Prologue: Devour the White Lion",
+    "text": "Prologue: Devour the White Lion\n\nA purging of ashes down her hourglass figureInscribed on my heart; “Devour me, Colossus” 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nDevour The White Lion\nLanguage\nCrimson Crocodile\n0\n1\nThe Crimson Crocodile caved in Patrick Bateman's chest with three repeated torso attacks\n\n\n\n\n\n\n\nStarting Characters\n\nCarrie\nPatrick Bateman\nFreddie Krueger\nCharlie (Hereditary)"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-1-first-crimson-day",
+    "href": "posts/the-cereal-convention/index.html#year-1-first-crimson-day",
+    "title": "The Cereal Convention",
+    "section": "Year 1: First Crimson Day",
+    "text": "Year 1: First Crimson Day\n\nI walk a road, horizons changeThe tournament’s begun 3\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nNotable Event\n\n\n\n\nFirst Crimson Day\nFirst Story\nAmmonia\nCrimson Crocodile\n1\nOn the Hunt, three people rolled criticals in the Gambler's Game of Death and gained +1 permanent Luck"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-2-smog-song",
+    "href": "posts/the-cereal-convention/index.html#year-2-smog-song",
+    "title": "The Cereal Convention",
+    "section": "Year 2: Smog Song",
+    "text": "Year 2: Smog Song\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nCrimson Crocodile\n1\n0\nPaint\nDeath of Song\nJousting\nBuffalo Bill narrowly defeated Freddie Kruger in a Jousting match"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-3-velvet-fog",
+    "href": "posts/the-cereal-convention/index.html#year-3-velvet-fog",
+    "title": "The Cereal Convention",
+    "section": "Year 3: Velvet Fog",
+    "text": "Year 3: Velvet Fog\n\nA choice of gold or velvetDo I go on, or follow the crown in the smoke? 5\n\n\n\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nVelvet Fog\n\nInner Lantern\nSmog Singers\n1\n1\nGave birth to five children in one year"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-4-the-hooded-knight",
+    "href": "posts/the-cereal-convention/index.html#year-4-the-hooded-knight",
+    "title": "The Cereal Convention",
+    "section": "Year 4: The Hooded Knight",
+    "text": "Year 4: The Hooded Knight\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nSmog Singers\n1\n2\nHovel\nThe Hooded Knight\nHaunted\nHooded Knight showed up, smoked two people, and left"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-5-plague-the-hanged-man",
+    "href": "posts/the-cereal-convention/index.html#year-5-plague-the-hanged-man",
+    "title": "The Cereal Convention",
+    "section": "Year 5: Plague / The Hanged Man",
+    "text": "Year 5: Plague / The Hanged Man\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nSmog Singers\n2\n1\nLantern Oven\nThe Hanged Man\nPlague\nStill defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns\n\n\nManhunter\n1\n0\nScrap Smelting\n\n\nScored the Death Blow against the Manhunter"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#quarry-timeline",
+    "href": "posts/the-cereal-convention/index.html#quarry-timeline",
+    "title": "The Cereal Convention",
+    "section": "",
+    "text": "&lt;Axes: xlabel='Year', ylabel='Monster'&gt;"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#footnotes",
+    "href": "posts/the-cereal-convention/index.html#footnotes",
+    "title": "The Cereal Convention",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSandman Volume 3: The Doll’s House↩︎\nNe Obliviscaris - Devour Me, Colossus (Part I​)​: Blackholes↩︎\nKing Crimson - The Court of the Crimson King↩︎\nDon McLean - American Pie↩︎\nBetween the Buried and Me - Option Oblivion↩︎\nMuse - Knights of Cydonia↩︎\nThe Faceless - Pestilence↩︎\nWarforged - We’ve Been Here Before↩︎\nJob For a Cowboy - Beyond the Chemical Doorway↩︎\nThe Faceless - Planetary Duality II: A Prophecies Fruition↩︎\nBrand of Sacrifice - Casca↩︎\nBetween the Buried and Me - Foam Born: (B) The Decade of Statues↩︎"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-6-unwanted-gifts-knighting",
+    "href": "posts/the-cereal-convention/index.html#year-6-unwanted-gifts-knighting",
+    "title": "The Cereal Convention",
+    "section": "Year 6: Unwanted Gifts / Knighting",
+    "text": "Year 6: Unwanted Gifts / Knighting\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nCrimson Crocodile\n2\n0\nSettlement Watch\nUnwanted Gifts\nKnighting\nAnnabelle scored 5 wounds in one turn using the paired razor cymbal after we hit the trap turn 1"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-7-self-invited-guests",
+    "href": "posts/the-cereal-convention/index.html#year-7-self-invited-guests",
+    "title": "The Cereal Convention",
+    "section": "Year 7: Self-invited Guests",
+    "text": "Year 7: Self-invited Guests\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nSmog Singers\n2\n1\nSymposium\nSelf-Invited Guests, Lights in the Sky\nBirth\nRipley died during a blitzkrieg where we killed the monster after going only three times"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#campaign-principles",
+    "href": "posts/the-cereal-convention/index.html#campaign-principles",
+    "title": "The Cereal Convention",
+    "section": "",
+    "text": "New Life\nDeath\nSociety\n\n\n\n\nProtect the Young\nCannibalize\nAccept the Darkness"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#principles",
+    "href": "posts/the-cereal-convention/index.html#principles",
+    "title": "The Cereal Convention",
+    "section": "",
+    "text": "New Life\nDeath\nSociety\n\n\n\n\nProtect the Young\nCannibalize\nAccept the Darkness"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#nodes",
+    "href": "posts/the-cereal-convention/index.html#nodes",
+    "title": "The Cereal Convention",
+    "section": "",
+    "text": "graph TB\n    A(Crimson Crocodile)\n    B(Smog Singers)\n    C(Sunstalker)\n    D(King)\n\n    A --&gt; B\n    B --&gt; C\n    C --&gt; D\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TB\n    A(Manhunter)\n    B(Atnas)\n    C(Black Knight)\n\n    A --&gt; B\n    B --&gt; C\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TB\n    A(Watcher)\n    B(Gold Smoke Knight)\n\n    A --&gt; B"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#population-timeline",
+    "href": "posts/the-cereal-convention/index.html#population-timeline",
+    "title": "The Cereal Convention",
+    "section": "Population Timeline",
+    "text": "Population Timeline"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-2-death-of-song",
+    "href": "posts/the-cereal-convention/index.html#year-2-death-of-song",
+    "title": "The Cereal Convention",
+    "section": "Year 2: Death of Song",
+    "text": "Year 2: Death of Song\n\nAnd we sang dirges in the darkThe day the music died 4\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nNotable Event\n\n\n\n\nJousting\nDeath of Song\nPaint\nCrimson Crocodile\n1\nBuffalo Bill narrowly defeated Freddie Kruger in a Jousting match"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-4-hooded-knight",
+    "href": "posts/the-cereal-convention/index.html#year-4-hooded-knight",
+    "title": "The Cereal Convention",
+    "section": "Year 4: Hooded Knight",
+    "text": "Year 4: Hooded Knight\n\n\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nHaunted\nHooded Knight\nHovel\nSmog Singers\n1\n2\nHooded Knight showed up, smoked two people, and left"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-5-the-hanged-man-brings-a-plague",
+    "href": "posts/the-cereal-convention/index.html#year-5-the-hanged-man-brings-a-plague",
+    "title": "The Cereal Convention",
+    "section": "Year 5: The Hanged Man Brings a Plague",
+    "text": "Year 5: The Hanged Man Brings a Plague\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nSmog Singers\n2\n1\nLantern Oven\nThe Hanged Man\nPlague\nStill defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns\n\n\nManhunter\n1\n0\nScrap Smelting\n\n\nScored the Death Blow against the Manhunter"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-6-unwanted-gifts",
+    "href": "posts/the-cereal-convention/index.html#year-6-unwanted-gifts",
+    "title": "The Cereal Convention",
+    "section": "Year 6: Unwanted Gifts",
+    "text": "Year 6: Unwanted Gifts\n\nI was ignorant, I was worldlyI was shown into a lifetime’s experiences 8\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nNotable Event\n\n\n\n\nKnighting\nUnwanted Gifts\nSettlement Watch\nCrimson Crocodile\n2\nAnnabelle scored 5 wounds in one turn using the paired razor cymbal after we hit the trap turn 1"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-5-the-hanged-man-bringeth-the-plague",
+    "href": "posts/the-cereal-convention/index.html#year-5-the-hanged-man-bringeth-the-plague",
+    "title": "The Cereal Convention",
+    "section": "Year 5: The Hanged Man Bringeth The Plague",
+    "text": "Year 5: The Hanged Man Bringeth The Plague\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nSmog Singers\n2\n1\nLantern Oven\nThe Hanged Man\nPlague\nStill defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns\n\n\nManhunter\n1\n0\nScrap Smelting\n\n\nScored the Death Blow against the Manhunter"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-5-the-hanged-plaguebearer",
+    "href": "posts/the-cereal-convention/index.html#year-5-the-hanged-plaguebearer",
+    "title": "The Cereal Convention",
+    "section": "Year 5: The Hanged Plaguebearer",
+    "text": "Year 5: The Hanged Plaguebearer\n\nA flourishing plague consumes the massesEmaciated figures dying in the streets 7\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nPlague\nThe Hanged Man\nScrap Smelting\nManhunter\n1\n0\nScored the Death Blow against the Manhunter and the settlement let Charlie die of the plague so they could innovate\n\n\n\nHands of Heat\nLantern Oven\nSmog Singers\n2\n1\nStill defeated first level 2 fight, despite hitting the trap 3 times and drawing the Legendary AI card, all within the first few turns"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-8-promise-under-the-sun",
+    "href": "posts/the-cereal-convention/index.html#year-8-promise-under-the-sun",
+    "title": "The Cereal Convention",
+    "section": "Year 8: Promise Under The Sun",
+    "text": "Year 8: Promise Under The Sun\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nCrimson Crocodile\n2\n1\nFamily\nPromise Under The Sun, Hooded Knight\nDeath"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-9-atnass-dinner-bell",
+    "href": "posts/the-cereal-convention/index.html#year-9-atnass-dinner-bell",
+    "title": "The Cereal Convention",
+    "section": "Year 9: Atnas’s Dinner Bell",
+    "text": "Year 9: Atnas’s Dinner Bell\n\nHis sword was withdrawn; witness the falconBlood covers your face 11\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nIt Rang\n\n\nAtnas\n1\n0\n\n\n\n\n\n\nSunstalker\n1\n0"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-7-self-invited-lights-in-the-sky",
+    "href": "posts/the-cereal-convention/index.html#year-7-self-invited-lights-in-the-sky",
+    "title": "The Cereal Convention",
+    "section": "Year 7: Self-invited Lights in the Sky",
+    "text": "Year 7: Self-invited Lights in the Sky\n\nThis organic antenna mountsAs the esoteric crown of my vertebrae 9\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nBirth\nSelf-Invited Guests, Lights in the Sky\nSymposium\nSmog Singers\n2\n1\nRipley died during a blitzkrieg where we killed the monster after going only three times and a cursed Santa hat was found in the settlement"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-8-promise-under-a-hooded-sun",
+    "href": "posts/the-cereal-convention/index.html#year-8-promise-under-a-hooded-sun",
+    "title": "The Cereal Convention",
+    "section": "Year 8: Promise Under A Hooded Sun",
+    "text": "Year 8: Promise Under A Hooded Sun\n\n\n\n\n\n\n\n\nMonster\nLevel\nDeaths\nInnovation\nStory Event\nSettlement Event\nNotable Event\n\n\n\n\nCrimson Crocodile\n2\n1\nFamily\nPromise Under The Sun, Hooded Knight\nDeath"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-8-under-a-hooded-sun",
+    "href": "posts/the-cereal-convention/index.html#year-8-under-a-hooded-sun",
+    "title": "The Cereal Convention",
+    "section": "Year 8: Under A Hooded Sun",
+    "text": "Year 8: Under A Hooded Sun\n\nA vile adversary approaches with hasteThe immense conqueror hides the sun 10\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nDeath\nPromise Under The Sun, Hooded Knight\nFamily\nCrimson Crocodile\n2\n1\nNot getting the damn Crimson Fin again -_-"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#campaign-timeline",
+    "href": "posts/the-cereal-convention/index.html#campaign-timeline",
+    "title": "The Cereal Convention",
+    "section": "Campaign Timeline",
+    "text": "Campaign Timeline"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-4-haunted-knight",
+    "href": "posts/the-cereal-convention/index.html#year-4-haunted-knight",
+    "title": "The Cereal Convention",
+    "section": "Year 4: Haunted Knight",
+    "text": "Year 4: Haunted Knight\n\nAnd how can we winWhen fools can be kings? 6\n\n\n\n\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nHaunted\nHooded Knight\nHovel\nSmog Singers\n1\n2\nHooded Knight showed up, smoked two people, and left"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-8-under-the-hooded-sun",
+    "href": "posts/the-cereal-convention/index.html#year-8-under-the-hooded-sun",
+    "title": "The Cereal Convention",
+    "section": "Year 8: Under The Hooded Sun",
+    "text": "Year 8: Under The Hooded Sun\n\n\n\n\n\n\n\n\nSettlement Event\nStory Event\nInnovation\nMonster\nLevel\nDeaths\nNotable Event\n\n\n\n\nDeath\nPromise Under The Sun, Hooded Knight\nFamily\nCrimson Crocodile\n2\n1\nNot getting the damn Crimson Fin again -_-"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-10-the-decade-of-statues",
+    "href": "posts/the-cereal-convention/index.html#year-10-the-decade-of-statues",
+    "title": "The Cereal Convention",
+    "section": "Year 10: The Decade of Statues",
+    "text": "Year 10: The Decade of Statues\n\nThe waves have pushed me to where I need to be 2"
+  },
+  {
+    "objectID": "posts/the-cereal-convention/index.html#year-10-a-decade-of-statues",
+    "href": "posts/the-cereal-convention/index.html#year-10-a-decade-of-statues",
+    "title": "The Cereal Convention",
+    "section": "Year 10: A Decade of Statues",
+    "text": "Year 10: A Decade of Statues\n\nThe waves have pushed me to where I need to be 12"
   }
 ]
