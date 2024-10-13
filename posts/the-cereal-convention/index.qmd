@@ -1,6 +1,8 @@
 ---
 title: "The Cereal Convention"
 subtitle: "A Kingdom Death Campaign Log"
+author: John Vivian
+date: 2024-09-30
 format: 
   html:
     css: styles.css
@@ -22,6 +24,7 @@ tools:
 ::: {.column-page}
 ::: {.column width="40%"}
 ### Campaign Information
+- **Game**: [Kingdom Death](https://kingdomdeath.com/)
 - **Settlement Name**: The Cereal Convention  
 - **Campaign**: People of the Lantern  
 - **Boss**: Watcher  
