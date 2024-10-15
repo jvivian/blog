@@ -1,0 +1,374 @@
+---
+title: "Pythagorean Time Dilation"
+subtitle: "A Summary of Classical Mechanics"
+author: John Vivian
+date: 2024-10-15
+format: 
+  html:
+    # css: styles.css
+    toc: true
+    toc-depth: 2
+    echo: false
+editor: visual
+execute: 
+    render-on-save: true
+tools:
+  - mermaid
+---
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.style.use('ggplot')
+```
+
+# Acceleration is Absolute
+> _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
+
+[^1]: Isaac Newton. "Anecdotes, Observations and Characters, of Books and Men" Vol 1 (page 158). Spence, J. 1820.
+
+Imagine yourself in space with no nearby objects, only distant stars; would it be possible to tell you are moving? Nope. As Einstein later proved, velocity only has context relative to another reference frame. Two people moving in in the same environment past each other would not be able to conclude whether one person was stationary and the other was moving or if both people are moving.
+
+Oddly, _acceleration_ is not the same. If you were suddenly accelerated while in the space suit you would feel it; you would jerk forward, feel the suit push against your chest, etc. The reason for this is acceleration produces a _force gradient_, as opposed to velocity which does not require a force to keep you moving (an object in motion, yada yada...).
+
+You can build your own accelerator-detector just by hanging a weight from a spring. If you begin accelerating left or right, the spring would stretch in the opposite direction. The weight needs to hang to work, because if you turn it sideways the weight will fall towards the ground, even if remain perfectly still. You _are_ accelerating, and have been for quite some time, directly towards the center of the planet. We experience this acceleration as _weight_, which is canceled out by the normal force of the planet pushing back up against us. 
+
+
+```{python}
+#| label: fig-spring_weight_visualization
+#| fig-cap: "Spring with hanging weight, which stretches to the left if accelerated to the right."
+# Parameters for the spring and weight
+k = 50  # Spring constant (N/m)
+mass = 1.0  # Mass of the weight (kg)
+g = 9.81  # Gravitational acceleration (m/s^2)
+equilibrium_length = 2.0  # Length of the spring with no weight (m)
+
+# Calculate the displacement due to the weight
+stretch = mass * g / k  # Stretch caused by the weight
+
+# Create the spring curve using sine waves for aesthetics
+def spring_curve(x: np.ndarray, stretch: float) -> np.ndarray:
+    """Creates a wavy curve representing the spring."""
+    return np.sin(10 * np.pi * x) * 0.1 - x * stretch
+
+# Generate the spring curve before and after stretching
+x = np.linspace(0, 1, 500)  # x-axis points along the spring
+y_unstretched = spring_curve(x, 0)  # Unstretched spring
+y_stretched = spring_curve(x, stretch)  # Stretched spring
+
+# Create the figure and axis
+fig, ax = plt.subplots(figsize=(6, 8))
+
+# Plot the unstretched and stretched spring curves
+ax.plot(y_unstretched, -x * equilibrium_length, 'k--', alpha=0.5, label='Unstretched Spring')
+ax.plot(y_stretched, -x * (equilibrium_length + stretch), 'b-', label='Stretched Spring')
+
+# Plot the weight as a black circle
+ax.plot(0, -(equilibrium_length + stretch), 'ro', markersize=15, label='Weight')
+
+# Plot the gravitational force vector (downward)
+ax.arrow(0, -(equilibrium_length + stretch), 0, -0.5, head_width=0.1, head_length=0.1, 
+         fc='blue', ec='blue', label='Gravitational Force $F_g$')
+
+# Plot the spring force vector (upward)
+ax.arrow(0, -(equilibrium_length + stretch), 0, 0.5, head_width=0.1, head_length=0.1, 
+         fc='green', ec='green', label='Spring Force $F_s$')
+
+# Set plot limits and labels
+ax.set_xlim(-0.5, 0.5)
+ax.set_ylim(-3.5, 0.5)
+ax.set_xlabel('Spring Width')
+ax.set_ylabel('Height')
+# ax.set_title('Spring with Hanging Weight Demonstrating Acceleration')
+
+# Add legend
+ax.legend(loc='upper right')
+
+# Display the plot
+plt.show()
+```
+
+Physics equations are incredible because they describe _universal relationships_ about the world we've found ourselves in. For example, the _momentum_ of an object is described by its mass and velocity: $p = mv$. This relationship applies to _every_ object of mass that can have a velocity. And I think that's pretty neat [^2]. This equation also let's us say momentum is proportional to velocity given constant mass. If you double the velocity of an object, you double its momentum.
+
+[^2]: Neature Walk: https://www.youtube.com/watch?v=Hm3JodBR-vs
+
+## Kinematic Equations
+> Moving Through Time: Universal Relationships of Motion
+
+These describe universal relationships about an object's motion with constant acceleration—useful when you want to predict where or how fast something will be at a given time. 
+
+$$v = v_0 + at$$
+
+Velocity increases linearly with time when acceleration is constant
+
+$$s = s_0 + v_0 t + \frac{1}{2} at^2$$
+
+Position grows with time, influenced by both your initial speed and the acceleration 
+
+$$v^2 = v_0^2 + 2a(s - s_0)$$  
+
+The relationship between velocity and distance, without needing time
+
+An interesting consequence to these equations is given position or velocity as a function of time, the equation will predict the function's value for whatever $t$ is. Meaning, these universal relationships do not operate as if the past (fixed from our perspective) is fundamentally different from the future (not-fixed, from our perspective).
+
+::: {.callout-tip collapse="true"}
+## What's the point of calculus
+Calculus solves two limit-based problems:
+
+1. The goal of the derivative is to find $\frac{dx}{dt}$ as they both approach zero, but you can't divide by zero.
+2. The integral attempts to find the sum of the area under the curve as the number of riemann squares approaches infinity.
+
+You can expand a small change in a simple function (such as $x^2$, i.e. $(x+h)^2 - x^2$) and work out as the limit $h \rightarrow 0$, you get $2x$.
+:::
+
+:::{.callout-note collapse="true"}
+## Kinematic Derivation
+The kinematic equations can be derived from the basic definition of calculus. Given a change in position over time is velocity:
+$$\frac{dx}{dt} = v$$
+
+we want to express $v$ in terms of $t$, since that also changes over time.
+
+$$v(t) = v_0 + at$$
+
+Reformulate velocity as the first time derivative of position
+
+$$\frac{dx}{dt} = v_0 + at$$
+
+Then integrate with respect to time
+
+$$x(t) = \int (v_0 + at) dt$$
+
+Solving for the integral gives us
+
+$$x(t) = v_0t + \frac{1}{2}at^2 + C$$
+
+Where C would represent whatever the **initial position** is, which we can call $x_0$. This gives us
+
+$$x(t) = x_0 + v_0t + \frac{1}{2}at^2$$
+
+You can plug this equation into $v = v_0 + at$ and do some math to get:
+
+$$v^2 = v_0^2 + 2a(x-x0)$$
+:::
+
+# Lagrangian and Hamiltonian Mechanics
+> Different ways to tell the same (Newtonian) story
+
+Instead of forces and acceleration, Lagrangian and Hamiltonian mechanics focuses on _paths, energy, and phase space_. The last is particularly useful for understanding field theory.
+
+```{python}
+#| label: fig-corrected_mechanics_comparison
+#| fig-cap: "Comparison of Newtonian, Lagrangian, and Hamiltonian Mechanics"
+from scipy.integrate import solve_ivp
+# Parameters for the harmonic oscillator
+m = 1.0   # Mass (kg)
+k = 1.0   # Spring constant (N/m)
+omega = np.sqrt(k / m)  # Angular frequency
+A = 1.0  # Amplitude of oscillation
+
+# Newtonian mechanics: F = ma = -kx
+def newtonian_acceleration(x: np.ndarray) -> np.ndarray:
+    return -omega**2 * x
+
+# Hamiltonian mechanics: Phase space dynamics
+def hamiltonian_system(t: float, y: np.ndarray) -> np.ndarray:
+    q, p = y  # Position and momentum
+    dqdt = p / m  # dx/dt = p / m
+    dpdt = -k * q  # dp/dt = -kx
+    return [dqdt, dpdt]
+
+# Solve Hamiltonian system for phase space trajectory
+sol = solve_ivp(hamiltonian_system, [0, 10], [A, 0], t_eval=np.linspace(0, 10, 500))
+
+# Lagrangian path: Position over time assuming maximum displacement at t=0
+time = np.linspace(0, 10, 100)
+x_lagrangian = A * np.cos(omega * time)  # Expected path for least action
+
+# Create figure with subplots
+fig, axs = plt.subplots(3, figsize=(8, 10))
+
+# 1. Newtonian mechanics: Acceleration vs. Position
+x = np.linspace(-A, A, 100)  # Position range for the oscillator
+axs[0].plot(x, newtonian_acceleration(x), color='blue')
+axs[0].set_title('Newtonian Mechanics: F = ma')
+axs[0].set_xlabel('Position ($x$)')
+axs[0].set_ylabel('Acceleration ($a$)')
+axs[0].axhline(0, color='black', lw=0.8)  # Equilibrium acceleration line
+
+# 2. Lagrangian mechanics: Path over time
+axs[1].plot(time, x_lagrangian, color='green')
+axs[1].set_title('Lagrangian Mechanics: Path Minimization')
+axs[1].set_xlabel('Time ($t$)')
+axs[1].set_ylabel('Position ($x$)')
+axs[1].axhline(0, color='black', lw=0.8)  # Equilibrium line
+
+# 3. Hamiltonian mechanics: Phase space trajectory
+axs[2].plot(sol.y[0], sol.y[1], color='red')
+axs[2].set_title('Hamiltonian Mechanics: Phase Space')
+axs[2].set_xlabel('Position ($q$)')
+axs[2].set_ylabel('Momentum ($p$)')
+axs[2].axhline(0, color='black', lw=0.8)  # Zero momentum line
+axs[2].axvline(0, color='black', lw=0.8)  # Zero position line
+
+# Adjust layout and display plot
+plt.suptitle('Comparison of Newtonian, Lagrangian, and Hamiltonian Mechanics')
+plt.tight_layout()
+plt.show()
+
+```
+
+## The Action Integral
+> The profound economy of Nature
+
+The action integral $S$ is the "score" of a given path taken by a system between two points in time.
+
+$$S[q(t)] = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt$$
+
+- $S[q(t)]$ is the _action_ which depends on the path $q(t)$
+- $L(q, \dot{q}, t)$ is the **Lagrangian**, which is the difference between the kinetic energy $T$ and potential energy $V$
+- Note: Dot notation above a variable represents its first derivative. Two dots for the second derivative.
+
+$$L = T - V$$
+
+The integral sums up $L$ along a specific path between $t_1$ and $t_2$
+
+
+
+
+# Minkowski Space
+
+```{python}
+#| label: fig-minkowski_light_cone
+#| fig-cap: Light Cone in Minkowski Space. A stationary observer moves vertically along a 'World Line'
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Plot the light cone (x = ±ct)
+t = np.linspace(-5, 5, 100)
+ax.plot(t, t, linestyle='--', color='orange', label='Light Cone: $x = ct$')
+ax.plot(t, -t, linestyle='--', color='orange')
+
+# Plot the observer's worldline (stationary at x = 0)
+ax.plot([0, 0], [-5, 5], color='blue', lw=2, label='Worldline of Observer')
+
+# Plot space and time axes
+ax.axhline(0, color='black', lw=1)  # Space axis
+ax.axvline(0, color='black', lw=1)  # Time axis
+
+# Annotate causal regions
+ax.text(2.5, 2.5, 'Future', fontsize=12, color='green', ha='center')
+ax.text(-2.5, -2.5, 'Past', fontsize=12, color='red', ha='center')
+ax.text(3.5, -0.5, 'Elsewhere', fontsize=12, color='gray', ha='center')
+
+# Set labels and limits
+ax.set_xlabel('Space ($x$)')
+ax.set_ylabel('Time ($t$)')
+ax.set_title('Minkowski Space: Light Cone of an Observer')
+
+# Set plot limits for symmetry
+ax.set_xlim(-5, 5)
+ax.set_ylim(-5, 5)
+
+# Add legend
+ax.legend(loc='upper right')
+
+# Display plot
+plt.show()
+
+```
+
+```{python}
+#| label: corrected_worldlines_lightcone
+#| fig-cap: "Minkowski Space: Worldlines for Stationary and Moving Observers"
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# Create figure and axis
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Generate time values
+t = np.linspace(-5, 5, 100)
+
+# Plot light cone (x = ±t)
+ax.plot(t, t, '--', color='orange', label='Light Cone: $x = ct$')
+ax.plot(t, -t, '--', color='orange')
+
+# Plot stationary observer's worldline (x = 0)
+ax.plot([0, 0], [-5, 5], color='blue', lw=2, label='Stationary Observer (v = 0)')
+
+# Plot worldline for v = 0.3c
+v1 = 0.3  # Velocity = 0.3c
+x1 = v1 * t  # Worldline for v = 0.3c
+ax.plot(x1, t, '--', color='blue', lw=2, label='Worldline (v = 0.3c)', alpha=0.75)
+
+# Plot worldline for v = 0.9c
+v3 = 0.6  # Velocity = 0.9c
+x3 = v3 * t  # Worldline for v = 0.9c
+ax.plot(x3, t, '--', color='blue', lw=2, label='Worldline (v = 0.6c)', alpha=0.5)
+
+# Plot worldline for v = 0.9c
+v2 = 0.9  # Velocity = 0.9c
+x2 = v2 * t  # Worldline for v = 0.9c
+ax.plot(x2, t, '--', color='blue', lw=2, label='Worldline (v = 0.9c)', alpha=0.25)
+
+# Set plot limits, labels, and title
+ax.set_xlim(-5, 5)
+ax.set_ylim(-5, 5)
+ax.set_xlabel('Space ($x$)')
+ax.set_ylabel('Time ($t$)')
+ax.set_title('Minkowski Space: Worldlines for Different Velocities')
+
+# Add legend
+ax.legend(loc='upper left')
+
+# Show plot
+plt.show()
+
+```
+
+```{python}
+#| label: adjusted_mechanics_comparison
+#| fig-cap: "Corrected Comparison of Newtonian, Lagrangian, and Hamiltonian Mechanics"
+# Parameters for the harmonic oscillator
+m = 1.0   # Mass (kg)
+k = 1.0   # Spring constant (N/m)
+omega = np.sqrt(k / m)  # Angular frequency
+A = 1.0  # Amplitude of oscillation
+
+# Hamiltonian mechanics: Phase space dynamics
+def hamiltonian_system(t: float, y: np.ndarray) -> np.ndarray:
+    q, p = y  # Position and momentum
+    dqdt = p / m  # dx/dt = p / m
+    dpdt = -k * q  # dp/dt = -kx
+    return [dqdt, dpdt]
+
+# Solve Hamiltonian system for phase space trajectory
+sol = solve_ivp(hamiltonian_system, [0, 10], [A, 0], t_eval=np.linspace(0, 10, 500))
+
+# Create figure and axis for the phase space plot
+fig, ax = plt.subplots(figsize=(6, 6))
+
+# Plot the phase space trajectory (position vs. momentum)
+ax.plot(sol.y[0], sol.y[1], color='red')
+ax.set_title('Hamiltonian Mechanics: Phase Space Trajectory')
+ax.set_xlabel('Position ($q$)')
+ax.set_ylabel('Momentum ($p$)')
+
+# Mark key points on the trajectory
+ax.scatter([0, 0], [1, -1], color='black', zorder=5, label='Max Momentum at $x=0$')
+ax.axhline(0, color='black', lw=0.8)  # Zero momentum line
+ax.axvline(0, color='black', lw=0.8)  # Zero position line
+
+# Add legend
+ax.legend(loc='upper right')
+
+# Display plot
+plt.show()
+
+```
+
+# Glossary
+
+- **Momentum** is the quantity of motion an object has—a measure of how hard it is to stop that object. Mathematically, it's $p = mv$, where $p$ is momentum, $m$ is mass, and $v$ is velocity.
