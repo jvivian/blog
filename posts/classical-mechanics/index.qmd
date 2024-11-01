@@ -1,6 +1,6 @@
 ---
-title: "Pythagorean Time Dilation"
-subtitle: "A Summary of Classical Mechanics"
+title: "A Journey Through (Space)Time"
+subtitle: "Summary of Classical Mechanics"
 author: John Vivian
 date: 2024-10-15
 format: 
@@ -23,18 +23,18 @@ import seaborn as sns
 plt.style.use('ggplot')
 ```
 
-# A Journey Through (Space)Time
 > _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
 
-This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_
+This overview is structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_.
 
-- While velocity only has meaning in other reference frames, acceleration is _absolute_, and can be identified intriniscally without one (in most cases).
-- The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
-- Magnetism only exists as a relativistic effect when an object moves relative to an electric field, which helps explain why we have never observed a magnetic monopole.
-- The path a particle or system takes is always the most "economical" route through spacetime (via minimization/maximization of **action**)
-- Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\Leftrightarrow$ energy conservation, spatial invariance $\Leftrightarrow$ momentum conservation, and rotational symmetry $\Leftrightarrow$ angular momentum conservation.
-- The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
-- Schwartzchild's solution to General Relativity, contained a mathematical singularity which was originally thought to be a mistake but is now known to be a _real_ singularity in spacetime.
+- While velocity only has meaning relative to other reference frames, acceleration is **absolute**. This means it can be detected intrinsically, even without comparing it to anything else (e.g., feeling pushed back in a car as it accelerates).
+- The inverse square law's squared term stems from our three-dimensional geometry. In three-dimensional space, the force from a point source dissipates as it spreads over the surface of a growing sphere.
+- Magnetism arises as a relativistic effect due to relative motion between electric charges, explaining why isolated magnetic monopoles haven't been observed.
+- The path a particle or system takes is always the most "economical" route through spacetime, achieved by minimizing or maximizing **action** in a system.
+- Conservation laws emerge directly from the symmetries inherent in physical laws. For example, time invariance leads to energy conservation, spatial invariance to momentum conservation, and rotational symmetry to angular momentum conservation.
+- The speed of light, $c$, provides a conversion factor between time and space, just as energy and mass are related, or electric and magnetic fields are two aspects of the same force.
+- Schwarzschild's solution to Einstein's field equations in General Relativity was initially thought incomplete because of a "mathematical singularity." This singularity, however, represents a genuine point of infinite curvature in spacetime—a black hole.
+
 
 # Acceleration is Absolute
 
