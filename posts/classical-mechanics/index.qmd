@@ -25,6 +25,8 @@ plt.style.use('ggplot')
 
 > _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
 
+[^1]: Isaac Newton. "Anecdotes, Observations and Characters, of Books and Men" Vol 1 (page 158). Spence, J. 1820.
+
 This overview is structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_.
 
 - While velocity only has meaning relative to other reference frames, acceleration is **absolute**. This means it can be detected intrinsically, even without comparing it to anything else (e.g., feeling pushed back in a car as it accelerates).
@@ -38,52 +40,47 @@ This overview is structured by the concepts I found most profound while reading 
 
 # Acceleration is Absolute
 
-[^1]: Isaac Newton. "Anecdotes, Observations and Characters, of Books and Men" Vol 1 (page 158). Spence, J. 1820.
+Imagine yourself in deep space, with only distant stars as a backdrop. Would it be possible to tell if you were moving? Nope. As Einstein showed, velocity only has meaning relative to another reference frame. If two people drifted past each other, neither could determine who was stationary or moving, or if they were both moving at once.
 
-Imagine yourself in space with no nearby objects, only distant stars; would it be possible to tell you are moving? Nope. As Einstein later proved, velocity only has context relative to another reference frame. Two people moving in in the same environment past each other would not be able to conclude whether one person was stationary and the other was moving or if both people are moving.
+Acceleration, however, is a different story. If you suddenly accelerated in your spacesuit, you would feel it: a jerk forward, the suit pressing against your chest, etc. This is because acceleration produces a _force gradient_, unlike velocity, which doesn’t require a force to sustain it (thanks to the principle of inertia).
 
-Oddly, _acceleration_ is not the same. If you were suddenly accelerated while in the space suit you would feel it; you would jerk forward, feel the suit push against your chest, etc. The reason for this is acceleration produces a _force gradient_, as opposed to velocity which does not require a force to keep you moving (an object in motion, yada yada...).
-
-You can build your own accelerator-detector just by hanging a weight from a spring. If you begin accelerating left or right, the spring would stretch in the opposite direction. The weight needs to hang to work, because if you turn it sideways the weight will fall towards the ground, even if remain perfectly still. You _are_ accelerating, and have been for quite some time, directly towards the center of the planet. We experience this acceleration as _weight_, which is canceled out by the normal force of the planet pushing back up against us. 
-
+You could build a simple “accelerometer” by hanging a weight from a spring. If you accelerated left or right, the spring would stretch in the opposite direction. The weight hanging is crucial, though: if you turned it horizontally, the weight would simply fall downward, even while stationary. This is because you _are_ accelerating—toward the center of the Earth. We perceive this continuous acceleration as _weight_, countered by the normal force of the ground pushing up against us.
 
 ```{python}
-#| label: fig-spring_weight_visualization
-#| fig-cap: "Spring with hanging weight, which stretches to the left if accelerated to the right."
+#| label: fig-spring_weight_visualization-dffad
+#| fig-cap: "Spring with a hanging weight, stretching left as the system accelerates to the right."
 # Parameters for the spring and weight
 k = 50  # Spring constant (N/m)
 mass = 1.0  # Mass of the weight (kg)
 g = 9.81  # Gravitational acceleration (m/s^2)
-equilibrium_length = 2.0  # Length of the spring with no weight (m)
+equilibrium_length = 2.0  # Length of the spring at equilibrium (m)
 
-# Calculate the displacement due to the weight
-stretch = mass * g / k  # Stretch caused by the weight
+# Calculate displacement caused by the weight’s force
+stretch = mass * g / k  # Stretch from the weight’s force on the spring
 
-# Create the spring curve using sine waves for aesthetics
+# Define a wavy line for visualizing the spring
 def spring_curve(x: np.ndarray, stretch: float) -> np.ndarray:
-    """Creates a wavy curve representing the spring."""
+    """Generates a wave pattern for visualizing a stretched spring."""
     return np.sin(10 * np.pi * x) * 0.1 - x * stretch
 
-# Generate the spring curve before and after stretching
-x = np.linspace(0, 1, 500)  # x-axis points along the spring
+# Generate spring curves for before and after stretching
+x = np.linspace(0, 1, 500)  # Position along the spring length
 y_unstretched = spring_curve(x, 0)  # Unstretched spring
 y_stretched = spring_curve(x, stretch)  # Stretched spring
 
 # Create the figure and axis
 fig, ax = plt.subplots(figsize=(6, 8))
 
-# Plot the unstretched and stretched spring curves
+# Plot both the unstretched and stretched spring curves
 ax.plot(y_unstretched, -x * equilibrium_length, 'k--', alpha=0.5, label='Unstretched Spring')
 ax.plot(y_stretched, -x * (equilibrium_length + stretch), 'b-', label='Stretched Spring')
 
-# Plot the weight as a black circle
+# Represent the weight as a red circle
 ax.plot(0, -(equilibrium_length + stretch), 'ro', markersize=15, label='Weight')
 
-# Plot the gravitational force vector (downward)
+# Plot gravitational and spring force vectors
 ax.arrow(0, -(equilibrium_length + stretch), 0, -0.5, head_width=0.1, head_length=0.1, 
          fc='blue', ec='blue', label='Gravitational Force $F_g$')
-
-# Plot the spring force vector (upward)
 ax.arrow(0, -(equilibrium_length + stretch), 0, 0.5, head_width=0.1, head_length=0.1, 
          fc='green', ec='green', label='Spring Force $F_s$')
 
@@ -92,7 +89,6 @@ ax.set_xlim(-0.5, 0.5)
 ax.set_ylim(-3.5, 0.5)
 ax.set_xlabel('Spring Width')
 ax.set_ylabel('Height')
-# ax.set_title('Spring with Hanging Weight Demonstrating Acceleration')
 
 # Add legend
 ax.legend(loc='upper right')
@@ -101,7 +97,7 @@ ax.legend(loc='upper right')
 plt.show()
 ```
 
-Physics equations are incredible because they describe _universal relationships_ about the world we've found ourselves in. For example, the _momentum_ of an object is described by its mass and velocity: $p = mv$. This relationship applies to _every_ object of mass that can have a velocity. And I think that's pretty neat [^2]. This equation also states that momentum is proportional to velocity given constant mass. Doubling the velocity of an object doubles its momentum.
+Physics equations are extraordinary because they describe _universal relationships_ in the natural world. For instance, the _momentum_ of an object is simply the product of its mass and velocity: $p = mv$. This relationship applies universally to every object with mass and velocity. And I think that's pretty neat [^2]. Notably, the equation shows that momentum is directly proportional to velocity for a constant mass—doubling an object’s velocity doubles its momentum.
 
 [^2]: Neature Walk: https://www.youtube.com/watch?v=Hm3JodBR-vs
 
