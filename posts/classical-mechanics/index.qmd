@@ -23,8 +23,20 @@ import seaborn as sns
 plt.style.use('ggplot')
 ```
 
-# Acceleration is Absolute
+# A Journey Through (Space)Time
 > _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
+
+This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_
+
+- While velocity only has meaning in other reference frames, acceleration is _absolute_, and can be identified intriniscally without one (in most cases).
+- The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
+- Magnetism only exists as a relativistic effect when an object moves relative to an electric field, which helps explain why we have never observed a magnetic monopole.
+- The path a particle or system takes is always the most "economical" route through spacetime (via minimization/maximization of **action**)
+- Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\Leftrightarrow$ energy conservation, spatial invariance $\Leftrightarrow$ momentum conservation, and rotational symmetry $\Leftrightarrow$ angular momentum conservation.
+- The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
+- Schwartzchild's solution to General Relativity, contained a mathematical singularity which was originally thought to be a mistake but is now known to be a _real_ singularity in spacetime.
+
+# Acceleration is Absolute
 
 [^1]: Isaac Newton. "Anecdotes, Observations and Characters, of Books and Men" Vol 1 (page 158). Spence, J. 1820.
 
@@ -215,6 +227,118 @@ $$F = G\frac{m_1m_2}{r^2}$$
 
 Why is $r$ squared? Why not quadrupled or halved? The inverse square relationship emerges as a property of living in three dimensions. The volume of a sphere increases with the square of the radius: $4\pi r^2$.
 
+# Maxwell's Equations
+
+## **Gauss's Law (Electric Field)**
+
+$$\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}$$
+
+**Meaning:**
+Gauss's Law describes the relationship between electric charges and the electric field they produce. Specifically, it states that the electric flux (the "flow" of the electric field) through a closed surface is proportional to the total charge enclosed within that surface.
+
+- $\nabla \cdot \mathbf{E}$: This is the divergence of the electric field $\mathbf{E}$, which essentially measures how much the electric field is "spreading out" from a point.
+- $\rho$: This represents the **charge density** (charge per unit volume). The more charge you have in a given region, the stronger the electric field diverges from that region.
+- $\epsilon_0$: This is the **permittivity of free space**, a constant that determines how electric fields interact in a vacuum.
+
+**Interpretation:**
+Gauss's Law tells us that **electric charges are the source of electric fields**. Positive charges create outward-directed electric fields, and negative charges create inward-directed fields.
+
+For example, the electric field around a point charge (like an electron) points away from the charge if it's positive, and towards the charge if it's negative. The strength of the field is directly related to the amount of charge.
+
+##  **Gauss's Law for Magnetism**
+
+$$\nabla \cdot \mathbf{B} = 0$$
+
+**Meaning:**
+This law states that there are **no magnetic monopoles** — that is, there are no isolated north or south magnetic poles. Magnetic fields ($\mathbf{B}$) always form closed loops. Every magnetic field line that leaves a north pole must eventually return to a south pole.
+
+- $\nabla \cdot \mathbf{B}$: This is the divergence of the magnetic field $\mathbf{B}$, which measures how much the magnetic field is "spreading out" from a point.
+- The fact that it's equal to zero means that the net magnetic "flux" through any closed surface is always zero, implying that magnetic field lines don’t begin or end at any point (unlike electric fields, which start or end on charges).
+
+**Interpretation:**
+This law tells us that there are no magnetic charges (monopoles) in nature — we only observe dipoles (like bar magnets, with both north and south poles). Magnetic field lines form loops, with no starting or ending point.
+
+## **Faraday's Law of Induction**
+$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
+
+**Meaning:**
+Faraday’s Law explains how a changing magnetic field creates an electric field. If you have a time-varying magnetic field ($\mathbf{B}$), it induces a circulating electric field ($\mathbf{E}$). This is the principle behind electromagnetic induction, which is used in transformers and electric generators.
+
+- **$\nabla \times \mathbf{E}$**: This is the curl of the electric field $\mathbf{E}$, which measures how much the electric field is "circulating" around a point.
+- **$\frac{\partial \mathbf{B}}{\partial t}$**: This is the time rate of change of the magnetic field. It represents how the magnetic field is changing in time.
+- The negative sign indicates that the induced electric field opposes the change in the magnetic field (this is Lenz's law).
+
+**Interpretation:**
+Faraday’s Law describes how **changing magnetic fields induce electric fields**. For example, moving a magnet through a coil of wire induces a current in the wire, because the magnetic field through the coil is changing.
+
+In a more general sense, this law explains how electric generators work. When a magnet is spun around near a coil of wire, the changing magnetic field induces an electric current in the wire, which we can then use as electrical power.
+
+## **Ampère's Law (with Maxwell’s Correction)**
+
+$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
+
+**Meaning:**
+Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:
+- By electric currents (moving charges), as described by the first term, $\mu_0 \mathbf{J}$.
+- By changing electric fields, as described by the second term, $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$, which is called the **displacement current** (introduced by Maxwell).
+
+- $\nabla \times \mathbf{B}$: This is the curl of the magnetic field $\mathbf{B}$, which measures how much the magnetic field "circulates" around a point.
+- $\mathbf{J}$: This is the **current density** (current per unit area).
+- $\frac{\partial \mathbf{E}}{\partial t}$: This represents the rate of change of the electric field in time.
+
+**Interpretation:**
+Ampère’s Law with Maxwell’s correction tells us that **currents** (moving charges) and **changing electric fields** generate magnetic fields. Without the time-dependent term $\frac{\partial \mathbf{E}}{\partial t}$, this would just be the original Ampère’s Law, which describes how an electric current creates a magnetic field (like in an electromagnet). Maxwell’s addition was crucial because it showed that even in the absence of a physical current, a changing electric field can still produce a magnetic field.
+
+This law is key to understanding why **electromagnetic waves** (like light) can propagate through empty space. The changing electric field creates a magnetic field, and the changing magnetic field creates an electric field — a self-propagating wave.
+
+### The Bigger Picture: Electromagnetic Waves
+Maxwell’s equations, taken together, explain how electric and magnetic fields interact and propagate. If you combine Faraday's Law and Ampère’s Law, you can derive the **wave equation** for both electric and magnetic fields, showing that disturbances in these fields propagate at the speed of light.
+
+This is why light, radio waves, X-rays, and all other electromagnetic radiation are essentially **electromagnetic waves**: oscillating electric and magnetic fields that move through space, even in a vacuum.
+
+- **Faraday’s Law**: A changing magnetic field creates an electric field.
+- **Ampère’s Law**: A changing electric field creates a magnetic field.
+Together, these two effects allow electromagnetic waves to propagate through space, with the electric and magnetic fields continuously regenerating each other.
+
+### Summary of Maxwell's Equations:
+1. **Gauss’s Law**: Electric charges produce electric fields.
+2. **Gauss’s Law for Magnetism**: There are no magnetic monopoles (magnetic fields form closed loops).
+3. **Faraday’s Law**: A changing magnetic field induces an electric field.
+4. **Ampère’s Law**: Electric currents and changing electric fields produce magnetic fields.
+
+These equations form the cornerstone of classical electromagnetism and show how electric and magnetic fields are two aspects of a unified force: **electromagnetism**. They govern everything from the behavior of electric circuits to the propagation of light across the universe.
+
+```{python}
+#| label: fig-gauss_law_electric
+#| fig-cap: "Gauss's Law for Electricity: Electric Field Lines Around Charges"
+# Create a grid for the field
+x, y = np.meshgrid(np.linspace(-2, 2, 400), np.linspace(-2, 2, 400))
+
+# Define charge positions and magnitudes (positive and negative)
+charges = [(1, (0.5, 0)), (-1, (-0.5, 0))]
+
+# Initialize the electric field vectors
+Ex, Ey = np.zeros(x.shape), np.zeros(y.shape)
+
+# Loop over the charges and calculate the contribution to the field
+for charge, (cx, cy) in charges:
+    r = np.sqrt((x - cx)**2 + (y - cy)**2)
+    Ex += charge * (x - cx) / r**3
+    Ey += charge * (y - cy) / r**3
+
+# Plot the electric field lines
+plt.figure(figsize=(6, 6))
+plt.streamplot(x, y, Ex, Ey, color=np.sqrt(Ex**2 + Ey**2), linewidth=1)
+plt.plot(0.5, 0, 'ro', markersize=10, label='Positive Charge')
+plt.plot(-0.5, 0, 'bo', markersize=10, label='Negative Charge')
+
+# Labels and title
+plt.title("Gauss's Law for Electricity")
+plt.legend()
+plt.show()
+```
+
+
 
 # Lagrangian and Hamiltonian Mechanics
 > Different ways to tell the same (Newtonian) story
@@ -296,7 +420,6 @@ $$S[q(t)] = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt$$
 $$L = T - V$$
 
 The integral sums up $L$ along a specific path between $t_1$ and $t_2$
-
 
 
 
@@ -392,47 +515,27 @@ plt.show()
 
 ```
 
-```{python}
-#| label: adjusted_mechanics_comparison
-#| fig-cap: "Corrected Comparison of Newtonian, Lagrangian, and Hamiltonian Mechanics"
-# Parameters for the harmonic oscillator
-m = 1.0   # Mass (kg)
-k = 1.0   # Spring constant (N/m)
-omega = np.sqrt(k / m)  # Angular frequency
-A = 1.0  # Amplitude of oscillation
 
-# Hamiltonian mechanics: Phase space dynamics
-def hamiltonian_system(t: float, y: np.ndarray) -> np.ndarray:
-    q, p = y  # Position and momentum
-    dqdt = p / m  # dx/dt = p / m
-    dpdt = -k * q  # dp/dt = -kx
-    return [dqdt, dpdt]
-
-# Solve Hamiltonian system for phase space trajectory
-sol = solve_ivp(hamiltonian_system, [0, 10], [A, 0], t_eval=np.linspace(0, 10, 500))
-
-# Create figure and axis for the phase space plot
-fig, ax = plt.subplots(figsize=(6, 6))
-
-# Plot the phase space trajectory (position vs. momentum)
-ax.plot(sol.y[0], sol.y[1], color='red')
-ax.set_title('Hamiltonian Mechanics: Phase Space Trajectory')
-ax.set_xlabel('Position ($q$)')
-ax.set_ylabel('Momentum ($p$)')
-
-# Mark key points on the trajectory
-ax.scatter([0, 0], [1, -1], color='black', zorder=5, label='Max Momentum at $x=0$')
-ax.axhline(0, color='black', lw=0.8)  # Zero momentum line
-ax.axvline(0, color='black', lw=0.8)  # Zero position line
-
-# Add legend
-ax.legend(loc='upper right')
-
-# Display plot
-plt.show()
-
-```
 
 # Glossary
 
 - **Momentum** is the quantity of motion an object has—a measure of how hard it is to stop that object. Mathematically, it's $p = mv$, where $p$ is momentum, $m$ is mass, and $v$ is velocity.
+- **Force** is any interaction that causes an object to change its motion (accelerate or decelerate). Newton's Second Law defines force as $F = ma$, where $F$ is the force, $m$ is mass, and $a$ is acceleration.
+- **Energy** is the capacity to do work. It exists in various forms, such as kinetic energy, potential energy, thermal energy, etc. In mechanics, the most common types are:
+  - **Kinetic Energy** is the energy an object has due to its motion: $K = \frac{1}{2}mv^2$.
+  - **Potential Energy** is the energy an object has due to its position in a force field, such as gravitational potential energy $U = mgh$ for an object in Earth's gravitational field.
+- **Work** is the process of energy transfer when a force is applied to an object and it moves: $W = F \cdot d \cdot \cos(\theta)$, where $F$ is the force, $d$ is the displacement, and $\theta$ is the angle between the force and displacement vectors.
+- **Newton's Laws of Motion**:
+  - **First Law (Inertia):** An object will remain at rest or in uniform motion unless acted upon by an external force.
+  - **Second Law:** The acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass: $F = ma$.
+  - **Third Law:** For every action, there is an equal and opposite reaction.
+- **Maxwell's Equations** describe how electric and magnetic fields interact and propagate:
+  - **Gauss's Law:** The electric flux through a closed surface is proportional to the charge enclosed.
+  - **Gauss's Law for Magnetism:** Magnetic monopoles do not exist; the magnetic flux through a closed surface is zero.
+  - **Faraday's Law of Induction:** A changing magnetic field induces an electric field.
+  - **Ampère's Law (with Maxwell's correction):** Magnetic fields can be generated by electric currents and changing electric fields.
+- **Lagrangian Mechanics** is a reformulation of classical mechanics based on the principle of least action. The **Lagrangian** $L$ is defined as the difference between kinetic and potential energy: $L = T - U$. It leads to the Euler-Lagrange equations, which describe the dynamics of a system.
+- **Hamiltonian Mechanics** is another reformulation of classical mechanics, focused on energy conservation. The **Hamiltonian** $H$ is the total energy of the system (kinetic plus potential energy): $H = T + U$. It uses a set of equations called Hamilton's equations to describe the evolution of a system over time.
+- **Minkowski Space** is a four-dimensional space combining three-dimensional space with time into a single manifold, used in the theory of special relativity. It allows for a unified treatment of space and time with the **spacetime interval**: $s^2 = (ct)^2 - x^2 - y^2 - z^2$, where $c$ is the speed of light. Note how $ct$ makes the units consistent.
+- **Einstein's Theory of Special Relativity** states that the laws of physics are the same in all inertial frames, and that the speed of light in a vacuum is constant. This leads to the famous equation $E = mc^2$, which relates mass and energy. 
+- **Einstein's Theory of General Relativity** generalizes special relativity to include gravity. It describes _gravity not as a force_ but as the curvature of spacetime caused by mass and energy. Objects follow geodesics, the shortest paths, in this curved spacetime.
