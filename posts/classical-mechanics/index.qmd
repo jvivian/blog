@@ -26,15 +26,18 @@ plt.style.use('ggplot')
 # A Journey Through (Space)Time
 > _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
 
-This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_
+This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_. 
 
 - While velocity only has meaning in other reference frames, acceleration is _absolute_, and can be identified intriniscally without one (in most cases).
 - The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
 - Magnetism only exists as a relativistic effect when an object moves relative to an electric field, which helps explain why we have never observed a magnetic monopole.
-- The path a particle or system takes is always the most "economical" route through spacetime (via minimization/maximization of **action**)
+- The path a particle or system takes is always the most "economical" route through spacetime via minimization/maximization of **action**---a scalar quantity that describes how the balance of kinetic versus potential energy of a physical system changes.
 - Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\rightarrow$ energy conservation, spatial invariance $\rightarrow$ momentum conservation, and rotational symmetry $\rightarrow$ angular momentum conservation.
 - The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
+- Lorentz transformations, which describe effects like length contraction and time dilation, can be derived from the invariant spacetime interval---analagous to the Pythagorean theorem---in the geometry of Minkowski space.
 - Schwartzchild's solution to General Relativity contained a mathematical singularity -- originally thought to be a _coordinate singularity_ -- turned out to be a real _curvature singularity_ in spacetime: a blackhole.
+
+**Disclaimer**: I’m not a mathematician or physicist, so aim to clarify the meaning of each variable and operator in the equations introduced.
 
 # Acceleration is Absolute
 
@@ -427,13 +430,14 @@ plt.show()
 
 $$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
 
-Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:
-- By electric currents (moving charges), as described by the first term, $\mu_0 \mathbf{J}$.
-- By changing electric fields, as described by the second term, $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$, which is called the **displacement current** (introduced by Maxwell).
-
 - $\nabla \times \mathbf{B}$: This is the curl of the magnetic field $\mathbf{B}$, which measures how much the magnetic field "circulates" around a point.
 - $\mathbf{J}$: This is the **current density** (current per unit area).
 - $\frac{\partial \mathbf{E}}{\partial t}$: This represents the rate of change of the electric field in time.
+
+Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:
+
+- By electric currents (moving charges), as described by the first term, $\mu_0 \mathbf{J}$.
+- By changing electric fields, as described by the second term, $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$, which is called the **displacement current** (introduced by Maxwell).
 
 Ampère’s Law with Maxwell’s correction tells us that **currents** (moving charges) and **changing electric fields** generate magnetic fields. Without the time-dependent term $\frac{\partial \mathbf{E}}{\partial t}$, this would just be the original Ampère’s Law, which describes how an electric current creates a magnetic field (like in an electromagnet). Maxwell’s addition was crucial because it showed that even in the absence of a physical current, a changing electric field can still produce a magnetic field.
 
@@ -488,7 +492,69 @@ This is why light, radio waves, X-rays, and all other electromagnetic radiation 
 # Lagrangian and Hamiltonian Mechanics
 > Different ways to tell the same (Newtonian) story
 
-Instead of forces and acceleration, Lagrangian and Hamiltonian mechanics focuses on _paths, energy, and phase space_. The last is particularly useful for understanding field theory.
+In Newtonian mechanics, where $F = ma$, we focus on forces acting at a specific point in space and time to answer "What happens at the next $t$?" This approach helps us understand motion in terms of **forces** and **accelerations**.
+
+In contrast, mechanics based on action principles---Lagrangian and Hamiltonian mechanics---start from a different perspective, emphasizing the concept of **action**. Action represents an energy tradeoff between kinetic and potential energy, shaped by the system's physical properties. Instead of predicting the immediate "next step," these approaches answer questions about _paths_, e.g. which trajectory will efficiently guide a rocket to the moon?
+
+In lieu of forces, Lagrangian and Hamiltonian mechanics prioritize **paths, energy, and phase space**. Phase space, in particular, provides a powerful framework for visualizing the state of a system and plays a central role in fields like quantum mechanics and field theory.
+
+To see these differences in action, we can visualize a classical physical system---the **simple harmonic oscillator**---through the lenses of Newtonian, Lagrangian, and Hamiltonian mechanics.
+
+::: {.callout-note collapse="true"}
+## Simple Harmonic Oscillator
+
+The **Simple Harmonic Oscillator** is a fundamental model of periodic motion, where an object experiences a restoring force proportional to its distance from an equilibrium position. This force always acts toward the equilibrium, driving the object back whenever it is displaced.
+
+```{python}
+#| label: fig-SHO
+#| fig-cap: This mass-spring system illustrates the concept of a simple harmonic oscillator, where the restoring force is proportional to displacement. This same principle applies in other contexts such as pendulums, which exhibit harmonic motion at small angles. LC circuits, oscillate energy between electric and magnetic fields. This even extends to quantum harmonic oscillator models which models particles in a potential well.
+
+fig, ax = plt.subplots(figsize=(8, 4))
+
+# Parameters for the mass-spring system visualization
+spring_length = 1.0  # length of the spring at rest
+displacement = 0.5   # displacement from equilibrium
+mass_position = spring_length + displacement  # position of the mass due to displacement
+
+# Draw the spring as a sinusoidal curve
+spring_x = np.linspace(0, spring_length + displacement, 100)
+spring_y = 0.1 * np.sin(10 * np.pi * spring_x / (spring_length + displacement))  # Wavy pattern for spring effect
+ax.plot(spring_x, spring_y, color='black', linewidth=2, label="Spring")
+
+# Draw the mass as a box
+mass_width, mass_height = 0.2, 0.2
+mass_x = [mass_position - mass_width / 2, mass_position + mass_width / 2, 
+          mass_position + mass_width / 2, mass_position - mass_width / 2, 
+          mass_position - mass_width / 2]
+mass_y = [-mass_height / 2, -mass_height / 2, mass_height / 2, mass_height / 2, -mass_height / 2]
+ax.fill(mass_x, mass_y, color='gray', label="Mass")
+
+# Indicate equilibrium position with a dashed line
+ax.axvline(spring_length, color='blue', linestyle='--', linewidth=1)
+ax.text(spring_length, 0.25, 'Equilibrium Position', color='blue', ha='center', fontsize=10)
+
+# Draw restoring force arrow
+ax.arrow(mass_position, 0, -0.3, 0, head_width=0.05, head_length=0.1, fc='red', ec='red', label="Restoring Force")
+ax.text(mass_position - 0.35, 0.05, r"$F = -kx$", color='red', fontsize=12)
+
+# Annotate displacement
+ax.annotate("Displacement (x)", xy=(mass_position - displacement / 2, 0.2), xytext=(mass_position + 0.2, 0.3),
+            arrowprops=dict(facecolor='black', arrowstyle="->"), fontsize=10)
+
+# Axis limits and labels
+ax.set_xlim(0, spring_length + displacement + 0.5)
+ax.set_ylim(-0.5, 0.5)
+ax.axis("off")  # Turn off axis for a clean look
+
+# Legend and Display
+plt.legend(loc="upper left", fontsize=10)
+
+# Show the plot
+plt.show()
+```
+
+:::
+
 
 ```{python}
 #| label: fig-corrected_mechanics_comparison
@@ -564,11 +630,91 @@ $$S[q(t)] = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt$$
 
 $$L = T - V$$
 
-The integral sums up $L$ along a specific path between $t_1$ and $t_2$
+In essence, the action integral sums up the Lagrangian $L$ over a specific path from $t_1$ to $t_2$. This principle of minimizing the action is known as the _principle of least action_, and it gives us the most efficient or "natural" path a system will take.
 
+### The Euler-Lagrange Equation
+
+We're still missing one component---a condition that allows us to minimize the Lagrangian. Thankfully someone way smarter than any of us worked out the rather elegant solution, the **Euler-Lagrange equation**:
+
+$$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0$$
+
+- **$\frac{\partial L}{\partial \dot{q}}$**: This is the **partial derivative of the Lagrangian with respect to the velocity** $\dot{q}$. It measures how sensitive the Lagrangian is to changes in the system's velocity.
+- **$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right)$**: This term takes the time derivative of the above quantity, capturing how this sensitivity changes as the system evolves over time.
+- **$\frac{\partial L}{\partial q}$**: This is the **partial derivative of the Lagrangian with respect to position** $q$. It measures how sensitive the Lagrangian is to changes in the system's position.
+
+The **Euler-Lagrange equation** tells us that, for the actual path taken by the system, these two rates of change are equal and opposite.
+
+#### Intuition Behind the Equation
+
+The Euler-Lagrange equation is the mathematical expression of the **principle of least action**. It provides the conditions under which the action $S$ is minimized. 
+
+To build intuition around this concept, let's imagine a ball rolling down a _frictionless_ hill.
+
+When the ball starts at the top of the hill, it has maximum potential energy (due to height and the acceleration from gravity) and zero kinetic energy (energy due to motion). As it begins rolling down, gravity pulls it lower, decreasing its potential energy. But energy can’t just disappear—instead, it converts into kinetic energy, causing the ball to speed up.
+
+The ball follows a path where potential energy smoothly turns into kinetic energy as it descends. The principle of least action explains this smooth exchange by "favoring" paths where energy changes are gradual and balanced.
+
+When the ball reaches the bottom, it’s out of hill to roll down. Its potential energy is minimized, and all the energy it gained from descending has been converted into kinetic energy. 
+
+This trade-off between potential and kinetic energy is natural because it minimizes abrupt changes in energy. A path where energy flowed in sharp bursts or stopped suddenly would require additional forces or disruptions. A smooth path minimizes these disturbances, making it the most efficient in terms of conserving energy while following the laws of physics.
+
+If this process sounds similar to **heat diffusion**, you're doin good baby. Both are examples of the Universe's tendency towards _equilibrium_ while maintaining _conservation_.
+
+::: {.callout-tip}
+## TLDR
+Any change in kinetic energy is exactly offset by an opposite change in potential energy, and vice versa. 
+:::
+
+
+::: {.callout-note collapse="true"}
+## The Action of Simple Harmonic Motion
+
+To see the action integral in action (hehe), let’s examine a **simple harmonic oscillator**, such as a mass attached to a spring and solve for the Lagrangian.
+
+**Kinetic Energy $T$**
+
+For an object of mass $m$ moving with velocity $\dot{q}$, the kinetic energy $T$ is given by:
+$$T = \frac{1}{2} m \dot{q}^2$$
+
+**Potential Energy $V$**
+
+For a spring with spring constant $k$, the potential energy $V$ depends on the displacement $q$ from equilibrium:
+$$V = \frac{1}{2} k q^2$$
+
+**Lagrangian $L = T - V$**  
+
+Substituting the expressions for $T$ and $V$:
+
+$$L = T - V = \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2$$
+
+**Action Integral**
+
+To find the path $q(t)$ that the system takes between times $t_1$ and $t_2$, we evaluate the action integral:
+$$S[q(t)] = \int_{t_1}^{t_2} \left( \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2 \right) \, dt$$
+
+**Finding the Path (Euler-Lagrange Equation)**
+
+Applying the **Euler-Lagrange equation** to the Lagrangian leads to the equation of motion:
+$$\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0$$
+
+Solving this gives the differential equation for a simple harmonic oscillator:
+$$m \ddot{q} + k q = 0$$
+
+which has solutions in the form of sinusoidal functions, describing the oscillatory motion $q(t)$ over time.
+
+If you squint, you'll see we've derived **Hooke's Law**. Since $\ddot{q} = a$ and $F=ma$:
+
+$$ ma = F = - kq $$
+
+where $k$ is the _spring constant_ AKA restoring force over the distance ($\frac{N}{m}$).
+
+:::
 
 
 # Minkowski Space
+> _Roads? Where we're going, we don't need roads_ [^3]
+
+[^3]: Dr. Emmmet Brown - Back to the Future
 
 ```{python}
 #| label: fig-minkowski_light_cone
