@@ -702,14 +702,103 @@ $$m \ddot{q} + k q = 0$$
 
 which has solutions in the form of sinusoidal functions, describing the oscillatory motion $q(t)$ over time.
 
+::: {.callout-warning collapse="true"}
+## Hey not so fast, where the hell is $q(t)$?
+Ok, ok sorry. I tried to pull a fast one. Solving the Lagrangian only gave us this differential equation—it didn’t directly give us the solution for 
+$q(t)$, which is the explicit path or trajectory of the system over time. 
+
+We can rewrite our solution as
+
+$$\ddot{q} + \frac{k}{m}q=0$$
+
+
+Let $\omega = \sqrt{\frac{k}{m}}$, where $\omega$ is the **angular frequency** of the oscillator. Now the equation becomes:
+$$\ddot{q} + \omega^2 q = 0$$
+
+This equation has a general solution of the form:
+$$q(t) = A \cos(\omega t) + B \sin(\omega t)$$
+where $A$ and $B$ are constants determined by the initial conditions of the system (such as initial position and velocity).
+
+::: {.callout-important collapse="true"}
+## But wait, why is that the general solution?
+Oh my god fuck off already
+:::
+
+### Interpretation
+This solution, $q(t) = A \cos(\omega t) + B \sin(\omega t)$, is the explicit **time-dependent path** or **trajectory** that the oscillator follows. It describes the oscillatory motion in terms of time, with:
+
+- $\omega$: The frequency of oscillation, showing how quickly the system oscillates.
+- $A$ and $B$: Constants that depend on the starting conditions (e.g., where and how fast the mass was initially moving).
+:::
+
 If you squint, you'll see we've derived **Hooke's Law**. Since $\ddot{q} = a$ and $F=ma$:
 
 $$ ma = F = - kq $$
 
 where $k$ is the _spring constant_ AKA restoring force over the distance ($\frac{N}{m}$).
 
+
 :::
 
+## The Hamiltonian Reform(ul)ation
+> Puttin' big E first
+
+We spent a a bit of time on Lagrangian mechanics because it also requires introduces several other interesting concepts like _the principle of least action_. The good news is we've done a lot of the heavy lifting and there's nothing too crazy about now thinking about Hamiltonian mechanics, where we shift from _paths_ to _energies_.
+
+While the Lagrangian $L = T - V$ is built around action, the Hamiltonian is a powerful reformulation that shifts the focus to energy. The Hamiltonian $H$ typically represents the total energy of a system $H = T + V$ (kinetic + potential energy) and is built to highlight conservation laws.
+
+Unlike the Lagrangian, the Hamiltonian only depends on the position $q$ and momentum $p$, but not directly on $t$ itself. This approach introduces **phase space** (a space defined by positions and momenta), allowing viusalization of a system’s entire state at any moment. Shifting from position/velocity to position/momentum reveals insights about stability, resonance, and even chaotic behavior in systems.
+
+Reviewing @fig-corrected_mechanics_comparison now may be elucidating. First, the phase space for the simple harmonic oscillator shows energy is conserved (closed ellipse). Second, thinking back to our ball-on-a-hill example and starting from the left and rolling down hill to the right, would hit maximum momentum at the bottom of the hill ($x=0$) and as it oscillated forever back-and-forth would follow a clockwise path around the ellipse (rolling back to where we started in this coordinate system means negative velocity therefore negative momentum).
+
+::: {.callout-note collapse="true"}
+## Simple Harmonic Hamiltonian
+> Here we can shortcut since we already did the Lagrangian solution.
+
+$$L = T - V = \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2$$
+
+**Define the Hamiltonian $H = T + V$ in Terms of Position and Momentum**
+
+To switch to the Hamiltonian formalism, we need to express the system in terms of **position $q$** and **momentum $p$**, where momentum $p$ is defined as:
+$$p = \frac{\partial L}{\partial \dot{q}} = m \dot{q}$$
+
+Now, let’s express the **Hamiltonian** $H$, which for many systems is the **total energy** $T + V$:
+$$H = T + V = \frac{p^2}{2m} + \frac{1}{2} k q^2$$
+
+So, the Hamiltonian for a simple harmonic oscillator is:
+$$H(q, p) = \frac{p^2}{2m} + \frac{1}{2} k q^2$$
+
+**Interpret the Hamiltonian**
+
+The Hamiltonian here represents the **total energy** of the oscillator, with:
+
+- $\frac{p^2}{2m}$: The **kinetic energy** in terms of momentum $p$
+- $\frac{1}{2} k q^2$: The **potential energy** stored in the spring
+
+**Derive the Equations of Motion Using Hamilton’s Equations**
+
+In Hamiltonian mechanics, we use **Hamilton’s equations** to describe the time evolution of the system:
+
+$$\dot{q} = \frac{\partial H}{\partial p} \quad \text{and} \quad \dot{p} = -\frac{\partial H}{\partial q}$$
+
+Applying these to our Hamiltonian:
+1. **Find $\dot{q}$**:
+   $$\dot{q} = \frac{\partial H}{\partial p} = \frac{p}{m}$$
+   This confirms our definition of momentum, $p = m \dot{q}$.
+
+2. **Find $\dot{p}$**:
+   $$\dot{p} = -\frac{\partial H}{\partial q} = -k q$$
+   This gives us the familiar equation of motion for a simple harmonic oscillator:
+   $$m \ddot{q} + k q = 0$$
+
+**Visualizing in Phase Space**
+
+The Hamiltonian approach naturally introduces **phase space**, where each point represents a state of the system with coordinates $(q, p)$. For a simple harmonic oscillator:
+- The system’s trajectory in phase space forms an **ellipse**.
+- This elliptical trajectory represents the **conservation of total energy**: as the oscillator moves, $q$ and $p$ oscillate back and forth, but the total energy (Hamiltonian) remains constant.
+
+This example highlights the power of the Hamiltonian formalism in tracking **conserved quantities** and understanding **system behavior** in phase space.
+:::
 
 # Minkowski Space
 > _Roads? Where we're going, we don't need roads_ [^3]
@@ -753,6 +842,54 @@ ax.legend(loc='upper right')
 # Display plot
 plt.show()
 
+```
+
+```{python}
+#| label: fig-pythag
+#| fig-cap: Real Time in Minkowski space
+
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Define the light cone (45-degree lines) for reference
+x = np.linspace(-10, 10, 400)
+t = np.abs(x)  # Light moves at 45 degrees, so t = |x|
+
+# Plot the light cone as dashed lines
+ax.plot(x, t, 'k--', alpha=0.5, label="Light Path (c)")
+ax.plot(x, -t, 'k--', alpha=0.5)
+
+# Coordinates for an example object moving slower than light
+x_object = 6
+t_object = 8
+s_object = np.sqrt((t_object)**2 - (x_object)**2)  # Proper time (tau), the hypotenuse
+
+# Draw the object’s path
+ax.plot([0, x_object], [0, t_object], color='blue', label="Object Path")
+ax.plot([0, x_object], [0, 0], 'b:', linewidth=1)  # Projected x-component
+ax.plot([x_object, x_object], [0, t_object], 'b:', linewidth=1)  # Projected t-component
+
+# Draw the hypotenuse representing real time (proper time)
+ax.annotate(r"$\tau$ (Proper Time)", xy=(x_object/2, t_object/2), xytext=(x_object/2 + 1, t_object/2 + 1),
+            arrowprops=dict(facecolor='blue', arrowstyle="->"), fontsize=12, color='blue')
+
+# Label and annotate
+ax.text(x_object + 0.5, t_object, r"$(x, t)$", fontsize=12, color="blue")
+ax.text(x_object/2 + 1, -0.5, "Space (x)", ha="center", fontsize=12)
+ax.text(0.5, t_object/2 + 1, "Time (t)", ha="center", rotation=90, fontsize=12)
+ax.text(x_object - 3, t_object + 1, r"$s = \sqrt{c^2 t^2 - x^2}$", fontsize=12, color="blue")
+
+# Set axis limits and labels
+ax.set_xlim(-10, 10)
+ax.set_ylim(-10, 10)
+ax.set_xlabel("Space (x)", fontsize=12)
+ax.set_ylabel("Time (t)", fontsize=12)
+
+# Legend and display adjustments
+ax.legend(loc="upper left")
+ax.axhline(0, color='black',linewidth=0.5)
+ax.axvline(0, color='black',linewidth=0.5)
+
+plt.show()
 ```
 
 ```{python}
