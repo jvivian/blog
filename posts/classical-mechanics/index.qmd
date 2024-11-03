@@ -10,8 +10,8 @@ format:
     toc-depth: 2
     echo: false
 editor: visual
-execute: 
-    render-on-save: true
+execute:
+  render-on-save: true
 tools:
   - mermaid
 ---
@@ -32,9 +32,9 @@ This overview is roughly structured by the concepts I found most profound while 
 - The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
 - Magnetism only exists as a relativistic effect when an object moves relative to an electric field, which helps explain why we have never observed a magnetic monopole.
 - The path a particle or system takes is always the most "economical" route through spacetime (via minimization/maximization of **action**)
-- Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\Leftrightarrow$ energy conservation, spatial invariance $\Leftrightarrow$ momentum conservation, and rotational symmetry $\Leftrightarrow$ angular momentum conservation.
+- Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\rightarrow$ energy conservation, spatial invariance $\rightarrow$ momentum conservation, and rotational symmetry $\rightarrow$ angular momentum conservation.
 - The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
-- Schwartzchild's solution to General Relativity, contained a mathematical singularity which was originally thought to be a mistake but is now known to be a _real_ singularity in spacetime.
+- Schwartzchild's solution to General Relativity contained a mathematical singularity -- originally thought to be a _coordinate singularity_ -- turned out to be a real _curvature singularity_ in spacetime: a blackhole.
 
 # Acceleration is Absolute
 
@@ -228,85 +228,42 @@ $$F = G\frac{m_1m_2}{r^2}$$
 Why is $r$ squared? Why not quadrupled or halved? The inverse square relationship emerges as a property of living in three dimensions. The volume of a sphere increases with the square of the radius: $4\pi r^2$.
 
 # Maxwell's Equations
+> Quote here
+
+Maxwell's Equations elegantly describe the behavior of electric and magnetic fields, revealing that these two forces are not separate but deeply interconnected. They provide a unified framework for understanding how electric charges and currents create fields that interact, propagate, and influence each other, ultimately giving rise to light itself. 
 
 ## **Gauss's Law (Electric Field)**
 
 $$\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}$$
 
-**Meaning:**
-Gauss's Law describes the relationship between electric charges and the electric field they produce. Specifically, it states that the electric flux (the "flow" of the electric field) through a closed surface is proportional to the total charge enclosed within that surface.
+:::{.callout-note collapse="true"}
+## Understanding the Del Operator ($\nabla$) in Maxwell’s Equations
+
+The **del operator** ($\nabla$) is a vector operator that captures how quantities change in space, and it’s central to expressing Maxwell’s equations in a compact, powerful form. 
+
+1. **Gradient ($\nabla \phi$)**: When applied to a scalar field $\phi$, $\nabla$ (del) gives the **gradient**, pointing in the direction of the greatest rate of change. For example, in an electric potential field $\phi$, the gradient $\vec{E} = -\nabla\phi$ tells us how the electric field varies in space.
+
+2. **Divergence ($\nabla \cdot$)**: When $\nabla$ is applied to a vector field with a dot product ($\nabla \cdot$), it gives the **divergence**. Divergence measures the “outflow” or “inflow” of a field at a point:
+   - **Gauss’s Law for Electricity** $(\nabla·\vec{E} = \frac{ρ}{ε_0})$: This tells us that the electric field $\vec{E}$ diverges from electric charges.
+   - **Gauss’s Law for Magnetism** $(\nabla·\vec{B} = 0)$: This shows that magnetic field lines have no divergence—they form closed loops, indicating no magnetic monopoles.
+
+3. **Curl ($\nabla \times$)**: When $\nabla$ is applied to a vector field with a cross product ($\nabla \times$), it gives the **curl**, measuring the “rotation” or “circulation” of a field:
+   - **Faraday’s Law** $(\nabla×\vec{E} = -\frac{∂\vec{B}}{∂t})$: A changing magnetic field $\vec{B}$ induces a circulating electric field $\vec{E}$.
+   - **Ampère’s Law (with Maxwell’s Correction)** $(\nabla×\vec{B} = μ_0\vec{J} + μ_0ε_0\frac{∂\vec{E}}{∂t})$: A changing electric field $\vec{E}$ or current density $\vec{J}$ induces a circulating magnetic field $\vec{B}$.
+
+### Summary:
+The del operator ($\nabla$) is a vector operator that operates on a:
+- **Gradient ($\nabla\phi$)**: scalar field, producing a vector field.
+- **Divergence ($\nabla\cdot$)**: vector field, producing a scalar field.
+- **Curl ($\nabla\times$)**: vector field, producing a vector field.
+:::
+
+
+Gauss's Law describes the relationship between electric charges and the electric field they produce. Specifically, it states that the electric flux (the "flow" of the electric field) through a closed surface is proportional to the total charge enclosed within that surface. For example, the electric field around a point charge (like an electron) points away from the charge if it's positive, and towards the charge if it's negative. The strength of the field is directly related to the amount of charge.
 
 - $\nabla \cdot \mathbf{E}$: This is the divergence of the electric field $\mathbf{E}$, which essentially measures how much the electric field is "spreading out" from a point.
 - $\rho$: This represents the **charge density** (charge per unit volume). The more charge you have in a given region, the stronger the electric field diverges from that region.
 - $\epsilon_0$: This is the **permittivity of free space**, a constant that determines how electric fields interact in a vacuum.
-
-**Interpretation:**
-Gauss's Law tells us that **electric charges are the source of electric fields**. Positive charges create outward-directed electric fields, and negative charges create inward-directed fields.
-
-For example, the electric field around a point charge (like an electron) points away from the charge if it's positive, and towards the charge if it's negative. The strength of the field is directly related to the amount of charge.
-
-##  **Gauss's Law for Magnetism**
-
-$$\nabla \cdot \mathbf{B} = 0$$
-
-**Meaning:**
-This law states that there are **no magnetic monopoles** — that is, there are no isolated north or south magnetic poles. Magnetic fields ($\mathbf{B}$) always form closed loops. Every magnetic field line that leaves a north pole must eventually return to a south pole.
-
-- $\nabla \cdot \mathbf{B}$: This is the divergence of the magnetic field $\mathbf{B}$, which measures how much the magnetic field is "spreading out" from a point.
-- The fact that it's equal to zero means that the net magnetic "flux" through any closed surface is always zero, implying that magnetic field lines don’t begin or end at any point (unlike electric fields, which start or end on charges).
-
-**Interpretation:**
-This law tells us that there are no magnetic charges (monopoles) in nature — we only observe dipoles (like bar magnets, with both north and south poles). Magnetic field lines form loops, with no starting or ending point.
-
-## **Faraday's Law of Induction**
-$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
-
-**Meaning:**
-Faraday’s Law explains how a changing magnetic field creates an electric field. If you have a time-varying magnetic field ($\mathbf{B}$), it induces a circulating electric field ($\mathbf{E}$). This is the principle behind electromagnetic induction, which is used in transformers and electric generators.
-
-- **$\nabla \times \mathbf{E}$**: This is the curl of the electric field $\mathbf{E}$, which measures how much the electric field is "circulating" around a point.
-- **$\frac{\partial \mathbf{B}}{\partial t}$**: This is the time rate of change of the magnetic field. It represents how the magnetic field is changing in time.
-- The negative sign indicates that the induced electric field opposes the change in the magnetic field (this is Lenz's law).
-
-**Interpretation:**
-Faraday’s Law describes how **changing magnetic fields induce electric fields**. For example, moving a magnet through a coil of wire induces a current in the wire, because the magnetic field through the coil is changing.
-
-In a more general sense, this law explains how electric generators work. When a magnet is spun around near a coil of wire, the changing magnetic field induces an electric current in the wire, which we can then use as electrical power.
-
-## **Ampère's Law (with Maxwell’s Correction)**
-
-$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
-
-**Meaning:**
-Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:
-- By electric currents (moving charges), as described by the first term, $\mu_0 \mathbf{J}$.
-- By changing electric fields, as described by the second term, $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$, which is called the **displacement current** (introduced by Maxwell).
-
-- $\nabla \times \mathbf{B}$: This is the curl of the magnetic field $\mathbf{B}$, which measures how much the magnetic field "circulates" around a point.
-- $\mathbf{J}$: This is the **current density** (current per unit area).
-- $\frac{\partial \mathbf{E}}{\partial t}$: This represents the rate of change of the electric field in time.
-
-**Interpretation:**
-Ampère’s Law with Maxwell’s correction tells us that **currents** (moving charges) and **changing electric fields** generate magnetic fields. Without the time-dependent term $\frac{\partial \mathbf{E}}{\partial t}$, this would just be the original Ampère’s Law, which describes how an electric current creates a magnetic field (like in an electromagnet). Maxwell’s addition was crucial because it showed that even in the absence of a physical current, a changing electric field can still produce a magnetic field.
-
-This law is key to understanding why **electromagnetic waves** (like light) can propagate through empty space. The changing electric field creates a magnetic field, and the changing magnetic field creates an electric field — a self-propagating wave.
-
-### The Bigger Picture: Electromagnetic Waves
-Maxwell’s equations, taken together, explain how electric and magnetic fields interact and propagate. If you combine Faraday's Law and Ampère’s Law, you can derive the **wave equation** for both electric and magnetic fields, showing that disturbances in these fields propagate at the speed of light.
-
-This is why light, radio waves, X-rays, and all other electromagnetic radiation are essentially **electromagnetic waves**: oscillating electric and magnetic fields that move through space, even in a vacuum.
-
-- **Faraday’s Law**: A changing magnetic field creates an electric field.
-- **Ampère’s Law**: A changing electric field creates a magnetic field.
-Together, these two effects allow electromagnetic waves to propagate through space, with the electric and magnetic fields continuously regenerating each other.
-
-### Summary of Maxwell's Equations:
-1. **Gauss’s Law**: Electric charges produce electric fields.
-2. **Gauss’s Law for Magnetism**: There are no magnetic monopoles (magnetic fields form closed loops).
-3. **Faraday’s Law**: A changing magnetic field induces an electric field.
-4. **Ampère’s Law**: Electric currents and changing electric fields produce magnetic fields.
-
-These equations form the cornerstone of classical electromagnetism and show how electric and magnetic fields are two aspects of a unified force: **electromagnetism**. They govern everything from the behavior of electric circuits to the propagation of light across the universe.
 
 ```{python}
 #| label: fig-gauss_law_electric
@@ -338,6 +295,194 @@ plt.legend()
 plt.show()
 ```
 
+
+##  **Gauss's Law for Magnetism**
+
+$$\nabla \cdot \mathbf{B} = 0$$
+
+This law states that there are **no magnetic monopoles** — that is, no isolated north or south magnetic poles. Magnetic fields ($\mathbf{B}$) always form closed loops. Every magnetic field line that leaves a north pole must eventually return to a south pole.
+
+- $\nabla \cdot \mathbf{B}$: This is the divergence of the magnetic field $\mathbf{B}$, which measures how much the magnetic field is "spreading out" from a point.
+- The fact that it's equal to zero means that the net magnetic "flux" through any closed surface is always zero, implying that magnetic field lines don’t begin or end at any point (unlike electric fields, which start or end on charges).
+
+```{python}
+#| label: fig-magnetic
+#| fig-cap: Magnetic field lines around a magnetic point
+
+# Grid for the contour plot
+x = np.linspace(-3, 3, 100)
+y = np.linspace(-3, 3, 100)
+X, Y = np.meshgrid(x, y)
+
+# Calculate a hypothetical magnetic dipole field in 2D for visualization
+# Assuming a simple dipole approximation
+B_x = -Y / (X**2 + Y**2)**1.5  # Field component in x direction
+B_y = X / (X**2 + Y**2)**1.5  # Field component in y direction
+
+# Magnitude of the field for contour levels
+B_magnitude = np.sqrt(B_x**2 + B_y**2)
+
+# Create the contour plot
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Plot the field lines as contours
+contour = ax.contour(X, Y, B_magnitude, levels=10, cmap="viridis", alpha=0.75)
+ax.clabel(contour, inline=True, fontsize=8, fmt="%.2f")
+
+# Add streamplot to show the direction of the magnetic field
+ax.streamplot(X, Y, B_x, B_y, color="darkred", linewidth=1, density=1.5, arrowsize=1.5)
+
+# Plot Gaussian surface as a dashed circle to emphasize the zero net flux
+surface_radius = 2.5
+theta = np.linspace(0, 2 * np.pi, 100)
+x_surface = surface_radius * np.cos(theta)
+y_surface = surface_radius * np.sin(theta)
+ax.plot(x_surface, y_surface, 'k--', label="Gaussian Surface")
+
+# Annotate the North and South poles for reference
+ax.text(0, 2.8, "N", ha='center', va='center', fontsize=14, color='blue')
+ax.text(0, -2.8, "S", ha='center', va='center', fontsize=14, color='blue')
+
+# Labels, legend, and aesthetic adjustments
+ax.legend(loc="upper right")
+ax.axis("equal")
+ax.axis("off")
+
+# Display the plot
+plt.show()
+```
+
+
+## **Faraday's Law of Induction**
+$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
+
+**Meaning:**
+Faraday’s Law explains how a changing magnetic field creates an electric field. If you have a time-varying magnetic field ($\mathbf{B}$), it induces a circulating electric field ($\mathbf{E}$). This is the principle behind electromagnetic induction, which is used in transformers and electric generators. When a magnet is spun around near a coil of wire, the changing magnetic field induces an electric current in the wire, which we can then use as electrical power.
+
+- **$\nabla \times \mathbf{E}$**: This is the curl of the electric field $\mathbf{E}$, which measures how much the electric field is "circulating" around a point.
+- **$\frac{\partial \mathbf{B}}{\partial t}$**: This is the time rate of change of the magnetic field. It represents how the magnetic field is changing in time.
+- The negative sign indicates that the induced electric field opposes the change in the magnetic field (this is Lenz's law).
+
+```{python}
+#| label: fig-faraday
+#| fig-cap: Changing magnetic fields induce electric fields
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Set up the figure and 3D axes with ggplot style
+plt.style.use('ggplot')
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Parameters for the waves
+x = np.linspace(0, 20, 1000)  # Position along the propagation direction (x-axis)
+k = 2 * np.pi / 5             # Wave number
+omega = 2 * np.pi / 5         # Angular frequency
+t = 0                         # Time (static snapshot)
+E0 = 1                        # Electric field amplitude
+B0 = 1                        # Magnetic field amplitude
+
+# Calculate the electric and magnetic fields as sinusoidal waves
+E = E0 * np.sin(k * x - omega * t)  # Electric field (along y-axis)
+B = B0 * np.sin(k * x - omega * t)  # Magnetic field (along z-axis)
+
+# Plot the electric field
+ax.plot(x, E, np.zeros_like(x), color='blue', label='Electric Field (E)', linewidth=2)
+# Plot the magnetic field
+ax.plot(x, np.zeros_like(x), B, color='red', label='Magnetic Field (B)', linewidth=2)
+
+# Add a dotted arrow along the x-axis to represent the direction of wave propagation
+ax.plot(x, np.zeros_like(x), np.zeros_like(x), 'k--', label='Propagation Direction (x)', linewidth=1.5)
+
+# Customize the view angle for a clear perspective
+ax.view_init(elev=30, azim=60)
+
+# Labels and legend for clarity
+ax.set_xlabel('Propagation Direction (x)', fontsize=12)
+ax.set_ylabel('Electric Field (E)', fontsize=12)
+ax.set_zlabel('Magnetic Field (B)', fontsize=12)
+ax.legend(fontsize=12)
+
+# Minimalist aesthetics: turn off grid panes for a cleaner look
+ax.grid(False)
+ax.xaxis.pane.fill = False
+ax.yaxis.pane.fill = False
+ax.zaxis.pane.fill = False
+ax.xaxis.pane.set_edgecolor('w')
+ax.yaxis.pane.set_edgecolor('w')
+ax.zaxis.pane.set_edgecolor('w')
+ax.set_xticks([])
+ax.set_yticks([])
+ax.set_zticks([])
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+## **Ampère's Law (with Maxwell’s Correction)**
+
+$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
+
+Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:
+- By electric currents (moving charges), as described by the first term, $\mu_0 \mathbf{J}$.
+- By changing electric fields, as described by the second term, $\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}$, which is called the **displacement current** (introduced by Maxwell).
+
+- $\nabla \times \mathbf{B}$: This is the curl of the magnetic field $\mathbf{B}$, which measures how much the magnetic field "circulates" around a point.
+- $\mathbf{J}$: This is the **current density** (current per unit area).
+- $\frac{\partial \mathbf{E}}{\partial t}$: This represents the rate of change of the electric field in time.
+
+Ampère’s Law with Maxwell’s correction tells us that **currents** (moving charges) and **changing electric fields** generate magnetic fields. Without the time-dependent term $\frac{\partial \mathbf{E}}{\partial t}$, this would just be the original Ampère’s Law, which describes how an electric current creates a magnetic field (like in an electromagnet). Maxwell’s addition was crucial because it showed that even in the absence of a physical current, a changing electric field can still produce a magnetic field.
+
+```{python}
+#| label: fig-ampere
+#| fig-cap: The opposite of Faraday's Law - a time-varying electric field is the source of an induced magnetic field.
+# Re-plotting with only "dE/dt" to emphasize the time-varying electric field as the source of the induced magnetic field
+
+# Set up the figure with ggplot style for aesthetics
+fig, ax = plt.subplots(figsize=(8, 8))
+ax.set_aspect('equal')
+
+# Define parameters for the capacitor plates and electric field lines
+plate_width = 1.0
+plate_length = 4.0
+plate_offset = 1.5
+
+# Plot the capacitor plates with color-coded charges
+ax.plot([-plate_length / 2, plate_length / 2], [plate_offset, plate_offset], color='red', lw=4, label="Capacitor Plate (+)")
+ax.plot([-plate_length / 2, plate_length / 2], [-plate_offset, -plate_offset], color='black', lw=4, label="Capacitor Plate (-)")
+
+# Electric field lines between capacitor plates (vertical lines indicating field change)
+for i in np.linspace(-plate_length / 2, plate_length / 2, 6):
+    ax.arrow(i, -plate_offset, 0, 2 * plate_offset, head_width=0.1, head_length=0.2, fc='blue', ec='blue')
+
+# Magnetic field lines (circling the changing electric field in the gap)
+theta = np.linspace(0, 2 * np.pi, 100)
+for radius in [2.2, 2.7, 3.2]:  # Multiple circles for the magnetic field lines
+    x = radius * np.cos(theta)
+    y = radius * np.sin(theta)
+    ax.plot(x, y, color='orange', linestyle='--', lw=1.5, alpha=0.8, label="Induced Magnetic Field" if radius == 2.2 else "")
+
+# Annotation to highlight the changing electric field (dE/dt)
+ax.text(0, -plate_offset - 0.5, "dE/dt (Changing Electric Field)", ha='center', color='blue', fontsize=12)
+ax.text(3.5, 0, "B (Induced Magnetic Field)", color='orange', fontsize=12, rotation=90)
+
+# Minimalist aesthetics
+ax.axis("off")
+ax.legend(loc="upper right")
+
+# Display the plot
+plt.tight_layout()
+plt.show()
+```
+
+### The Bigger Picture: Electromagnetic Waves
+Maxwell’s equations, taken together, explain how electric and magnetic fields interact and propagate. If you combine Faraday's Law and Ampère’s Law, you can derive the **wave equation** for both electric and magnetic fields, showing that disturbances in these fields propagate at the speed of light. Together, these two effects allow electromagnetic waves to propagate through space, with the electric and magnetic fields continuously regenerating each other.
+
+This is why light, radio waves, X-rays, and all other electromagnetic radiation are essentially **electromagnetic waves**: oscillating electric and magnetic fields that move through space, even in a vacuum.
 
 
 # Lagrangian and Hamiltonian Mechanics
