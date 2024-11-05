@@ -25,7 +25,12 @@ plt.style.use('ggplot')
 
 > _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
 
-This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_. 
+[^1]: Isaac Newton
+
+::: {.callout-note}
+## Motivation
+This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_.
+:::
 
 - While velocity only has meaning in other reference frames, acceleration is _absolute_, and can be identified intriniscally without one (in most cases).
 - The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
@@ -34,19 +39,22 @@ This overview is roughly structured by the concepts I found most profound while 
 - Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\rightarrow$ energy conservation, spatial invariance $\rightarrow$ momentum conservation, and rotational symmetry $\rightarrow$ angular momentum conservation.
 - The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
 - Lorentz transformations, which describe effects like length contraction and time dilation, can be derived from the invariant spacetime interval---analagous to the Pythagorean theorem---in the geometry of Minkowski space.
-- Schwartzchild's solution to General Relativity contained a mathematical singularity -- originally thought to be a _coordinate singularity_ -- turned out to be a real _curvature singularity_ in spacetime: a blackhole.
+- Schwartzchild's solution to General Relativity contained a curious mathematical singularity which -- originally thought to be a _coordinate singularity_ -- turned out to be a real _curvature singularity_ in spacetime: the infamous blackhole.
 
-**Disclaimer**: I’m not a mathematician or physicist, so aim to clarify the meaning of each variable and operator in the equations introduced.
+::: {.callout-warning}
+## Disclaimer
+I’m neither a mathematician or physicist but do my best to clarify the meaning of each variable and operator in the equations introduced.
+:::
 
-# Acceleration is Absolute
+# Absolute Power, Absolute Acceleration
 
-Imagine yourself in deep space, with only distant stars as a backdrop. Would it be possible to tell if you were moving? Nope. As Einstein showed, velocity only has meaning relative to another reference frame. If two people drifted past each other, neither could determine who was stationary or moving, or if they were both moving at once.
+Imagine yourself floating in deep space, with only distant stars as a backdrop. Would you be able to tell if you were moving? Surprisingly, no. As Einstein demonstrated, **velocity only has meaning relative to another reference frame**. If two people drift past each other, neither can determine who is “stationary” or “moving” in any absolute sense—both could be moving, or one could be stationary. In empty space, without other points of reference, velocity becomes entirely relative.
 
-Imagine yourself in space with no nearby objects, only distant stars; would it be possible to tell you are moving? Nope. As Einstein later proved, velocity only has context relative to another reference frame. Two people moving in in the same environment past each other would not be able to conclude whether one person was stationary and the other was moving or if both people are moving.
+Oddly, _acceleration is different_. If you were suddenly accelerated in your spacesuit, you’d feel it immediately—your body would press against the suit, jerking you forward. Acceleration creates a force that acts on you directly, causing a _force gradient_ you can feel. Unlike velocity, which requires no force to sustain, acceleration always involves a force acting on a mass.
 
-Oddly, _acceleration_ is not the same. If you were suddenly accelerated while in the space suit you would feel it; you would jerk forward, feel the suit push against your chest, etc. The reason for this is acceleration produces a _force gradient_, as opposed to velocity which does not require a force to keep you moving (an object in motion, yada yada...).
+In fact, you can create your own “accelerometer” with something as simple as a spring and weight. Hang the weight from a spring, and if you accelerate left or right, the weight will stretch the spring in the opposite direction. This setup works because acceleration produces a noticeable force, while constant velocity does not.
 
-You can build your own accelerator-detector just by hanging a weight from a spring. If you begin accelerating left or right, the spring would stretch in the opposite direction. The weight needs to hang to work, because if you turn it sideways the weight will fall towards the ground, even if remain perfectly still. You _are_ accelerating, and have been for quite some time, directly towards the center of the planet. We experience this acceleration as _weight_, which is canceled out by the normal force of the planet pushing back up against us. 
+
 
 
 ```{python}
@@ -100,7 +108,13 @@ ax.legend(loc='upper right')
 plt.show()
 ```
 
-Physics equations are extraordinary because they describe _universal relationships_ in the natural world. For instance, the _momentum_ of an object is simply the product of its mass and velocity: $p = mv$. This relationship applies universally to every object with mass and velocity. And I think that's pretty neat [^2]. Notably, the equation shows that momentum is directly proportional to velocity for a constant mass—doubling an object’s velocity doubles its momentum.
+Back on Earth, even when we’re standing still, we feel the effect of acceleration toward the planet’s center, which we experience as _weight_. This downward pull is balanced by the normal force of the ground pushing back up against us, allowing us to experience acceleration even when we appear stationary.
+
+---
+
+Physics equations are extraordinary because they describe _universal relationships_ in the natural world. For instance, the **momentum** of an object is simply the product of its mass and velocity: 
+$$p = mv$$
+This relationship applies universally to every object with mass and velocity. And I think that's pretty neat [^2]. Notably, the equation shows that momentum is directly proportional to velocity for a constant mass—doubling an object’s velocity doubles its momentum.
 
 [^2]: Neature Walk: https://www.youtube.com/watch?v=Hm3JodBR-vs
 
@@ -125,12 +139,64 @@ An interesting consequence to these equations is given position or velocity as a
 
 ::: {.callout-tip collapse="true"}
 ## What's the point of calculus
-Calculus solves two limit-based problems:
+Calculus addresses two fundamental problems involving limits: **rates of change** and **accumulation**.
 
-1. The goal of the derivative is to find $\frac{dx}{dt}$ as they both approach zero, but you can't divide by zero.
-2. The integral attempts to find the sum of the area under the curve as the number of riemann squares approaches infinity.
+**Derivatives**: The derivative represents the rate of change of a quantity. It answers questions like, “How fast is something changing at an exact moment?” Calculus solves this by finding $\frac{dx}{dt}$ as both $dx$ and $dt$ approach zero—a challenge because dividing by zero is undefined. By using limits, calculus lets us precisely calculate this “instantaneous” rate without ever actually dividing by zero.
 
-You can expand a small change in a simple function (such as $x^2$, i.e. $(x+h)^2 - x^2$) and work out as the limit $h \rightarrow 0$, you get $2x$.
+**Integrals**: The integral represents the accumulation of quantities over an interval, like the area under a curve. To do this, calculus sums up infinitely many tiny pieces (Riemann squares) as their width approaches zero. This limit-based approach lets us find the exact area, even under curves that are difficult or impossible to sum otherwise.
+
+
+```{python}
+#| label: fig-calculus
+#| fig-cap: Given some continuous function, the derivative is _instantaneous rate of change_ at a given point. 
+# Set up a 1x2 subplot for Derivative and Integral plots side by side
+fig, axes = plt.subplots(2, 1, figsize=(6, 5))
+x = np.linspace(0, 10, 100)
+
+# Define a quadratic function for position over time, e.g., f(x) = 0.5*x^2 (constant acceleration)
+position = 0.5 * x**2
+
+# Derivative Plot (Position by time with tangent line)
+axes[0].plot(x, position, label=r"$f(x) = \frac{1}{2}x^2$", color="blue")
+tangent_x = 5  # Point at which to draw the tangent
+tangent_slope = tangent_x  # Derivative of 0.5*x^2 is x, so slope at x = 5 is 5
+tangent_line = tangent_slope * (x - tangent_x) + 0.5 * tangent_x**2
+axes[0].plot(x, tangent_line, linestyle="--", color="orange", label=r"$\frac{dx}{dt}$ at $x=5$")
+axes[0].scatter(tangent_x, 0.5 * tangent_x**2, color="red")  # Point of tangency
+axes[0].set_title("Derivative (Instantaneous Rate of Change)")
+axes[0].set_xlabel("Time (t)")
+axes[0].set_ylabel("Position (f(x))")
+axes[0].legend()
+axes[0].grid(True, linestyle=':', alpha=0.7)
+
+# Integral Plot (Riemann squares for area under the curve)
+f_x = 0.5 * x**2
+num_squares = 10  # Number of Riemann squares
+x_riemann = np.linspace(0, 10, num_squares + 1)
+y_riemann = 0.5 * x_riemann**2
+widths = x_riemann[1] - x_riemann[0]
+
+# Plot the position curve for reference
+axes[1].plot(x, f_x, color="blue", label=r"$f(x) = \frac{1}{2}x^2$")
+# Plot Riemann squares
+for i in range(num_squares):
+    axes[1].bar(x_riemann[i], y_riemann[i], width=widths, align="edge", color="orange", edgecolor="black", alpha=0.3)
+
+axes[1].set_title("Integral (Riemann Sum Approximation)")
+axes[1].set_xlabel("x")
+axes[1].set_ylabel("f(x)")
+axes[1].legend()
+axes[1].grid(True, linestyle=':', alpha=0.7)
+
+# Layout adjustment
+plt.tight_layout()
+plt.show()
+```
+
+
+For example, if we expand a small change in a function, such as $(x + h)^2 - x^2$, and take the limit as $h \rightarrow 0$, we end up with $2x$—the derivative of $x^2$. What's really magical is the inverse of $x^2$ is the integral. This makes sense if you consider the derivative gives the rate of change (e.g. velocity from a function of position) and integration adds the accumulated change to get the original value (e.g. total distance from a function of velocity).
+
+$$ \frac{dx}{dt} f(x) = \int f(v) \space dt $$
 :::
 
 :::{.callout-note collapse="true"}
@@ -164,6 +230,20 @@ $$v^2 = v_0^2 + 2a(x-x0)$$
 :::
 
 ## The Universal Law of Gravitation
+> Quote here
+
+Newton’s Law of Gravitation describes the gravitational force between two masses, expressing how every mass exerts an attractive force on every other mass in the universe:
+
+$$
+F = G\frac{m_1 m_2}{r^2}
+$$
+
+where:
+
+- $F$ is the gravitational force between the two masses.
+- $G$ is the gravitational constant, a fundamental constant that calibrates the strength of gravity.
+- $m_1$ and $m_2$ are the masses of the two objects.
+- $r$ is the distance between the centers of the two masses.
 
 ```{python}
 #| label: fig-gravitational_force_visualization
@@ -214,6 +294,13 @@ ax.legend(loc='upper right')
 # Display the plot
 plt.show()
 ```
+
+### Why the Inverse-Square Law? Why $r^2$?
+The inverse-square relationship, $\frac{1}{r^2}$, reflects a fundamental property of how forces and fields spread out in three-dimensional space. Newton’s insight into this came from observing that gravitational and other forces, like light intensity, diminish in strength with the square of the distance.
+
+In three-dimensional space, when a force radiates outward from a point source (such as a mass), it spreads uniformly over the surface of an expanding sphere centered around that source. The surface area of a sphere grows proportionally to $r^2$, where $r$ is the radius of the sphere. Consequently, as the distance $r$ increases, the same force is distributed over a larger area, causing the intensity at any given point on that surface to diminish in proportion to $\frac{1}{r^2}$.
+
+Thus, the inverse-square law isn’t arbitrary but rather a natural consequence of geometry in three-dimensional space. If we lived in a universe with different spatial dimensions, the exponent would change accordingly. For example, in a two-dimensional plane, the force would weaken with $\frac{1}{r}$, while in four dimensions, it would decay with $\frac{1}{r^3}$.
 
 Newton's Universal Law of Gravitation describes the generated by two masses. This equation also ties together the inverse square law (decay of intensity of effects such as light, radiation, or gravity). 
 
@@ -479,7 +566,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-### The Bigger Picture: Electromagnetic Waves
+### The Unification of Electromagnetism
 Maxwell’s equations, taken together, explain how electric and magnetic fields interact and propagate. If you combine Faraday's Law and Ampère’s Law, you can derive the **wave equation** for both electric and magnetic fields, showing that disturbances in these fields propagate at the speed of light. Together, these two effects allow electromagnetic waves to propagate through space, with the electric and magnetic fields continuously regenerating each other.
 
 This is why light, radio waves, X-rays, and all other electromagnetic radiation are essentially **electromagnetic waves**: oscillating electric and magnetic fields that move through space, even in a vacuum.
@@ -796,10 +883,26 @@ The Hamiltonian approach naturally introduces **phase space**, where each point 
 This example highlights the power of the Hamiltonian formalism in tracking **conserved quantities** and understanding **system behavior** in phase space.
 :::
 
-# Minkowski Space
+# Pythagoras in Minkowski Space
 > _Roads? Where we're going, we don't need roads_ [^3]
 
 [^3]: Dr. Emmmet Brown - Back to the Future
+
+## Special Relativity and the Insanity of $c$
+
+Goal: Introduce special relativity by focusing on why $c$, the speed of light, is fundamental and invariant.
+
+Key Points: The postulate that $c$ is the same for all observers leads to time dilation and length contraction.
+Explain how $c$ creates a relationship between space and time, where distance can be "subtracted" from time, giving rise to the spacetime interval.
+
+Connection: This section sets up Minkowski space and real time, motivating the need for a geometric interpretation of spacetime.
+
+## Lost In (Minkowski) Space
+Goal: Introduce the geometry of Minkowski space and the concept of the spacetime interval.
+
+Key Points: Define Minkowski space and the spacetime interval: $s^2 = c^2t^2 - x^2$. Explain that the interval $s$ remains invariant for all observers and represents real time (proper time), which serves as the "distance" in this geometry.
+
+Connection: Introduce the idea that spacetime can be curved by mass, which lays the groundwork for general relativity and the Schwarzschild solution.
 
 ```{python}
 #| label: fig-minkowski_light_cone
@@ -939,7 +1042,31 @@ plt.show()
 
 ```
 
+## General Relativity: Gravity as Curvature
+> May the Schwarz(schild Solution) be with you [^4]
 
+[^4]: Space Balls - 1987
+
+Goal: Introduce general relativity’s core idea that mass and energy curve spacetime, with a specific focus on the Schwarzschild solution.
+
+Key Points: Briefly explain how Einstein’s field equations describe how mass curves spacetime. Describe the Schwarzschild solution as a specific, spherically symmetric solution that describes the geometry outside a massive, non-rotating object. Explain the Schwarzschild radius and its role in defining the event horizon.
+
+Connection: Use this to introduce black holes and explain why crossing the event horizon changes the nature of time and space.
+
+## Black Holes: The Inevitable Exit from Our Universe
+Goal: Define black holes, focusing on the event horizon and the singularity.
+
+Key Points: Distinguish between the event horizon (boundary from which light cannot escape) and the singularity (where spacetime curvature becomes infinite). Describe how the event horizon represents a “point of no return”—once crossed, all paths lead to the singularity.
+
+Connection: Lead into a discussion of Kruskal-Szekeres coordinates as a way to better understand spacetime inside the horizon.
+
+## Kruskal-Szekeres Coordinates: Inside the Event Horizon
+
+Goal: Use Kruskal coordinates to explain why the singularity lies in the future of any object crossing the event horizon.
+
+Key Points:Explain how Kruskal coordinates extend the Schwarzschild solution, allowing us to visualize the paths of objects inside the event horizon. Describe how, inside the event horizon, the time and space axes effectively “flip”—$t$ becomes spatial, and $x$ becomes temporal. Discuss the inevitability of the singularity: once inside, all directions in time lead to the singularity.
+
+Connection: This section ties together how both special and general relativity redefine our notions of space, time, and causality.
 
 # Glossary
 
