@@ -1,8 +1,9 @@
 ---
-title: "A Journey Through (Space)Time"
-subtitle: "Summary of Classical Mechanics"
+title: "Pythagorean Time Dilation"
+subtitle: "A Summary of Classical Mechanics"
 author: John Vivian
 date: 2024-10-15
+categories: [Math, Physics]
 format: 
   html:
     # css: styles.css
@@ -23,14 +24,16 @@ import seaborn as sns
 plt.style.use('ggplot')
 ```
 
-> _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
+# A Journey Through (Space)Time
 
-[^1]: Isaac Newton
+> _I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me_ [^1]
 
 ::: {.callout-note}
 ## Motivation
 This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll's book _The Biggest Ideas in The Universe: Space, Time, and Motion_.
 :::
+
+[^1]: Isaac Newton
 
 - While velocity only has meaning in other reference frames, acceleration is _absolute_, and can be identified intriniscally without one (in most cases).
 - The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).
@@ -39,7 +42,7 @@ This overview is roughly structured by the concepts I found most profound while 
 - Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\rightarrow$ energy conservation, spatial invariance $\rightarrow$ momentum conservation, and rotational symmetry $\rightarrow$ angular momentum conservation.
 - The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
 - Lorentz transformations, which describe effects like length contraction and time dilation, can be derived from the invariant spacetime interval---analagous to the Pythagorean theorem---in the geometry of Minkowski space.
-- Schwartzchild's solution to General Relativity contained a curious mathematical singularity which -- originally thought to be a _coordinate singularity_ -- turned out to be a real _curvature singularity_ in spacetime: the infamous blackhole.
+- Schwartzchild's solution to General Relativity contained a curious mathematical singularity which---originally thought to be a _coordinate singularity_---turned out to be a real _curvature singularity_ in spacetime: the infamous **blackhole**.
 
 ::: {.callout-warning}
 ## Disclaimer
@@ -890,19 +893,30 @@ This example highlights the power of the Hamiltonian formalism in tracking **con
 
 ## Special Relativity and the Insanity of $c$
 
-Goal: Introduce special relativity by focusing on why $c$, the speed of light, is fundamental and invariant.
+At 16 years old Einstein had thoughts about what it would be like to chase down a beam of light coming out of a flashlight. Classically, if he moved fast enough he could coast alongside that wave of light, like when a train matches the speed of a passing bird.
 
-Key Points: The postulate that $c$ is the same for all observers leads to time dilation and length contraction.
-Explain how $c$ creates a relationship between space and time, where distance can be "subtracted" from time, giving rise to the spacetime interval.
+An unexpected consequence of the **Michelson-Morley Experiment** of 1887---while looking for a theoretical "luminiferous aether"---was that the inferometer detected light moving the same speed regardless of direction, suggesting it was the same speed regardless of how the Earth moved through space, therefore **independent of the observer's motion**. This led the groundwork for Einstein's theory.
 
-Connection: This section sets up Minkowski space and real time, motivating the need for a geometric interpretation of spacetime.
+### The Speed of Light, $c$, and the Foundations of Special Relativity
 
-## Lost In (Minkowski) Space
-Goal: Introduce the geometry of Minkowski space and the concept of the spacetime interval.
+Einstein realized that, to be consistent with Maxwell’s equations for electromagnetism, light’s speed must remain constant across all frames of reference. This insight forced a rethinking of space and time. The concepts of absolute time (a universal “clock”) and absolute space (a universal grid) had to be discarded. Instead, space and time are intertwined in such a way that the speed of light remains constant—a revolutionary shift that led to the notion of spacetime.
 
-Key Points: Define Minkowski space and the spacetime interval: $s^2 = c^2t^2 - x^2$. Explain that the interval $s$ remains invariant for all observers and represents real time (proper time), which serves as the "distance" in this geometry.
+1. Invariance of $c$: The speed of light in a vacuum is the same for all observers, regardless of their motion. This means that whether you’re standing still, driving a car, or hurtling through space, $c$ is always the same.
+2. Space and Time Adapt: For this invariance to hold, space and time themselves must adapt to keep the speed of light constant. If you move faster, time slows down and lengths contract to ensure you never catch up with light.
+3. Relativity of Simultaneity: Events that appear simultaneous to one observer may not be simultaneous to another moving observer. This idea challenges our intuitive notion of a shared “now” and suggests that time flows differently depending on motion. Ab event in one observer's past can be another's future depending on how fast they are moving relative to one another.
+4. More directly, we now know this also limits _informations_ ability to propagate faster than speed of light. Quantum entanglement, counter-intuitively, does _not_ violate this principle.
 
-Connection: Introduce the idea that spacetime can be curved by mass, which lays the groundwork for general relativity and the Schwarzschild solution.
+### Time is Just Another Coordinate
+
+In everyday life, we already treat time and space as coordinates, although we often don’t think of them this way. Imagine you’re meeting a friend at a café. You naturally specify a location (**space coordinates**) and a time (**time coordinate**). Without both, you might arrive at the café only to miss each other by an hour or by a block.
+
+Einstein’s insight was that this relationship goes much deeper: **space and time are not separate entities but are interwoven**. Just as you can’t meet your friend without specifying both space and time, the universe itself weaves these dimensions together in a way that affects how time flows and distances change.
+
+We can now measure something called the **spacetime interval** that takes both space and time into account by plotting space against time and exploring how $c$ creates boundaries within this space and how spacetime intervals (measured as the hypotenuse on this graph) remain constant for all observers (and lead to the derivations of the **Lorentz Transformations**).
+
+## Lost In (Minkowski) Space: The Geometry of Spacetime
+
+In everyday life, we think of **space** and **time** as separate. We measure distances in meters or miles and keep track of time with clocks. However, special relativity showed us that space and time are deeply connected, forming a unified framework called **spacetime**. We can described this framework mathematically using a special kind of geometry called **Minkowski space**.
 
 ```{python}
 #| label: fig-minkowski_light_cone
@@ -942,6 +956,12 @@ ax.legend(loc='upper right')
 plt.show()
 
 ```
+
+### The Spacetime Interval
+
+In Minkowski space, the fundamental unit of "distance" isn’t a simple measurement of space or time alone—it’s a combination of both, called the **spacetime interval**. For two events separated by a distance $x$ and a time $t$, the spacetime interval $s$ is given by:
+
+$$s^2 = c^2 t^2 - x^2$$
 
 ```{python}
 #| label: fig-pythag
@@ -990,6 +1010,35 @@ ax.axvline(0, color='black',linewidth=0.5)
 
 plt.show()
 ```
+
+
+This interval differs from the usual Euclidean distance formula.
+
+- $c$ is the speed of light, a constant that connects space and time.
+- The interval $s$ combines spatial separation ($x$) and time separation ($t$) but with a **minus sign** in front of $x^2$, which makes the geometry of Minkowski space different from ordinary space.
+- Note how we keep units consistent by multiplying $t$ by $c$. We're not in Kansas anymore [^5].
+
+[^5]: The Wizard of Oz
+
+### Why This Interval Matters
+
+The spacetime interval $s$ has an important property: it’s **invariant** for all observers, regardless of their relative motion. This invariance means that while two observers might disagree on measurements of $x$ and $t$, they will always agree on the value of $s$. In other words, even though space and time are experienced differently depending on motion, **spacetime itself has an unchanging “distance”** between events.
+
+This interval $s$ is also known as **proper time** when it represents the "real time" experienced by an object moving along a specific path in spacetime. Just as distance measures separation in space, the spacetime interval $s$ measures separation in spacetime.
+
+### Visualizing Minkowski Space
+
+In Minkowski space, we can plot time and space as perpendicular axes, similar to a regular coordinate system, but with some key differences. Points (or “events”) in spacetime are located by both space and time coordinates. If we connect two events, the **spacetime interval** $s$ between them becomes the “distance” in this spacetime geometry.
+
+This interval sets limits on causality: events separated by a spacetime interval greater than zero (i.e., spacelike intervals) cannot influence each other, as no signal can travel faster than the speed of light. Light itself defines the **boundary of possible influence**, forming a "light cone" structure in this space.
+
+### Toward General Relativity: Curved Spacetime
+
+Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when we introduce **mass**? Einstein’s theory of general relativity builds on this framework by showing that **mass curves spacetime**. Massive objects like planets and stars create distortions, bending the paths of objects and even light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.
+
+This concept of curved spacetime is described mathematically by the **Schwarzschild solution**, a specific solution to Einstein’s field equations. It describes the geometry around a massive, non-rotating object, leading us to concepts like **black holes** and **event horizons**.
+
+In summary, Minkowski space provides the foundation for understanding spacetime as a unified geometry where space and time are linked through the spacetime interval. This flat spacetime model prepares us for the next step: seeing how spacetime itself bends in the presence of mass, laying the groundwork for the profound ideas of general relativity.
 
 ```{python}
 #| label: corrected_worldlines_lightcone
