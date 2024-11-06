@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>blog - Blast Beats and Beep Boops</title>
+<title>Blast Beats and Beep Boops – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,11 +37,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6561bbde787c299e21493071c8edc6ff.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44266c55e4ed57b741d21de50a2a288a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -93,8 +100,35 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -102,49 +136,49 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://jvivian.github.io" rel="" target=""><i class="bi bi-bookmarks" role="img">
+    <a class="nav-link" href="https://jvivian.github.io"> <i class="bi bi-bookmarks" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jvivian" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jvivian"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&amp;hl=en&amp;authuser=1" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&amp;hl=en&amp;authuser=1"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/john-vivian-913b41a6/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/john-vivian-913b41a6/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -157,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -170,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Automation">Automation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="BJJ">BJJ <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Digital Art">Digital Art <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Documentation">Documentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Graphs">Graphs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Math">Math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Modeling">Modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Writing">Writing <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QXV0b21hdGlvbg==">Automation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QkpK">BJJ <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGlnaXRhbCBBcnQ=">Digital Art <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RG9jdW1lbnRhdGlvbg==">Documentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R3JhcGhz">Graphs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0aA==">Math <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TW9kZWxpbmc=">Modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGh5c2ljcw==">Physics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V3JpdGluZw==">Writing <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -181,40 +215,75 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Math,Modeling,Python" data-listing-date-sort="1709971200000" data-listing-file-modified-sort="1710101004572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="0" data-categories="TWF0aCxQaHlzaWNz" data-listing-date-sort="1730880000000" data-listing-file-modified-sort="1730929234506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="56" data-listing-word-count-sort="11058">
 <div class="thumbnail">
-<p><a href="./posts/dr-dfm-covid/presentation-post.html"> <img src="./posts/dr-dfm-covid/jv_dfm.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/classical-mechanics/index.html" class="no-external"></a></p><a href="./posts/classical-mechanics/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/classical-mechanics/index_files/figure-html/fig-spring_weight_visualization-dffad-output-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/classical-mechanics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/dr-dfm-covid/presentation-post.html">
 <h3 class="no-anchor listing-title">
-Covid-19 Data-Rich Dynamic Factor Model
+<a href="./posts/classical-mechanics/index.html" class="no-external">Pythagorean Time Dilation</a>
 </h3>
 <div class="listing-subtitle">
-Overview, Python Package, and Interactive Analysis
+<a href="./posts/classical-mechanics/index.html" class="no-external">A Summary of Classical Mechanics</a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Math'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('TWF0aA=='); return false;">
 Math
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Modeling'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('UGh5c2ljcw=='); return false;">
+Physics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/classical-mechanics/index.html" class="no-external"><em>I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a…</em><sup></sup></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/classical-mechanics/index.html" class="no-external">
+<div class="listing-date">
+Nov 6, 2024
+</div>
+<div class="listing-author">
+John Vivian
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TWF0aCxNb2RlbGluZyxQeXRob24=" data-listing-date-sort="1709971200000" data-listing-file-modified-sort="1710101004572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2008">
+<div class="thumbnail">
+<p><a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external"></a></p><a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external">
+<p><img loading="lazy" src="./posts/dr-dfm-covid/jv_dfm.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external">Covid-19 Data-Rich Dynamic Factor Model</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external">Overview, Python Package, and Interactive Analysis</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('TWF0aA=='); return false;">
+Math
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxpbmc='); return false;">
 Modeling
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
 Python
 </div>
 </div>
-<a href="./posts/dr-dfm-covid/presentation-post.html">
 <div class="listing-description">
-The only function of economic forecasting is to make astrology look respectable <sup>1</sup>
+<a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external">The only function of economic forecasting is to make astrology look respectable <sup>1</sup></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/dr-dfm-covid/presentation-post.html">
+<a href="./posts/dr-dfm-covid/presentation-post.html" class="no-external">
 <div class="listing-date">
 Mar 9, 2024
 </div>
@@ -224,35 +293,33 @@ John Vivian, Aaron Cooke, Josh Fitzgerald
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Writing,Digital Art" data-listing-date-sort="1708934400000" data-listing-file-modified-sort="1709090035859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24">
+<div class="quarto-post image-right" data-index="2" data-categories="V3JpdGluZyxEaWdpdGFsIEFydA==" data-listing-date-sort="1708934400000" data-listing-file-modified-sort="1726298936214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4738">
 <div class="thumbnail">
-<p><a href="./posts/kd-inked-into-creation/index.html"> <img src="./posts/kd-inked-into-creation/imgs/The-Butcher-4k.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/kd-inked-into-creation/index.html" class="no-external"></a></p><a href="./posts/kd-inked-into-creation/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/kd-inked-into-creation/imgs/The-Butcher-4k.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/kd-inked-into-creation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/kd-inked-into-creation/index.html">
 <h3 class="no-anchor listing-title">
-Inked Into Creation
+<a href="./posts/kd-inked-into-creation/index.html" class="no-external">Inked Into Creation</a>
 </h3>
 <div class="listing-subtitle">
-<em>Settlement Intelligencia</em>: Chapters I - X<br>A Kingdom Death Tale
+<a href="./posts/kd-inked-into-creation/index.html" class="no-external"><em>Settlement Intelligencia</em>: Chapters I - X<br>A Kingdom Death Tale</a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Writing'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('V3JpdGluZw=='); return false;">
 Writing
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Digital Art'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCBBcnQ='); return false;">
 Digital Art
 </div>
 </div>
-<a href="./posts/kd-inked-into-creation/index.html">
 <div class="listing-description">
-From the void I am born<br> into wave and particle <span class="citation" data-cites="IntegralBirth">[1]</span>
+<a href="./posts/kd-inked-into-creation/index.html" class="no-external">From the void I am born<br> into wave and particle <span class="citation" data-cites="IntegralBirth">[1]</span></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/kd-inked-into-creation/index.html">
+<a href="./posts/kd-inked-into-creation/index.html" class="no-external">
 <div class="listing-date">
 Feb 26, 2024
 </div>
@@ -262,32 +329,30 @@ John Vivian
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Digital Art" data-listing-date-sort="1699689600000" data-listing-file-modified-sort="1708569889859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="3" data-categories="RGlnaXRhbCBBcnQ=" data-listing-date-sort="1699689600000" data-listing-file-modified-sort="1728941370930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="719">
 <div class="thumbnail">
-<p><a href="./posts/kd-art/index.html"> <img src="./posts/kd-art/the_hand.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/kd-art/index.html" class="no-external"></a></p><a href="./posts/kd-art/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/kd-art/the_hand.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/kd-art/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/kd-art/index.html">
 <h3 class="no-anchor listing-title">
-Kingdom Death Artwork
+<a href="./posts/kd-art/index.html" class="no-external">Kingdom Death Artwork</a>
 </h3>
 <div class="listing-subtitle">
-Physical Models as the Basis of Digital Art
+<a href="./posts/kd-art/index.html" class="no-external">Physical Models as the Basis of Digital Art</a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Digital Art'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCBBcnQ='); return false;">
 Digital Art
 </div>
 </div>
-<a href="./posts/kd-art/index.html">
 <div class="listing-description">
-The Ghost in the Machine
+<a href="./posts/kd-art/index.html" class="no-external">The Ghost in the Machine</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/kd-art/index.html">
+<a href="./posts/kd-art/index.html" class="no-external">
 <div class="listing-date">
 Nov 11, 2023
 </div>
@@ -297,35 +362,33 @@ John Vivian
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="BJJ,Graphs" data-listing-date-sort="1693465200000" data-listing-file-modified-sort="1700014040354" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="4" data-categories="QkpKLEdyYXBocw==" data-listing-date-sort="1693465200000" data-listing-file-modified-sort="1700014040354" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1010">
 <div class="thumbnail">
-<p><a href="./posts/bjj-graphs/index.html"> <img src="./posts/bjj-graphs/cover-jv.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bjj-graphs/index.html" class="no-external"></a></p><a href="./posts/bjj-graphs/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/bjj-graphs/cover-jv.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bjj-graphs/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/bjj-graphs/index.html">
 <h3 class="no-anchor listing-title">
-Brazilian Jiu Jitsu Concepts as Graphs
+<a href="./posts/bjj-graphs/index.html" class="no-external">Brazilian Jiu Jitsu Concepts as Graphs</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bjj-graphs/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('BJJ'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('QkpK'); return false;">
 BJJ
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Graphs'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('R3JhcGhz'); return false;">
 Graphs
 </div>
 </div>
-<a href="./posts/bjj-graphs/index.html">
 <div class="listing-description">
-Depth-first <del>Search</del> Scooch
+<a href="./posts/bjj-graphs/index.html" class="no-external">Depth-first <del>Search</del> Scooch</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/bjj-graphs/index.html">
+<a href="./posts/bjj-graphs/index.html" class="no-external">
 <div class="listing-date">
 Aug 31, 2023
 </div>
@@ -335,35 +398,33 @@ John Vivian
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Writing,Digital Art" data-listing-date-sort="1683010800000" data-listing-file-modified-sort="1709008725783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="5" data-categories="V3JpdGluZyxEaWdpdGFsIEFydA==" data-listing-date-sort="1683010800000" data-listing-file-modified-sort="1709008725783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1797">
 <div class="thumbnail">
-<p><a href="./posts/kd-awake/index.html"> <img src="./posts/kd-awake/ch00a-wide.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/kd-awake/index.html" class="no-external"></a></p><a href="./posts/kd-awake/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/kd-awake/ch00a-wide.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/kd-awake/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/kd-awake/index.html">
 <h3 class="no-anchor listing-title">
-Awake
+<a href="./posts/kd-awake/index.html" class="no-external">Awake</a>
 </h3>
 <div class="listing-subtitle">
-A Kingdom Death Tale
+<a href="./posts/kd-awake/index.html" class="no-external">A Kingdom Death Tale</a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Writing'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('V3JpdGluZw=='); return false;">
 Writing
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Digital Art'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCBBcnQ='); return false;">
 Digital Art
 </div>
 </div>
-<a href="./posts/kd-awake/index.html">
 <div class="listing-description">
-Cogito, ergo sum
+<a href="./posts/kd-awake/index.html" class="no-external">Cogito, ergo sum</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/kd-awake/index.html">
+<a href="./posts/kd-awake/index.html" class="no-external">
 <div class="listing-date">
 May 2, 2023
 </div>
@@ -373,35 +434,33 @@ John Vivian
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Automation,Documentation" data-listing-date-sort="1677830400000" data-listing-file-modified-sort="1699740262721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="6" data-categories="QXV0b21hdGlvbixEb2N1bWVudGF0aW9u" data-listing-date-sort="1677830400000" data-listing-file-modified-sort="1699740262721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1145">
 <div class="thumbnail">
-<p><a href="./posts/hassberry-pi/index.html"> <img src="./posts/hassberry-pi/image.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/hassberry-pi/index.html" class="no-external"></a></p><a href="./posts/hassberry-pi/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/hassberry-pi/image.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/hassberry-pi/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/hassberry-pi/index.html">
 <h3 class="no-anchor listing-title">
-Hassberry-Pi: Part 1
+<a href="./posts/hassberry-pi/index.html" class="no-external">Hassberry-Pi: Part 1</a>
 </h3>
 <div class="listing-subtitle">
-Setting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration
+<a href="./posts/hassberry-pi/index.html" class="no-external">Setting up Home Assistant for Z-Wave, MQTT, Discord, and Raspberry Pi integration</a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Automation'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGlvbg=='); return false;">
 Automation
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RG9jdW1lbnRhdGlvbg=='); return false;">
 Documentation
 </div>
 </div>
-<a href="./posts/hassberry-pi/index.html">
 <div class="listing-description">
-Praise the Omnissiah
+<a href="./posts/hassberry-pi/index.html" class="no-external">Praise the Omnissiah</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/hassberry-pi/index.html">
+<a href="./posts/hassberry-pi/index.html" class="no-external">
 <div class="listing-date">
 Mar 3, 2023
 </div>
@@ -415,7 +474,7 @@ John Vivian
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div id="quarto-copyright" class="quarto-appendix-contents"><div>John Vivian - 2024 - All Rights Reserved</div></div></section></div></main> <!-- /main -->
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>John Vivian - 2024 - All Rights Reserved</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -457,6 +516,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -525,13 +611,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -566,18 +654,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -609,11 +686,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -623,8 +739,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -636,7 +761,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -680,6 +928,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -705,6 +954,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -765,6 +1040,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
