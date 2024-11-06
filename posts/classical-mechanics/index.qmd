@@ -2,8 +2,9 @@
 title: "Pythagorean Time Dilation"
 subtitle: "A Summary of Classical Mechanics"
 author: John Vivian
-date: 2024-10-15
+date: 2024-11-06
 categories: [Math, Physics]
+image: "imgs/krusty.png"
 format: 
   html:
     css: styles.css
@@ -50,16 +51,16 @@ This overview is roughly structured by the concepts I found most profound while 
 I’m neither a mathematician or physicist but do my best to clarify the meaning of each variable and operator in the equations introduced.
 :::
 
-# Absolute Power, Absolute Acceleration
+# Absolute Acceleration
+> _Speed has never killed anyone. Suddenly becoming stationary, that's what gets you_ [^9]
+
+[^9]: Jeremy Clarkson
 
 Imagine yourself floating in deep space, with only distant stars as a backdrop. Would you be able to tell if you were moving? Surprisingly, no. As Einstein demonstrated, **velocity only has meaning relative to another reference frame**. If two people drift past each other, neither can determine who is “stationary” or “moving” in any absolute sense—both could be moving, or one could be stationary. In empty space, without other points of reference, velocity becomes entirely relative.
 
 Oddly, _acceleration is different_. If you were suddenly accelerated in your spacesuit, you’d feel it immediately—your body would press against the suit, jerking you forward. Acceleration creates a force that acts on you directly, causing a _force gradient_ you can feel. Unlike velocity, which requires no force to sustain, acceleration always involves a force acting on a mass.
 
 In fact, you can create your own “accelerometer” with something as simple as a spring and weight. Hang the weight from a spring, and if you accelerate left or right, the weight will stretch the spring in the opposite direction. This setup works because acceleration produces a noticeable force, while constant velocity does not.
-
-
-
 
 ```{python}
 #| label: fig-spring_weight_visualization-dffad
@@ -234,7 +235,7 @@ $$v^2 = v_0^2 + 2a(x-x0)$$
 :::
 
 ## The Universal Law of Gravitation
-> Quote here
+> Not the Deepak Chopra variety
 
 Newton’s Law of Gravitation describes the gravitational force between two masses, expressing how every mass exerts an attractive force on every other mass in the universe:
 
@@ -318,7 +319,7 @@ $$F = G\frac{m_1m_2}{r^2}$$
 Why is $r$ squared? Why not quadrupled or halved? The inverse square relationship emerges as a property of living in three dimensions. The volume of a sphere increases with the square of the radius: $4\pi r^2$.
 
 # Maxwell's Equations
-> Quote here
+> The Original Field Science
 
 Maxwell's Equations elegantly describe the behavior of electric and magnetic fields, revealing that these two forces are not separate but deeply interconnected. They provide a unified framework for understanding how electric charges and currents create fields that interact, propagate, and influence each other, ultimately giving rise to light itself. 
 
@@ -900,12 +901,12 @@ An unexpected consequence of the **Michelson-Morley Experiment** of 1887---while
 
 ### The Speed of Light, $c$, and the Foundations of Special Relativity
 
-Einstein realized that, to be consistent with Maxwell’s equations for electromagnetism, light’s speed must remain constant across all frames of reference. This insight forced a rethinking of space and time. The concepts of absolute time (a universal “clock”) and absolute space (a universal grid) had to be discarded. Instead, space and time are intertwined in such a way that the speed of light remains constant—a revolutionary shift that led to the notion of spacetime.
+Einstein realized that, to be consistent with Maxwell’s equations for electromagnetism, light’s speed must remain constant across all frames of reference. This insight forced a rethinking of space and time. The concepts of absolute time (a universal “clock”) and absolute space (a universal grid) had to be discarded. Instead, space and time are intertwined in such a way that the speed of light remains constant—a revolutionary shift that led to the notion of **spacetime**.
 
 1. Invariance of $c$: The speed of light in a vacuum is the same for all observers, regardless of their motion. This means that whether you’re standing still, driving a car, or hurtling through space, $c$ is always the same.
 2. Space and Time Adapt: For this invariance to hold, space and time themselves must adapt to keep the speed of light constant. If you move faster, your time slows down and lengths contract relative to slower-moving observers.
 3. Relativity of Simultaneity: Events that appear simultaneous to one observer may not be simultaneous to another moving observer. This idea challenges the intuitive notion of a shared “now” and suggests that time flows differently depending on motion. An event in one observer's past can be in another's future depending on how fast they are moving relative to one another.
-4. More directly, we now know this also limits _informations_ ability to propagate faster than speed of light. Quantum entanglement, counter-intuitively, does _not_ violate this principle.
+4. More directly, we now know this also limits _informations_ ability to propagate faster than $c$. Quantum entanglement, counter-intuitively, does _not_ violate this principle.
 
 ### Time is Just Another Coordinate
 
@@ -1373,7 +1374,6 @@ Kruskal coordinates provide a profound visualization of how **general relativity
 - **Causality** inside the event horizon is altered: what we consider “future” becomes tied to an inevitable destination (the singularity).
 
 # Timeline of The Universe
-> The End
 
 $Ga$ is **Giga-Annum** or 1 billion Earth years
 
