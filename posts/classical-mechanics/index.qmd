@@ -6,10 +6,11 @@ date: 2024-10-15
 categories: [Math, Physics]
 format: 
   html:
-    # css: styles.css
+    css: styles.css
     toc: true
     toc-depth: 2
     echo: false
+    page-layout: full
 editor: visual
 execute:
   render-on-save: true
@@ -42,7 +43,7 @@ This overview is roughly structured by the concepts I found most profound while 
 - Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system's laws relate directly to a given conservation law: time invariance $\rightarrow$ energy conservation, spatial invariance $\rightarrow$ momentum conservation, and rotational symmetry $\rightarrow$ angular momentum conservation.
 - The speed of light, $c$, provides a conversion factor between time and space. Like energy $\Leftrightarrow$ mass and electricity $\Leftrightarrow$ magnetism, they are aspects of the same phenomena.
 - Lorentz transformations, which describe effects like length contraction and time dilation, can be derived from the invariant spacetime interval---analagous to the Pythagorean theorem---in the geometry of Minkowski space.
-- Schwartzchild's solution to General Relativity contained a curious mathematical singularity which---originally thought to be a _coordinate singularity_---turned out to be a real _curvature singularity_ in spacetime: the infamous **blackhole**.
+- Schwartzchild's solution to General Relativity contained a curious mathematical singularity which---originally thought to be a _coordinate singularity_---turned out to be a real _curvature singularity_ in spacetime: the infamous **black hole**.
 
 ::: {.callout-warning}
 ## Disclaimer
@@ -1027,7 +1028,7 @@ This interval $s$ is also known as **proper time** when it represents the "real 
 
 One unintuitive concept about Minkowski space is: due to the negative sign in how the spacetime interval is calculated, a longer line does not correspond to _more time experienced_. In fact, just the opposite is true. Relative to a stationary reference view, the closer on object moves to the speed of light the less time it will experience (**Time Dilation**) and the smaller the object will appear (**Length Contraction**).
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 ## Derivation of Lorentz Transformations from Spacetime Interval
 To derive the time dilation and length contraction formulas from the spacetime interval, we can start with the invariant interval in special relativity. The spacetime interval $s^2$ between two events in Minkowski space is given by:
 
@@ -1184,15 +1185,14 @@ L' = L \sqrt{1 - \frac{v^2}{c^2}}
 $$
 
 where:
+
 - $L$ is the proper length (length of the rod in the frame where it is at rest),
 - $L'$ is the contracted length as observed in the frame moving at speed $v$ relative to the rod.
-
-This shows an observer moving relative to the rod measures a shorter length than an observer at rest with respect to it.
 :::
 
 ```{python}
 #| label: fig-length-contraction
-#| fig-cap: Example of how long 1 meter rod would appear to an observer as they moved at different fractions of the speed of light
+#| fig-cap: Example of how long a 1 meter rod would appear to an observer as they moved at different fractions of the speed of light
 v_values = np.linspace(0, 0.99, 500)  # velocities as fraction of c, up to 99% of c
 L0 = 1  # initial (proper) length in meters
 
@@ -1213,13 +1213,19 @@ ax.grid(True)
 plt.show()
 ```
 
+### The Twin Paradox
 
-### Mass Curvature
+Now you might be feeling comfortable with the classic **Twin Paradox** where Alice and Bob age differently as one leaves the planet and returns going some speed close to $c$. If you're like me, you may suddenly think: "Wait, if every reference frame is relative, aren't they _both_ moving equally fast apart from one other, meaning they would both appear to experience less time?"
+
+The answer is _yes_. The only way the twin paradox actually makes sense is when you consider Bob has to _stop his ship and turn around_. If you imagine this path in Minkowski space, with Alice moving forward in time along the worldline axis and Bob moving away at some angle fractional trajectory of $c$, then turning around and coming back, it becomes clear why this happens. The calculated spacetime interval for Bob will show that he has experienced less time than Alice due to his relative _return speed_. If Bob accelerated away _very quickly_ then traveled back at a much lower speed, the age difference would be quite small compared to the standard scenario.
+
+
+### Mass Consequences
 > _...And I cannot lie. <br>You other brothers can't deny._ [^6]
 
 [^6]: Sir Mix-a-Lot - I Like Big Butts
 
-Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when **mass** is introduced? Einstein’s theory of general relativity builds on his previous framework by realizing **mass curves spacetime**. Massive objects like planets and stars create distortions, bending the paths of objects and even electromagnetic waves like light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.
+Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when **mass** is introduced? Einstein’s theory of general relativity builds on his previous framework by realizing **gravity is not a force but a consequence of spacetime curvature**. Massive objects like planets and stars create distortions, bending the paths of objects and even electromagnetic waves like light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.
 
 This concept of curved spacetime can be described mathematically by the **Schwarzschild solution**, a specific solution to Einstein’s field equations. It describes the geometry around a massive, non-rotating object, leading us to concepts like **black holes** and **event horizons**.
 
@@ -1228,26 +1234,175 @@ This concept of curved spacetime can be described mathematically by the **Schwar
 
 [^4]: Space Balls - 1987
 
-Goal: Introduce general relativity’s core idea that mass and energy curve spacetime, with a specific focus on the Schwarzschild solution.
+:::{.callout-caution}
+The math here is complicated and so things will be kept top-level. While Einstein's equation may not appear intimidating, it uses a myriad of reduced terms that stand for advanced concepts like the **Ricci Curvature Tensor** which the **Einstein Tensor** is based on.
+:::
 
-Key Points: Briefly explain how Einstein’s field equations describe how mass curves spacetime. Describe the Schwarzschild solution as a specific, spherically symmetric solution that describes the geometry outside a massive, non-rotating object. Explain the Schwarzschild radius and its role in defining the event horizon.
+Einstein’s theory of **general relativity** describes how **mass and energy curve spacetime**, creating the effect we perceive as gravity. The fundamental equation that captures this relationship is Einstein's **field equation**:
 
-Connection: Use this to introduce black holes and explain why crossing the event horizon changes the nature of time and space.
+$$
+G_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
+$$
 
-## Black Holes: The Inevitable Exit from Our Universe
-Goal: Define black holes, focusing on the event horizon and the singularity.
+In simpler terms:
 
-Key Points: Distinguish between the event horizon (boundary from which light cannot escape) and the singularity (where spacetime curvature becomes infinite). Describe how the event horizon represents a “point of no return”—once crossed, all paths lead to the singularity.
+- $G_{\mu \nu}$: This term represents **spacetime curvature**. It’s called the **Einstein tensor**, which describes how spacetime is curved at each point. Specifically, it involves complex mathematics that measure how spacetime “bends.”
+- $T_{\mu \nu}$: This term represents **energy and momentum** in the universe. Called the **stress-energy tensor**, it includes mass, energy, pressure, and stress (forces) within spacetime.
+- $\frac{8 \pi G}{c^4}$: **Einstein Graviational Constant**
 
-Connection: Lead into a discussion of Kruskal-Szekeres coordinates as a way to better understand spacetime inside the horizon.
+Conceptually, Einstein’s equation tells us that **mass and energy** (on the right) **determine the curvature of spacetime** (on the left). So, massive objects like stars or planets create a “dent” in spacetime and this curvature dictates how objects move around them.
+
+### The Schwarzschild Solution: A Simple Case of Curved Spacetime
+
+The **Schwarzschild solution** is a specific solution to Einstein’s field equations that applies to a **spherically symmetric, non-rotating massive object** (like an idealized black hole or planet).
+
+The **Schwarzschild metric** describes the geometry of spacetime around such an object and is given by:
+
+$$
+ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2
+$$
+
+Broken down:
+
+- $ds^2$: This is the **spacetime interval** (or proper distance) between two events in spacetime, affected by the gravitational field.
+- $\left(1 - \frac{2GM}{c^2 r}\right)$: This factor modifies both the time and space terms and depends on **mass $M$** of the object and the **distance $r$** from its center.
+- $r$: The radial distance from the center of the massive object.
+- $d\Omega^2$: This term represents the spherical coordinates (angles) around the object and isn’t directly relevant to time dilation or the event horizon.
+
+### Schwarzschild Radius and The Event Horizon
+
+[^7]: Medieval Proverb
+
+The **Schwarzschild radius** $R_s$ is a critical radius derived from this solution. It’s defined as:
+
+$$
+R_s = \frac{2GM}{c^2}
+$$
+
+- This radius represents the **event horizon** of a black hole—the boundary beyond which nothing, not even light, can escape.
+
+- When $r = R_s$, the term $\left(1 - \frac{2GM}{c^2 r}\right)$ becomes zero in the time component, making $ds^2 \to 0$ for any finite time interval $dt$. This means time essentially “stops” from the perspective of a distant observer watching an object fall toward the black hole.
+
+### Curvature & Coordinate Singularities
+
+There are two key types of singularities associated with black holes:
+
+- **Coordinate Singularity (Event Horizon)**
+  - At $r = R_s$, the Schwarzschild metric appears to “break down” (it becomes infinite or zero). But this isn’t a true physical singularity—it’s a **coordinate singularity**.
+  - This can be thought of as a mathematical artifact of the coordinate system. The event horizon can be crossed by an infalling object without encountering infinite curvature.
+  - Using alternative coordinates, such as **Kruskal-Szekeres coordinates**, removes this “singularity,” allowing for a smooth path through the event horizon.
+
+- **Curvature Singularity (Central Singularity)**
+  - At $r = 0$, the curvature of spacetime becomes **infinite**. This is a **true physical singularity** where densities become infinitely large, and the laws of physics as we know them break down.  - This singularity is located at the center of a black hole and is inescapable once an object crosses the event horizon.
+
+### Inevitability Across The Event Horizon
+> All Roads Lead To Rome [^7]
+
+Once an object crosses the event horizon at $r = R_s$, the roles of time and space coordinates **effectively switch**. Inside the event horizon:
+
+- The **radial coordinate $r$** behaves like **time**: all paths lead inevitably toward $r = 0$, the singularity, much like how all paths in normal time lead toward the future.
+- The **time coordinate $t$** behaves more like a spatial coordinate, losing its usual meaning. Inside the horizon, movement “forward in time” is equivalent to moving closer to the singularity.
+
+This is why **crossing the event horizon is a point of no return**—just as you can’t stop moving forward in time, you can’t stop moving toward the singularity once you’re inside.
+
+![Visualization of Light Cones in Time as a Function of Schwarzschild Radius [^8]](imgs/schwarz.png)
+
+[^8]: https://www.johnboccio.com/
+
+This coordinate flipping is a consequence of the Schwarzschild Coordinates used. If we use a slightly different reformulation known as the **Eddington-Finkelstein Coordinates** we see the same effect of moving towards the curvature singularity without the sign flipping:
+
+![Eddington-Finkelstein Coordinate Plot [^8]](imgs/eddy.png)
+
+### Summary
+
+The Schwarzschild solution reveals:
+
+- **Massive objects curve spacetime** creating gravitational effects.
+- **The Schwarzschild radius** marks the event horizon beyond which time and space switch roles.
+- **Coordinate singularities** (event horizons) differ from **curvature singularities** (central singularities).
 
 ## Kruskal-Szekeres Coordinates: Inside the Event Horizon
 
-Goal: Use Kruskal coordinates to explain why the singularity lies in the future of any object crossing the event horizon.
+**Kruskal coordinates** extend the **Schwarzschild solution** by providing a way to visualize black holes in a way that doesn’t have the coordinate singularity at the event horizon. This extension allows us to map out the **paths of objects** inside and outside the event horizon, showing how they approach the singularity.
 
-Key Points:Explain how Kruskal coordinates extend the Schwarzschild solution, allowing us to visualize the paths of objects inside the event horizon. Describe how, inside the event horizon, the time and space axes effectively “flip”—$t$ becomes spatial, and $x$ becomes temporal. Discuss the inevitability of the singularity: once inside, all directions in time lead to the singularity.
+In Kruskal coordinates:
 
-Connection: This section ties together how both special and general relativity redefine our notions of space, time, and causality.
+- The **event horizon** is not a boundary in the traditional sense; rather, it’s a point where **space and time axes flip**.
+- These coordinates allow for a smooth, continuous depiction of spacetime across the event horizon, highlighting the inevitability of the singularity for any object that crosses this boundary.
+
+![Kruskal–Szekeres coordinates [^8]](imgs/krusty.png)
+
+### The Flip: Space and Time Axes Inside the Event Horizon
+
+In the **Schwarzschild solution**, time $t$ and radial distance $r$ are the primary coordinates:
+
+- **Outside the event horizon**, $t$ acts as the time coordinate and $r$ as the spatial coordinate.
+- **Inside the event horizon** (i.e., for $r < R_s$, the Schwarzschild radius), the coordinates flip in a very real sense:
+  - **Radial distance $r$** now acts like a **time coordinate**—all paths move inexorably toward decreasing $r$, regardless of any attempts to escape.
+  - **Time $t$** behaves more like a **spatial coordinate**, losing its usual meaning of “forward in time.”
+
+This flip in coordinates means that **Time flows toward the singularity** for any object inside the event horizon, making the singularity effectively an **inevitable future** rather than a point in space you could avoid.
+
+
+### Kruskal Coordinates Eliminate The Coordinate Event Horizon Coordinate Singularity 
+
+Kruskal coordinates $(T, X)$ replace $(t, r)$ to eliminate the coordinate singularity at $r = R_s$, making it clear that:
+
+- **The event horizon is just another part of spacetime** in Kruskal coordinates, without the artificial “infinite” boundary seen in Schwarzschild coordinates.
+- **Inside the event horizon**, the coordinate transformation shows all future paths converge toward the singularity at $r = 0$, regardless of any efforts by the object.
+
+In Kruskal diagrams:
+
+- The **singularity** at $r = 0$ forms a “line” in the future, with all paths ending at this point.
+- The **event horizon** is a 45° line, where light rays moving toward the horizon just manage to hover there, unable to escape.
+- **Outside the event horizon**, paths can move freely, but inside, every direction (even those that feel “upward” or “outward”) ultimately leads to the singularity.
+
+
+### Why the Singularity Is Inevitable in the Future
+
+Since time and space effectively flip inside the event horizon, the singularity acts as a future point in **temporal terms**:
+
+- No path—whether for light, particles, or any object—can avoid the singularity once it crosses the event horizon.
+- This setup leads to the conclusion that **the singularity lies in the future of all objects that cross the event horizon**. There’s no direction to move that doesn’t lead to it, just as there’s no way to avoid moving forward in time outside a black hole.
+
+### Relativity Redfines Space, Time, and Causality
+
+Kruskal coordinates provide a profound visualization of how **general relativity** reshapes our understanding of spacetime:
+
+- **Space and time are not fixed** but depend on the gravitational context, and near a black hole, these roles are transformed.
+- **Causality** inside the event horizon is altered: what we consider “future” becomes tied to an inevitable destination (the singularity).
+
+# Timeline of The Universe
+> The End
+
+$Ga$ is **Giga-Annum** or 1 billion Earth years
+
+:::{.column-screen}
+```{mermaid}
+timeline
+    Big Bang : -13.8 Ga
+    First Atoms Form : -13.7 Ga
+    First Stars Form : -13.5 Ga
+    Milky Way Forms : -13.4 Ga
+    Sun and Solar System Form : -4.6 Ga
+
+    Present Day : 0 Ga
+
+    Milky Way and Andromeda Galaxy Collision : +4 Ga
+    Sun Expands into a Red Giant : +5 Ga
+    Sun Becomes a White Dwarf : +7.5 Ga
+    Stellar Formation Ceases in Most Galaxies : +100 Ga
+    Degenerate Era Begins : +1,000 Ga
+    Black Holes Begin Evaporating via Hawking Radiation : +10^67 Ga
+    Black Hole Era Ends : +10^100 Ga
+    Dark Era Begins (Only Subatomic Particles Remain) : +10^120 Ga
+```
+:::
+
+# Acknowledgements
+Thank you for reading! I hope you found some parts as mind-blowingly bizarre as I did.
+
+Special thanks to my friend Devery for agreeing to look over the math for me and Sam and Kaia for letting me yap at them about this while I was working on it.
 
 # Glossary
 
