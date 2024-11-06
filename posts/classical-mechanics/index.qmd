@@ -902,8 +902,8 @@ An unexpected consequence of the **Michelson-Morley Experiment** of 1887---while
 Einstein realized that, to be consistent with Maxwell’s equations for electromagnetism, light’s speed must remain constant across all frames of reference. This insight forced a rethinking of space and time. The concepts of absolute time (a universal “clock”) and absolute space (a universal grid) had to be discarded. Instead, space and time are intertwined in such a way that the speed of light remains constant—a revolutionary shift that led to the notion of spacetime.
 
 1. Invariance of $c$: The speed of light in a vacuum is the same for all observers, regardless of their motion. This means that whether you’re standing still, driving a car, or hurtling through space, $c$ is always the same.
-2. Space and Time Adapt: For this invariance to hold, space and time themselves must adapt to keep the speed of light constant. If you move faster, time slows down and lengths contract to ensure you never catch up with light.
-3. Relativity of Simultaneity: Events that appear simultaneous to one observer may not be simultaneous to another moving observer. This idea challenges our intuitive notion of a shared “now” and suggests that time flows differently depending on motion. Ab event in one observer's past can be another's future depending on how fast they are moving relative to one another.
+2. Space and Time Adapt: For this invariance to hold, space and time themselves must adapt to keep the speed of light constant. If you move faster, your time slows down and lengths contract relative to slower-moving observers.
+3. Relativity of Simultaneity: Events that appear simultaneous to one observer may not be simultaneous to another moving observer. This idea challenges the intuitive notion of a shared “now” and suggests that time flows differently depending on motion. An event in one observer's past can be in another's future depending on how fast they are moving relative to one another.
 4. More directly, we now know this also limits _informations_ ability to propagate faster than speed of light. Quantum entanglement, counter-intuitively, does _not_ violate this principle.
 
 ### Time is Just Another Coordinate
@@ -916,7 +916,7 @@ We can now measure something called the **spacetime interval** that takes both s
 
 ## Lost In (Minkowski) Space: The Geometry of Spacetime
 
-In everyday life, we think of **space** and **time** as separate. We measure distances in meters or miles and keep track of time with clocks. However, special relativity showed us that space and time are deeply connected, forming a unified framework called **spacetime**. We can described this framework mathematically using a special kind of geometry called **Minkowski space**.
+We can described the unified spacetime framework mathematically using a special kind of geometry called **Minkowski space**. In this space, all objects project a **causal light cone** forward along the time axis that restricts what other events in spacetime they can interact with. Photons, which are massless, propagate along the diagonals $y = \pm \space x$.
 
 ```{python}
 #| label: fig-minkowski_light_cone
@@ -959,7 +959,7 @@ plt.show()
 
 ### The Spacetime Interval
 
-In Minkowski space, the fundamental unit of "distance" isn’t a simple measurement of space or time alone—it’s a combination of both, called the **spacetime interval**. For two events separated by a distance $x$ and a time $t$, the spacetime interval $s$ is given by:
+In Minkowski space, the fundamental unit of "distance" isn’t a simple measurement of space or time alone—it’s a combination of both, called the **spacetime interval**. For two events separated by a distance $x$ and a time $t$, the spacetime interval $s$ is given by a modified form of the Pythagorean Theorem:
 
 $$s^2 = c^2 t^2 - x^2$$
 
@@ -1011,85 +1011,217 @@ ax.axvline(0, color='black',linewidth=0.5)
 plt.show()
 ```
 
-
 This interval differs from the usual Euclidean distance formula.
 
 - $c$ is the speed of light, a constant that connects space and time.
 - The interval $s$ combines spatial separation ($x$) and time separation ($t$) but with a **minus sign** in front of $x^2$, which makes the geometry of Minkowski space different from ordinary space.
 - Note how we keep units consistent by multiplying $t$ by $c$. We're not in Kansas anymore [^5].
 
-[^5]: The Wizard of Oz
+[^5]: Dorothy - The Wizard of Oz
 
 ### Why This Interval Matters
 
 The spacetime interval $s$ has an important property: it’s **invariant** for all observers, regardless of their relative motion. This invariance means that while two observers might disagree on measurements of $x$ and $t$, they will always agree on the value of $s$. In other words, even though space and time are experienced differently depending on motion, **spacetime itself has an unchanging “distance”** between events.
 
-This interval $s$ is also known as **proper time** when it represents the "real time" experienced by an object moving along a specific path in spacetime. Just as distance measures separation in space, the spacetime interval $s$ measures separation in spacetime.
+This interval $s$ is also known as **proper time** when it represents the "real time" experienced by an object moving along a specific path in spacetime. Just as distance measures separation in space, the spacetime interval $s$ measures separation in spacetime. 
 
-### Visualizing Minkowski Space
+One unintuitive concept about Minkowski space is: due to the negative sign in how the spacetime interval is calculated, a longer line does not correspond to _more time experienced_. In fact, just the opposite is true. Relative to a stationary reference view, the closer on object moves to the speed of light the less time it will experience (**Time Dilation**) and the smaller the object will appear (**Length Contraction**).
 
-In Minkowski space, we can plot time and space as perpendicular axes, similar to a regular coordinate system, but with some key differences. Points (or “events”) in spacetime are located by both space and time coordinates. If we connect two events, the **spacetime interval** $s$ between them becomes the “distance” in this spacetime geometry.
+::: {.callout-note}
+## Derivation of Lorentz Transformations from Spacetime Interval
+To derive the time dilation and length contraction formulas from the spacetime interval, we can start with the invariant interval in special relativity. The spacetime interval $s^2$ between two events in Minkowski space is given by:
 
-This interval sets limits on causality: events separated by a spacetime interval greater than zero (i.e., spacelike intervals) cannot influence each other, as no signal can travel faster than the speed of light. Light itself defines the **boundary of possible influence**, forming a "light cone" structure in this space.
+$$
+s^2 = c^2 \Delta t^2 - \Delta x^2
+$$
 
-### Toward General Relativity: Curved Spacetime
+where:
 
-Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when we introduce **mass**? Einstein’s theory of general relativity builds on this framework by showing that **mass curves spacetime**. Massive objects like planets and stars create distortions, bending the paths of objects and even light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.
+- $c$ is the speed of light,
+- $\Delta t$ is the time difference between the two events in one frame,
+- $\Delta x$ is the spatial separation between the events in the same frame.
 
-This concept of curved spacetime is described mathematically by the **Schwarzschild solution**, a specific solution to Einstein’s field equations. It describes the geometry around a massive, non-rotating object, leading us to concepts like **black holes** and **event horizons**.
+This interval $s^2$ is invariant (it remains the same) in all inertial reference frames and is the basis for both derivations.
 
-In summary, Minkowski space provides the foundation for understanding spacetime as a unified geometry where space and time are linked through the spacetime interval. This flat spacetime model prepares us for the next step: seeing how spacetime itself bends in the presence of mass, laying the groundwork for the profound ideas of general relativity.
+---
+
+### 1. Deriving Time Dilation
+
+Consider two events that occur at the same location in a moving frame $S'$ (e.g., a clock moving with speed $v$ relative to an observer in frame $S$).
+
+#### Setup:
+- In the moving frame $S'$, the spatial separation $\Delta x' = 0$ because both events happen at the same place.
+- Let $\Delta t'$ be the time interval between the two events in $S'$ (the proper time).
+- In the stationary frame $S$, let the events be separated by a time interval $\Delta t$ and a spatial distance $\Delta x$.
+
+#### Interval in Frame $S'$:
+Since $\Delta x' = 0$,
+$$
+s^2 = c^2 \Delta t'^2
+$$
+
+#### Interval in Frame $S$:
+In the stationary frame $S$, the events are separated in both space and time:
+$$
+s^2 = c^2 \Delta t^2 - \Delta x^2
+$$
+
+Since $s^2$ is invariant, we equate the two expressions:
+$$
+c^2 \Delta t'^2 = c^2 \Delta t^2 - \Delta x^2
+$$
+
+Now, using the relationship $\Delta x = v \Delta t$ (where $v$ is the relative velocity of the two frames),
+$$
+c^2 \Delta t'^2 = c^2 \Delta t^2 - (v \Delta t)^2
+$$
+
+Factoring out $\Delta t^2$,
+$$
+c^2 \Delta t'^2 = \Delta t^2 (c^2 - v^2)
+$$
+
+Dividing both sides by $c^2$,
+$$
+\Delta t'^2 = \Delta t^2 \left( 1 - \frac{v^2}{c^2} \right)
+$$
+
+Taking the square root,
+$$
+\Delta t' = \Delta t \sqrt{1 - \frac{v^2}{c^2}}
+$$
+
+Since $\Delta t'$ is the proper time (the time in the frame where the events happen at the same location), we rearrange this to express $\Delta t$ in terms of $\Delta t'$:
+$$
+\Delta t = \frac{\Delta t'}{\sqrt{1 - \frac{v^2}{c^2}}}
+$$
+
+This is the **time dilation formula**. It shows that the time interval $\Delta t$ in the stationary frame $S$ (observed time) is longer than the time interval $\Delta t'$ in the moving frame $S'$ (proper time). In other words, a moving clock runs slower when observed from a stationary frame.
+
+---
+
+### 2. Deriving Length Contraction
+
+Consider two points at rest in frame $S$ that define the endpoints of a rod, with a length $L$ measured in the frame $S$.
+
+#### Setup:
+- In the stationary frame $S$, the endpoints of the rod are separated by $\Delta x = L$.
+- In the moving frame $S'$, the endpoints are separated by $\Delta x' = L'$, which we want to find.
+- The events marking the locations of the endpoints are simultaneous in $S$ (so $\Delta t = 0$ in $S$).
+
+#### Interval in Frame $S$:
+Since the events are simultaneous in $S$,
+$$
+s^2 = -\Delta x^2 = -L^2
+$$
+
+#### Interval in Frame $S'$:
+In the moving frame $S'$, where the rod is moving with velocity $v$, the spatial separation is $\Delta x' = L'$, and there may be a nonzero time difference $\Delta t'$ between the events.
+
+Using the invariant interval,
+$$
+s^2 = c^2 \Delta t'^2 - L'^2
+$$
+
+Equating the intervals,
+$$
+-L^2 = c^2 \Delta t'^2 - L'^2
+$$
+
+where $L$ is the length of the rod in the stationary frame $S$, and $L'$ is the length measured in the moving frame $S'$. To proceed, let’s set up the interval conditions a bit more carefully.
+
+#### Clarify the Setup
+In the stationary frame $S$:
+
+- The events marking the endpoints of the rod are simultaneous ($\Delta t = 0$).
+- The length $L$ is the proper length, as it’s measured in the frame where the rod is at rest.
+
+In the moving frame $S'$:
+
+- The endpoints are separated by $\Delta x' = L'$.
+- Since the events are not simultaneous in $S'$, there may be a time difference $\Delta t'$ between observing each endpoint in $S'$.
+
+#### Interval Invariance Between Frames
+
+From the invariance of the spacetime interval, we have:
+$$
+s^2 = -L^2 = c^2 \Delta t'^2 - L'^2
+$$
+
+#### Finding $L'$ in Terms of $L$
+
+Since we want to measure the length of the rod in $S'$ (the moving frame), we must consider the relativity of simultaneity. For length contraction, we want to eliminate $\Delta t'$ because in $S'$ the length $L'$ is measured at a single moment (i.e., events should be simultaneous in $S'$ to define the length).
+
+To eliminate $\Delta t'$, use the fact that $\Delta t'$ is related to the motion of the rod. Given $\Delta x = L$ in $S$, and knowing that $S'$ moves at velocity $v$ relative to $S$, the time interval in $S'$ can be expressed as:
+$$
+\Delta t' = \frac{v \Delta x}{c^2} = \frac{v L}{c^2}
+$$
+
+Substitute $\Delta t' = \frac{v L}{c^2}$ back into the interval equation:
+$$
+-L^2 = c^2 \left( \frac{v L}{c^2} \right)^2 - L'^2
+$$
+
+Simplify:
+$$
+-L^2 = \frac{v^2 L^2}{c^2} - L'^2
+$$
+
+Rearrange to solve for $L'^2$:
+$$
+L'^2 = L^2 \left(1 - \frac{v^2}{c^2}\right)
+$$
+
+Taking the square root:
+$$
+L' = L \sqrt{1 - \frac{v^2}{c^2}}
+$$
+
+### Final Length Contraction Formula
+This is the **length contraction formula**:
+$$
+L' = L \sqrt{1 - \frac{v^2}{c^2}}
+$$
+
+where:
+- $L$ is the proper length (length of the rod in the frame where it is at rest),
+- $L'$ is the contracted length as observed in the frame moving at speed $v$ relative to the rod.
+
+This shows an observer moving relative to the rod measures a shorter length than an observer at rest with respect to it.
+:::
 
 ```{python}
-#| label: corrected_worldlines_lightcone
-#| fig-cap: "Minkowski Space: Worldlines for Stationary and Moving Observers"
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+#| label: fig-length-contraction
+#| fig-cap: Example of how long 1 meter rod would appear to an observer as they moved at different fractions of the speed of light
+v_values = np.linspace(0, 0.99, 500)  # velocities as fraction of c, up to 99% of c
+L0 = 1  # initial (proper) length in meters
 
+# Length contraction formula
+L_contracted = L0 * np.sqrt(1 - v_values**2)
 
-# Create figure and axis
-fig, ax = plt.subplots(figsize=(8, 8))
+# Plot the contraction of length as velocity increases
+fig, ax = plt.subplots(figsize=(8, 6))
+ax.plot(v_values, L_contracted, color='blue', label="Contracted Length")
 
-# Generate time values
-t = np.linspace(-5, 5, 100)
+# Labels and plot styling
+ax.set_xlabel("Velocity as a fraction of the speed of light (v/c)")
+ax.set_ylabel("Observed Length (m)")
+ax.set_title("Length Contraction of a 1 Meter Object vs. Speed")
+ax.legend()
+ax.grid(True)
 
-# Plot light cone (x = ±t)
-ax.plot(t, t, '--', color='orange', label='Light Cone: $x = ct$')
-ax.plot(t, -t, '--', color='orange')
-
-# Plot stationary observer's worldline (x = 0)
-ax.plot([0, 0], [-5, 5], color='blue', lw=2, label='Stationary Observer (v = 0)')
-
-# Plot worldline for v = 0.3c
-v1 = 0.3  # Velocity = 0.3c
-x1 = v1 * t  # Worldline for v = 0.3c
-ax.plot(x1, t, '--', color='blue', lw=2, label='Worldline (v = 0.3c)', alpha=0.75)
-
-# Plot worldline for v = 0.9c
-v3 = 0.6  # Velocity = 0.9c
-x3 = v3 * t  # Worldline for v = 0.9c
-ax.plot(x3, t, '--', color='blue', lw=2, label='Worldline (v = 0.6c)', alpha=0.5)
-
-# Plot worldline for v = 0.9c
-v2 = 0.9  # Velocity = 0.9c
-x2 = v2 * t  # Worldline for v = 0.9c
-ax.plot(x2, t, '--', color='blue', lw=2, label='Worldline (v = 0.9c)', alpha=0.25)
-
-# Set plot limits, labels, and title
-ax.set_xlim(-5, 5)
-ax.set_ylim(-5, 5)
-ax.set_xlabel('Space ($x$)')
-ax.set_ylabel('Time ($t$)')
-ax.set_title('Minkowski Space: Worldlines for Different Velocities')
-
-# Add legend
-ax.legend(loc='upper left')
-
-# Show plot
 plt.show()
-
 ```
+
+
+### Mass Curvature
+> _...And I cannot lie. <br>You other brothers can't deny._ [^6]
+
+[^6]: Sir Mix-a-Lot - I Like Big Butts
+
+Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when **mass** is introduced? Einstein’s theory of general relativity builds on his previous framework by realizing **mass curves spacetime**. Massive objects like planets and stars create distortions, bending the paths of objects and even electromagnetic waves like light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.
+
+This concept of curved spacetime can be described mathematically by the **Schwarzschild solution**, a specific solution to Einstein’s field equations. It describes the geometry around a massive, non-rotating object, leading us to concepts like **black holes** and **event horizons**.
 
 ## General Relativity: Gravity as Curvature
 > May the Schwarz(schild Solution) be with you [^4]
