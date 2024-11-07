@@ -1,0 +1,22 @@
+/* Increase font size, node padding, and spacing for Mermaid timeline */
+.mermaid svg {
+    font-size: 18px; /* Increases font size */
+}
+
+.mermaid .label text {
+    font-size: 16px; /* Increases node label font size */
+}
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse {
+    padding: 8px; /* Adds padding inside nodes */
+}
+
+.mermaid .edgeLabel text {
+    font-size: 14px; /* Increases font size for edge labels */
+}
+
+.mermaid .label rect {
+    width: 200px; /* Adjusts width of nodes */
+}
