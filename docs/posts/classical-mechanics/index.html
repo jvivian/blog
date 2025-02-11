@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Vivian">
+<meta name="dcterms.date" content="2024-11-06">
+
+<title>Pythagorean Time Dilation – blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6561bbde787c299e21493071c8edc6ff.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-44266c55e4ed57b741d21de50a2a288a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jvivian.github.io"> <i class="bi bi-bookmarks" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jvivian"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&amp;hl=en&amp;authuser=1"> <i class="bi bi-book" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/john-vivian-913b41a6/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#a-journey-through-spacetime" id="toc-a-journey-through-spacetime" class="nav-link active" data-scroll-target="#a-journey-through-spacetime">A Journey Through (Space)Time</a></li>
+  <li><a href="#absolute-acceleration" id="toc-absolute-acceleration" class="nav-link" data-scroll-target="#absolute-acceleration">Absolute Acceleration</a>
+  <ul class="collapse">
+  <li><a href="#kinematic-equations" id="toc-kinematic-equations" class="nav-link" data-scroll-target="#kinematic-equations">Kinematic Equations</a></li>
+  <li><a href="#the-universal-law-of-gravitation" id="toc-the-universal-law-of-gravitation" class="nav-link" data-scroll-target="#the-universal-law-of-gravitation">The Universal Law of Gravitation</a></li>
+  </ul></li>
+  <li><a href="#maxwells-equations" id="toc-maxwells-equations" class="nav-link" data-scroll-target="#maxwells-equations">Maxwell’s Equations</a>
+  <ul class="collapse">
+  <li><a href="#gausss-law-electric-field" id="toc-gausss-law-electric-field" class="nav-link" data-scroll-target="#gausss-law-electric-field"><strong>Gauss’s Law (Electric Field)</strong></a></li>
+  <li><a href="#gausss-law-for-magnetism" id="toc-gausss-law-for-magnetism" class="nav-link" data-scroll-target="#gausss-law-for-magnetism"><strong>Gauss’s Law for Magnetism</strong></a></li>
+  <li><a href="#faradays-law-of-induction" id="toc-faradays-law-of-induction" class="nav-link" data-scroll-target="#faradays-law-of-induction"><strong>Faraday’s Law of Induction</strong></a></li>
+  <li><a href="#ampères-law-with-maxwells-correction" id="toc-ampères-law-with-maxwells-correction" class="nav-link" data-scroll-target="#ampères-law-with-maxwells-correction"><strong>Ampère’s Law (with Maxwell’s Correction)</strong></a></li>
+  </ul></li>
+  <li><a href="#lagrangian-and-hamiltonian-mechanics" id="toc-lagrangian-and-hamiltonian-mechanics" class="nav-link" data-scroll-target="#lagrangian-and-hamiltonian-mechanics">Lagrangian and Hamiltonian Mechanics</a>
+  <ul class="collapse">
+  <li><a href="#the-action-integral" id="toc-the-action-integral" class="nav-link" data-scroll-target="#the-action-integral">The Action Integral</a></li>
+  <li><a href="#the-hamiltonian-reformulation" id="toc-the-hamiltonian-reformulation" class="nav-link" data-scroll-target="#the-hamiltonian-reformulation">The Hamiltonian Reform(ul)ation</a></li>
+  </ul></li>
+  <li><a href="#pythagoras-in-minkowski-space" id="toc-pythagoras-in-minkowski-space" class="nav-link" data-scroll-target="#pythagoras-in-minkowski-space">Pythagoras in Minkowski Space</a>
+  <ul class="collapse">
+  <li><a href="#special-relativity-and-the-insanity-of-c" id="toc-special-relativity-and-the-insanity-of-c" class="nav-link" data-scroll-target="#special-relativity-and-the-insanity-of-c">Special Relativity and the Insanity of <span class="math inline">\(c\)</span></a></li>
+  <li><a href="#lost-in-minkowski-space-the-geometry-of-spacetime" id="toc-lost-in-minkowski-space-the-geometry-of-spacetime" class="nav-link" data-scroll-target="#lost-in-minkowski-space-the-geometry-of-spacetime">Lost In (Minkowski) Space: The Geometry of Spacetime</a></li>
+  <li><a href="#general-relativity-gravity-as-curvature" id="toc-general-relativity-gravity-as-curvature" class="nav-link" data-scroll-target="#general-relativity-gravity-as-curvature">General Relativity: Gravity as Curvature</a></li>
+  <li><a href="#kruskal-szekeres-coordinates-inside-the-event-horizon" id="toc-kruskal-szekeres-coordinates-inside-the-event-horizon" class="nav-link" data-scroll-target="#kruskal-szekeres-coordinates-inside-the-event-horizon">Kruskal-Szekeres Coordinates: Inside the Event Horizon</a></li>
+  </ul></li>
+  <li><a href="#timeline-of-the-universe" id="toc-timeline-of-the-universe" class="nav-link" data-scroll-target="#timeline-of-the-universe">Timeline of The Universe</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pythagorean Time Dilation</h1>
+<p class="subtitle lead">A Summary of Classical Mechanics</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Math</div>
+    <div class="quarto-category">Physics</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Vivian </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 6, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="a-journey-through-spacetime" class="level1">
+<h1>A Journey Through (Space)Time</h1>
+<blockquote class="blockquote">
+<p><em>I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me</em> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Motivation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This overview is roughly structured by the concepts I found most profound while reading and researching topics in Sean Carroll’s book <em>The Biggest Ideas in The Universe: Space, Time, and Motion</em>.</p>
+</div>
+</div>
+<ul>
+<li>While velocity only has meaning in other reference frames, acceleration is <em>absolute</em>, and can be identified intriniscally without one (in most cases).</li>
+<li>The squared term in the inverse square law is derived from the spacial geometry we live in (three dimensions).</li>
+<li>Magnetism only exists as a relativistic effect when an object moves relative to an electric field, which helps explain why we have never observed a magnetic monopole.</li>
+<li>The path a particle or system takes is always the most “economical” route through spacetime via minimization/maximization of <strong>action</strong>—a scalar quantity that describes how the balance of kinetic versus potential energy of a physical system changes.</li>
+<li>Conservation laws arise directly from symmetries in the laws of physics. I.e. The invariance of a system’s laws relate directly to a given conservation law: time invariance <span class="math inline">\(\rightarrow\)</span> energy conservation, spatial invariance <span class="math inline">\(\rightarrow\)</span> momentum conservation, and rotational symmetry <span class="math inline">\(\rightarrow\)</span> angular momentum conservation.</li>
+<li>The speed of light, <span class="math inline">\(c\)</span>, provides a conversion factor between time and space. Like energy <span class="math inline">\(\Leftrightarrow\)</span> mass and electricity <span class="math inline">\(\Leftrightarrow\)</span> magnetism, they are aspects of the same phenomena.</li>
+<li>Lorentz transformations, which describe effects like length contraction and time dilation, can be derived from the invariant spacetime interval—analagous to the Pythagorean theorem—in the geometry of Minkowski space.</li>
+<li>Schwartzchild’s solution to General Relativity contained a curious mathematical singularity which—originally thought to be a <em>coordinate singularity</em>—turned out to be a real <em>curvature singularity</em> in spacetime: the infamous <strong>black hole</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Disclaimer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’m neither a mathematician or physicist but do my best to clarify the meaning of each variable and operator in the equations introduced.</p>
+</div>
+</div>
+</section>
+<section id="absolute-acceleration" class="level1">
+<h1>Absolute Acceleration</h1>
+<blockquote class="blockquote">
+<p><em>Speed has never killed anyone. Suddenly becoming stationary, that’s what gets you</em> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p>Imagine yourself floating in deep space, with only distant stars as a backdrop. Would you be able to tell if you were moving? Surprisingly, no. As Einstein demonstrated, <strong>velocity only has meaning relative to another reference frame</strong>. If two people drift past each other, neither can determine who is “stationary” or “moving” in any absolute sense—both could be moving, or one could be stationary. In empty space, without other points of reference, velocity becomes entirely relative.</p>
+<p>Oddly, <em>acceleration is different</em>. If you were suddenly accelerated in your spacesuit, you’d feel it immediately—your body would press against the suit, jerking you forward. Acceleration creates a force that acts on you directly, causing a <em>force gradient</em> you can feel. Unlike velocity, which requires no force to sustain, acceleration always involves a force acting on a mass.</p>
+<p>In fact, you can create your own “accelerometer” with something as simple as a spring and weight. Hang the weight from a spring, and if you accelerate left or right, the weight will stretch the spring in the opposite direction. This setup works because acceleration produces a noticeable force, while constant velocity does not.</p>
+<div id="cell-fig-spring_weight_visualization-dffad" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-spring_weight_visualization-dffad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spring_weight_visualization-dffad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-spring_weight_visualization-dffad-output-1.png" width="528" height="659" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spring_weight_visualization-dffad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Spring with a hanging weight, stretching left as the system accelerates to the right.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Back on Earth, even when we’re standing still, we feel the effect of acceleration toward the planet’s center, which we experience as <em>weight</em>. This downward pull is balanced by the normal force of the ground pushing back up against us, allowing us to experience acceleration even when we appear stationary.</p>
+<hr>
+<p>Physics equations are extraordinary because they describe <em>universal relationships</em> in the natural world. For instance, the <strong>momentum</strong> of an object is simply the product of its mass and velocity: <span class="math display">\[p = mv\]</span> This relationship applies universally to every object with mass and velocity. And I think that’s pretty neat <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Notably, the equation shows that momentum is directly proportional to velocity for a constant mass—doubling an object’s velocity doubles its momentum.</p>
+<section id="kinematic-equations" class="level2">
+<h2 class="anchored" data-anchor-id="kinematic-equations">Kinematic Equations</h2>
+<blockquote class="blockquote">
+<p>Moving Through Time: Universal Relationships of Motion</p>
+</blockquote>
+<p>These equations describe universal relationships about an object’s motion with constant acceleration—useful for predicting where or how fast something will be at a given time.</p>
+<p><span class="math display">\[v = v_0 + at\]</span></p>
+<p>Velocity increases linearly with time when acceleration is constant</p>
+<p><span class="math display">\[s = s_0 + v_0 t + \frac{1}{2} at^2\]</span></p>
+<p>Position grows with time, influenced by both your initial speed and the acceleration</p>
+<p><span class="math display">\[v^2 = v_0^2 + 2a(s - s_0)\]</span></p>
+<p>The relationship between velocity and distance, without needing time</p>
+<p>An interesting consequence to these equations is given position or velocity as a function of time, the equation will predict the function’s value for whatever <span class="math inline">\(t\)</span> is. Meaning, these universal relationships do not operate as if the past (fixed from our perspective) is fundamentally different from the future (not-fixed, from our perspective).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What’s the point of calculus
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Calculus addresses two fundamental problems involving limits: <strong>rates of change</strong> and <strong>accumulation</strong>.</p>
+<p><strong>Derivatives</strong>: The derivative represents the rate of change of a quantity. It answers questions like, “How fast is something changing at an exact moment?” Calculus solves this by finding <span class="math inline">\(\frac{dx}{dt}\)</span> as both <span class="math inline">\(dx\)</span> and <span class="math inline">\(dt\)</span> approach zero—a challenge because dividing by zero is undefined. By using limits, calculus lets us precisely calculate this “instantaneous” rate without ever actually dividing by zero.</p>
+<p><strong>Integrals</strong>: The integral represents the accumulation of quantities over an interval, like the area under a curve. To do this, calculus sums up infinitely many tiny pieces (Riemann squares) as their width approaches zero. This limit-based approach lets us find the exact area, even under curves that are difficult or impossible to sum otherwise.</p>
+<div id="cell-fig-calculus" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-calculus" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calculus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-calculus-output-1.png" width="567" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calculus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Given some continuous function, the derivative is <em>instantaneous rate of change</em> at a given point.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>For example, if we expand a small change in a function, such as <span class="math inline">\((x + h)^2 - x^2\)</span>, and take the limit as <span class="math inline">\(h \rightarrow 0\)</span>, we end up with <span class="math inline">\(2x\)</span>—the derivative of <span class="math inline">\(x^2\)</span>. What’s really magical is the inverse of <span class="math inline">\(x^2\)</span> is the integral. This makes sense if you consider the derivative gives the rate of change (e.g.&nbsp;velocity from a function of position) and integration adds the accumulated change to get the original value (e.g.&nbsp;total distance from a function of velocity).</p>
+<p><span class="math display">\[ \frac{dx}{dt} f(x) = \int f(v) \space dt \]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kinematic Derivation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The kinematic equations can be derived from the basic definition of calculus. Given a change in position over time is velocity: <span class="math display">\[\frac{dx}{dt} = v\]</span></p>
+<p>we want to express <span class="math inline">\(v\)</span> in terms of <span class="math inline">\(t\)</span>, since that also changes over time.</p>
+<p><span class="math display">\[v(t) = v_0 + at\]</span></p>
+<p>Reformulate velocity as the first time derivative of position</p>
+<p><span class="math display">\[\frac{dx}{dt} = v_0 + at\]</span></p>
+<p>Then integrate with respect to time</p>
+<p><span class="math display">\[x(t) = \int (v_0 + at) dt\]</span></p>
+<p>Solving for the integral gives us</p>
+<p><span class="math display">\[x(t) = v_0t + \frac{1}{2}at^2 + C\]</span></p>
+<p>Where C would represent whatever the <strong>initial position</strong> is, which we can call <span class="math inline">\(x_0\)</span>. This gives us</p>
+<p><span class="math display">\[x(t) = x_0 + v_0t + \frac{1}{2}at^2\]</span></p>
+<p>You can plug this equation into <span class="math inline">\(v = v_0 + at\)</span> and do some math to get:</p>
+<p><span class="math display">\[v^2 = v_0^2 + 2a(x-x0)\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-universal-law-of-gravitation" class="level2">
+<h2 class="anchored" data-anchor-id="the-universal-law-of-gravitation">The Universal Law of Gravitation</h2>
+<blockquote class="blockquote">
+<p>Not the Deepak Chopra variety</p>
+</blockquote>
+<p>Newton’s Law of Gravitation describes the gravitational force between two masses, expressing how every mass exerts an attractive force on every other mass in the universe:</p>
+<p><span class="math display">\[
+F = G\frac{m_1 m_2}{r^2}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(F\)</span> is the gravitational force between the two masses.</li>
+<li><span class="math inline">\(G\)</span> is the gravitational constant, a fundamental constant that calibrates the strength of gravity.</li>
+<li><span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> are the masses of the two objects.</li>
+<li><span class="math inline">\(r\)</span> is the distance between the centers of the two masses.</li>
+</ul>
+<div id="cell-fig-gravitational_force_visualization" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-gravitational_force_visualization" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gravitational_force_visualization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-gravitational_force_visualization-output-1.png" width="686" height="506" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gravitational_force_visualization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Force vectors (equal and opposite for each mass) generated as a result of their respective masses and distance.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="why-the-inverse-square-law-why-r2" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-inverse-square-law-why-r2">Why the Inverse-Square Law? Why <span class="math inline">\(r^2\)</span>?</h3>
+<p>The inverse-square relationship, <span class="math inline">\(\frac{1}{r^2}\)</span>, reflects a fundamental property of how forces and fields spread out in three-dimensional space. Newton’s insight into this came from observing that gravitational and other forces, like light intensity, diminish in strength with the square of the distance.</p>
+<p>In three-dimensional space, when a force radiates outward from a point source (such as a mass), it spreads uniformly over the surface of an expanding sphere centered around that source. The surface area of a sphere grows proportionally to <span class="math inline">\(r^2\)</span>, where <span class="math inline">\(r\)</span> is the radius of the sphere. Consequently, as the distance <span class="math inline">\(r\)</span> increases, the same force is distributed over a larger area, causing the intensity at any given point on that surface to diminish in proportion to <span class="math inline">\(\frac{1}{r^2}\)</span>.</p>
+<p>Thus, the inverse-square law isn’t arbitrary but rather a natural consequence of geometry in three-dimensional space. If we lived in a universe with different spatial dimensions, the exponent would change accordingly. For example, in a two-dimensional plane, the force would weaken with <span class="math inline">\(\frac{1}{r}\)</span>, while in four dimensions, it would decay with <span class="math inline">\(\frac{1}{r^3}\)</span>.</p>
+<p>Newton’s Universal Law of Gravitation describes the generated by two masses. This equation also ties together the inverse square law (decay of intensity of effects such as light, radiation, or gravity).</p>
+<p><span class="math display">\[F = G\frac{m_1m_2}{r^2}\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> is the gravitational force between two masses.</li>
+<li><span class="math inline">\(G\)</span> is the gravitational constant.</li>
+<li><span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> are the masses of the two objects.</li>
+<li><span class="math inline">\(r\)</span> is the distance between the centers of the two masses.</li>
+</ul>
+<p>Why is <span class="math inline">\(r\)</span> squared? Why not quadrupled or halved? The inverse square relationship emerges as a property of living in three dimensions. The volume of a sphere increases with the square of the radius: <span class="math inline">\(4\pi r^2\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="maxwells-equations" class="level1">
+<h1>Maxwell’s Equations</h1>
+<blockquote class="blockquote">
+<p>The Original Field Science</p>
+</blockquote>
+<p>Maxwell’s Equations elegantly describe the behavior of electric and magnetic fields, revealing that these two forces are not separate but deeply interconnected. They provide a unified framework for understanding how electric charges and currents create fields that interact, propagate, and influence each other, ultimately giving rise to light itself.</p>
+<section id="gausss-law-electric-field" class="level2">
+<h2 class="anchored" data-anchor-id="gausss-law-electric-field"><strong>Gauss’s Law (Electric Field)</strong></h2>
+<p><span class="math display">\[\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Understanding the Del Operator (<span class="math inline">\(\nabla\)</span>) in Maxwell’s Equations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <strong>del operator</strong> (<span class="math inline">\(\nabla\)</span>) is a vector operator that captures how quantities change in space, and it’s central to expressing Maxwell’s equations in a compact, powerful form.</p>
+<ol type="1">
+<li><p><strong>Gradient (<span class="math inline">\(\nabla \phi\)</span>)</strong>: When applied to a scalar field <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\nabla\)</span> (del) gives the <strong>gradient</strong>, pointing in the direction of the greatest rate of change. For example, in an electric potential field <span class="math inline">\(\phi\)</span>, the gradient <span class="math inline">\(\vec{E} = -\nabla\phi\)</span> tells us how the electric field varies in space.</p></li>
+<li><p><strong>Divergence (<span class="math inline">\(\nabla \cdot\)</span>)</strong>: When <span class="math inline">\(\nabla\)</span> is applied to a vector field with a dot product (<span class="math inline">\(\nabla \cdot\)</span>), it gives the <strong>divergence</strong>. Divergence measures the “outflow” or “inflow” of a field at a point:</p>
+<ul>
+<li><strong>Gauss’s Law for Electricity</strong> <span class="math inline">\((\nabla·\vec{E} = \frac{ρ}{ε_0})\)</span>: This tells us that the electric field <span class="math inline">\(\vec{E}\)</span> diverges from electric charges.</li>
+<li><strong>Gauss’s Law for Magnetism</strong> <span class="math inline">\((\nabla·\vec{B} = 0)\)</span>: This shows that magnetic field lines have no divergence—they form closed loops, indicating no magnetic monopoles.</li>
+</ul></li>
+<li><p><strong>Curl (<span class="math inline">\(\nabla \times\)</span>)</strong>: When <span class="math inline">\(\nabla\)</span> is applied to a vector field with a cross product (<span class="math inline">\(\nabla \times\)</span>), it gives the <strong>curl</strong>, measuring the “rotation” or “circulation” of a field:</p>
+<ul>
+<li><strong>Faraday’s Law</strong> <span class="math inline">\((\nabla×\vec{E} = -\frac{∂\vec{B}}{∂t})\)</span>: A changing magnetic field <span class="math inline">\(\vec{B}\)</span> induces a circulating electric field <span class="math inline">\(\vec{E}\)</span>.</li>
+<li><strong>Ampère’s Law (with Maxwell’s Correction)</strong> <span class="math inline">\((\nabla×\vec{B} = μ_0\vec{J} + μ_0ε_0\frac{∂\vec{E}}{∂t})\)</span>: A changing electric field <span class="math inline">\(\vec{E}\)</span> or current density <span class="math inline">\(\vec{J}\)</span> induces a circulating magnetic field <span class="math inline">\(\vec{B}\)</span>.</li>
+</ul></li>
+</ol>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<p>The del operator (<span class="math inline">\(\nabla\)</span>) is a vector operator that operates on a: - <strong>Gradient (<span class="math inline">\(\nabla\phi\)</span>)</strong>: scalar field, producing a vector field. - <strong>Divergence (<span class="math inline">\(\nabla\cdot\)</span>)</strong>: vector field, producing a scalar field. - <strong>Curl (<span class="math inline">\(\nabla\times\)</span>)</strong>: vector field, producing a vector field.</p>
+</section>
+</div>
+</div>
+</div>
+<p>Gauss’s Law describes the relationship between electric charges and the electric field they produce. Specifically, it states that the electric flux (the “flow” of the electric field) through a closed surface is proportional to the total charge enclosed within that surface. For example, the electric field around a point charge (like an electron) points away from the charge if it’s positive, and towards the charge if it’s negative. The strength of the field is directly related to the amount of charge.</p>
+<ul>
+<li><span class="math inline">\(\nabla \cdot \mathbf{E}\)</span>: This is the divergence of the electric field <span class="math inline">\(\mathbf{E}\)</span>, which essentially measures how much the electric field is “spreading out” from a point.</li>
+<li><span class="math inline">\(\rho\)</span>: This represents the <strong>charge density</strong> (charge per unit volume). The more charge you have in a given region, the stronger the electric field diverges from that region.</li>
+<li><span class="math inline">\(\epsilon_0\)</span>: This is the <strong>permittivity of free space</strong>, a constant that determines how electric fields interact in a vacuum.</li>
+</ul>
+<div id="cell-fig-gauss_law_electric" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-gauss_law_electric" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gauss_law_electric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-gauss_law_electric-output-1.png" width="518" height="508" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gauss_law_electric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Gauss’s Law for Electricity: Electric Field Lines Around Charges
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gausss-law-for-magnetism" class="level2">
+<h2 class="anchored" data-anchor-id="gausss-law-for-magnetism"><strong>Gauss’s Law for Magnetism</strong></h2>
+<p><span class="math display">\[\nabla \cdot \mathbf{B} = 0\]</span></p>
+<p>This law states that there are <strong>no magnetic monopoles</strong> — that is, no isolated north or south magnetic poles. Magnetic fields (<span class="math inline">\(\mathbf{B}\)</span>) always form closed loops. Every magnetic field line that leaves a north pole must eventually return to a south pole.</p>
+<ul>
+<li><span class="math inline">\(\nabla \cdot \mathbf{B}\)</span>: This is the divergence of the magnetic field <span class="math inline">\(\mathbf{B}\)</span>, which measures how much the magnetic field is “spreading out” from a point.</li>
+<li>The fact that it’s equal to zero means that the net magnetic “flux” through any closed surface is always zero, implying that magnetic field lines don’t begin or end at any point (unlike electric fields, which start or end on charges).</li>
+</ul>
+<div id="cell-fig-magnetic" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-magnetic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-magnetic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-magnetic-output-1.png" width="614" height="611" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-magnetic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Magnetic field lines around a magnetic point
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="faradays-law-of-induction" class="level2">
+<h2 class="anchored" data-anchor-id="faradays-law-of-induction"><strong>Faraday’s Law of Induction</strong></h2>
+<p><span class="math display">\[\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\]</span></p>
+<p><strong>Meaning:</strong> Faraday’s Law explains how a changing magnetic field creates an electric field. If you have a time-varying magnetic field (<span class="math inline">\(\mathbf{B}\)</span>), it induces a circulating electric field (<span class="math inline">\(\mathbf{E}\)</span>). This is the principle behind electromagnetic induction, which is used in transformers and electric generators. When a magnet is spun around near a coil of wire, the changing magnetic field induces an electric current in the wire, which we can then use as electrical power.</p>
+<ul>
+<li><strong><span class="math inline">\(\nabla \times \mathbf{E}\)</span></strong>: This is the curl of the electric field <span class="math inline">\(\mathbf{E}\)</span>, which measures how much the electric field is “circulating” around a point.</li>
+<li><strong><span class="math inline">\(\frac{\partial \mathbf{B}}{\partial t}\)</span></strong>: This is the time rate of change of the magnetic field. It represents how the magnetic field is changing in time.</li>
+<li>The negative sign indicates that the induced electric field opposes the change in the magnetic field (this is Lenz’s law).</li>
+</ul>
+<div id="cell-fig-faraday" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div id="fig-faraday" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-faraday-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-faraday-output-1.png" width="566" height="566" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-faraday-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Changing magnetic fields induce electric fields
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ampères-law-with-maxwells-correction" class="level2">
+<h2 class="anchored" data-anchor-id="ampères-law-with-maxwells-correction"><strong>Ampère’s Law (with Maxwell’s Correction)</strong></h2>
+<p><span class="math display">\[\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}\]</span></p>
+<ul>
+<li><span class="math inline">\(\nabla \times \mathbf{B}\)</span>: This is the curl of the magnetic field <span class="math inline">\(\mathbf{B}\)</span>, which measures how much the magnetic field “circulates” around a point.</li>
+<li><span class="math inline">\(\mathbf{J}\)</span>: This is the <strong>current density</strong> (current per unit area).</li>
+<li><span class="math inline">\(\frac{\partial \mathbf{E}}{\partial t}\)</span>: This represents the rate of change of the electric field in time.</li>
+</ul>
+<p>Ampère’s Law relates electric currents and changing electric fields to the magnetic field they produce. It says that magnetic fields can be generated in two ways:</p>
+<ul>
+<li>By electric currents (moving charges), as described by the first term, <span class="math inline">\(\mu_0 \mathbf{J}\)</span>.</li>
+<li>By changing electric fields, as described by the second term, <span class="math inline">\(\mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}\)</span>, which is called the <strong>displacement current</strong> (introduced by Maxwell).</li>
+</ul>
+<p>Ampère’s Law with Maxwell’s correction tells us that <strong>currents</strong> (moving charges) and <strong>changing electric fields</strong> generate magnetic fields. Without the time-dependent term <span class="math inline">\(\frac{\partial \mathbf{E}}{\partial t}\)</span>, this would just be the original Ampère’s Law, which describes how an electric current creates a magnetic field (like in an electromagnet). Maxwell’s addition was crucial because it showed that even in the absence of a physical current, a changing electric field can still produce a magnetic field.</p>
+<div id="cell-fig-ampere" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div id="fig-ampere" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ampere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-ampere-output-1.png" width="760" height="747" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ampere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The opposite of Faraday’s Law - a time-varying electric field is the source of an induced magnetic field.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="the-unification-of-electromagnetism" class="level3">
+<h3 class="anchored" data-anchor-id="the-unification-of-electromagnetism">The Unification of Electromagnetism</h3>
+<p>Maxwell’s equations, taken together, explain how electric and magnetic fields interact and propagate. If you combine Faraday’s Law and Ampère’s Law, you can derive the <strong>wave equation</strong> for both electric and magnetic fields, showing that disturbances in these fields propagate at the speed of light. Together, these two effects allow electromagnetic waves to propagate through space, with the electric and magnetic fields continuously regenerating each other.</p>
+<p>This is why light, radio waves, X-rays, and all other electromagnetic radiation are essentially <strong>electromagnetic waves</strong>: oscillating electric and magnetic fields that move through space, even in a vacuum.</p>
+</section>
+</section>
+</section>
+<section id="lagrangian-and-hamiltonian-mechanics" class="level1">
+<h1>Lagrangian and Hamiltonian Mechanics</h1>
+<blockquote class="blockquote">
+<p>Different ways to tell the same (Newtonian) story</p>
+</blockquote>
+<p>In Newtonian mechanics, where <span class="math inline">\(F = ma\)</span>, we focus on forces acting at a specific point in space and time to answer “What happens at the next <span class="math inline">\(t\)</span>?” This approach helps us understand motion in terms of <strong>forces</strong> and <strong>accelerations</strong>.</p>
+<p>In contrast, mechanics based on action principles—Lagrangian and Hamiltonian mechanics—start from a different perspective, emphasizing the concept of <strong>action</strong>. Action represents an energy tradeoff between kinetic and potential energy, shaped by the system’s physical properties. Instead of predicting the immediate “next step,” these approaches answer questions about <em>paths</em>, e.g.&nbsp;which trajectory will efficiently guide a rocket to the moon?</p>
+<p>In lieu of forces, Lagrangian and Hamiltonian mechanics prioritize <strong>paths, energy, and phase space</strong>. Phase space, in particular, provides a powerful framework for visualizing the state of a system and plays a central role in fields like quantum mechanics and field theory.</p>
+<p>To see these differences in action, we can visualize a classical physical system—the <strong>simple harmonic oscillator</strong>—through the lenses of Newtonian, Lagrangian, and Hamiltonian mechanics.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple Harmonic Oscillator
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <strong>Simple Harmonic Oscillator</strong> is a fundamental model of periodic motion, where an object experiences a restoring force proportional to its distance from an equilibrium position. This force always acts toward the equilibrium, driving the object back whenever it is displaced.</p>
+<div id="cell-fig-SHO" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div id="fig-sho" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-sho-output-1.png" width="639" height="315" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: This mass-spring system illustrates the concept of a simple harmonic oscillator, where the restoring force is proportional to displacement. This same principle applies in other contexts such as pendulums, which exhibit harmonic motion at small angles. LC circuits, oscillate energy between electric and magnetic fields. This even extends to quantum harmonic oscillator models which models particles in a potential well.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cell-fig-corrected_mechanics_comparison" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div id="fig-corrected_mechanics_comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-corrected_mechanics_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-corrected_mechanics_comparison-output-1.png" width="757" height="943" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corrected_mechanics_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Comparison of Newtonian, Lagrangian, and Hamiltonian Mechanics for a simple harmonic oscillator
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="the-action-integral" class="level2">
+<h2 class="anchored" data-anchor-id="the-action-integral">The Action Integral</h2>
+<blockquote class="blockquote">
+<p>The profound economy of Nature</p>
+</blockquote>
+<p>The action integral <span class="math inline">\(S\)</span> is the “score” of a given path taken by a system between two points in time.</p>
+<p><span class="math display">\[S[q(t)] = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt\]</span></p>
+<ul>
+<li><span class="math inline">\(S[q(t)]\)</span> is the <em>action</em> which depends on the path <span class="math inline">\(q(t)\)</span></li>
+<li><span class="math inline">\(L(q, \dot{q}, t)\)</span> is the <strong>Lagrangian</strong>, which is the difference between the kinetic energy <span class="math inline">\(T\)</span> and potential energy <span class="math inline">\(V\)</span></li>
+<li>Note: Dot notation above a variable represents its first derivative. Two dots for the second derivative.</li>
+</ul>
+<p><span class="math display">\[L = T - V\]</span></p>
+<p>In essence, the action integral sums up the Lagrangian <span class="math inline">\(L\)</span> over a specific path from <span class="math inline">\(t_1\)</span> to <span class="math inline">\(t_2\)</span>. This principle of minimizing the action is known as the <em>principle of least action</em>, and it gives us the most efficient or “natural” path a system will take.</p>
+<section id="the-euler-lagrange-equation" class="level3">
+<h3 class="anchored" data-anchor-id="the-euler-lagrange-equation">The Euler-Lagrange Equation</h3>
+<p>We’re still missing one component—a condition that allows us to minimize the Lagrangian. Thankfully someone way smarter than any of us worked out the rather elegant solution, the <strong>Euler-Lagrange equation</strong>:</p>
+<p><span class="math display">\[\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0\]</span></p>
+<ul>
+<li><strong><span class="math inline">\(\frac{\partial L}{\partial \dot{q}}\)</span></strong>: This is the <strong>partial derivative of the Lagrangian with respect to the velocity</strong> <span class="math inline">\(\dot{q}\)</span>. It measures how sensitive the Lagrangian is to changes in the system’s velocity.</li>
+<li><strong><span class="math inline">\(\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right)\)</span></strong>: This term takes the time derivative of the above quantity, capturing how this sensitivity changes as the system evolves over time.</li>
+<li><strong><span class="math inline">\(\frac{\partial L}{\partial q}\)</span></strong>: This is the <strong>partial derivative of the Lagrangian with respect to position</strong> <span class="math inline">\(q\)</span>. It measures how sensitive the Lagrangian is to changes in the system’s position.</li>
+</ul>
+<p>The <strong>Euler-Lagrange equation</strong> tells us that, for the actual path taken by the system, these two rates of change are equal and opposite.</p>
+<section id="intuition-behind-the-equation" class="level4">
+<h4 class="anchored">Intuition Behind the Equation</h4>
+<p>The Euler-Lagrange equation is the mathematical expression of the <strong>principle of least action</strong>. It provides the conditions under which the action <span class="math inline">\(S\)</span> is minimized.</p>
+<p>To build intuition around this concept, let’s imagine a ball rolling down a <em>frictionless</em> hill.</p>
+<p>When the ball starts at the top of the hill, it has maximum potential energy (due to height and the acceleration from gravity) and zero kinetic energy (energy due to motion). As it begins rolling down, gravity pulls it lower, decreasing its potential energy. But energy can’t just disappear—instead, it converts into kinetic energy, causing the ball to speed up.</p>
+<p>The ball follows a path where potential energy smoothly turns into kinetic energy as it descends. The principle of least action explains this smooth exchange by “favoring” paths where energy changes are gradual and balanced.</p>
+<p>When the ball reaches the bottom, it’s out of hill to roll down. Its potential energy is minimized, and all the energy it gained from descending has been converted into kinetic energy.</p>
+<p>This trade-off between potential and kinetic energy is natural because it minimizes abrupt changes in energy. A path where energy flowed in sharp bursts or stopped suddenly would require additional forces or disruptions. A smooth path minimizes these disturbances, making it the most efficient in terms of conserving energy while following the laws of physics.</p>
+<p>If this process sounds similar to <strong>heat diffusion</strong>, you’re doin good baby. Both are examples of the Universe’s tendency towards <em>equilibrium</em> while maintaining <em>conservation</em>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TLDR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Any change in kinetic energy is exactly offset by an opposite change in potential energy, and vice versa.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Action of Simple Harmonic Motion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To see the action integral in action (hehe), let’s examine a <strong>simple harmonic oscillator</strong>, such as a mass attached to a spring and solve for the Lagrangian.</p>
+<p><strong>Kinetic Energy <span class="math inline">\(T\)</span></strong></p>
+<p>For an object of mass <span class="math inline">\(m\)</span> moving with velocity <span class="math inline">\(\dot{q}\)</span>, the kinetic energy <span class="math inline">\(T\)</span> is given by: <span class="math display">\[T = \frac{1}{2} m \dot{q}^2\]</span></p>
+<p><strong>Potential Energy <span class="math inline">\(V\)</span></strong></p>
+<p>For a spring with spring constant <span class="math inline">\(k\)</span>, the potential energy <span class="math inline">\(V\)</span> depends on the displacement <span class="math inline">\(q\)</span> from equilibrium: <span class="math display">\[V = \frac{1}{2} k q^2\]</span></p>
+<p><strong>Lagrangian <span class="math inline">\(L = T - V\)</span></strong></p>
+<p>Substituting the expressions for <span class="math inline">\(T\)</span> and <span class="math inline">\(V\)</span>:</p>
+<p><span class="math display">\[L = T - V = \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2\]</span></p>
+<p><strong>Action Integral</strong></p>
+<p>To find the path <span class="math inline">\(q(t)\)</span> that the system takes between times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span>, we evaluate the action integral: <span class="math display">\[S[q(t)] = \int_{t_1}^{t_2} \left( \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2 \right) \, dt\]</span></p>
+<p><strong>Finding the Path (Euler-Lagrange Equation)</strong></p>
+<p>Applying the <strong>Euler-Lagrange equation</strong> to the Lagrangian leads to the equation of motion: <span class="math display">\[\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0\]</span></p>
+<p>Solving this gives the differential equation for a simple harmonic oscillator: <span class="math display">\[m \ddot{q} + k q = 0\]</span></p>
+<p>which has solutions in the form of sinusoidal functions, describing the oscillatory motion <span class="math inline">\(q(t)\)</span> over time.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hey not so fast, where the hell is <span class="math inline">\(q(t)\)</span>?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ok, ok sorry. I tried to pull a fast one. Solving the Lagrangian only gave us this differential equation—it didn’t directly give us the solution for <span class="math inline">\(q(t)\)</span>, which is the explicit path or trajectory of the system over time.</p>
+<p>We can rewrite our solution as</p>
+<p><span class="math display">\[\ddot{q} + \frac{k}{m}q=0\]</span></p>
+<p>Let <span class="math inline">\(\omega = \sqrt{\frac{k}{m}}\)</span>, where <span class="math inline">\(\omega\)</span> is the <strong>angular frequency</strong> of the oscillator. Now the equation becomes: <span class="math display">\[\ddot{q} + \omega^2 q = 0\]</span></p>
+<p>This equation has a general solution of the form: <span class="math display">\[q(t) = A \cos(\omega t) + B \sin(\omega t)\]</span> where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants determined by the initial conditions of the system (such as initial position and velocity).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+But wait, why is that the general solution?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Oh my god fuck off already</p>
+</div>
+</div>
+</div>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>This solution, <span class="math inline">\(q(t) = A \cos(\omega t) + B \sin(\omega t)\)</span>, is the explicit <strong>time-dependent path</strong> or <strong>trajectory</strong> that the oscillator follows. It describes the oscillatory motion in terms of time, with:</p>
+<ul>
+<li><span class="math inline">\(\omega\)</span>: The frequency of oscillation, showing how quickly the system oscillates.</li>
+<li><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: Constants that depend on the starting conditions (e.g., where and how fast the mass was initially moving).</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<p>If you squint, you’ll see we’ve derived <strong>Hooke’s Law</strong>. Since <span class="math inline">\(\ddot{q} = a\)</span> and <span class="math inline">\(F=ma\)</span>:</p>
+<p><span class="math display">\[ ma = F = - kq \]</span></p>
+<p>where <span class="math inline">\(k\)</span> is the <em>spring constant</em> AKA restoring force over the distance (<span class="math inline">\(\frac{N}{m}\)</span>).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="the-hamiltonian-reformulation" class="level2">
+<h2 class="anchored" data-anchor-id="the-hamiltonian-reformulation">The Hamiltonian Reform(ul)ation</h2>
+<blockquote class="blockquote">
+<p>Puttin’ big E first</p>
+</blockquote>
+<p>We spent a a bit of time on Lagrangian mechanics because it also requires introduces several other interesting concepts like <em>the principle of least action</em>. The good news is we’ve done a lot of the heavy lifting and there’s nothing too crazy about now thinking about Hamiltonian mechanics, where we shift from <em>paths</em> to <em>energies</em>.</p>
+<p>While the Lagrangian <span class="math inline">\(L = T - V\)</span> is built around action, the Hamiltonian is a powerful reformulation that shifts the focus to energy. The Hamiltonian <span class="math inline">\(H\)</span> typically represents the total energy of a system <span class="math inline">\(H = T + V\)</span> (kinetic + potential energy) and is built to highlight conservation laws.</p>
+<p>Unlike the Lagrangian, the Hamiltonian only depends on the position <span class="math inline">\(q\)</span> and momentum <span class="math inline">\(p\)</span>, but not directly on <span class="math inline">\(t\)</span> itself. This approach introduces <strong>phase space</strong> (a space defined by positions and momenta), allowing viusalization of a system’s entire state at any moment. Shifting from position/velocity to position/momentum reveals insights about stability, resonance, and even chaotic behavior in systems.</p>
+<p>Reviewing <a href="#fig-corrected_mechanics_comparison" class="quarto-xref">Figure&nbsp;9</a> now may be elucidating. First, the phase space for the simple harmonic oscillator shows energy is conserved (closed ellipse). Second, thinking back to our ball-on-a-hill example and starting from the left and rolling down hill to the right, would hit maximum momentum at the bottom of the hill (<span class="math inline">\(x=0\)</span>) and as it oscillated forever back-and-forth would follow a clockwise path around the ellipse (rolling back to where we started in this coordinate system means negative velocity therefore negative momentum).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple Harmonic Hamiltonian
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Here we can shortcut since we already did the Lagrangian solution.</p>
+</blockquote>
+<p><span class="math display">\[L = T - V = \frac{1}{2} m \dot{q}^2 - \frac{1}{2} k q^2\]</span></p>
+<p><strong>Define the Hamiltonian <span class="math inline">\(H = T + V\)</span> in Terms of Position and Momentum</strong></p>
+<p>To switch to the Hamiltonian formalism, we need to express the system in terms of <strong>position <span class="math inline">\(q\)</span></strong> and <strong>momentum <span class="math inline">\(p\)</span></strong>, where momentum <span class="math inline">\(p\)</span> is defined as: <span class="math display">\[p = \frac{\partial L}{\partial \dot{q}} = m \dot{q}\]</span></p>
+<p>Now, let’s express the <strong>Hamiltonian</strong> <span class="math inline">\(H\)</span>, which for many systems is the <strong>total energy</strong> <span class="math inline">\(T + V\)</span>: <span class="math display">\[H = T + V = \frac{p^2}{2m} + \frac{1}{2} k q^2\]</span></p>
+<p>So, the Hamiltonian for a simple harmonic oscillator is: <span class="math display">\[H(q, p) = \frac{p^2}{2m} + \frac{1}{2} k q^2\]</span></p>
+<p><strong>Interpret the Hamiltonian</strong></p>
+<p>The Hamiltonian here represents the <strong>total energy</strong> of the oscillator, with:</p>
+<ul>
+<li><span class="math inline">\(\frac{p^2}{2m}\)</span>: The <strong>kinetic energy</strong> in terms of momentum <span class="math inline">\(p\)</span></li>
+<li><span class="math inline">\(\frac{1}{2} k q^2\)</span>: The <strong>potential energy</strong> stored in the spring</li>
+</ul>
+<p><strong>Derive the Equations of Motion Using Hamilton’s Equations</strong></p>
+<p>In Hamiltonian mechanics, we use <strong>Hamilton’s equations</strong> to describe the time evolution of the system:</p>
+<p><span class="math display">\[\dot{q} = \frac{\partial H}{\partial p} \quad \text{and} \quad \dot{p} = -\frac{\partial H}{\partial q}\]</span></p>
+<p>Applying these to our Hamiltonian: 1. <strong>Find <span class="math inline">\(\dot{q}\)</span></strong>: <span class="math display">\[\dot{q} = \frac{\partial H}{\partial p} = \frac{p}{m}\]</span> This confirms our definition of momentum, <span class="math inline">\(p = m \dot{q}\)</span>.</p>
+<ol start="2" type="1">
+<li><strong>Find <span class="math inline">\(\dot{p}\)</span></strong>: <span class="math display">\[\dot{p} = -\frac{\partial H}{\partial q} = -k q\]</span> This gives us the familiar equation of motion for a simple harmonic oscillator: <span class="math display">\[m \ddot{q} + k q = 0\]</span></li>
+</ol>
+<p><strong>Visualizing in Phase Space</strong></p>
+<p>The Hamiltonian approach naturally introduces <strong>phase space</strong>, where each point represents a state of the system with coordinates <span class="math inline">\((q, p)\)</span>. For a simple harmonic oscillator: - The system’s trajectory in phase space forms an <strong>ellipse</strong>. - This elliptical trajectory represents the <strong>conservation of total energy</strong>: as the oscillator moves, <span class="math inline">\(q\)</span> and <span class="math inline">\(p\)</span> oscillate back and forth, but the total energy (Hamiltonian) remains constant.</p>
+<p>This example highlights the power of the Hamiltonian formalism in tracking <strong>conserved quantities</strong> and understanding <strong>system behavior</strong> in phase space.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="pythagoras-in-minkowski-space" class="level1">
+<h1>Pythagoras in Minkowski Space</h1>
+<blockquote class="blockquote">
+<p><em>Roads? Where we’re going, we don’t need roads</em> <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</blockquote>
+<section id="special-relativity-and-the-insanity-of-c" class="level2">
+<h2 class="anchored" data-anchor-id="special-relativity-and-the-insanity-of-c">Special Relativity and the Insanity of <span class="math inline">\(c\)</span></h2>
+<p>At 16 years old Einstein had thoughts about what it would be like to chase down a beam of light coming out of a flashlight. Classically, if he moved fast enough he could coast alongside that wave of light, like when a train matches the speed of a passing bird.</p>
+<p>An unexpected consequence of the <strong>Michelson-Morley Experiment</strong> of 1887—while looking for a theoretical “luminiferous aether”—was that the inferometer detected light moving the same speed regardless of direction, suggesting it was the same speed regardless of how the Earth moved through space, therefore <strong>independent of the observer’s motion</strong>. This led the groundwork for Einstein’s theory.</p>
+<section id="the-speed-of-light-c-and-the-foundations-of-special-relativity" class="level3">
+<h3 class="anchored" data-anchor-id="the-speed-of-light-c-and-the-foundations-of-special-relativity">The Speed of Light, <span class="math inline">\(c\)</span>, and the Foundations of Special Relativity</h3>
+<p>Einstein realized that, to be consistent with Maxwell’s equations for electromagnetism, light’s speed must remain constant across all frames of reference. This insight forced a rethinking of space and time. The concepts of absolute time (a universal “clock”) and absolute space (a universal grid) had to be discarded. Instead, space and time are intertwined in such a way that the speed of light remains constant—a revolutionary shift that led to the notion of <strong>spacetime</strong>.</p>
+<ol type="1">
+<li>Invariance of <span class="math inline">\(c\)</span>: The speed of light in a vacuum is the same for all observers, regardless of their motion. This means that whether you’re standing still, driving a car, or hurtling through space, <span class="math inline">\(c\)</span> is always the same.</li>
+<li>Space and Time Adapt: For this invariance to hold, space and time themselves must adapt to keep the speed of light constant. If you move faster, your time slows down and lengths contract relative to slower-moving observers.</li>
+<li>Relativity of Simultaneity: Events that appear simultaneous to one observer may not be simultaneous to another moving observer. This idea challenges the intuitive notion of a shared “now” and suggests that time flows differently depending on motion. An event in one observer’s past can be in another’s future depending on how fast they are moving relative to one another.</li>
+<li>More directly, we now know this also limits <em>informations</em> ability to propagate faster than <span class="math inline">\(c\)</span>. Quantum entanglement, counter-intuitively, does <em>not</em> violate this principle.</li>
+</ol>
+</section>
+<section id="time-is-just-another-coordinate" class="level3">
+<h3 class="anchored" data-anchor-id="time-is-just-another-coordinate">Time is Just Another Coordinate</h3>
+<p>In everyday life, we already treat time and space as coordinates, although we often don’t think of them this way. Imagine you’re meeting a friend at a café. You naturally specify a location (<strong>space coordinates</strong>) and a time (<strong>time coordinate</strong>). Without both, you might arrive at the café only to miss each other by an hour or by a block.</p>
+<p>Einstein’s insight was that this relationship goes much deeper: <strong>space and time are not separate entities but are interwoven</strong>. Just as you can’t meet your friend without specifying both space and time, the universe itself weaves these dimensions together in a way that affects how time flows and distances change.</p>
+<p>We can now measure something called the <strong>spacetime interval</strong> that takes both space and time into account by plotting space against time and exploring how <span class="math inline">\(c\)</span> creates boundaries within this space and how spacetime intervals (measured as the hypotenuse on this graph) remain constant for all observers (and lead to the derivations of the <strong>Lorentz Transformations</strong>).</p>
+</section>
+</section>
+<section id="lost-in-minkowski-space-the-geometry-of-spacetime" class="level2">
+<h2 class="anchored" data-anchor-id="lost-in-minkowski-space-the-geometry-of-spacetime">Lost In (Minkowski) Space: The Geometry of Spacetime</h2>
+<p>We can described the unified spacetime framework mathematically using a special kind of geometry called <strong>Minkowski space</strong>. In this space, all objects project a <strong>causal light cone</strong> forward along the time axis that restricts what other events in spacetime they can interact with. Photons, which are massless, propagate along the diagonals <span class="math inline">\(y = \pm \space x\)</span>.</p>
+<div id="cell-fig-minkowski_light_cone" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div id="fig-minkowski_light_cone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-minkowski_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-minkowski_light_cone-output-1.png" width="665" height="679" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minkowski_light_cone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Light Cone in Minkowski Space. A stationary observer moves vertically along a ‘World Line’
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="the-spacetime-interval" class="level3">
+<h3 class="anchored" data-anchor-id="the-spacetime-interval">The Spacetime Interval</h3>
+<p>In Minkowski space, the fundamental unit of “distance” isn’t a simple measurement of space or time alone—it’s a combination of both, called the <strong>spacetime interval</strong>. For two events separated by a distance <span class="math inline">\(x\)</span> and a time <span class="math inline">\(t\)</span>, the spacetime interval <span class="math inline">\(s\)</span> is given by a modified form of the Pythagorean Theorem:</p>
+<p><span class="math display">\[s^2 = c^2 t^2 - x^2\]</span></p>
+<div id="cell-fig-pythag" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div id="fig-pythag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pythag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-pythag-output-1.png" width="700" height="659" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pythag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Real Time in Minkowski space
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This interval differs from the usual Euclidean distance formula.</p>
+<ul>
+<li><span class="math inline">\(c\)</span> is the speed of light, a constant that connects space and time.</li>
+<li>The interval <span class="math inline">\(s\)</span> combines spatial separation (<span class="math inline">\(x\)</span>) and time separation (<span class="math inline">\(t\)</span>) but with a <strong>minus sign</strong> in front of <span class="math inline">\(x^2\)</span>, which makes the geometry of Minkowski space different from ordinary space.</li>
+<li>Note how we keep units consistent by multiplying <span class="math inline">\(t\)</span> by <span class="math inline">\(c\)</span>. We’re not in Kansas anymore <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</li>
+</ul>
+</section>
+<section id="why-this-interval-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-interval-matters">Why This Interval Matters</h3>
+<p>The spacetime interval <span class="math inline">\(s\)</span> has an important property: it’s <strong>invariant</strong> for all observers, regardless of their relative motion. This invariance means that while two observers might disagree on measurements of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span>, they will always agree on the value of <span class="math inline">\(s\)</span>. In other words, even though space and time are experienced differently depending on motion, <strong>spacetime itself has an unchanging “distance”</strong> between events.</p>
+<p>This interval <span class="math inline">\(s\)</span> is also known as <strong>proper time</strong> when it represents the “real time” experienced by an object moving along a specific path in spacetime. Just as distance measures separation in space, the spacetime interval <span class="math inline">\(s\)</span> measures separation in spacetime.</p>
+<p>One unintuitive concept about Minkowski space is: due to the negative sign in how the spacetime interval is calculated, a longer line does not correspond to <em>more time experienced</em>. In fact, just the opposite is true. Relative to a stationary reference view, the closer on object moves to the speed of light the less time it will experience (<strong>Time Dilation</strong>) and the smaller the object will appear (<strong>Length Contraction</strong>).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Derivation of Lorentz Transformations from Spacetime Interval
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To derive the time dilation and length contraction formulas from the spacetime interval, we can start with the invariant interval in special relativity. The spacetime interval <span class="math inline">\(s^2\)</span> between two events in Minkowski space is given by:</p>
+<p><span class="math display">\[
+s^2 = c^2 \Delta t^2 - \Delta x^2
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(c\)</span> is the speed of light,</li>
+<li><span class="math inline">\(\Delta t\)</span> is the time difference between the two events in one frame,</li>
+<li><span class="math inline">\(\Delta x\)</span> is the spatial separation between the events in the same frame.</li>
+</ul>
+<p>This interval <span class="math inline">\(s^2\)</span> is invariant (it remains the same) in all inertial reference frames and is the basis for both derivations.</p>
+<hr>
+<section id="deriving-time-dilation" class="level3">
+<h3 class="anchored" data-anchor-id="deriving-time-dilation">1. Deriving Time Dilation</h3>
+<p>Consider two events that occur at the same location in a moving frame <span class="math inline">\(S'\)</span> (e.g., a clock moving with speed <span class="math inline">\(v\)</span> relative to an observer in frame <span class="math inline">\(S\)</span>).</p>
+<section id="setup" class="level4">
+<h4 class="anchored" data-anchor-id="setup">Setup:</h4>
+<ul>
+<li>In the moving frame <span class="math inline">\(S'\)</span>, the spatial separation <span class="math inline">\(\Delta x' = 0\)</span> because both events happen at the same place.</li>
+<li>Let <span class="math inline">\(\Delta t'\)</span> be the time interval between the two events in <span class="math inline">\(S'\)</span> (the proper time).</li>
+<li>In the stationary frame <span class="math inline">\(S\)</span>, let the events be separated by a time interval <span class="math inline">\(\Delta t\)</span> and a spatial distance <span class="math inline">\(\Delta x\)</span>.</li>
+</ul>
+</section>
+<section id="interval-in-frame-s" class="level4">
+<h4 class="anchored" data-anchor-id="interval-in-frame-s">Interval in Frame <span class="math inline">\(S'\)</span>:</h4>
+<p>Since <span class="math inline">\(\Delta x' = 0\)</span>, <span class="math display">\[
+s^2 = c^2 \Delta t'^2
+\]</span></p>
+</section>
+<section id="interval-in-frame-s-1" class="level4">
+<h4 class="anchored" data-anchor-id="interval-in-frame-s-1">Interval in Frame <span class="math inline">\(S\)</span>:</h4>
+<p>In the stationary frame <span class="math inline">\(S\)</span>, the events are separated in both space and time: <span class="math display">\[
+s^2 = c^2 \Delta t^2 - \Delta x^2
+\]</span></p>
+<p>Since <span class="math inline">\(s^2\)</span> is invariant, we equate the two expressions: <span class="math display">\[
+c^2 \Delta t'^2 = c^2 \Delta t^2 - \Delta x^2
+\]</span></p>
+<p>Now, using the relationship <span class="math inline">\(\Delta x = v \Delta t\)</span> (where <span class="math inline">\(v\)</span> is the relative velocity of the two frames), <span class="math display">\[
+c^2 \Delta t'^2 = c^2 \Delta t^2 - (v \Delta t)^2
+\]</span></p>
+<p>Factoring out <span class="math inline">\(\Delta t^2\)</span>, <span class="math display">\[
+c^2 \Delta t'^2 = \Delta t^2 (c^2 - v^2)
+\]</span></p>
+<p>Dividing both sides by <span class="math inline">\(c^2\)</span>, <span class="math display">\[
+\Delta t'^2 = \Delta t^2 \left( 1 - \frac{v^2}{c^2} \right)
+\]</span></p>
+<p>Taking the square root, <span class="math display">\[
+\Delta t' = \Delta t \sqrt{1 - \frac{v^2}{c^2}}
+\]</span></p>
+<p>Since <span class="math inline">\(\Delta t'\)</span> is the proper time (the time in the frame where the events happen at the same location), we rearrange this to express <span class="math inline">\(\Delta t\)</span> in terms of <span class="math inline">\(\Delta t'\)</span>: <span class="math display">\[
+\Delta t = \frac{\Delta t'}{\sqrt{1 - \frac{v^2}{c^2}}}
+\]</span></p>
+<p>This is the <strong>time dilation formula</strong>. It shows that the time interval <span class="math inline">\(\Delta t\)</span> in the stationary frame <span class="math inline">\(S\)</span> (observed time) is longer than the time interval <span class="math inline">\(\Delta t'\)</span> in the moving frame <span class="math inline">\(S'\)</span> (proper time). In other words, a moving clock runs slower when observed from a stationary frame.</p>
+<hr>
+</section>
+</section>
+<section id="deriving-length-contraction" class="level3">
+<h3 class="anchored" data-anchor-id="deriving-length-contraction">2. Deriving Length Contraction</h3>
+<p>Consider two points at rest in frame <span class="math inline">\(S\)</span> that define the endpoints of a rod, with a length <span class="math inline">\(L\)</span> measured in the frame <span class="math inline">\(S\)</span>.</p>
+<section id="setup-1" class="level4">
+<h4 class="anchored" data-anchor-id="setup-1">Setup:</h4>
+<ul>
+<li>In the stationary frame <span class="math inline">\(S\)</span>, the endpoints of the rod are separated by <span class="math inline">\(\Delta x = L\)</span>.</li>
+<li>In the moving frame <span class="math inline">\(S'\)</span>, the endpoints are separated by <span class="math inline">\(\Delta x' = L'\)</span>, which we want to find.</li>
+<li>The events marking the locations of the endpoints are simultaneous in <span class="math inline">\(S\)</span> (so <span class="math inline">\(\Delta t = 0\)</span> in <span class="math inline">\(S\)</span>).</li>
+</ul>
+</section>
+<section id="interval-in-frame-s-2" class="level4">
+<h4 class="anchored" data-anchor-id="interval-in-frame-s-2">Interval in Frame <span class="math inline">\(S\)</span>:</h4>
+<p>Since the events are simultaneous in <span class="math inline">\(S\)</span>, <span class="math display">\[
+s^2 = -\Delta x^2 = -L^2
+\]</span></p>
+</section>
+<section id="interval-in-frame-s-3" class="level4">
+<h4 class="anchored" data-anchor-id="interval-in-frame-s-3">Interval in Frame <span class="math inline">\(S'\)</span>:</h4>
+<p>In the moving frame <span class="math inline">\(S'\)</span>, where the rod is moving with velocity <span class="math inline">\(v\)</span>, the spatial separation is <span class="math inline">\(\Delta x' = L'\)</span>, and there may be a nonzero time difference <span class="math inline">\(\Delta t'\)</span> between the events.</p>
+<p>Using the invariant interval, <span class="math display">\[
+s^2 = c^2 \Delta t'^2 - L'^2
+\]</span></p>
+<p>Equating the intervals, <span class="math display">\[
+-L^2 = c^2 \Delta t'^2 - L'^2
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is the length of the rod in the stationary frame <span class="math inline">\(S\)</span>, and <span class="math inline">\(L'\)</span> is the length measured in the moving frame <span class="math inline">\(S'\)</span>. To proceed, let’s set up the interval conditions a bit more carefully.</p>
+</section>
+<section id="clarify-the-setup" class="level4">
+<h4 class="anchored" data-anchor-id="clarify-the-setup">Clarify the Setup</h4>
+<p>In the stationary frame <span class="math inline">\(S\)</span>:</p>
+<ul>
+<li>The events marking the endpoints of the rod are simultaneous (<span class="math inline">\(\Delta t = 0\)</span>).</li>
+<li>The length <span class="math inline">\(L\)</span> is the proper length, as it’s measured in the frame where the rod is at rest.</li>
+</ul>
+<p>In the moving frame <span class="math inline">\(S'\)</span>:</p>
+<ul>
+<li>The endpoints are separated by <span class="math inline">\(\Delta x' = L'\)</span>.</li>
+<li>Since the events are not simultaneous in <span class="math inline">\(S'\)</span>, there may be a time difference <span class="math inline">\(\Delta t'\)</span> between observing each endpoint in <span class="math inline">\(S'\)</span>.</li>
+</ul>
+</section>
+<section id="interval-invariance-between-frames" class="level4">
+<h4 class="anchored" data-anchor-id="interval-invariance-between-frames">Interval Invariance Between Frames</h4>
+<p>From the invariance of the spacetime interval, we have: <span class="math display">\[
+s^2 = -L^2 = c^2 \Delta t'^2 - L'^2
+\]</span></p>
+</section>
+<section id="finding-l-in-terms-of-l" class="level4">
+<h4 class="anchored" data-anchor-id="finding-l-in-terms-of-l">Finding <span class="math inline">\(L'\)</span> in Terms of <span class="math inline">\(L\)</span></h4>
+<p>Since we want to measure the length of the rod in <span class="math inline">\(S'\)</span> (the moving frame), we must consider the relativity of simultaneity. For length contraction, we want to eliminate <span class="math inline">\(\Delta t'\)</span> because in <span class="math inline">\(S'\)</span> the length <span class="math inline">\(L'\)</span> is measured at a single moment (i.e., events should be simultaneous in <span class="math inline">\(S'\)</span> to define the length).</p>
+<p>To eliminate <span class="math inline">\(\Delta t'\)</span>, use the fact that <span class="math inline">\(\Delta t'\)</span> is related to the motion of the rod. Given <span class="math inline">\(\Delta x = L\)</span> in <span class="math inline">\(S\)</span>, and knowing that <span class="math inline">\(S'\)</span> moves at velocity <span class="math inline">\(v\)</span> relative to <span class="math inline">\(S\)</span>, the time interval in <span class="math inline">\(S'\)</span> can be expressed as: <span class="math display">\[
+\Delta t' = \frac{v \Delta x}{c^2} = \frac{v L}{c^2}
+\]</span></p>
+<p>Substitute <span class="math inline">\(\Delta t' = \frac{v L}{c^2}\)</span> back into the interval equation: <span class="math display">\[
+-L^2 = c^2 \left( \frac{v L}{c^2} \right)^2 - L'^2
+\]</span></p>
+<p>Simplify: <span class="math display">\[
+-L^2 = \frac{v^2 L^2}{c^2} - L'^2
+\]</span></p>
+<p>Rearrange to solve for <span class="math inline">\(L'^2\)</span>: <span class="math display">\[
+L'^2 = L^2 \left(1 - \frac{v^2}{c^2}\right)
+\]</span></p>
+<p>Taking the square root: <span class="math display">\[
+L' = L \sqrt{1 - \frac{v^2}{c^2}}
+\]</span></p>
+</section>
+</section>
+<section id="final-length-contraction-formula" class="level3">
+<h3 class="anchored" data-anchor-id="final-length-contraction-formula">Final Length Contraction Formula</h3>
+<p>This is the <strong>length contraction formula</strong>: <span class="math display">\[
+L' = L \sqrt{1 - \frac{v^2}{c^2}}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(L\)</span> is the proper length (length of the rod in the frame where it is at rest),</li>
+<li><span class="math inline">\(L'\)</span> is the contracted length as observed in the frame moving at speed <span class="math inline">\(v\)</span> relative to the rod.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<div id="cell-fig-length-contraction" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display">
+<div id="fig-length-contraction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-length-contraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-length-contraction-output-1.png" width="666" height="529" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-length-contraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Example of how long a 1 meter rod would appear to an observer as they moved at different fractions of the speed of light
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="the-twin-paradox" class="level3">
+<h3 class="anchored" data-anchor-id="the-twin-paradox">The Twin Paradox</h3>
+<p>Now you might be feeling comfortable with the classic <strong>Twin Paradox</strong> where Alice and Bob age differently as one leaves the planet and returns going some speed close to <span class="math inline">\(c\)</span>. If you’re like me, you may suddenly think: “Wait, if every reference frame is relative, aren’t they <em>both</em> moving equally fast apart from one other, meaning they would both appear to experience less time?”</p>
+<p>The answer is <em>yes</em>. The only way the twin paradox actually makes sense is when you consider Bob has to <em>stop his ship and turn around</em>. If you imagine this path in Minkowski space, with Alice moving forward in time along the worldline axis and Bob moving away at some angle fractional trajectory of <span class="math inline">\(c\)</span>, then turning around and coming back, it becomes clear why this happens. The calculated spacetime interval for Bob will show that he has experienced less time than Alice due to his relative <em>return speed</em>. If Bob accelerated away <em>very quickly</em> then traveled back at a much lower speed, the age difference would be quite small compared to the standard scenario.</p>
+</section>
+<section id="mass-consequences" class="level3">
+<h3 class="anchored" data-anchor-id="mass-consequences">Mass Consequences</h3>
+<blockquote class="blockquote">
+<p><em>…And I cannot lie. <br>You other brothers can’t deny.</em> <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+</blockquote>
+<p>Minkowski space describes a flat spacetime, where the geometry remains consistent everywhere. But what happens when <strong>mass</strong> is introduced? Einstein’s theory of general relativity builds on his previous framework by realizing <strong>gravity is not a force but a consequence of spacetime curvature</strong>. Massive objects like planets and stars create distortions, bending the paths of objects and even electromagnetic waves like light. This curved geometry replaces Minkowski space with a more complex spacetime that adapts to the distribution of mass and energy.</p>
+<p>This concept of curved spacetime can be described mathematically by the <strong>Schwarzschild solution</strong>, a specific solution to Einstein’s field equations. It describes the geometry around a massive, non-rotating object, leading us to concepts like <strong>black holes</strong> and <strong>event horizons</strong>.</p>
+</section>
+</section>
+<section id="general-relativity-gravity-as-curvature" class="level2">
+<h2 class="anchored" data-anchor-id="general-relativity-gravity-as-curvature">General Relativity: Gravity as Curvature</h2>
+<blockquote class="blockquote">
+<p>May the Schwarz(schild Solution) be with you <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+</blockquote>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The math here is complicated and so things will be kept top-level. While Einstein’s equation may not appear intimidating, it uses a myriad of reduced terms that stand for advanced concepts like the <strong>Ricci Curvature Tensor</strong> which the <strong>Einstein Tensor</strong> is based on.</p>
+</div>
+</div>
+<p>Einstein’s theory of <strong>general relativity</strong> describes how <strong>mass and energy curve spacetime</strong>, creating the effect we perceive as gravity. The fundamental equation that captures this relationship is Einstein’s <strong>field equation</strong>:</p>
+<p><span class="math display">\[
+G_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
+\]</span></p>
+<p>In simpler terms:</p>
+<ul>
+<li><span class="math inline">\(G_{\mu \nu}\)</span>: This term represents <strong>spacetime curvature</strong>. It’s called the <strong>Einstein tensor</strong>, which describes how spacetime is curved at each point. Specifically, it involves complex mathematics that measure how spacetime “bends.”</li>
+<li><span class="math inline">\(T_{\mu \nu}\)</span>: This term represents <strong>energy and momentum</strong> in the universe. Called the <strong>stress-energy tensor</strong>, it includes mass, energy, pressure, and stress (forces) within spacetime.</li>
+<li><span class="math inline">\(\frac{8 \pi G}{c^4}\)</span>: <strong>Einstein Graviational Constant</strong></li>
+</ul>
+<p>Conceptually, Einstein’s equation tells us that <strong>mass and energy</strong> (on the right) <strong>determine the curvature of spacetime</strong> (on the left). So, massive objects like stars or planets create a “dent” in spacetime and this curvature dictates how objects move around them.</p>
+<section id="the-schwarzschild-solution-a-simple-case-of-curved-spacetime" class="level3">
+<h3 class="anchored" data-anchor-id="the-schwarzschild-solution-a-simple-case-of-curved-spacetime">The Schwarzschild Solution: A Simple Case of Curved Spacetime</h3>
+<p>The <strong>Schwarzschild solution</strong> is a specific solution to Einstein’s field equations that applies to a <strong>spherically symmetric, non-rotating massive object</strong> (like an idealized black hole or planet).</p>
+<p>The <strong>Schwarzschild metric</strong> describes the geometry of spacetime around such an object and is given by:</p>
+<p><span class="math display">\[
+ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2
+\]</span></p>
+<p>Broken down:</p>
+<ul>
+<li><span class="math inline">\(ds^2\)</span>: This is the <strong>spacetime interval</strong> (or proper distance) between two events in spacetime, affected by the gravitational field.</li>
+<li><span class="math inline">\(\left(1 - \frac{2GM}{c^2 r}\right)\)</span>: This factor modifies both the time and space terms and depends on <strong>mass <span class="math inline">\(M\)</span></strong> of the object and the <strong>distance <span class="math inline">\(r\)</span></strong> from its center.</li>
+<li><span class="math inline">\(r\)</span>: The radial distance from the center of the massive object.</li>
+<li><span class="math inline">\(d\Omega^2\)</span>: This term represents the spherical coordinates (angles) around the object and isn’t directly relevant to time dilation or the event horizon.</li>
+</ul>
+</section>
+<section id="schwarzschild-radius-and-the-event-horizon" class="level3">
+<h3 class="anchored" data-anchor-id="schwarzschild-radius-and-the-event-horizon">Schwarzschild Radius and The Event Horizon</h3>
+<p>The <strong>Schwarzschild radius</strong> <span class="math inline">\(R_s\)</span> is a critical radius derived from this solution. It’s defined as:</p>
+<p><span class="math display">\[
+R_s = \frac{2GM}{c^2}
+\]</span></p>
+<ul>
+<li><p>This radius represents the <strong>event horizon</strong> of a black hole—the boundary beyond which nothing, not even light, can escape.</p></li>
+<li><p>When <span class="math inline">\(r = R_s\)</span>, the term <span class="math inline">\(\left(1 - \frac{2GM}{c^2 r}\right)\)</span> becomes zero in the time component, making <span class="math inline">\(ds^2 \to 0\)</span> for any finite time interval <span class="math inline">\(dt\)</span>. This means time essentially “stops” from the perspective of a distant observer watching an object fall toward the black hole.</p></li>
+</ul>
+</section>
+<section id="curvature-coordinate-singularities" class="level3">
+<h3 class="anchored" data-anchor-id="curvature-coordinate-singularities">Curvature &amp; Coordinate Singularities</h3>
+<p>There are two key types of singularities associated with black holes:</p>
+<ul>
+<li><strong>Coordinate Singularity (Event Horizon)</strong>
+<ul>
+<li>At <span class="math inline">\(r = R_s\)</span>, the Schwarzschild metric appears to “break down” (it becomes infinite or zero). But this isn’t a true physical singularity—it’s a <strong>coordinate singularity</strong>.</li>
+<li>This can be thought of as a mathematical artifact of the coordinate system. The event horizon can be crossed by an infalling object without encountering infinite curvature.</li>
+<li>Using alternative coordinates, such as <strong>Kruskal-Szekeres coordinates</strong>, removes this “singularity,” allowing for a smooth path through the event horizon.</li>
+</ul></li>
+<li><strong>Curvature Singularity (Central Singularity)</strong>
+<ul>
+<li>At <span class="math inline">\(r = 0\)</span>, the curvature of spacetime becomes <strong>infinite</strong>. This is a <strong>true physical singularity</strong> where densities become infinitely large, and the laws of physics as we know them break down. - This singularity is located at the center of a black hole and is inescapable once an object crosses the event horizon.</li>
+</ul></li>
+</ul>
+</section>
+<section id="inevitability-across-the-event-horizon" class="level3">
+<h3 class="anchored" data-anchor-id="inevitability-across-the-event-horizon">Inevitability Across The Event Horizon</h3>
+<blockquote class="blockquote">
+<p>All Roads Lead To Rome <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+</blockquote>
+<p>Once an object crosses the event horizon at <span class="math inline">\(r = R_s\)</span>, the roles of time and space coordinates <strong>effectively switch</strong>. Inside the event horizon:</p>
+<ul>
+<li>The <strong>radial coordinate <span class="math inline">\(r\)</span></strong> behaves like <strong>time</strong>: all paths lead inevitably toward <span class="math inline">\(r = 0\)</span>, the singularity, much like how all paths in normal time lead toward the future.</li>
+<li>The <strong>time coordinate <span class="math inline">\(t\)</span></strong> behaves more like a spatial coordinate, losing its usual meaning. Inside the horizon, movement “forward in time” is equivalent to moving closer to the singularity.</li>
+</ul>
+<p>This is why <strong>crossing the event horizon is a point of no return</strong>—just as you can’t stop moving forward in time, you can’t stop moving toward the singularity once you’re inside.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/schwarz.png" class="img-fluid figure-img"></p>
+<figcaption>Visualization of Light Cones in Time as a Function of Schwarzschild Radius <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></figcaption>
+</figure>
+</div>
+<p>This coordinate flipping is a consequence of the Schwarzschild Coordinates used. If we use a slightly different reformulation known as the <strong>Eddington-Finkelstein Coordinates</strong> we see the same effect of moving towards the curvature singularity without the sign flipping:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/eddy.png" class="img-fluid figure-img"></p>
+<figcaption>Eddington-Finkelstein Coordinate Plot <a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></figcaption>
+</figure>
+</div>
+</section>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<p>The Schwarzschild solution reveals:</p>
+<ul>
+<li><strong>Massive objects curve spacetime</strong> creating gravitational effects.</li>
+<li><strong>The Schwarzschild radius</strong> marks the event horizon beyond which time and space switch roles.</li>
+<li><strong>Coordinate singularities</strong> (event horizons) differ from <strong>curvature singularities</strong> (central singularities).</li>
+</ul>
+</section>
+</section>
+<section id="kruskal-szekeres-coordinates-inside-the-event-horizon" class="level2">
+<h2 class="anchored" data-anchor-id="kruskal-szekeres-coordinates-inside-the-event-horizon">Kruskal-Szekeres Coordinates: Inside the Event Horizon</h2>
+<p><strong>Kruskal coordinates</strong> extend the <strong>Schwarzschild solution</strong> by providing a way to visualize black holes in a way that doesn’t have the coordinate singularity at the event horizon. This extension allows us to map out the <strong>paths of objects</strong> inside and outside the event horizon, showing how they approach the singularity.</p>
+<p>In Kruskal coordinates:</p>
+<ul>
+<li>The <strong>event horizon</strong> is not a boundary in the traditional sense; rather, it’s a point where <strong>space and time axes flip</strong>.</li>
+<li>These coordinates allow for a smooth, continuous depiction of spacetime across the event horizon, highlighting the inevitability of the singularity for any object that crosses this boundary.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/krusty.png" class="img-fluid figure-img"></p>
+<figcaption>Kruskal–Szekeres coordinates <a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></figcaption>
+</figure>
+</div>
+<section id="the-flip-space-and-time-axes-inside-the-event-horizon" class="level3">
+<h3 class="anchored" data-anchor-id="the-flip-space-and-time-axes-inside-the-event-horizon">The Flip: Space and Time Axes Inside the Event Horizon</h3>
+<p>In the <strong>Schwarzschild solution</strong>, time <span class="math inline">\(t\)</span> and radial distance <span class="math inline">\(r\)</span> are the primary coordinates:</p>
+<ul>
+<li><strong>Outside the event horizon</strong>, <span class="math inline">\(t\)</span> acts as the time coordinate and <span class="math inline">\(r\)</span> as the spatial coordinate.</li>
+<li><strong>Inside the event horizon</strong> (i.e., for <span class="math inline">\(r &lt; R_s\)</span>, the Schwarzschild radius), the coordinates flip in a very real sense:
+<ul>
+<li><strong>Radial distance <span class="math inline">\(r\)</span></strong> now acts like a <strong>time coordinate</strong>—all paths move inexorably toward decreasing <span class="math inline">\(r\)</span>, regardless of any attempts to escape.</li>
+<li><strong>Time <span class="math inline">\(t\)</span></strong> behaves more like a <strong>spatial coordinate</strong>, losing its usual meaning of “forward in time.”</li>
+</ul></li>
+</ul>
+<p>This flip in coordinates means that <strong>Time flows toward the singularity</strong> for any object inside the event horizon, making the singularity effectively an <strong>inevitable future</strong> rather than a point in space you could avoid.</p>
+</section>
+<section id="kruskal-coordinates-eliminate-the-coordinate-event-horizon-coordinate-singularity" class="level3">
+<h3 class="anchored" data-anchor-id="kruskal-coordinates-eliminate-the-coordinate-event-horizon-coordinate-singularity">Kruskal Coordinates Eliminate The Coordinate Event Horizon Coordinate Singularity</h3>
+<p>Kruskal coordinates <span class="math inline">\((T, X)\)</span> replace <span class="math inline">\((t, r)\)</span> to eliminate the coordinate singularity at <span class="math inline">\(r = R_s\)</span>, making it clear that:</p>
+<ul>
+<li><strong>The event horizon is just another part of spacetime</strong> in Kruskal coordinates, without the artificial “infinite” boundary seen in Schwarzschild coordinates.</li>
+<li><strong>Inside the event horizon</strong>, the coordinate transformation shows all future paths converge toward the singularity at <span class="math inline">\(r = 0\)</span>, regardless of any efforts by the object.</li>
+</ul>
+<p>In Kruskal diagrams:</p>
+<ul>
+<li>The <strong>singularity</strong> at <span class="math inline">\(r = 0\)</span> forms a “line” in the future, with all paths ending at this point.</li>
+<li>The <strong>event horizon</strong> is a 45° line, where light rays moving toward the horizon just manage to hover there, unable to escape.</li>
+<li><strong>Outside the event horizon</strong>, paths can move freely, but inside, every direction (even those that feel “upward” or “outward”) ultimately leads to the singularity.</li>
+</ul>
+</section>
+<section id="why-the-singularity-is-inevitable-in-the-future" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-singularity-is-inevitable-in-the-future">Why the Singularity Is Inevitable in the Future</h3>
+<p>Since time and space effectively flip inside the event horizon, the singularity acts as a future point in <strong>temporal terms</strong>:</p>
+<ul>
+<li>No path—whether for light, particles, or any object—can avoid the singularity once it crosses the event horizon.</li>
+<li>This setup leads to the conclusion that <strong>the singularity lies in the future of all objects that cross the event horizon</strong>. There’s no direction to move that doesn’t lead to it, just as there’s no way to avoid moving forward in time outside a black hole.</li>
+</ul>
+</section>
+<section id="relativity-redfines-space-time-and-causality" class="level3">
+<h3 class="anchored" data-anchor-id="relativity-redfines-space-time-and-causality">Relativity Redfines Space, Time, and Causality</h3>
+<p>Kruskal coordinates provide a profound visualization of how <strong>general relativity</strong> reshapes our understanding of spacetime:</p>
+<ul>
+<li><strong>Space and time are not fixed</strong> but depend on the gravitational context, and near a black hole, these roles are transformed.</li>
+<li><strong>Causality</strong> inside the event horizon is altered: what we consider “future” becomes tied to an inevitable destination (the singularity).</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="timeline-of-the-universe" class="level1 page-columns page-full">
+<h1>Timeline of The Universe</h1>
+<p><span class="math inline">\(Ga\)</span> is <strong>Giga-Annum</strong> or 1 billion Earth years</p>
+<div class="column-screen">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">timeline
+    Big Bang : -13.8 Ga
+    First Atoms Form : -13.7 Ga
+    First Stars Form : -13.5 Ga
+    Milky Way Forms : -13.4 Ga
+    Sun and Solar System Form : -4.6 Ga
+
+    Present Day : 0 Ga
+
+    Milky Way and Andromeda Galaxy Collision : +4 Ga
+    Sun Expands into a Red Giant : +5 Ga
+    Sun Becomes a White Dwarf : +7.5 Ga
+    Stellar Formation Ceases in Most Galaxies : +100 Ga
+    Degenerate Era Begins : +1,000 Ga
+    Black Holes Begin Evaporating via Hawking Radiation : +10^67 Ga
+    Black Hole Era Ends : +10^100 Ga
+    Dark Era Begins (Only Subatomic Particles Remain) : +10^120 Ga
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="acknowledgements" class="level1">
+<h1>Acknowledgements</h1>
+<p>Thank you for reading! I hope you took a moment to appreciate just how interesting and bizarre this place we find ourselves in truly is</p>
+<p>Special thanks to my friend Devery for agreeing to look over the math for me and Sam and Kaia for letting me yap at them about this while I was working on it.</p>
+</section>
+<section id="glossary" class="level1">
+<h1>Glossary</h1>
+<ul>
+<li><strong>Momentum</strong> is the quantity of motion an object has—a measure of how hard it is to stop that object. Mathematically, it’s <span class="math inline">\(p = mv\)</span>, where <span class="math inline">\(p\)</span> is momentum, <span class="math inline">\(m\)</span> is mass, and <span class="math inline">\(v\)</span> is velocity.</li>
+<li><strong>Force</strong> is any interaction that causes an object to change its motion (accelerate or decelerate). Newton’s Second Law defines force as <span class="math inline">\(F = ma\)</span>, where <span class="math inline">\(F\)</span> is the force, <span class="math inline">\(m\)</span> is mass, and <span class="math inline">\(a\)</span> is acceleration.</li>
+<li><strong>Energy</strong> is the capacity to do work. It exists in various forms, such as kinetic energy, potential energy, thermal energy, etc. In mechanics, the most common types are:
+<ul>
+<li><strong>Kinetic Energy</strong> is the energy an object has due to its motion: <span class="math inline">\(K = \frac{1}{2}mv^2\)</span>.</li>
+<li><strong>Potential Energy</strong> is the energy an object has due to its position in a force field, such as gravitational potential energy <span class="math inline">\(U = mgh\)</span> for an object in Earth’s gravitational field.</li>
+</ul></li>
+<li><strong>Work</strong> is the process of energy transfer when a force is applied to an object and it moves: <span class="math inline">\(W = F \cdot d \cdot \cos(\theta)\)</span>, where <span class="math inline">\(F\)</span> is the force, <span class="math inline">\(d\)</span> is the displacement, and <span class="math inline">\(\theta\)</span> is the angle between the force and displacement vectors.</li>
+<li><strong>Newton’s Laws of Motion</strong>:
+<ul>
+<li><strong>First Law (Inertia):</strong> An object will remain at rest or in uniform motion unless acted upon by an external force.</li>
+<li><strong>Second Law:</strong> The acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass: <span class="math inline">\(F = ma\)</span>.</li>
+<li><strong>Third Law:</strong> For every action, there is an equal and opposite reaction.</li>
+</ul></li>
+<li><strong>Maxwell’s Equations</strong> describe how electric and magnetic fields interact and propagate:
+<ul>
+<li><strong>Gauss’s Law:</strong> The electric flux through a closed surface is proportional to the charge enclosed.</li>
+<li><strong>Gauss’s Law for Magnetism:</strong> Magnetic monopoles do not exist; the magnetic flux through a closed surface is zero.</li>
+<li><strong>Faraday’s Law of Induction:</strong> A changing magnetic field induces an electric field.</li>
+<li><strong>Ampère’s Law (with Maxwell’s correction):</strong> Magnetic fields can be generated by electric currents and changing electric fields.</li>
+</ul></li>
+<li><strong>Lagrangian Mechanics</strong> is a reformulation of classical mechanics based on the principle of least action. The <strong>Lagrangian</strong> <span class="math inline">\(L\)</span> is defined as the difference between kinetic and potential energy: <span class="math inline">\(L = T - U\)</span>. It leads to the Euler-Lagrange equations, which describe the dynamics of a system.</li>
+<li><strong>Hamiltonian Mechanics</strong> is another reformulation of classical mechanics, focused on energy conservation. The <strong>Hamiltonian</strong> <span class="math inline">\(H\)</span> is the total energy of the system (kinetic plus potential energy): <span class="math inline">\(H = T + U\)</span>. It uses a set of equations called Hamilton’s equations to describe the evolution of a system over time.</li>
+<li><strong>Minkowski Space</strong> is a four-dimensional space combining three-dimensional space with time into a single manifold, used in the theory of special relativity. It allows for a unified treatment of space and time with the <strong>spacetime interval</strong>: <span class="math inline">\(s^2 = (ct)^2 - x^2 - y^2 - z^2\)</span>, where <span class="math inline">\(c\)</span> is the speed of light. Note how <span class="math inline">\(ct\)</span> makes the units consistent.</li>
+<li><strong>Einstein’s Theory of Special Relativity</strong> states that the laws of physics are the same in all inertial frames, and that the speed of light in a vacuum is constant. This leads to the famous equation <span class="math inline">\(E = mc^2\)</span>, which relates mass and energy.</li>
+<li><strong>Einstein’s Theory of General Relativity</strong> generalizes special relativity to include gravity. It describes <em>gravity not as a force</em> but as the curvature of spacetime caused by mass and energy. Objects follow geodesics, the shortest paths, in this curved spacetime.</li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Isaac Newton<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Jeremy Clarkson<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Neature Walk: https://www.youtube.com/watch?v=Hm3JodBR-vs<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Dr.&nbsp;Emmmet Brown - Back to the Future<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Dorothy - The Wizard of Oz<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Sir Mix-a-Lot - I Like Big Butts<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Space Balls - 1987<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Medieval Proverb<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>https://www.johnboccio.com/<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>https://www.johnboccio.com/<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>https://www.johnboccio.com/<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>John Vivian - 2024 - All Rights Reserved</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
